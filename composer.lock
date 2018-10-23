@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b045c69f9b9680011c116ad88b9818b2",
+    "content-hash": "40c54aa64affe31a00180026e1be1305",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -290,6 +290,56 @@
                 "validator"
             ],
             "time": "2018-04-30T10:33:04+00:00"
+        },
+        {
+            "name": "craftcms/ckeditor",
+            "version": "1.0.0-beta.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/185f6064cc135d717cf7b43c93aff2063ce399f1",
+                "reference": "185f6064cc135d717cf7b43c93aff2063ce399f1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "CKEditor",
+                "handle": "ckeditor",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/ckeditor/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/ckeditor/archive/master.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\ckeditor\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Edit rich text content in Craft CMS using CKEditor.",
+            "keywords": [
+                "ckeditor",
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/ckeditor/issues?state=open",
+                "source": "https://github.com/craftcms/ckeditor",
+                "docs": "https://github.com/craftcms/ckeditor",
+                "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
+            },
+            "time": "2018-01-15T18:06:22+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -2539,7 +2589,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "craftcms/ckeditor": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
