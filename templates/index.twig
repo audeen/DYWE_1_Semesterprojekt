@@ -1,2 +1,30 @@
-dies ist ein test
-homepage
+{% extends "_layout.twig" %}
+{% block main %}
+    
+{#  #}
+
+{% for entry in craft.entries.section('main').limit(10).all() %}
+
+<a href="{{ entry.url }}">
+
+    <h2>
+        {{ entry.title }}
+    </h2>
+
+</a>
+
+<h3>
+    {{ entry.artikelTeaser }}
+</h3>
+
+{{ entry.artikelBody }}
+
+<p class="post-meta">Posted by
+    <a href="#">{{ entry.author }}</a>
+    on 
+</p>
+
+{% endfor %}
+
+
+{% endblock main %}

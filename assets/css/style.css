@@ -1,0 +1,154 @@
+/* Allgemeine Definitionen
+ * ======================================== */
+
+ @font-face {
+    font-family: 'Inconsolata';
+    src: url('../fonts/Inconsolata/Inconsolata-Regular.ttf')
+    format('truetype');
+    }
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('../fonts/Inconsolata/Inconsolata-Bold.ttf')
+    format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Medium.ttf')
+    format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf')
+    format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Italic.ttf')
+    format('truetype');
+    font-style: italic;
+}
+
+html {
+    font:16px/1.6 'Montserrat', helvetica, arial, sans-serif;
+}
+
+body {
+    background-color: #aaa;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1200px;
+}
+
+/* Überschriften, Text und Listen
+ * ======================================== */
+
+h1 {
+	font-family: 'Inconsolata';
+	font-size: 2.25rem;
+	line-height: 1.2;
+}
+h2 {
+	font-family: 'Inconsolata';
+	font-size: 1.75rem;
+	line-height: 1.2;
+}
+
+
+/* Logo + Navigation
+* ======================================== */
+
+header {
+    max-width: 1200px;
+}
+
+.logo {
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    
+}
+
+
+nav {
+    list-style: none;
+    margin: 0; 
+    
+    background: deepskyblue;
+    
+    display: flex;
+    
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+  
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    color: white;
+  }
+  
+nav a:hover {
+    background-color: #000;
+  }
+  
+  @media all and (max-width: 800px) {
+    nav {
+      justify-content: space-around;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    nav {
+      flex-flow: column wrap;
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    
+    nav a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.3); 
+      border-bottom: 1px solid rgba(0,0,0,0.1); 
+    }
+  
+    
+    nav li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+
+
+
+
+/* Inhalt
+* ======================================== */
+
+.content {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ff0;
+    margin: 0;
+    list-style:none;
+}
+
+.artikel {
+       
+    margin: 2rem;
+    
+}
+.artikel_1, .artikel_2 {
+
+    border: 2px solid #000;
+    margin: 2rem;
+    padding: 0 2rem;
+    background-color: #0bbbef;
+}
+
+
