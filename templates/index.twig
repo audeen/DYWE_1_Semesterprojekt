@@ -5,8 +5,8 @@
 
 <div class="artikel_1">
 
-<a href='aktuelles'>
-    <h2> {{ entry.section }}</h2>
+<a href='aktuellesOverview'>
+    <h3> {{ entry.section }}</h3>
 </a>
 
 <a href="{{ entry.url }}">
@@ -44,8 +44,8 @@
 
 <div class="artikel_1">
 
-<a href='projekte'>
-    <h2> {{ entry.section }}</h2>
+<a href='projekteOverview'>
+    <h3> {{ entry.section }}</h3>
 </a>
 
 <a href="{{ entry.url }}">
@@ -74,10 +74,10 @@
 
 {% endblock projekte %}
 
-{#  #}
+  
 {#  #}
 
-{% block main %}
+{#{% block main %}
     
 {% for entry in craft.entries.section('main').limit(1).all() %}
 
@@ -113,4 +113,4 @@
 {% endfor %}
 
 
-{% endblock main %}
+{% endblock main %}#}

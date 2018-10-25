@@ -1,7 +1,7 @@
 {% extends "_layout" %}
 {% block aktuelles %}
     
-
+{% for entry in craft.entries.section('aktuelles').limit(10).all() %}
 
 <div class="artikel_1">
 
@@ -31,7 +31,8 @@
 </div>
 <br>
 
-
+{% endfor %}
 
 
 {% endblock aktuelles %}
+

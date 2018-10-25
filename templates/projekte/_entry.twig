@@ -1,11 +1,11 @@
 {% extends "_layout" %}
 {% block projekte %}
     
-{% for entry in craft.entries.section('projekte').limit(10).all() %}
+
 
 <div class="artikel_1">
 
-<a href='projekte'>
+<a href="{{ siteUrl }}projekteOverview">
     <h2> {{ entry.section }}</h2>
 </a>
 
@@ -31,7 +31,7 @@
 </div>
 <br>
 
-{% endfor %}
+
 
 
 {% endblock projekte %}
