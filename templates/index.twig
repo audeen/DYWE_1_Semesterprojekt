@@ -1,15 +1,19 @@
-{% extends "_layout.twig" %}
-{% block main %}
+{% extends "_layout" %}
+{% block aktuelles %}
     
-{#  #}
+{% for entry in craft.entries.section('aktuelles').limit(1).all() %}
 
-{% for entry in craft.entries.section('main').limit(10).all() %}
+<div class="artikel_1">
+
+<a href='aktuelles'>
+    <h2> {{ entry.section }}</h2>
+</a>
 
 <a href="{{ entry.url }}">
 
-    <h2>
+    <h1>
         {{ entry.title }}
-    </h2>
+    </h1>
 
 </a>
 
@@ -17,12 +21,94 @@
     {{ entry.artikelTeaser }}
 </h3>
 
-{{ entry.artikelBody }}
+
+    {{ entry.artikelBody }}
 
 <p class="post-meta">Posted by
     <a href="#">{{ entry.author }}</a>
-    on 
+    on {{ entry.postDate | date('d M, Y')}}
 </p>
+</div>
+<br>
+
+{% endfor %}
+
+{% endblock aktuelles %}
+
+{#  #}
+{#  #}
+
+{% block projekte %}
+    
+{% for entry in craft.entries.section('projekte').limit(1).all() %}
+
+<div class="artikel_1">
+
+<a href='projekte'>
+    <h2> {{ entry.section }}</h2>
+</a>
+
+<a href="{{ entry.url }}">
+
+    <h1>
+        {{ entry.title }}
+    </h1>
+
+</a>
+
+<h3>
+    {{ entry.artikelTeaser }}
+</h3>
+
+
+    {{ entry.artikelBody }}
+
+<p class="post-meta">Posted by
+    <a href="#">{{ entry.author }}</a>
+    on {{ entry.postDate | date('d M, Y')}}
+</p>
+</div>
+<br>
+
+{% endfor %}
+
+{% endblock projekte %}
+
+{#  #}
+{#  #}
+
+{% block main %}
+    
+{% for entry in craft.entries.section('main').limit(1).all() %}
+
+<div class="artikel_1">
+
+<a href='main'>
+    <h2> {{ entry.section }}</h2>
+</a>
+
+<a href="{{ entry.url }}">
+
+    <h1>
+        {{ entry.title }}
+    </h1>
+
+</a>
+
+<h3>
+    {{ entry.artikelTeaser }}
+</h3>
+
+
+    {{ entry.artikelBody }}
+
+<p class="post-meta">Posted by
+    <a href="#">{{ entry.author }}</a>
+    on {{ entry.postDate | date('d M, Y')}}
+</p>
+</div>
+
+<br>
 
 {% endfor %}
 
