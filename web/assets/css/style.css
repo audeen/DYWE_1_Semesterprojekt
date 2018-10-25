@@ -71,6 +71,11 @@ header {
     
 }
 
+/* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
+
+nav ul, li {
+    display: flex;
+}
 
 nav {
     list-style: none;

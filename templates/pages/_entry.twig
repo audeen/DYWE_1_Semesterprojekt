@@ -1,0 +1,36 @@
+{% extends "_layout" %}
+
+<!-- Klasse für Kontakt muss noch in CSS gebaut werden, hier erstmal nur Dummy -->
+
+<div class="artikel_1">
+
+<a href="{{ siteUrl }}projekteOverview">
+    <h2> {{ entry.section }}</h2>
+</a>
+
+<a href="{{ entry.url }}">
+
+    <h1>
+        {{ entry.title }}
+    </h1>
+
+</a>
+{##
+<h3>
+    {{ entry.artikelTeaser }}
+</h3> 
+##}
+
+    {{ entry.pageCopy }}
+
+<p class="post-meta">Posted by
+    <a href="#">{{ entry.author }}</a>
+    on {{ entry.postDate | date('d M, Y')}}
+</p>
+</div>
+<br>
+
+
+
+
+{% endblock projekte %}
