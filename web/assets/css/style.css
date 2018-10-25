@@ -86,7 +86,7 @@ header
 .nav
 {
             list-style: none;
-            margin: 0;
+            margin: auto;
             background: deepskyblue;
             display: flex;
             flex-flow: row wrap;
