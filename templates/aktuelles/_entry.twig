@@ -24,9 +24,11 @@
 
     {{ entry.artikelBody }}
 
-    {% for image in entry.artikelImgaes %}
-        <img src="{{ image.url }}">
-    {% endfor %}
+    {% set myAsset = entry.artikelImage.one()%}
+    {% if myAsset %}    
+    <img src="{{ myAsset.url }}" alt="{{ myAsset.title }}"/>
+    {% endif %}
+  
 
 <p class="post-meta">Posted by
     <a href="#">{{ entry.author }}</a>
