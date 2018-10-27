@@ -24,6 +24,8 @@
 
     {{ entry.artikelBody }}
 
+    <img src="{{ entry.artikelImage.first.url }}">
+
 <p class="post-meta">Posted by
     <a href="#">{{ entry.author }}</a>
     on {{ entry.postDate | date('d M, Y')}}
