@@ -24,7 +24,9 @@
 
     {{ entry.artikelBody }}
 
-    <img src="{{ entry.artikelImage.first.url }}">
+    {% for image in entry.artikelImgaes %}
+        <img src="{{ image.url }}">
+    {% endfor %}
 
 <p class="post-meta">Posted by
     <a href="#">{{ entry.author }}</a>
