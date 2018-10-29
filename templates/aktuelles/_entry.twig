@@ -24,27 +24,11 @@
 
     {{ entry.artikelBody }}
 
-{# Create an asset query with the 'volume' and 'kind' parameters #}
-{% set myAssetQuery = craft.assets()
-    .volume('images')
-    .kind('image') %}
-
-{# Fetch the assets #}
-{% set images = myAssetQuery.all() %}
-
-{# Display the thumbnail list #}
-<ul>
-    {% for image in images %}
-        <li><img src="{{ image.getUrl }}" alt="{{ image.title }}"></li>
+    {% for image in entry.artikelImage %}
+    <div>
+        <img src="{{ image.geturl ('smallThumb') }}">
+    </div>
     {% endfor %}
-</ul>
-
-
-{#     {% set myAsset = entry.artikelImage.one()%}
-    {% if myAsset %}    
-    <img src="{{ myAsset.url }}" alt="{{ myAsset.title }}"/>
-    {% endif %}  #}
-  
 
 <p class="post-meta">Posted by
     <a href="#">{{ entry.author }}</a>
