@@ -75,15 +75,31 @@ h2
 header
 {
     max-width:                  1200px;
+    margin:                     auto;
+}
+
+.lhead
+{
+    display:                    flex;
+    background-color:           #000000;
+    color:                      #ffffff;
+    text-align:                 left;
+    padding:                    auto;
+    padding-left:               50px;
 }
 
 .logo
 {
-    height:                     200px;
-    background-color:           #000;
-    text-align:                 center;
-    color:                      #ffffff;
+    max-height:                 230px;
+    width:                      auto;
+    text-align:                 left;
+}
+
+.hhead
+{
     padding:                    20px;
+    margin-top:                 90px;
+    font-size:                  2.80rem;
 }
 
 /* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
@@ -113,7 +129,7 @@ header
   
 .nav a:hover
 {
-    background-color:           #000000;
+    color:                      #000000;
 }
   
 @media all and (max-width: 800px)
@@ -148,8 +164,77 @@ header
     }
 }
 
+/* Footer + Copyright ;)
+* ======================================== */
+
+footer
+{
+    max-width:                  1200px;
+    background-color:           #000000;
+}
+
+.foot
+{
+    list-style:                 none;
+    margin:                     auto;
+    display:                    flex;
+    flex-flow:                  row wrap;
+    justify-content:            space-around;
+}
+
+.foot a
+{
+    text-decoration:            none;
+    display:                    block;
+    padding:                    1rem;
+    color:                      #ffffff;
+}
+
+.foot a:hover
+{
+    color:                      #ff0000;
+}
+
+@media all and (max-width: 800px)
+{
+    .foot
+    {
+        justify-content:        space-around;
+    }
+}
+
+@media all and (max-width: 600px)
+{
+    .foot
+    {
+        flex-flow:              column wrap;
+        flex-flow:              column wrap;
+        padding:                0;
+    }
+
+    .foot a
+    {
+        text-align:             center;
+        padding:                10px;
+        border-top:             1px solid rgba(255,255,255,0.3);
+        border-bottom:          1px solid rgba(0,0,0,0.1);
+    }
 
 
+    .foot li:last-of-type a
+    {
+        border-bottom:          none;
+    }
+}
+
+.copy
+{
+    text-align:                 right;
+    color:                      #ffffff;
+    margin:                     5px;
+    margin-top:                 40px;
+    font-size:                  0.6rem;
+}
 
 /* Inhalt
 * ======================================== */
@@ -157,7 +242,7 @@ header
 .content
 {
     display:                    flex;
-    flex-direction:             row;
+    flex-direction:             column;
     flex-wrap:                  wrap;
     justify-content:            space-around;
     background-color:           #ffff00;
@@ -172,8 +257,7 @@ header
 
 .artikel_1, .artikel_2
 {
-    max-width:                  1150px;
-    border:                     2px solid #000;
+    border:                     2px solid #000000;
     margin:                     2rem;
     padding:                    0 2rem;
     background-color:           #0bbbef;

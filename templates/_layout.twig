@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Page Title</title>
+        <title>FPB-Kiel - {{ craft.request.firstSegment|ucfirst }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link   rel="stylesheet"
                 type="text/css"
@@ -28,17 +28,17 @@
 <!-- Container für Kopfbereich mit Logo & Navigation -->
 
             <header>
-                <div class="logo">
-                    <h1>Forschungsgruppe Perfect Beat</h1>
+                <div class="lhead">
+                    <img class="logo" src="../web/assets/imgs/FPB-Logo.png" alt="Forschungsgruppe Perfect Beat">
+                    <div class="hhead">Forschungsgruppe Perfect Beat</div>
                 </div>
                 <div>
                     <ul class="nav">
                         <li><div><a href="{{ siteUrl }}">Start</a></div></li>
                         <li><div class="navlink"><a href="{{ siteUrl }}aktuellesOverview">Aktuelles</a></div></li>
                         <li><div class="navlink"><a href="{{ siteUrl }}projekteOverview">Projekte</a></div></li>
-                        <li><div class="navlink"><a href="#">Open Source</a></div></li>
-                        <li><div class="navlink"><a href="#">Mods</a></div></li>
-                        <li><div class="navlink"><a href="#">Info</a></div></li>
+                        <li><div class="navlink"><a href="{{ siteUrl }}opensourceOverview">Open Source</a></div></li>
+                        <li><div class="navlink"><a href="{{ siteUrl }}modsOverview">Mods</a></div></li>
                     </ul>
                 </div>
             </header>
@@ -59,7 +59,15 @@
 <!-- Container für Footer -->
 
             <footer>
-
+                <div>
+                    <ul class="foot">
+                        <li><div><a href="{{ siteUrl }}">Impressum</a></div></li>
+                        <li><div class="navlink"><a href="#">Datenschutzvereinbarung</a></div></li>
+                        <li><div class="navlink"><a href="#">Kontakt</a></div></li>
+                        <li><div class="navlink"><a href="#">Links</a></div></li>
+                        <div class="copy">&copy;HOTDOCS 2018</div>
+                    </ul>
+                </div>
             </footer>
         </div>
     </body>
