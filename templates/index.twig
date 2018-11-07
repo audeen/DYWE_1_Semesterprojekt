@@ -4,30 +4,18 @@
 {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
 
 <div class="artikel_1">
-
-<a href='aktuellesOverview'>
-    <h3> {{ entry.section }}</h3>
-</a>
-
-<a href="{{ entry.url }}">
-
-    <h1>
-        {{ entry.title }}
-    </h1>
-
-</a>
-
-<h3>
-    {{ entry.artikelTeaser }}
-</h3>
-
-
+    <a href='aktuellesOverview'>
+    <h3>{{ entry.section }}</h3>
+    </a>
+    <a href="{{ entry.url }}">
+    <h1>{{ entry.title }}</h1>
+    </a>
+    <h3>{{ entry.artikelTeaser }}</h3>
     {{ entry.artikelBody }}
-
-<p class="post-meta">Posted by
-    <a href="#">{{ entry.author }}</a>
-    on {{ entry.postDate | date('d M, Y')}}
-</p>
+    <p class="post-meta">Posted by
+        <a href="#">{{ entry.author }}</a>
+            on {{ entry.postDate | date('d M, Y')}}
+    </p>
 </div>
 <br>
 
@@ -43,30 +31,18 @@
 {% for entry in craft.entries.section('projekte').limit(1).all() %}
 
 <div class="artikel_1">
-
-<a href='projekteOverview'>
-    <h3> {{ entry.section }}</h3>
-</a>
-
-<a href="{{ entry.url }}">
-
-    <h1>
-        {{ entry.title }}
-    </h1>
-
-</a>
-
-<h3>
-    {{ entry.artikelTeaser }}
-</h3>
-
-
+    <a href='projekteOverview'>
+        <h3>{{ entry.section }}</h3>
+    </a>
+    <a href="{{ entry.url }}">
+    <h1>{{ entry.title }}</h1>
+    </a>
+    <h3>{{ entry.artikelTeaser }}</h3>
     {{ entry.artikelBody }}
-
-<p class="post-meta">Posted by
-    <a href="#">{{ entry.author }}</a>
-    on {{ entry.postDate | date('d M, Y')}}
-</p>
+    <p class="post-meta">Posted by
+        <a href="#">{{ entry.author }}</a>
+            on {{ entry.postDate | date('d M, Y')}}
+    </p>
 </div>
 <br>
 
@@ -82,32 +58,19 @@
 {% for entry in craft.entries.section('main').limit(1).all() %}
 
 <div class="artikel_1">
-
-<a href='main'>
-    <h2> {{ entry.section }}</h2>
-</a>
-
-<a href="{{ entry.url }}">
-
-    <h1>
-        {{ entry.title }}
-    </h1>
-
-</a>
-
-<h3>
-    {{ entry.artikelTeaser }}
-</h3>
-
-
+    <a href='main'>
+        <h2>{{ entry.section }}</h2>
+    </a>
+    <a href="{{ entry.url }}">
+    <h1>{{ entry.title }}</h1>
+    </a>
+    <h3>{{ entry.artikelTeaser }}</h3>
     {{ entry.artikelBody }}
-
-<p class="post-meta">Posted by
-    <a href="#">{{ entry.author }}</a>
-    on {{ entry.postDate | date('d M, Y')}}
-</p>
+    <p class="post-meta">Posted by
+        <a href="#">{{ entry.author }}</a>
+        on {{ entry.postDate | date('d M, Y')}}
+    </p>
 </div>
-
 <br>
 
 {% endfor %}
