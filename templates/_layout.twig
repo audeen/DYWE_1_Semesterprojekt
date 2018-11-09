@@ -5,10 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>FPB-Kiel - {{ craft.request.firstSegment|ucfirst }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link   rel="stylesheet"
-                type="text/css"
-                media="screen"
-                href="/assets/css/style.css"/>
 
 <!-- Workaround mit siteUrl, geht das eleganter?!?! -->
 
@@ -29,7 +25,7 @@
 
             <header>
                 <div class="lhead">
-                    <img class="logo" src="../web/assets/imgs/FPB-Logo.png" alt="Forschungsgruppe Perfect Beat">
+                    <img class="logo" src="{{ siteUrl }}assets/imgs/FPB-Logo.png" alt="Forschungsgruppe Perfect Beat">
                     <div class="hhead">Forschungsgruppe Perfect Beat</div>
                 </div>
                 <div>
