@@ -1,4 +1,5 @@
 {% extends "_layout" %}
+
 {% block aktuelles %}
     
 {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
@@ -12,10 +13,6 @@
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
     {{ entry.artikelBody }}
-    <p class="post-meta">Posted by
-        <a href="#">{{ entry.author }}</a>
-            on {{ entry.postDate | date('d M, Y')}}
-    </p>
 </div>
 <br>
 
@@ -23,8 +20,6 @@
 
 {% endblock aktuelles %}
 
-{#  #}
-{#  #}
 
 {% block projekte %}
     
@@ -39,10 +34,6 @@
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
     {{ entry.artikelBody }}
-    <p class="post-meta">Posted by
-        <a href="#">{{ entry.author }}</a>
-            on {{ entry.postDate | date('d M, Y')}}
-    </p>
 </div>
 <br>
 
@@ -51,14 +42,12 @@
 {% endblock projekte %}
 
   
-{#  #}
-
-{#{% block main %}
+{% block opensource %}
     
-{% for entry in craft.entries.section('main').limit(1).all() %}
+{% for entry in craft.entries.section('opensource').limit(1).all() %}
 
 <div class="artikel_1">
-    <a href='main'>
+    <a href='opensourceOverview'>
         <h2>{{ entry.section }}</h2>
     </a>
     <a href="{{ entry.url }}">
@@ -66,14 +55,30 @@
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
     {{ entry.artikelBody }}
-    <p class="post-meta">Posted by
-        <a href="#">{{ entry.author }}</a>
-        on {{ entry.postDate | date('d M, Y')}}
-    </p>
 </div>
 <br>
 
 {% endfor %}
 
+{% endblock opensource %}
 
-{% endblock main %}#}
+
+{% block mods %}
+
+{% for entry in craft.entries.section('mods').limit(1).all() %}
+
+<div class="artikel_1">
+    <a href='modsOverview'>
+        <h2>{{ entry.section }}</h2>
+    </a>
+    <a href="{{ entry.url }}">
+    <h1>{{ entry.title }}</h1>
+    </a>
+    <h3>{{ entry.artikelTeaser }}</h3>
+    {{ entry.artikelBody }}
+</div>
+<br>
+
+{% endfor %}
+
+{% endblock mods %}

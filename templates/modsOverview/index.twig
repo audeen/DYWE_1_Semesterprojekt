@@ -1,0 +1,17 @@
+{% extends "_layout" %}
+{% block mods %}
+
+{% for entry in craft.entries.section('mods').limit(10).all() %}
+
+<div class="artikel_1">
+    <a href="{{ entry.url }}">
+        <h1>{{ entry.title }}</h1>
+    </a>
+    <h3>{{ entry.artikelTeaser }}</h3>
+    {{ entry.artikelBody }}
+</div>
+<br>
+
+{% endfor %}
+
+{% endblock mods %}

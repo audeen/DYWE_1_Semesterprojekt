@@ -52,8 +52,32 @@
                 {% block projekte %}
                 {% endblock projekte %}
 
-                {% block main %}
-                {% endblock main %}
+                <div class="cta0">
+                    <div class="cta1">
+                        <a href="{{ siteUrl }}projekteOverview">
+                        <img class="cta_img" src="../web/assets/imgs/pearl-syncussion-sy1-1529186.jpg">
+                        <div class="cta4">Projekte</div>
+                        </a>
+                    </div>
+                    <div class="cta2">
+                        <a href="{{ siteUrl }}opensourceOverview">
+                        <img class="cta_img" src="../web/assets/imgs/desktop-source-code-and-wallpaper-by-computer-language-with-coding-and-programming_33771-596.jpg">
+                        <div class="cta4">Open Source</div>
+                        </a>
+                    </div>
+                    <div class="cta3">
+                        <a href="{{ siteUrl }}modsOverview">
+                        <img class="cta_img" src="../web/assets/imgs/soldering.jpg">
+                        <div class="cta4">Mods</div>
+                        </a>
+                    </div>
+                </div>
+
+                {% block opensource %}
+                {% endblock opensource %}
+
+                {% block mods %}
+                {% endblock mods %}
             </div>
 
 <!-- Container für Footer -->

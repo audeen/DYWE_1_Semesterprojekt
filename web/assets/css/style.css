@@ -51,6 +51,11 @@ body
     max-width:                  1200px;
 }
 
+img
+{
+    max-width:                  100%;
+    height:                     auto;
+}
 /* Überschriften, Text und Listen
  * ======================================== */
 
@@ -252,15 +257,69 @@ footer
 
 .artikel
 {
-    margin:                     2rem;
+    margin:                     1.6rem;
+}
+
+.artikel_1 figure
+{
+    margin:                     0 auto;
 }
 
 .artikel_1, .artikel_2
 {
-    border:                     2px solid #000000;
-    margin:                     2rem;
-    padding:                    0 2rem;
+    margin:                     1.6rem;
+    padding:                    1.6rem;
     background-color:           #0bbbef;
 }
 
+/* Call to Action
+* ======================================== */
 
+.cta0
+{
+    display:                    flex;
+    justify-content:            space-around;
+    box-sizing:                 border-box;
+    margin:                     1.6rem;
+    padding:                    1.1rem;
+    background-color:           #000000;
+}
+
+.cta1
+{
+    width:                      31%;
+    background-color:           #00ff00;
+}
+
+.cta2
+{
+    width:                      31%;
+    background-color:           #ff0000;
+}
+
+.cta3
+{
+    width:                      31%;
+    background-color:           #0000ff;
+}
+
+.cta4
+{
+    background-color:           rgba(255,255,255,0.7);
+    color:                      #000000;
+    text-align:                 center;
+    font-weight:                bold;
+    font-variant:               small-caps;
+    z-index:                    1;
+}
+
+.cta_img
+{
+    z-index:                    0;
+    height:                     auto;
+}
+
+.cta4 a
+{
+    text-decoration:            none;
+}
