@@ -1,25 +1,17 @@
 {% extends "_layout" %}
-{% block aktuelles %}
+{% block projekte %}
     
 
 
 <div class="artikel_1">
-    <a href="{{ siteUrl }}aktuellesOverview">
-        <h2>{{ entry.section }}</h2>
+    <a href="{{ siteUrl }}projekteOverview">
+        <h3>{{ entry.section }}</h3>
     </a>
-
     <a href="{{ entry.url }}">
-        <h1>{{ entry.title }}</h1>
+    <h1>{{ entry.title }}</h1>
     </a>
-
     <h3>{{ entry.artikelTeaser }}</h3>
-
     {{ entry.artikelBody }}
-
-    {% for image in entry.artikelImage %}
-        <img src="{{ image.url }}">
-    {% endfor %}
-
     <p class="post-meta">Posted by
         <a href="#">{{ entry.author }}</a>
             on {{ entry.postDate | date('d M, Y')}}
@@ -27,4 +19,5 @@
 </div>
 <br>
 
-{% endblock aktuelles %}
+
+{% endblock projekte %}

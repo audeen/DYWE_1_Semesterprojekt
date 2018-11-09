@@ -11,44 +11,44 @@ CSS-Dateien nach Sinn aufteilen
 
 @font-face
 {
-            font-family:        'Inconsolata';
-            src:                url('../fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
+    font-family:                'Inconsolata';
+    src:                        url('../fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
 }
 @font-face
 {
-            font-family:        'Inconsolata';
-            src:                url('../fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
-            font-weight:        bold;
+    font-family:                'Inconsolata';
+    src:                        url('../fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
+    font-weight:                bold;
 }
 @font-face
 {
-            font-family:        'Montserrat';
-            src:                url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-family:                'Montserrat';
+    src:                        url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
 }
 @font-face
 {
-            font-family:        'Montserrat';
-            src:                url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
-            font-weight:        bold;
+    font-family:                'Montserrat';
+    src:                        url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight:                bold;
 }
 @font-face
 {
-            font-family:        'Montserrat';
-            src:                url('../fonts/Montserrat/Montserrat-Italic.ttf')format('truetype');
-            font-style:         italic;
+    font-family:                'Montserrat';
+    src:                        url('../fonts/Montserrat/Montserrat-Italic.ttf')format('truetype');
+    font-style:                 italic;
 }
 
 html
 {
-            font:               16px/1.6 'Montserrat', helvetica, arial, sans-serif;
+    font:                       16px/1.6 'Montserrat', helvetica, arial, sans-serif;
 }
 
 body
 {
-            background-color:   #aaa;
-            margin:             auto;
-            min-width:          320px;
-            max-width:          1200px;
+    background-color:           #ffffff;
+    margin:                     auto;
+    min-width:                  320px;
+    max-width:                  1200px;
 }
 
 /* Überschriften, Text und Listen
@@ -56,15 +56,16 @@ body
 
 h1
 {
-	       font-family:        'Inconsolata';
-	       font-size:          2.25rem;
-	       line-height:        1.2;
+    font-family:                'Inconsolata';
+    font-size:                  2.25rem;
+    line-height:                1.2;
 }
+
 h2
 {
-	       font-family:        'Inconsolata';
-	       font-size:          1.75rem;
-	       line-height:        1.2;
+    font-family:                'Inconsolata';
+	font-size:                  1.75rem;
+	line-height:                1.2;
 }
 
 
@@ -73,15 +74,32 @@ h2
 
 header
 {
-            max-width:          1200px;
+    max-width:                  1200px;
+    margin:                     auto;
+}
+
+.lhead
+{
+    display:                    flex;
+    background-color:           #000000;
+    color:                      #ffffff;
+    text-align:                 left;
+    padding:                    auto;
+    padding-left:               50px;
 }
 
 .logo
 {
-            height:             200px;
-            background-color:   #000;
-            text-align:         center;
-            color:              #fff;
+    max-height:                 230px;
+    width:                      auto;
+    text-align:                 left;
+}
+
+.hhead
+{
+    padding:                    20px;
+    margin-top:                 90px;
+    font-size:                  2.80rem;
 }
 
 /* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
@@ -93,32 +111,32 @@ header
 
 .nav
 {
-            list-style:         none;
-            margin:             auto;
-            background:         deepskyblue;
-            display:            flex;
-            flex-flow:          row wrap;
-            justify-content:    space-around;
+    list-style:                 none;
+    margin:                     auto;
+    background:                 #00bfff;
+    display:                    flex;
+    flex-flow:                  row wrap;
+    justify-content:            space-around;
 }
   
 .nav a
 {
-            text-decoration:    none;
-            display:            block;
-            padding:            1rem;
-            color:              #fff;
+    text-decoration:            none;
+    display:                    block;
+    padding:                    1rem;
+    color:                      #ffffff;
 }
   
 .nav a:hover
 {
-            background-color:   #000;
+    color:                      #000000;
 }
   
 @media all and (max-width: 800px)
 {
     .nav
     {
-            justify-content:    space-around;
+        justify-content:        space-around;
     }
 }
   
@@ -126,54 +144,123 @@ header
 {
     .nav
     {
-            flex-flow:          column wrap;
-            flex-flow:          column wrap;
-            padding:            0;
+        flex-flow:              column wrap;
+        flex-flow:              column wrap;
+        padding:                0;
     }
     
     .nav a
     {
-            text-align:         center;
-            padding:            10px;
-            border-top:         1px solid rgba(255,255,255,0.3);
-            border-bottom:      1px solid rgba(0,0,0,0.1);
+        text-align:             center;
+        padding:                10px;
+        border-top:             1px solid rgba(255,255,255,0.3);
+        border-bottom:          1px solid rgba(0,0,0,0.1);
     }
   
     
     .nav li:last-of-type a
     {
-            border-bottom:      none;
+        border-bottom:          none;
     }
 }
 
+/* Footer + Copyright ;)
+* ======================================== */
+
+footer
+{
+    max-width:                  1200px;
+    background-color:           #000000;
+}
+
+.foot
+{
+    list-style:                 none;
+    margin:                     auto;
+    display:                    flex;
+    flex-flow:                  row wrap;
+    justify-content:            space-around;
+}
+
+.foot a
+{
+    text-decoration:            none;
+    display:                    block;
+    padding:                    1rem;
+    color:                      #ffffff;
+}
+
+.foot a:hover
+{
+    color:                      #ff0000;
+}
+
+@media all and (max-width: 800px)
+{
+    .foot
+    {
+        justify-content:        space-around;
+    }
+}
+
+@media all and (max-width: 600px)
+{
+    .foot
+    {
+        flex-flow:              column wrap;
+        flex-flow:              column wrap;
+        padding:                0;
+    }
+
+    .foot a
+    {
+        text-align:             center;
+        padding:                10px;
+        border-top:             1px solid rgba(255,255,255,0.3);
+        border-bottom:          1px solid rgba(0,0,0,0.1);
+    }
 
 
+    .foot li:last-of-type a
+    {
+        border-bottom:          none;
+    }
+}
+
+.copy
+{
+    text-align:                 right;
+    color:                      #ffffff;
+    margin:                     5px;
+    margin-top:                 40px;
+    font-size:                  0.6rem;
+}
 
 /* Inhalt
 * ======================================== */
 
 .content
 {
-            display:            flex;
-            flex-direction:     row;
-            flex-wrap:          wrap;
-            justify-content:    space-around;
-            background-color:   #ff0;
-            margin:             0;
-            list-style:         none;
+    display:                    flex;
+    flex-direction:             column;
+    flex-wrap:                  wrap;
+    justify-content:            space-around;
+    background-color:           #ffff00;
+    margin:                     0;
+    list-style:                 none;
 }
 
 .artikel
 {
-            margin:             2rem;
+    margin:                     2rem;
 }
 
 .artikel_1, .artikel_2
 {
-            border:             2px solid #000;
-            margin:             2rem;
-            padding:            0 2rem;
-            background-color:   #0bbbef;
+    border:                     2px solid #000000;
+    margin:                     2rem;
+    padding:                    0 2rem;
+    background-color:           #0bbbef;
 }
 
 
