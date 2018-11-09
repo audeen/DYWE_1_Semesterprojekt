@@ -246,32 +246,26 @@ footer
 
 .content
 {
+    box-sizing:                 border-box;
     display:                    flex;
     flex-direction:             column;
-    flex-wrap:                  wrap;
-    justify-content:            space-around;
     background-color:           #ffff00;
-    margin:                     0;
     list-style:                 none;
 }
 
-.artikel
+.artikel_1
 {
+    box-sizing:                 border-box;
     margin:                     1.6rem;
+    margin-bottom:              0;
+    padding:                    1.3rem;
+    background-color:           #0bbbef;
 }
 
 .artikel_1 figure
 {
     margin:                     0 auto;
 }
-
-.artikel_1, .artikel_2
-{
-    margin:                     1.6rem;
-    padding:                    1.6rem;
-    background-color:           #0bbbef;
-}
-
 /* Call to Action
 * ======================================== */
 
@@ -279,9 +273,9 @@ footer
 {
     display:                    flex;
     justify-content:            space-around;
-    box-sizing:                 border-box;
     margin:                     1.6rem;
-    padding:                    1.1rem;
+    margin-bottom:              0;
+    padding:                    1.3rem;
     background-color:           #000000;
 }
 
