@@ -1,6 +1,6 @@
 {% extends "_layout" %}
-{% block aktuelles %}
-    
+{% block mods %}
+
 
 
 <div class="artikel_1">
@@ -11,11 +11,12 @@
 
     <h3>{{ entry.artikelTeaser }}</h3>
 
-    <p>{{ entry.artikelBody }}</p>
+    {{ entry.artikelBody }}
 
-{# Create an asset query with the 'volume' and 'kind' parameters #}
+
+    {# Create an asset query with the 'volume' and 'kind' parameters #}
 {% set myAssetQuery = craft.assets()
-    .volume('photos')
+    .volume('modsAssets')
     .kind('image') %}
 
 {# Fetch the assets #}
@@ -24,10 +25,11 @@
 {# Display the thumbnail list #}
 <ul>
     {% for image in images %}
-        <li><img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}"></li>
+        <li><img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.title }}"></li>
     {% endfor %}
 </ul>
 
+
 </div>
 
-{% endblock aktuelles %}
+{% endblock mods %}
