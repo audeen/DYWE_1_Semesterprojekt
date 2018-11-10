@@ -62,14 +62,14 @@ img
 h1
 {
     font-family:                'Inconsolata';
-    font-size:                  2.25rem;
+    font-size:                  2.25em;
     line-height:                1.2;
 }
 
 h2
 {
     font-family:                'Inconsolata';
-	font-size:                  1.75rem;
+	font-size:                  1.75em;
 	line-height:                1.2;
 }
 
@@ -79,35 +79,18 @@ h2
 
 header
 {
-    max-width:                  1200px;
+    max-width:                  100%;
     margin:                     auto;
-}
-
-.lhead
-{
-    display:                    flex;
-    background-color:           #000000;
-    color:                      #ffffff;
-    text-align:                 left;
-    padding:                    auto;
-    padding-left:               50px;
 }
 
 .logo
 {
-    max-height:                 230px;
-    width:                      auto;
-    text-align:                 left;
-}
-
-.hhead
-{
-    padding:                    20px;
-    margin-top:                 90px;
-    font-size:                  2.80rem;
+    display:                    flex;
 }
 
 /* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
+/* man kann es nicht in header schreiben, habe ich gerade ausprobiert, dann wird alles nebeneinander ausgegeben... also bekommen die einzelnen div klassen flex
+wenn du diesen kommentar gelesen hast, bitte löschen ;) */
 
 /* nav ul, li
 {
@@ -116,14 +99,14 @@ header
 
 .nav
 {
+    display:                    flex;
     list-style:                 none;
     margin:                     auto;
-    background:                 #00bfff;
-    display:                    flex;
+    background-color:           #00bfff;
     flex-flow:                  row wrap;
-    justify-content:            space-around;
+    justify-content:            flex-start, space-around;
 }
-  
+
 .nav a
 {
     text-decoration:            none;
@@ -141,7 +124,7 @@ header
 {
     .nav
     {
-        justify-content:        space-around;
+        justify-content:        flex-start, space-around;
     }
 }
   
@@ -174,59 +157,58 @@ header
 
 footer
 {
-    max-width:                  1200px;
-    background-color:           #000000;
+    max-width:                  100%;
 }
 
-.foot
+.foot_nav
 {
+    display:                    flex;
     list-style:                 none;
     margin:                     auto;
-    display:                    flex;
+    background-color:           #000000;
     flex-flow:                  row wrap;
-    justify-content:            space-around;
+    justify-content:            flex-start, space-around;
 }
 
-.foot a
+.foot_nav a
 {
     text-decoration:            none;
     display:                    block;
-    padding:                    1rem;
+    padding:                    1.1rem;
     color:                      #ffffff;
 }
 
-.foot a:hover
+.foot_nav a:hover
 {
     color:                      #ff0000;
 }
 
 @media all and (max-width: 800px)
 {
-    .foot
+    .foot_nav
     {
-        justify-content:        space-around;
+        justify-content:        flex-start, space-around;
     }
 }
 
 @media all and (max-width: 600px)
 {
-    .foot
+    .foot_nav
     {
         flex-flow:              column wrap;
         flex-flow:              column wrap;
         padding:                0;
     }
 
-    .foot a
+    .foot_nav a
     {
-        text-align:             center;
         padding:                10px;
         border-top:             1px solid rgba(255,255,255,0.3);
         border-bottom:          1px solid rgba(0,0,0,0.1);
     }
 
 
-    .foot li:last-of-type a
+    .foot_nav li:last-of-type a
     {
         border-bottom:          none;
     }
@@ -234,11 +216,10 @@ footer
 
 .copy
 {
-    text-align:                 right;
+    display:                    block;
+    padding:                    1.1rem;
+    padding-left:               10rem;
     color:                      #ffffff;
-    margin:                     5px;
-    margin-top:                 40px;
-    font-size:                  0.6rem;
 }
 
 /* Inhalt
@@ -302,18 +283,23 @@ footer
 
 .cta_t
 {
-    background-color:           rgba(255,255,255,0.6);
-    color:                      #000000;
+    background-color:           rgba(255,255,255,0.45);
+    color:                      #ffffff;
     position:                   absolute;
     width:                      100%;
     top:                        70%;
     z-index:                    1000;
     text-align:                 center;
-    font-size:                  1.4rem;
+    font-size:                  1.5rem;
     font-weight:                bold;
     font-variant:               small-caps;
     border-width:               0;
     border-bottom-width:        0.05rem;
     border-top-width:           0.05rem;
-    border-style:               solid;
+    border-style:               inset;
+    text-shadow:                -1px -1px 0 #000,
+                                1px -1px 0 #000,
+                                -1px 1px 0 #000,
+                                1px 1px 0 #000;
 }
+
