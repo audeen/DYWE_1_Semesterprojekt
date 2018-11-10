@@ -14,21 +14,27 @@
     {{ entry.artikelBody }}
 
 
-    {# Create an asset query with the 'volume' and 'kind' parameters #}
-{% set myAssetQuery = craft.assets()
-    .volume('modsAssets')
-    .kind('image') %}
+    {% for asset in entry.artikelAssets %}
+     <img src="{{ asset.url }}" alt="{{ asset.title }}">                               
+{% endfor %}
 
-{# Fetch the assets #}
+
+
+{#     {# Create an asset query with the 'volume' and 'kind' parameters 
+{% set myAssetQuery = craft.assets()
+    .volume('Assets')
+    .kind('asset') %}
+
+{# Fetch the assets 
 {% set images = myAssetQuery.all() %}
 
-{# Display the thumbnail list #}
+{# Display the thumbnail list 
 <ul>
-    {% for image in images %}
-        <li><img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.title }}"></li>
+    {% for asset in images %}
+        <li><img src="{{ image.geturl('smallThumb') }}" alt="{{ image.title }}"></li>
     {% endfor %}
 </ul>
-
+ #}
 
 </div>
 
