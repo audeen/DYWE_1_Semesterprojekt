@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>FPB-Kiel - {{ craft.request.firstSegment|ucfirst }}</title>
+        <title>FPB-Kiel - {{ craft.app.request.segments|first }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Workaround mit siteUrl, geht das eleganter?!?! -->
