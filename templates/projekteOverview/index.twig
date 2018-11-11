@@ -1,4 +1,10 @@
 {% extends "_layout" %}
+
+{% set page_title = 'Projekte' %}
+{% set projekte = 'current' %}
+{% set start, aktuelles, opensource, mods = '','','','' %}
+
+
 {% block projekte %}
     
 {% for entry in craft.entries.section('projekte').limit(10).all() %}

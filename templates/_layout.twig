@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>FPB-Kiel - {{ craft.app.request.segments|first }}</title>
+        <title>{% if page_title is defined %} {{ page_title }} | {% endif %}Forschungsgruppe Perfect Beat</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Workaround mit siteUrl, geht das eleganter?!?! -->
@@ -29,11 +29,11 @@
                 </div>
                 <div>
                     <ul class="nav">
-                        <li><div class="navlink"><a href="{{ siteUrl }}">Start</a></div></li>
-                        <li><div class="navlink"><a href="{{ siteUrl }}aktuellesOverview">Aktuelles</a></div></li>
-                        <li><div class="navlink"><a href="{{ siteUrl }}projekteOverview">Projekte</a></div></li>
-                        <li><div class="navlink"><a href="{{ siteUrl }}opensourceOverview">Open Source</a></div></li>
-                        <li><div class="navlink"><a href="{{ siteUrl }}modsOverview">Mods</a></div></li>
+                        <li><div class="{{ start }}"><a href="{{ siteUrl }}">Start</a></div></li>
+                        <li><div class="{{ aktuelles }}"><a href="{{ siteUrl }}aktuellesOverview">Aktuelles</a></div></li>
+                        <li><div class="{{ projekte }}"><a href="{{ siteUrl }}projekteOverview">Projekte</a></div></li>
+                        <li><div class="{{ opensource }}"><a href="{{ siteUrl }}opensourceOverview">Open Source</a></div></li>
+                        <li><div class="{{ mods }}"><a href="{{ siteUrl }}modsOverview">Mods</a></div></li>
                     </ul>
                 </div>
             </header>

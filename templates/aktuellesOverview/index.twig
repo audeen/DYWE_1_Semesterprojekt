@@ -1,11 +1,16 @@
 {% extends "_layout" %}
 
+{% set page_title = 'Aktuelles' %}
+{% set aktuelles = 'current' %}
+{% set start, projekte, opensource, mods = '','','','' %}
+
+
 {% block aktuelles %}
     
 {% for entry in craft.entries.section('aktuelles').limit(10).all() %}
 
 <div class="artikel_1">
-    <a href="{{ entry.uri }}">
+    <a href="{{ entry.url }}">
         <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
