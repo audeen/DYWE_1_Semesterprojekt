@@ -55,6 +55,15 @@
 
                 {% block mods %}
                 {% endblock mods %}
+
+                {% block kontakt %}
+                {% endblock kontakt %}
+
+                {% block impressum %}
+                {% endblock impressum %}
+
+                {% block datenschutz %}
+                {% endblock datenschutz %}
             </div>
 
 <!-- Container für Footer -->
@@ -62,10 +71,10 @@
             <footer>
                 <div>
                     <ul class="foot_nav">
-                        <li><div><a href="{{ siteUrl }}">Impressum</a></div></li>
-                        <li><div><a href="#">Datenschutzvereinbarung</a></div></li>
-                        <li><div><a href="#">Kontakt</a></div></li>
-                        <li><div><a href="#">Links</a></div></li>
+                        <li><div><a href="{{ siteUrl }}impressum">Impressum</a></div></li>
+                        <li><div><a href="{{ siteUrl }}datenschutz">Datenschutzvereinbarung</a></div></li>
+                        <li><div><a href="{{ siteUrl }}kontakt">Kontakt</a></div></li>
+                        <li><div><a href="{{ siteUrl }}links">Links</a></div></li>
                         <div class="copy">&copy; HotDocs</div>
                     </ul>
                 </div>

@@ -94,7 +94,18 @@ h3
 	line-height:                1.2;
     color:                      #ffffff;
     padding-left:               2rem;
+    font-stretch:               expanded;
+}
+
+h4
+{
+    font-family:                'Inconsolata';
+	font-size:                  1em;
+	line-height:                1.2;
+    color:                      #ffffff;
+    padding-left:               2.5rem;
     font-weight:                normal;
+    margin:                     0;
 }
 
 
@@ -278,23 +289,49 @@ footer
     margin-bottom:              1rem;
 }
 
-.artikel_1
+.artikel_1, .artikel_2
 {
     margin:                     0;
     margin-top:                 1rem;
     padding:                    1.3rem;
+    padding-right:              3rem;
     background-color:           rgba(11, 11, 11, 1);
     color:                      #ffffff;
 }
 
-.artikel_1 a
+.artikel_1 a, .artikel_2 a
 {
     text-decoration:            none;
+    color:                      inherit;
 }
+
 
 .artikel_1 figure
 {
     margin:                     0 auto;
+}
+
+.artikel_2 p
+{
+    line-height:                1.6rem;
+    padding-left:               2.5rem;
+    margin-bottom:              2rem;
+}
+
+.artikel_2 h3
+{
+    margin-top:                 2rem;
+    font-family:                'Inconsolata';
+	line-height:                1.2;
+    color:                      #ffffff;
+    padding-left:               2rem;
+    font-stretch:               expanded;
+}
+
+.artikel_2 h4
+{
+    color:                      #ffffff;
+    padding-left:               2rem;
 }
 
 /* Call to Action
