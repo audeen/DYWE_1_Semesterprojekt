@@ -45,10 +45,13 @@ html
 
 body
 {
-    background-color:           #ffffff;
+    background-color:           rgba(0, 0, 0, 0.9);
     margin:                     auto;
     min-width:                  320px;
     max-width:                  1200px;
+    background-image:           url(../imgs/bg_platine.jpg);
+    background-repeat:          no-repeat;
+    background-size:            cover;
 }
 
 img
@@ -56,6 +59,8 @@ img
     max-width:                  100%;
     height:                     auto;
 }
+
+
 /* Überschriften, Text und Listen
  * ======================================== */
 
@@ -64,13 +69,34 @@ h1
     font-family:                'Inconsolata';
     font-size:                  2.25em;
     line-height:                1.2;
+    color:                      #cc0000;
+    font-variant:               normal;
+    margin:                     0.5rem;
+    padding-left:               0.5rem;
 }
 
 h2
 {
     font-family:                'Inconsolata';
-	font-size:                  1.75em;
+	font-size:                  1.2em;
 	line-height:                1.2;
+    color:                      #b3b3b3;
+    margin:                     auto;
+}
+
+.h2 a, .h1 a
+{
+    text-decoration:            none;
+}
+
+h3
+{
+    font-family:                'Inconsolata';
+	font-size:                  1.5em;
+	line-height:                1.2;
+    color:                      #ffffff;
+    padding-left:               2rem;
+    font-weight:                normal;
 }
 
 
@@ -80,7 +106,11 @@ h2
 header
 {
     max-width:                  100%;
-    margin:                     auto;
+    margin:                     0;
+    padding:                    0;
+    display:                    flex;
+    flex-flow:                  row wrap;
+    background-color:           rgba(0, 0, 0, 0.9);
 }
 
 .logo
@@ -89,8 +119,6 @@ header
 }
 
 /* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
-/* man kann es nicht in header schreiben, habe ich gerade ausprobiert, dann wird alles nebeneinander ausgegeben... also bekommen die einzelnen div klassen flex
-wenn du diesen kommentar gelesen hast, bitte löschen ;) */
 
 /* nav ul, li
 {
@@ -99,27 +127,36 @@ wenn du diesen kommentar gelesen hast, bitte löschen ;) */
 
 .nav
 {
+    width:                      100%;
     display:                    flex;
     list-style:                 none;
     margin:                     auto;
-    background-color:           #00bfff;
-    flex-flow:                  row wrap;
-    justify-content:            flex-start, space-around;
+    padding-left:               0.8rem;
 }
 
 .nav a
 {
     text-decoration:            none;
     display:                    block;
-    padding:                    1rem;
-    color:                      #ffffff;
+    padding:                    0.5rem;
+    color:                      #CC0000;
+    text-transform:             uppercase;
+    font-weight:                bold;
+    border-color:               #CC0000;
+    border-style:               solid;
+    border-width:               0.2rem;
+    margin:                     0.5rem;
 }
-  
+
 .nav a:hover
 {
-    color:                      #000000;
+    color:                      #fff000;
+    border-color:               #fff000;
+    border-style:               solid;
+    border-width:               0.2rem;
+    border-left-width:          1.5rem;
 }
-  
+
 @media all and (max-width: 800px)
 {
     .nav
@@ -132,7 +169,6 @@ wenn du diesen kommentar gelesen hast, bitte löschen ;) */
 {
     .nav
     {
-        flex-flow:              column wrap;
         flex-flow:              column wrap;
         padding:                0;
     }
@@ -163,24 +199,45 @@ footer
 .foot_nav
 {
     display:                    flex;
+    flex-flow:                  row wrap;
     list-style:                 none;
     margin:                     auto;
-    background-color:           #000000;
-    flex-flow:                  row wrap;
-    justify-content:            flex-start, space-around;
+    margin-top:                 1rem;
+    padding-left:               0.8rem;
+    background-color:           rgba(0, 0, 0, 1);
 }
 
 .foot_nav a
 {
     text-decoration:            none;
-    display:                    block;
-    padding:                    1.1rem;
-    color:                      #ffffff;
+    text-transform:             uppercase;
+    font-weight:                bold;
+    display:                    flex;
+    margin:                     0.5rem;
+    padding:                    0.5rem;
+    color:                      #cc0000;
+    border-color:               #CC0000;
+    border-style:               solid;
+    border-width:               0.05rem;
 }
 
 .foot_nav a:hover
 {
-    color:                      #ff0000;
+    color:                      #fff000;
+    border-color:               #fff000;
+    border-style:               solid;
+    border-width:               0.05rem;
+}
+
+.copy
+{
+    justify-content:            flex-end;
+    display:                    flex;
+    margin:                     0.3rem;
+    margin-left:                auto;
+    padding:                    0.4rem;
+    text-transform:             uppercase;
+    color:                      #b3b3b3;
 }
 
 @media all and (max-width: 800px)
@@ -191,7 +248,7 @@ footer
     }
 }
 
-@media all and (max-width: 600px)
+@media all and (max-width: 770px)
 {
     .foot_nav
     {
@@ -207,20 +264,12 @@ footer
         border-bottom:          1px solid rgba(0,0,0,0.1);
     }
 
-
     .foot_nav li:last-of-type a
     {
         border-bottom:          none;
     }
 }
 
-.copy
-{
-    display:                    block;
-    padding:                    1.1rem;
-    padding-left:               10rem;
-    color:                      #ffffff;
-}
 
 /* Inhalt
 * ======================================== */
@@ -229,18 +278,23 @@ footer
 {
     display:                    flex;
     flex-direction:             column;
-    background-color:           #ffff00;
+    background-color:           rgba(0, 0, 0, 0.1);
     list-style:                 none;
 }
 
 .artikel_1
 {
-    margin:                     1.6rem;
-    margin-bottom:              0;
+    margin:                     0;
+    margin-top:                 1rem;
     padding:                    1.3rem;
-    background-color:           #0bbbef;
+    background-color:           rgba(11, 11, 11, 1);
+    color:                      #ffffff;
 }
 
+.artikel a
+{
+    color:                      #CC0000;
+}
 .artikel_1 figure
 {
     margin:                     0 auto;
@@ -252,9 +306,10 @@ footer
 .cta0
 {
     display:                    flex;
+    flex-flow:                  row wrap;
     justify-content:            space-around;
-    margin:                     1.6rem;
-    margin-bottom:              0;
+    margin:                     0;
+    margin-top:                 1rem;
     padding:                    0;
     padding-top:                0.8rem;
     padding-bottom:             0.8rem;
@@ -266,6 +321,23 @@ footer
     width:                      31%;
     position:                   relative;
 }
+
+@media all and (max-width: 700px)
+{
+    .cta0
+    {
+        flex-flow:              column wrap;
+        padding:                1rem;
+
+    }
+
+    .cta
+    {
+        width:                  100%;
+    }
+}
+
+
 
 .cta a
 {
@@ -283,8 +355,8 @@ footer
 
 .cta_t
 {
-    background-color:           rgba(255,255,255,0.45);
-    color:                      #ffffff;
+    background-color:           rgba(255,255,255,0.83);
+    color:                      #CC0000;
     position:                   absolute;
     width:                      100%;
     top:                        70%;
@@ -292,14 +364,6 @@ footer
     text-align:                 center;
     font-size:                  1.5rem;
     font-weight:                bold;
-    font-variant:               small-caps;
-    border-width:               0;
-    border-bottom-width:        0.05rem;
-    border-top-width:           0.05rem;
-    border-style:               inset;
-    text-shadow:                -1px -1px 0 #000,
-                                1px -1px 0 #000,
-                                -1px 1px 0 #000,
-                                1px 1px 0 #000;
+    text-transform:             uppercase;
 }
 
