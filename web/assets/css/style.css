@@ -50,7 +50,7 @@ body
     min-width:                  320px;
     max-width:                  1200px;
     background-image:           url(../imgs/bg_platine.jpg);
-    background-repeat:          no-repeat;
+    background-position:        50% 50%;
     background-size:            cover;
 }
 
@@ -108,14 +108,12 @@ header
     max-width:                  100%;
     margin:                     0;
     padding:                    0;
-    display:                    flex;
-    flex-flow:                  row wrap;
-    background-color:           rgba(0, 0, 0, 0.9);
 }
 
 .logo
 {
     display:                    flex;
+    width:                      100%;
 }
 
 /* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
@@ -127,17 +125,19 @@ header
 
 .nav
 {
-    width:                      100%;
     display:                    flex;
+    flex-flow:                  row wrap;
     list-style:                 none;
     margin:                     auto;
-    padding-left:               0.8rem;
+    padding-left:               2rem;
+    background-color:           rgba(1, 0, 0, 1);
 }
 
 .nav a
 {
     text-decoration:            none;
     display:                    block;
+    justify-content:            flex-start, space-around;
     padding:                    0.5rem;
     color:                      #CC0000;
     text-transform:             uppercase;
@@ -145,7 +145,8 @@ header
     border-color:               #CC0000;
     border-style:               solid;
     border-width:               0.2rem;
-    margin:                     0.5rem;
+    margin-right:               4rem;
+    margin-bottom:              1rem
 }
 
 .nav a:hover
@@ -154,7 +155,6 @@ header
     border-color:               #fff000;
     border-style:               solid;
     border-width:               0.2rem;
-    border-left-width:          1.5rem;
 }
 
 @media all and (max-width: 800px)
@@ -177,14 +177,9 @@ header
     {
         text-align:             center;
         padding:                10px;
-        border-top:             1px solid rgba(255,255,255,0.3);
-        border-bottom:          1px solid rgba(0,0,0,0.1);
-    }
-  
-    
-    .nav li:last-of-type a
-    {
-        border-bottom:          none;
+        border-color:           #CC0000;
+        border-style:           solid;
+        border-width:           0.2rem;
     }
 }
 
@@ -202,7 +197,6 @@ footer
     flex-flow:                  row wrap;
     list-style:                 none;
     margin:                     auto;
-    margin-top:                 1rem;
     padding-left:               0.8rem;
     background-color:           rgba(0, 0, 0, 1);
 }
@@ -233,9 +227,9 @@ footer
 {
     justify-content:            flex-end;
     display:                    flex;
-    margin:                     0.3rem;
+    margin:                     0.5rem;
     margin-left:                auto;
-    padding:                    0.4rem;
+    padding:                    0.5rem;
     text-transform:             uppercase;
     color:                      #b3b3b3;
 }
@@ -259,14 +253,11 @@ footer
 
     .foot_nav a
     {
+        text-align:             center;
         padding:                10px;
-        border-top:             1px solid rgba(255,255,255,0.3);
-        border-bottom:          1px solid rgba(0,0,0,0.1);
-    }
-
-    .foot_nav li:last-of-type a
-    {
-        border-bottom:          none;
+        border-color:           #CC0000;
+        border-style:           solid;
+        border-width:           0.2rem;
     }
 }
 
@@ -278,8 +269,9 @@ footer
 {
     display:                    flex;
     flex-direction:             column;
-    background-color:           rgba(0, 0, 0, 0.1);
+    background-color:           rgba(0, 0, 0, 0.5);
     list-style:                 none;
+    margin-bottom:              1rem;
 }
 
 .artikel_1
@@ -291,10 +283,6 @@ footer
     color:                      #ffffff;
 }
 
-.artikel a
-{
-    color:                      #CC0000;
-}
 .artikel_1 figure
 {
     margin:                     0 auto;
