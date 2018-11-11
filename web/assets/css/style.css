@@ -75,6 +75,8 @@ h1
     padding-left:               0.5rem;
 }
 
+
+
 h2
 {
     font-family:                'Inconsolata';
@@ -82,11 +84,6 @@ h2
 	line-height:                1.2;
     color:                      #b3b3b3;
     margin:                     auto;
-}
-
-.h2 a, .h1 a
-{
-    text-decoration:            none;
 }
 
 h3
@@ -127,26 +124,26 @@ header
 {
     display:                    flex;
     flex-flow:                  row wrap;
+    justify-content:            flex-start;
     list-style:                 none;
     margin:                     auto;
-    padding-left:               2rem;
+    padding-left:               0;
     background-color:           rgba(1, 0, 0, 1);
 }
 
 .nav a
 {
     text-decoration:            none;
-    display:                    block;
-    justify-content:            flex-start, space-around;
+    display:                    flex;
+    margin:                     1.5rem;
+    margin-top:                 0;
     padding:                    0.5rem;
-    color:                      #CC0000;
+    color:                      rgba(255, 0, 0, 0.7);
     text-transform:             uppercase;
     font-weight:                bold;
     border-color:               #CC0000;
     border-style:               solid;
-    border-width:               0.2rem;
-    margin-right:               4rem;
-    margin-bottom:              1rem
+    border-width:               0.1rem;
 }
 
 .nav a:hover
@@ -154,14 +151,14 @@ header
     color:                      #fff000;
     border-color:               #fff000;
     border-style:               solid;
-    border-width:               0.2rem;
+    border-width:               0.1rem;
 }
 
 @media all and (max-width: 800px)
 {
     .nav
     {
-        justify-content:        flex-start, space-around;
+        justify-content:        flex-start;
     }
 }
   
@@ -195,6 +192,7 @@ footer
 {
     display:                    flex;
     flex-flow:                  row wrap;
+    justify-content:            space-around;
     list-style:                 none;
     margin:                     auto;
     padding-left:               0.8rem;
@@ -205,27 +203,19 @@ footer
 {
     text-decoration:            none;
     text-transform:             uppercase;
-    font-weight:                bold;
     display:                    flex;
     margin:                     0.5rem;
     padding:                    0.5rem;
     color:                      #cc0000;
-    border-color:               #CC0000;
-    border-style:               solid;
-    border-width:               0.05rem;
 }
 
 .foot_nav a:hover
 {
     color:                      #fff000;
-    border-color:               #fff000;
-    border-style:               solid;
-    border-width:               0.05rem;
 }
 
 .copy
 {
-    justify-content:            flex-end;
     display:                    flex;
     margin:                     0.5rem;
     margin-left:                auto;
@@ -281,6 +271,11 @@ footer
     padding:                    1.3rem;
     background-color:           rgba(11, 11, 11, 1);
     color:                      #ffffff;
+}
+
+.art_link
+{
+    text-decoration:            none;
 }
 
 .artikel_1 figure
