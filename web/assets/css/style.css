@@ -286,7 +286,8 @@ footer
     flex-direction:             column;
     background-color:           rgba(0, 0, 0, 0.5);
     list-style:                 none;
-    margin-bottom:              1rem;
+
+    
 }
 
 .artikel_1, .artikel_2
@@ -334,6 +335,17 @@ footer
     padding-left:               2rem;
 }
 
+.kontakt 
+{
+    display:                    flex;
+}
+
+.maps
+{
+    
+    margin-top:                 1rem;
+    margin-left:                1rem;
+}
 /* Call to Action
 * ======================================== */
 
