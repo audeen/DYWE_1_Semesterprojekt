@@ -14,7 +14,7 @@
     <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
-        {{ entry.artikelBody|chop(limit=2, unit='p') }}
+        {{ entry.artikelBody|chop(limit=1, unit='p') }}
 </div>
 
 {% endfor %}
