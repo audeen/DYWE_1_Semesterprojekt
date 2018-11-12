@@ -19,7 +19,7 @@
     <h4>
         {% set asset = entry.artikelAssets.first|default(false) %}
         {% if asset %}
-            <img src="{{ asset.getUrl('smallThumb') }}" />
+            <img src="{{ asset.getUrl('smallThumb') }}" width="{{ asset.getWidth('smallThumb') }}" height="{{ asset.getHeight('smallThumb') }}">
         {% endif %}
 
         {{ entry.artikelBody|chop(limit=1, unit='p', allowedTags="<p>,<h4>") }}
