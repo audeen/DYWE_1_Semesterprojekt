@@ -14,8 +14,10 @@
         <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
+    <h4>
         {{ entry.artikelBody|chop(limit=1, unit='p') }}
-</div>
+        <a href="{{ entry.url }}">Weiterlesen...</a>
+    </h4>
 
 {% endfor %}
 <br>

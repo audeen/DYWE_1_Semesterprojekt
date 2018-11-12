@@ -4,8 +4,6 @@
 {% set start, aktuelles, opensource, mods = '','','','' %}
 
 {% block projekte %}
-    
-
 
 <div class="artikel_3">
     <a href="{{ siteUrl }}projekteOverview">
@@ -15,8 +13,7 @@
     <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
-    {{ entry.artikelBody }}
+    <h4>{{ entry.artikelBody }}</h4>
 </div>
-
 
 {% endblock projekte %}
