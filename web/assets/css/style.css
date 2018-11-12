@@ -324,6 +324,7 @@ footer
     margin:                     0 auto;
 }
 
+
 /* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
 * ======================================== */
 
@@ -366,6 +367,17 @@ footer
     padding-left:               2rem;
 }
 
+.kontakt
+{
+    display:                    flex;
+}
+
+.maps
+{
+
+    margin-top:                 1rem;
+    margin-left:                1rem;
+}
 
 /* Artikel für Artikel selbst
 * ======================================== */
@@ -398,19 +410,6 @@ footer
     margin:                     0;
 }
 
-
-
-.kontakt
-{
-    display:                    flex;
-}
-
-.maps
-{
-
-    margin-top:                 1rem;
-    margin-left:                1rem;
-}
 
 /* Call to Action
 * ======================================== */
