@@ -15,7 +15,13 @@
     <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>{{ entry.artikelBody }}</h4>
+    <h4>
+       {% for image in entry.artikelImage %}
+            <img src="{{ image.geturl }}" width="{{ image.getWidth('mediumThumb') }}" height="{{ image.getHeight('mediumThumb') }}">
+        {% endfor %}
+        {{ entry.artikelBody }}
+        <a href="{{ entry.url }}">Weiterlesen...</a>
+    </h4>
 </div>
 
 {% endfor %}
@@ -35,7 +41,10 @@
     <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>{{ entry.artikelBody }}</h4>
+    <h4>
+        {{ entry.artikelBody }}
+        <a href="{{ entry.url }}">Weiterlesen...</a>
+    </h4>
 </div>
 
 {% endfor %}
@@ -79,7 +88,10 @@
     <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>{{ entry.artikelBody }}</h4>
+    <h4>
+        {{ entry.artikelBody }}
+        <a href="{{ entry.url }}">Weiterlesen...</a>
+    </h4>
 </div>
 
 {% endfor %}
@@ -99,7 +111,10 @@
     <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>{{ entry.artikelBody }}</h4>
+    <h4>
+        {{ entry.artikelBody }}
+        <a href="{{ entry.url }}">Weiterlesen...</a>
+    </h4>
 </div>
 
 {% endfor %}

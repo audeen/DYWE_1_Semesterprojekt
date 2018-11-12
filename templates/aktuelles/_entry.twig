@@ -4,10 +4,8 @@
 {% set start, projekte, opensource, mods = '','','','' %}
 
 {% block aktuelles %}
-    
 
-
-<div class="artikel_1">
+<div class="artikel_3">
 
     <a href="{{ entry.url }}">
         <h1>{{ entry.title }}</h1>
@@ -15,22 +13,13 @@
 
     <h3>{{ entry.artikelTeaser }}</h3>
 
-    <p>{{ entry.artikelBody }}</p>
+    <p>
+        {{ entry.artikelBody }}
+        {% for image in entry.artikelImage %}
+            <img src="{{ image.geturl ('mediumThumb') }}">
+        {% endfor %}
+    </p>
 
-{# Create an asset query with the 'volume' and 'kind' parameters #}
-{% set myAssetQuery = craft.assets()
-    .volume('photos')
-    .kind('image') %}
-
-{# Fetch the assets #}
-{% set images = myAssetQuery.all() %}
-
-{# Display the thumbnail list #}
-<ul>
-    {% for image in images %}
-        <li><img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}"></li>
-    {% endfor %}
-</ul>
 
 </div>
 

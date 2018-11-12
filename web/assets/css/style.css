@@ -65,6 +65,7 @@ img
 /* Überschriften, Text und Listen
  * ======================================== */
 
+/* Artikel Titel */
 h1
 {
     font-family:                'Inconsolata';
@@ -76,17 +77,18 @@ h1
     padding-left:               0.5rem;
 }
 
-
-
+/* Section */
 h2
 {
     font-family:                'Inconsolata';
 	font-size:                  1.2em;
 	line-height:                1.2;
+    text-transform:             uppercase;
     color:                      #b3b3b3;
     margin:                     auto;
 }
 
+/* Artikel Teaser */
 h3
 {
     font-family:                'Inconsolata';
@@ -97,6 +99,7 @@ h3
     font-stretch:               expanded;
 }
 
+/* Artikel Body */
 h4
 {
     font-family:                'Inconsolata';
@@ -289,7 +292,41 @@ footer
     margin-bottom:              1rem;
 }
 
-.artikel_1, .artikel_2
+/* Artikel für Übersichtsseiten
+* ======================================== */
+
+.artikel_1
+{
+    margin:                     0;
+    margin-top:                 1rem;
+    padding:                    1.3rem;
+    padding-right:              2rem;
+    background-color:           rgba(11, 11, 11, 1);
+    color:                      #ffffff;
+}
+
+.artikel_1 a
+{
+    text-decoration:            none;
+    color:                      #fff000;
+}
+
+.artikel_1 img
+{
+    float:                      left;
+    margin-right:               1rem;
+    margin-bottom:              1rem;
+}
+
+.artikel_1 figure
+{
+    margin:                     0 auto;
+}
+
+/* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
+* ======================================== */
+
+.artikel_2
 {
     margin:                     0;
     margin-top:                 1rem;
@@ -299,16 +336,10 @@ footer
     color:                      #ffffff;
 }
 
-.artikel_1 a, .artikel_2 a
+.artikel_2 a
 {
     text-decoration:            none;
     color:                      inherit;
-}
-
-
-.artikel_1 figure
-{
-    margin:                     0 auto;
 }
 
 .artikel_2 p
@@ -333,6 +364,38 @@ footer
     color:                      #ffffff;
     padding-left:               2rem;
 }
+
+/* Artikel für Artikel selbst
+* ======================================== */
+
+.artikel_3
+{
+    margin:                     0;
+    margin-top:                 1rem;
+    padding:                    1.3rem;
+    padding-right:              2rem;
+    background-color:           rgba(11, 11, 11, 1);
+    color:                      #ffffff;
+}
+
+.artikel_3 a
+{
+    text-decoration:            none;
+    color:                      inherit;
+}
+
+.artikel_3 img
+{
+
+}
+
+.artikel_3 p
+{
+    padding-left:               2.5rem;
+    font-weight:                normal;
+    margin:                     0;
+}
+
 
 /* Call to Action
 * ======================================== */
@@ -371,8 +434,6 @@ footer
         width:                  100%;
     }
 }
-
-
 
 .cta a
 {
