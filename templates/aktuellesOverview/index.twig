@@ -17,9 +17,6 @@
     <h4>
         {{ entry.artikelBody|chop(limit=2, unit='p') }}
         <a href="{{ entry.url }}">Weiterlesen...</a>
-        {% for image in entry.artikelImage %}
-            <img src="{{ image.geturl ('mediumThumb') }}">
-        {% endfor %}
     </h4>
 </div>
 
