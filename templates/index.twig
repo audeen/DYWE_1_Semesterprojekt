@@ -17,10 +17,11 @@
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
     <h4>
-        {% set asset = entry.artikelAssets.first|default(false) %}
-        {% if asset %}
-            <img src="{{ asset.geturl() }}">
-        {% endif %}
+        {% for image in entry.artikelImage.limit(2).all() %}
+            <div>
+                <img src="{{ image.geturl ('smallThumb') }}">
+            </div>
+        {% endfor %}
 
         {{ entry.artikelBody|chop(limit=1, unit='p', allowedTags="<p>,<h4>") }}
         <a href="{{ entry.url }}">weiterlesen...</a>

@@ -126,6 +126,7 @@ header
 {
     display:                    flex;
     width:                      100%;
+    height:                     auto;
 }
 
 /* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
@@ -314,6 +315,8 @@ footer
 
 .artikel_1 img
 {
+    display:                    flex;
+    flex-flow:                  column;
     float:                      left;
     margin-right:               1rem;
     margin-bottom:              1rem;
