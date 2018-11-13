@@ -11,7 +11,7 @@
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
     <h4>
-        {% for image in entry.artikelImage.all() %}
+        {% for image in entry.artikelImage.limit(4).all() %}
             <div>
                 <img src="{{ image.geturl ('largeThumb') }}">
             </div>
