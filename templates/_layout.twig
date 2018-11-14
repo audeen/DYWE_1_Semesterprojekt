@@ -33,8 +33,10 @@
 
             <header>
                 <div class="logo">
+                    <a href={{ siteUrl }}>
                     <img src="{{ siteUrl }}assets/imgs/FPB%20Header.png" alt="Forschungsgruppe Perfect Beat">
                 </div>
+            </a>
                 <div>
                     <ul class="nav">
                         <li><div class="{{ start }}"><a href="{{ siteUrl }}">Start</a></div></li>
@@ -42,6 +44,14 @@
                         <li><div class="{{ projekte }}"><a href="{{ siteUrl }}projekteOverview">Projekte</a></div></li>
                         <li><div class="{{ opensource }}"><a href="{{ siteUrl }}opensourceOverview">Open Source</a></div></li>
                         <li><div class="{{ mods }}"><a href="{{ siteUrl }}modsOverview">Mods</a></div></li>
+                        <li><div id="wrapper">
+                                <div class="square icon">
+                                    <span class="line top"></span>
+                                    <span class="line middle"></span>
+                                    <span class="line bottom"></span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </header>
@@ -93,5 +103,14 @@
                 </div>
             </footer>
         </div>
+    
+    <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
+    
+    <script type="text/javascript">
+        $("#wrapper").click(function(){
+            $(".icon").toggleClass("close");
+        });
+    </script>        
+    
     </body>
 </html>

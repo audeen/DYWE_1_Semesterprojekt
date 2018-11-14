@@ -476,3 +476,56 @@ footer
     text-transform:             uppercase;
 }
 
+/* Hamburger-Menü */
+.li nav {
+    display: flex;
+}
+
+#wrapper{
+    background: #000;
+    display: inline-block;
+    width: 60%;
+    color:                      rgba(255, 0, 0, 0.7);
+    border-color:               #CC0000;
+    border-style:               solid;
+    border-width:               0.1rem;
+    position: relative;
+    cursor: pointer;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    margin-top: 0;
+}
+.square {
+    height: 1.5rem;
+    
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    height: 6px;
+    width: 60%;
+    background:  rgba(255, 0, 0);
+    border-radius: 8px;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.25s;
+}
+
+.top{
+    top: 17.5%;
+}
+.middle{
+    top: 50%;
+}
+.bottom{
+    top: 82.5%;
+}
+
+.icon.close .top {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.icon.close .middle, .icon.close .bottom {
+    transform: rotate(-45deg);
+    top: 50%;
+}
