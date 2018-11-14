@@ -535,14 +535,6 @@ footer
     top: 50%;
 }
 
-@media all and (max-width: 800px)
-{
-    #wrapper
-    {
-        display: inline-block;
-    }
-}
-  
 @media all and (max-width: 760px)
 {
     #wrapper
