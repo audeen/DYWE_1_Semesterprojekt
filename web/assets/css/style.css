@@ -291,8 +291,7 @@ footer
     flex-direction:             column;
     background-color:           rgba(0, 0, 0, 0.5);
     list-style:                 none;
-
-
+    padding-bottom:             1rem;
 }
 
 /* Artikel für Übersichtsseiten
@@ -542,4 +541,3 @@ footer
         display: inline-block;
     }
 }
-  
