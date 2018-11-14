@@ -127,6 +127,7 @@ header
     display:                    flex;
     width:                      100%;
     height:                     auto;
+    cursor:                     pointer;
 }
 
 /* Warum wird das nicht vererbt? In meiner Vorlage funktionierte das.. */
@@ -480,13 +481,13 @@ footer
 }
 
 /* Hamburger-Menü */
-.li nav {
+/* .li nav {
     display: flex;
-}
+} */
 
 #wrapper{
     background: #000;
-    display: inline-block;
+    display: none;
     width: 60%;
     color:                      rgba(255, 0, 0, 0.7);
     border-color:               #CC0000;
@@ -497,6 +498,7 @@ footer
     padding: 1.5rem;
     margin: 1.5rem;
     margin-top: 0;
+    
 }
 .square {
     height: 1.5rem;
@@ -532,3 +534,20 @@ footer
     transform: rotate(-45deg);
     top: 50%;
 }
+
+@media all and (max-width: 800px)
+{
+    #wrapper
+    {
+        display: inline-block;
+    }
+}
+  
+@media all and (max-width: 760px)
+{
+    #wrapper
+    {
+        display: inline-block;
+    }
+}
+  
