@@ -317,7 +317,10 @@ footer
 
 .copy
 {
-    text-align:                 right;
+    display:                    inline-flex;
+    position:                   absolute;
+    right:                      0;
+    margin:                     auto;
     padding:                    0.3rem;
     padding-right:              1rem;
     text-transform:             uppercase;
