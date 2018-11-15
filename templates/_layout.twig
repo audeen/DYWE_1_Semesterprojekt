@@ -32,31 +32,43 @@
 <!-- Container für Kopfbereich mit Logo & Navigation -->
 
             <header>
-                <div onclick="window.location='{{ siteUrl }}';">
-                    
-                        <img class="logo" src="{{ siteUrl }}assets/imgs/FPB%20Header.png" alt="Forschungsgruppe Perfect Beat">
-                   
-                </div>
-            
                 <div>
-                    <ul class="nav">
-                        <li><div class="{{ start }}"><a href="{{ siteUrl }}">Start</a></div></li>
-                        <li><div class="{{ aktuelles }}"><a href="{{ siteUrl }}aktuellesOverview">Aktuelles</a></div></li>
-                        <li><div class="{{ projekte }}"><a href="{{ siteUrl }}projekteOverview">Projekte</a></div></li>
-                        <li><div class="{{ opensource }}"><a href="{{ siteUrl }}opensourceOverview">Open Source</a></div></li>
-                        <li><div class="{{ mods }}"><a href="{{ siteUrl }}modsOverview">Mods</a></div></li>
-                        <li><div id="wrapper">
-                                <div class="square icon">
-                                    <span class="line top"></span>
-                                    <span class="line middle"></span>
-                                    <span class="line bottom"></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <div onclick="window.location='{{ siteUrl }}';">
+                        <img class="logo" src="{{ siteUrl }}assets/imgs/FPB%20Header.png" alt="Forschungsgruppe Perfect Beat">
+                    </div>
                 </div>
             </header>
-
+            <div class="nav" id="mytopNav">
+                        <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
+                        <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
+                        <a class="{{ projekte }}" href="{{ siteUrl }}projekteOverview">Projekte</a>
+                        <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
+                        <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
+                        <a href="javascript:void(0);" class="icon" onclick="HH_topMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+            </div>
+            <script>
+                function HH_topMenu()
+                {
+                    var x = document.getElementById("mytopNav");
+                    if (x.className === "nav")
+                    {
+                    x.className += " responsive";
+                    }
+                    else
+                    {
+                    x.className = "nav";
+                    }
+                }
+            </script>
+            <!--
+            <div id="wrapper">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+                <p class="wrap_p">Menu</p>
+            </div> -->
 <!-- Container für Content -->
 
             <div class="content">
@@ -93,15 +105,30 @@
 <!-- Container für Footer -->
 
             <footer>
-                <div>
-                    <ul class="foot_nav">
-                        <li><div><a href="{{ siteUrl }}impressum">Impressum</a></div></li>
-                        <li><div><a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a></div></li>
-                        <li><div><a href="{{ siteUrl }}kontakt">Kontakt</a></div></li>
-                        <li><div><a href="{{ siteUrl }}links">Links</a></div></li>
+                <div class="nav" id="mydownNav">
+                        <a href="{{ siteUrl }}impressum">Impressum</a>
+                        <a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a>
+                        <a href="{{ siteUrl }}kontakt">Kontakt</a>
+                        <a href="{{ siteUrl }}links">Links</a>
+                        <a href="javascript:void(0);" class="icon" onclick="HH_downMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
                         <div class="copy">&copy; HotDocs</div>
-                    </ul>
                 </div>
+                <script>
+                function HH_downMenu()
+                {
+                    var x = document.getElementById("mydownNav");
+                    if (x.className === "nav")
+                    {
+                    x.className += " responsive";
+                    }
+                    else
+                    {
+                    x.className = "nav";
+                    }
+                }
+            </script>
             </footer>
         </div>
     
