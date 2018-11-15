@@ -37,7 +37,7 @@
 
 <!-- Container für Kopfbereich mit Logo & Navigation -->
 
-            <header>
+            <header id="myHead">
                 <div>
                     <div onclick="window.location='{{ siteUrl }}';">
                         <img class="logo" src="{{ siteUrl }}assets/imgs/FPB%20Header.png" alt="Forschungsgruppe Perfect Beat">
@@ -74,10 +74,11 @@
             </script>
             <script>
                 window.onscroll = function() {scrollNav()};
-
+                var offsetHeight = document.getElementById('myHead').offsetHeight;
+console.log(offsetHeight)
                 function scrollNav()
                 {
-                    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+                    if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
                     {
                         document.getElementById("scroll_nav", "mytopNav").className = "logo_nav", "nav";
                     }

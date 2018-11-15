@@ -116,7 +116,20 @@ h4
     margin:                     0;
 }
 
+@media all and (max-width: 770px)
+{
+    h3
+    {
+        padding-left:            1rem;
+        text-align:              justify;
+    }
 
+    h4
+    {
+        padding-left:            1rem;
+        text-align:              justify;
+    }
+}
 /* Logo + Navigation
 * ======================================== */
 
