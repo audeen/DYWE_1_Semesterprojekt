@@ -21,6 +21,12 @@
                 media="screen"
                 href="{{ siteUrl }}assets/css/style.css"/>
 
+<!-- CSS Einbindung für fa fa -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- -->
+
         <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
     </head>
     <body>
@@ -47,7 +53,11 @@
                         <a href="javascript:void(0);" class="icon" onclick="HH_topMenu()">
                             <i class="fa fa-bars"></i>
                         </a>
+                        <div class="logo_nav" id="scroll_nav"><img src="{{ siteUrl }}assets/imgs/FPB-Logo.png"></div>
             </div>
+
+<!-- Scripte für responsive Nav, müssen noch in JS ausgelagert werden ;) -->
+
             <script>
                 function HH_topMenu()
                 {
@@ -62,13 +72,22 @@
                     }
                 }
             </script>
-            <!--
-            <div id="wrapper">
-                <span class="line top"></span>
-                <span class="line middle"></span>
-                <span class="line bottom"></span>
-                <p class="wrap_p">Menu</p>
-            </div> -->
+            <script>
+                window.onscroll = function() {scrollNav()};
+
+                function scrollNav()
+                {
+                    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+                    {
+                        document.getElementById("scroll_nav", "mytopNav").className = "logo_nav", "nav";
+                    }
+                    else
+                    {
+                        document.getElementById("scroll_nav", "mytopNav").className = "logo_nav_hidden", "nav border_hidden";
+                    }
+                }
+            </script>
+
 <!-- Container für Content -->
 
             <div class="content">
