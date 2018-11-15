@@ -5,8 +5,8 @@
 
 {% block aktuelles %}
 
-<div class="artikel_3">
-    <a href="{{ entry.url }}">
+
+{#     <a href="{{ entry.url }}">
         <h1>{{ entry.title }}</h1>
     </a>
     <h3>{{ entry.artikelTeaser }}</h3>
@@ -17,7 +17,40 @@
             </div>
         {% endfor %}
         {{ entry.artikelBody }}
-    </h4>
-</div>
+    </h4> #}
+
+
+
+  <div class="artikel_3">
+    {% for block in entry.artikel.all() %}
+	{% switch block.type %}
+
+		{% case "titel" %}
+			{{ block.titel }} {# Type: Reiner Text #}
+
+		{% case "teaser" %}
+			{{ block.teaser }} {# Type: Reiner Text #}
+
+		{% case "body" %}
+			{{ block.body }} {# Type: CKEditor #}
+
+		{% case "bilder" %}
+			{{ block.bild }} {# Type: Dateien #}
+			{{ block.bildExtern }} {# Type: URL #}
+			{{ block.artikelThumbnail }} {# Type: Dateien #}
+
+		{% case "videos" %}
+			{{ block.youtubeEmbed }} {# Type: URL #}
+
+		{% default %}
+			...
+
+	{% endswitch %}
+{% endfor %}
+    </div>
+
+
 
 {% endblock aktuelles %}
+
+
