@@ -74,10 +74,11 @@
             </script>
             <script>
                 window.onscroll = function() {scrollNav()};
-                var offsetHeight = document.getElementById('myHead').offsetHeight;
-console.log(offsetHeight)
+                var offsetHeight;
+
                 function scrollNav()
                 {
+                    offsetHeight = document.getElementById('myHead').offsetHeight;
                     if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
                     {
                         document.getElementById("scroll_nav", "mytopNav").className = "logo_nav", "nav";
