@@ -32,8 +32,9 @@
     <body>
 
 <!-- Allumfassender Container -->
-
+<div class="parallax-window" data-parallax="scroll" data-image-src="{{ siteUrl }}assets/imgs/bg_platine_hoch.jpg">
         <div class="site">
+           
 
 <!-- Container für Kopfbereich mit Logo & Navigation -->
 
@@ -152,6 +153,7 @@
             </script>
             </footer>
         </div>
+    </div>
     
     <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
     
@@ -160,6 +162,6 @@
             $(".icon").toggleClass("close");
         });
     </script>        
-    
+    <script src="{{ siteUrl }}assets/js/parallax.js"></script>
     </body>
 </html>

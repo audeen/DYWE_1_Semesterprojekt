@@ -46,15 +46,16 @@ html
 .site
 {
     position:                   relative;
+    margin:                     auto;
+    min-width:                  320px;
+    max-width:                  1200px;
 }
 
 body
 {
     background-color:           rgba(0, 0, 0, 0.9);
-    margin:                     auto;
-    min-width:                  320px;
-    max-width:                  1200px;
-    background:                 url(../imgs/bg_platine.jpg);
+
+
     background-attachment:      fixed;
     background-position:        center;
     background-size:            cover;
@@ -349,7 +350,7 @@ footer
     margin-top:                 1rem;
     padding:                    1.3rem;
     padding-right:              2rem;
-    background-color:           rgba(11, 11, 11, 1);
+    background-color:           rgba(11, 11, 11, 0.5);
     color:                      #ffffff;
 }
 
@@ -383,7 +384,7 @@ footer
     margin-top:                 1rem;
     padding:                    1.3rem;
     padding-right:              3rem;
-    background-color:           rgba(11, 11, 11, 1);
+    background-color:           rgba(11, 11, 11, 0.5);
     color:                      #ffffff;
 }
 
@@ -437,7 +438,7 @@ footer
     margin-top:                 1rem;
     padding:                    1.3rem;
     padding-right:              2rem;
-    background-color:           rgba(11, 11, 11, 1);
+    background-color:           rgba(11, 11, 11, 0.5);
     color:                      #ffffff;
 }
 
@@ -522,4 +523,10 @@ footer
     font-size:                  1.5rem;
     font-weight:                bold;
     text-transform:             uppercase;
+}
+
+#parallax-window {
+    min-height: 400px;
+    width: 100%;
+	background: transparent;
 }
