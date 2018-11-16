@@ -32,7 +32,7 @@
 			<h2>{{ block.teaser }}</h2> {# Type: Reiner Text #}
 
 		{% case "artikelBody" %}
-			{{ block.body }} {# Type: CKEditor #}
+			<p>{{ block.body }}</p> {# Type: CKEditor #}
 
 		{% case "bilder" %}
 			<img src="{{ block.bildLarge.one.url }}"> {# Type: Dateien #}
