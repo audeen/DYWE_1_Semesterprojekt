@@ -32,12 +32,16 @@
 			<h2>{{ block.teaser }}</h2> {# Type: Reiner Text #}
 
 		{% case "artikelBody" %}
-			<p>{{ block.body }}</p> {# Type: CKEditor #}
+			{{ block.body }} {# Type: CKEditor #}
 
 		{% case "bilder" %}
-			<img src="{{ block.bildLarge.one.url }}"> {# Type: Dateien #}
+			{# <img src="{{ block.bildLarge.one.url }}"> #} {# Type: Dateien #}
 			{# {{ block.bildExtern }} #} {# Type: URL #}
 			{# {{ block.artikelThumbnail }} #} {# Type: Dateien #}
+
+		{% for image in block.bildLarge %}
+    		<img src="{{ image.url }}">
+		{% endfor %}
 
 		{% case "videos" %}
 			{{ block.youtubeEmbed }} {# Type: URL #}

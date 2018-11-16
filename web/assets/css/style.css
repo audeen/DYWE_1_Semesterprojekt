@@ -448,16 +448,17 @@ footer
     color:                      inherit;
 }
 
-.artikel_3 img
+/* .artikel_3 img
 {
 
-}
+} */
 
 .artikel_3 p
 {
     padding-left:               2.5rem;
     font-weight:                normal;
     margin:                     0;
+    word-wrap:                  break-word;
 }
 
 
