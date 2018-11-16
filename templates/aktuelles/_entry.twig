@@ -39,7 +39,7 @@
 			{# {{ block.bildExtern }} #} {# Type: URL #}
 			{# {{ block.artikelThumbnail }} #} {# Type: Dateien #}
 
-		{% for image in block.bildLarge %}
+		{% for image in block.bildLarge.all %}
     		<img src="{{ image.url }}">
 		{% endfor %}
 
