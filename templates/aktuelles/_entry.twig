@@ -25,19 +25,19 @@
     {% for block in entry.artikel.all() %}
 	{% switch block.type %}
 
-		{% case "titel" %}
+		{% case "artikelTitel" %}
 			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
 
-		{% case "teaser" %}
+		{% case "artikelTeaser" %}
 			<h2>{{ block.teaser }}</h2> {# Type: Reiner Text #}
 
-		{% case "body" %}
+		{% case "artikelBody" %}
 			{{ block.body }} {# Type: CKEditor #}
 
 		{% case "bilder" %}
-			<img src="{{ block.bild.one.url }}"> {# Type: Dateien #}
-			{{ block.bildExtern }} {# Type: URL #}
-			{{ block.artikelThumbnail }} {# Type: Dateien #}
+			<img src="{{ block.bildLarge.one.url }}"> {# Type: Dateien #}
+			{# {{ block.bildExtern }} #} {# Type: URL #}
+			{# {{ block.artikelThumbnail }} #} {# Type: Dateien #}
 
 		{% case "videos" %}
 			{{ block.youtubeEmbed }} {# Type: URL #}
