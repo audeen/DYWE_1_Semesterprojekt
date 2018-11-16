@@ -26,16 +26,16 @@
 	{% switch block.type %}
 
 		{% case "titel" %}
-			{{ block.titel }} {# Type: Reiner Text #}
+			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
 
 		{% case "teaser" %}
-			{{ block.teaser }} {# Type: Reiner Text #}
+			<h2>{{ block.teaser }}</h2> {# Type: Reiner Text #}
 
 		{% case "body" %}
 			{{ block.body }} {# Type: CKEditor #}
 
 		{% case "bilder" %}
-			{{ block.bild.one.url }} {# Type: Dateien #}
+			<img src="{{ block.bild.one.url }}"> {# Type: Dateien #}
 			{{ block.bildExtern }} {# Type: URL #}
 			{{ block.artikelThumbnail }} {# Type: Dateien #}
 
