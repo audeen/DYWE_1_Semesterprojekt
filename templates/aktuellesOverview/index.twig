@@ -7,25 +7,30 @@
 
 {% block aktuelles %}
     
-{% for entry in craft.entries.section('aktuelles').limit(10).all() %}
+{% for block in entry.artikel.all() %}
+{% switch block.type %}
 
-<div class="artikel_1">
-    <a href="{{ entry.url }}">
-        <h1>{{ entry.title }}</h1>
-    </a>
-    <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>
-        {% for image in entry.artikelImage.limit(1).all() %}
-            <div>
-                <img src="{{ image.geturl ('mediumThumb') }}">
-            </div>
-        {% endfor %}
+    {% case "titel" %}
+        {{ block.titel }} {# Type: Reiner Text #}
 
-        {{ entry.artikelBody|chop(limit=1, unit='p') }}
-        <a href="{{ entry.url }}">Weiterlesen...</a>
-    </h4>
-</div>
+    {% case "teaser" %}
+        {{ block.teaser }} {# Type: Reiner Text #}
 
+    {% case "body" %}
+        {{ block.body }} {# Type: CKEditor #}
+
+    {% case "bilder" %}
+        {{ block.bild.one.url }} {# Type: Dateien #}
+        {{ block.bildExtern }} {# Type: URL #}
+        {{ block.artikelThumbnail }} {# Type: Dateien #}
+
+    {% case "videos" %}
+        {{ block.youtubeEmbed }} {# Type: URL #}
+
+    {% default %}
+        ...
+
+{% endswitch %}
 {% endfor %}
 <br>
 {% endblock aktuelles %}
