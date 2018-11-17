@@ -26,19 +26,7 @@
         {% for image in block.bildLarge %}
             <img src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
         {% endfor %}
-			{#{{ block.bildSmall }} {# Type: Dateien #}
-			{#{{ block.bildMedium }} {# Type: Dateien #}
-			{#{{ block.bildLarge }} {# Type: Dateien #}
-            {#{% for image in block.bildLarge.all %}
-    		  <img src="{{ image.url }}">
-            {% endfor %}
-			{{ block.zweiBilder }} {# Type: Dateien #}
-			{#{{ block.dreiBilder }} {# Type: Dateien #}
-			{#{{ block.artikelThumbnail }} {# Type: Dateien #}
-           {# {% for image in block.artikelThumbnail.all %}
-    		  <img src="{{ image.url }}">
-            {% endfor %}
-			{{ block.bildergalerie }} {# Type: Dateien #}
+
 
 		{% default %}
 			...
