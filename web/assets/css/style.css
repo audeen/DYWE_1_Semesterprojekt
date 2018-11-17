@@ -84,6 +84,7 @@ h2
     font-family:                'Inconsolata';
 	font-size:                  1.2em;
 	line-height:                1.2;
+    width:                      auto;
     text-transform:             uppercase;
     color:                      #b3b3b3;
     margin:                     auto;
@@ -187,7 +188,7 @@ header
     text-decoration:            none;
     color:                      rgba(255, 0, 0, 0.7);
     margin:                     0.5rem;
-    padding:                    0.1rem;
+    padding:                    0.2rem;
     text-transform:             uppercase;
     font-weight:                bold;
     border-color:               #CC0000;
@@ -412,21 +413,20 @@ footer
 .artikel_1 a
 {
     text-decoration:            none;
-    color:                      #fff000;
 }
 
-.artikel_1 button
+.button
 {
+    display:                    inline-flex;
     background-color:           rgba(11, 11, 11, 0);
-    border:                     none;
-    color:                      white;
-    padding:                    15px 32px;
-    text-align:                 center;
     text-decoration:            none;
-    display:                    inline-block;
-    margin:                     4px 2px;
-    cursor:                     pointer;
-
+    color:                      rgba(255, 0, 0, 0.7);
+    margin:                     0.5rem;
+    padding:                    0.2rem;
+    font-weight:                bold;
+    border-color:               #CC0000;
+    border-style:               solid;
+    border-width:               0.1rem;
 }
 
 .artikel_1 img

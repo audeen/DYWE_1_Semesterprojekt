@@ -6,52 +6,47 @@
 {% block aktuelles %}
 
 
-{#     <a href="{{ entry.url }}">
-        <h1>{{ entry.title }}</h1>
-    </a>
-    <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>
-        {% for image in entry.artikelImage.limit(4).all() %}
-            <div>
-                <img src="{{ image.geturl ('largeThumb') }}">
-            </div>
-        {% endfor %}
-        {{ entry.artikelBody }}
-    </h4> #}
-
-
-
   <div class="artikel_3">
     {% for block in entry.artikel.all() %}
+
 	{% switch block.type %}
 
-		{% case "artikelTitel" %}
+        {% case "artikelTitel" %}
 			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
 
 		{% case "artikelTeaser" %}
-			<h2>{{ block.teaser }}</h2> {# Type: Reiner Text #}
+			<h3>{{ block.teaser }}</h3> {# Type: Reiner Text #}
 
 		{% case "artikelBody" %}
-			{{ block.body }} {# Type: CKEditor #}
+			<p>{{ block.body }} {# Type: CKEditor #}
+            </p>
 
-		{% case "bilder" %}
-			{# <img src="{{ block.bildLarge.one.url }}"> #} {# Type: Dateien #}
-			{# {{ block.bildExtern }} #} {# Type: URL #}
-			{# {{ block.artikelThumbnail }} #} {# Type: Dateien #}
+        {% case "bilder" %}
 
-		{% for image in block.bildLarge.all %}
-    		<img src="{{ image.url }}">
-		{% endfor %}
-
-		{% case "videos" %}
-			{{ block.youtubeEmbed }} {# Type: URL #}
+        {% for image in block.bildLarge %}
+            <img src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
+        {% endfor %}
+			{#{{ block.bildSmall }} {# Type: Dateien #}
+			{#{{ block.bildMedium }} {# Type: Dateien #}
+			{#{{ block.bildLarge }} {# Type: Dateien #}
+            {#{% for image in block.bildLarge.all %}
+    		  <img src="{{ image.url }}">
+            {% endfor %}
+			{{ block.zweiBilder }} {# Type: Dateien #}
+			{#{{ block.dreiBilder }} {# Type: Dateien #}
+			{#{{ block.artikelThumbnail }} {# Type: Dateien #}
+           {# {% for image in block.artikelThumbnail.all %}
+    		  <img src="{{ image.url }}">
+            {% endfor %}
+			{{ block.bildergalerie }} {# Type: Dateien #}
 
 		{% default %}
 			...
 
-	{% endswitch %}
+    {% endswitch %}
+
 {% endfor %}
-    </div>
+</div>
 
 
 

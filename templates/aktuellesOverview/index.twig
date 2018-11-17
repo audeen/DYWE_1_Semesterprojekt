@@ -14,7 +14,9 @@
 	{% switch block.type %}
 
 		{% case "artikelTitel" %}
+        <a href="{{ entry.url}}">
 			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
+        </a>
 
 		{% case "artikelTeaser" %}
 			<h2>{{ block.teaser }}</h2> {# Type: Reiner Text #}

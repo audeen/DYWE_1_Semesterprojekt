@@ -26,16 +26,13 @@
 
 		{% case "artikelBody" %}
 			<p>{{ block.body|chop(limit=1, unit='p') }} {# Type: CKEditor #}
-            <button><a href="{{ entry.url }}">weiterlesen...</a></button>
+            <a class="button" href="{{ entry.url }}">weiterlesen</a>
             </p>
-		{% case "bilder" %}
-			{# <img src="{{ block.bildLarge.one.url }}"> #} {# Type: Dateien #}
-			{# {{ block.bildExtern }} #} {# Type: URL #}
-			{# {{ block.artikelThumbnail }} #} {# Type: Dateien #}
 
-		{% for image in block.bildLarge.all %}
-    		<img src="{{ image.url }}">
-		{% endfor %}
+        {% case "bilder" %}
+			{% for image in block.artikelThumbnail %}
+            <img src="{{ image.getUrl() }}" width="330px" height="{{ image.getHeight() }}" alt="{{ image.title }}">
+            {% endfor %}
 
 		{% default %}
 			...
