@@ -220,8 +220,7 @@ header
     -moz-animation:             fadein 1s; /* Firefox */
     -webkit-animation:          fadein 1s; /* Safari and Chrome */
     -o-animation:               fadein 1s; /* Opera */
-    animation:                  fadein 1s;
-
+    animation:                  fadein 0s;
 }
 
 .nav_logo
@@ -233,13 +232,10 @@ header
     display:                    inline-flex;
     width:                      4rem;
     height:                     3rem;
-    animation:                  fadein 5s;
     -moz-animation:             fadein 5s; /* Firefox */
     -webkit-animation:          fadein 5s; /* Safari and Chrome */
     -o-animation:               fadein 5s; /* Opera */
-    animation:                  fadein 5s;
-
-
+    animation:                  fadein 0s;
 }
     @keyframes fadein {
         from {
@@ -293,7 +289,7 @@ header
         -moz-animation:         fadein 3s; /* Firefox */
         -webkit-animation:      fadein 3s; /* Safari and Chrome */
         -o-animation:           fadein 3s; /* Opera */
-        animation:              fadein 3s;
+        animation:              fadein 0s;
 
     }
 
@@ -349,11 +345,10 @@ header
         float:                  none;
         display:                block;
         text-align:             center;
-        -moz-animation:         fadein 0s; /* Firefox */
-        -webkit-animation:      fadein 0s; /* Safari and Chrome */
-        -o-animation:           fadein 0s; /* Opera */
+        -moz-animation:         fadein 3s; /* Firefox */
+        -webkit-animation:      fadein 3s; /* Safari and Chrome */
+        -o-animation:           fadein 3s; /* Opera */
         animation:              fadein 0s;
-
     }
 
     .nav.responsive a:hover, .nav_border.responsive a:hover
@@ -447,11 +442,6 @@ footer
     margin:                     1rem;
 }
 
-.artikel_1 figure
-{
-    margin:                     0 auto;
-}
-
 @media all and (max-width: 770px)
 {
     .artikel_1
@@ -462,6 +452,15 @@ footer
         padding-right:          1rem;
         background-color:       rgba(11, 11, 11, 0.5);
         color:                  #ffffff;
+    }
+
+    .artikel_1
+    {
+        display:                    inline-flex;
+        flex-flow:                  column;
+        float:                      left;
+        margin:                     1rem;
+        width:                      100%
     }
 }
 /* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
@@ -631,7 +630,7 @@ footer
 
 .parallax-window
 {
-    background-color:           rgba(0, 0, 0, 0.5);
+    background-color:           rgba(0, 0, 0, 0.6);
     min-height:                 800px;
     width:                      100%;
     background-attachment:      fixed;
