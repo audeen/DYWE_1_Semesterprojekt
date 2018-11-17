@@ -43,8 +43,8 @@
                     </div>
                 </div>
             </header>
-            <div class="nav" id="HH_Nav">
-                <a href="javascript:void(0);" class="icon" onclick="HH_Menu()">
+            <div class="nav" id="HHheadNav">
+                <a href="javascript:void(0);" class="icon" onclick="HHheadMenu()">
                     <i class="fa fa-flask"></i>
                 </a>
                 <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
@@ -87,8 +87,8 @@
 
 <!-- Container für Footer -->
             <footer>
-                <div class="nav" id="HH_Nav">
-                    <a href="javascript:void(0);" class="icon" onclick="HH_Menu()">
+                <div class="nav" id="HHfootNav">
+                    <a href="javascript:void(0);" class="icon" onclick="HHfootMenu()">
                         <i class="fa fa-wrench"></i>
                     </a>
                     <a href="{{ siteUrl }}impressum">Impressum</a>
@@ -102,11 +102,11 @@
     </div>
 
 <!-- Java Einbindungen -->
-
     <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
     <script src="{{ siteUrl }}assets/js/parallax.js"></script>
     <script src="{{ siteUrl }}assets/js/scroll_nav.js"></script>
-    <script src="{{ siteUrl }}assets/js/HH_Menu.js"></script>
+    <script src="{{ siteUrl }}assets/js/HHheadMenu.js"></script>
+    <script src="{{ siteUrl }}assets/js/HHfootMenu.js"></script>
 
     </body>
 </html>

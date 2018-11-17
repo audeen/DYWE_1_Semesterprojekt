@@ -6,12 +6,12 @@
         offsetHeight = document.getElementById('Head').offsetHeight;
         if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
         {
-            document.getElementById("topNav").className = "nav_border";
+            document.getElementById("HHheadNav").className = "nav_border";
             document.getElementById("scroll_nav").className = "nav_logo";
         }
         else
         {
-            document.getElementById("topNav").className = "nav";
+            document.getElementById("HHheadNav").className = "nav";
             document.getElementById("scroll_nav").className = "nav_logo_hidden";
         }
     }
