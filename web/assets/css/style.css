@@ -137,6 +137,7 @@ header
     max-width:                  100%;
     margin:                     0;
     padding:                    0;
+    opacity:                    1;
 }
 
 .logo
@@ -192,6 +193,9 @@ header
     border-color:               #CC0000;
     border-style:               solid;
     border-width:               0.1rem;
+    -moz-animation:         fadein 3s; /* Firefox */
+    -webkit-animation:      fadein 3s; /* Safari and Chrome */
+    -o-animation:           fadein 3s; /* Opera */
 }
 
 .nav a.current, .nav_border a.current
@@ -211,6 +215,9 @@ header
 .nav .icon, .nav_border .icon
 {
     display:                    none;
+    -moz-animation:         fadein 3s; /* Firefox */
+    -webkit-animation:      fadein 3s; /* Safari and Chrome */
+    -o-animation:           fadein 3s; /* Opera */
 }
 
 .nav_logo
@@ -222,7 +229,44 @@ header
     display:                    inline-flex;
     width:                      4rem;
     height:                     3rem;
+    animation:                  fadein 3s;
+    -moz-animation:             fadein 3s; /* Firefox */
+    -webkit-animation:          fadein 3s; /* Safari and Chrome */
+    -o-animation:               fadein 3s; /* Opera */
+
 }
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-o-keyframes fadein { /* Opera */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 
 .nav_logo_hidden
 {
@@ -240,8 +284,10 @@ header
     {
         display:                inline-flex;
         float:                  right;
+        -moz-animation:         fadein 3s; /* Firefox */
+        -webkit-animation:      fadein 3s; /* Safari and Chrome */
+        -o-animation:           fadein 3s; /* Opera */
     }
-
 
     .nav a.icon, .nav_border a.icon
     {
@@ -272,7 +318,7 @@ header
 
 @media all and (max-width: 770px)
 {
-    .nav.responsive
+    .nav.responsive, .nav_border.responsive
     {
         position:               relative;
         position:               -webkit-sticky;
@@ -281,7 +327,7 @@ header
         z-index:                3000;
     }
 
-    .nav.responsive a.icon
+    .nav.responsive a.icon, .nav_border.responsive a.icon
     {
         right:                  0;
         top:                    0;
@@ -290,14 +336,14 @@ header
         padding-right:          0.6rem;
     }
 
-    .nav.responsive a
+    .nav.responsive a, .nav_border.responsive a
     {
         float:                  none;
         display:                block;
         text-align:             center;
     }
 
-    .nav.responsive a:hover
+    .nav.responsive a:hover, .nav_border.responsive a:hover
     {
         color:                  #ff66cc;
         border-color:           #ff66cc;
@@ -305,7 +351,7 @@ header
         border-width:           0.1rem;
     }
 
-    .nav.responsive a.current
+    .nav.responsive a.current, .nav_border.responsive a.current
     {
         color:                  #fff000;
         border-color:           #fff000;

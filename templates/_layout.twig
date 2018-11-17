@@ -25,6 +25,8 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <!-- -->
 
         <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
@@ -67,14 +69,13 @@
                     offsetHeight = document.getElementById('Head').offsetHeight;
                     if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
                     {
-                        document.getElementById("scroll_nav").className = "nav_logo";
                         document.getElementById("topNav").className = "nav_border";
-
+                        document.getElementById("scroll_nav").className = "nav_logo";
                     }
                     else
                     {
-                        document.getElementById("scroll_nav").className = "nav_logo_hidden";
                         document.getElementById("topNav").className = "nav";
+                        document.getElementById("scroll_nav").className = "nav_logo_hidden";
                     }
                 }
             </script>
@@ -84,6 +85,10 @@
                 {
                     var x = document.getElementById("topNav");
                     if (x.className === "nav")
+                    {
+                    x.className += " responsive";
+                    }
+                    else if (x.className === "nav_border")
                     {
                     x.className += " responsive";
                     }
