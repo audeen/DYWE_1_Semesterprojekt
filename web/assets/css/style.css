@@ -53,12 +53,8 @@ html
 
 body
 {
-    background-color:           rgba(0, 0, 0, 0.9);
-
-
-    background-attachment:      fixed;
-    background-position:        center;
-    background-size:            cover;
+    background-color:           rgba(0, 0, 0, 1);
+    margin:                     0;
 }
 
 img
@@ -92,6 +88,7 @@ h2
     text-transform:             uppercase;
     color:                      #b3b3b3;
     margin:                     auto;
+    letter-spacing:             0.2rem;
 }
 
 /* Artikel Teaser */
@@ -103,6 +100,7 @@ h3
     color:                      #ffffff;
     padding-left:               2rem;
     font-stretch:               expanded;
+    hyphens:                    auto;
 }
 
 /* Artikel Body */
@@ -115,6 +113,7 @@ h4
     padding-left:               2.5rem;
     font-weight:                normal;
     margin:                     0;
+    hyphens:                    auto;
 }
 
 @media all and (max-width: 770px)
@@ -150,8 +149,7 @@ header
 }
 
 
-/* Navigation incl. HH Menu & Events
-* ======================================== */
+/* Navigation incl. HH Menu & Events */
 
 .nav
 {
@@ -168,11 +166,6 @@ header
     border-style:               solid;
     border-width:               0;
     border-bottom-width:        0.3rem;
-}
-
-.nav border_hidden
-{
-    border:                     0;
 }
 
 .nav a
@@ -234,16 +227,32 @@ header
     .nav a.current
     {
         display:                inline-flex;
+        float:                  right;
     }
 
 
     .nav a.icon
     {
-        float:                  left;
+        float:                  right;
         display:                inline-flex;
         padding:                0.4rem;
         padding-left:           0.6rem;
         padding-right:          0.6rem;
+    }
+
+    .nav_logo
+    {
+        left:                   0;
+        float:                  left;
+        padding:                0;
+        padding-left:           0.1rem;
+        width:                  5rem;
+        height:                 3rem;
+    }
+
+    .nav_logo_hidden
+    {
+        display:                none;
     }
 }
 
@@ -251,7 +260,7 @@ header
 {
     .nav.responsive
     {
-        position:               absolute;
+        position:               relative;
         position:               -webkit-sticky;
         position:               sticky;
         top:                    0;
@@ -260,9 +269,7 @@ header
 
     .nav.responsive a.icon
     {
-        position:               relative;
-        float:                  left;
-        left:                   0;
+        right:                  0;
         top:                    0;
         padding:                0.1rem;
         padding-left:           0.6rem;
@@ -290,21 +297,6 @@ header
         border-color:           #fff000;
     }
 
-    .logo_nav
-    {
-        position:               absolute;
-        right:                  0;
-        padding:                0;
-        padding-right:          1.5rem;
-        display:                inline-flex;
-        width:                  3rem;
-        height:                 3rem;
-    }
-
-    .logo_nav_hidden
-    {
-        display:                none;
-    }
 }
 
 
@@ -318,9 +310,9 @@ footer
 
 .copy
 {
-    display:                    inline-flex;
-    position:                   absolute;
-    right:                      0;
+    display:                    block;
+    float:                      left;
+    left:                       0;
     margin:                     auto;
     padding:                    0.3rem;
     padding-right:              1rem;
@@ -338,7 +330,7 @@ footer
     flex-direction:             column;
     background-color:           rgba(0, 0, 0, 0.5);
     list-style:                 none;
-    padding-bottom:             1rem;
+    padding-bottom:             3rem;
 }
 
 /* Artikel für Übersichtsseiten
@@ -374,6 +366,17 @@ footer
     margin:                     0 auto;
 }
 
+@media all and (max-width: 770px)
+{
+    .artikel_1
+    {
+        margin:                 0;
+        margin-top:             1rem;
+        padding:                0.3rem;
+        padding-right:          1rem;
+        background-color:       rgba(11, 11, 11, 0.5);
+        color:                  #ffffff;
+}
 
 /* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
 * ======================================== */
@@ -526,8 +529,14 @@ footer
     text-transform:             uppercase;
 }
 
-#parallax-window {
-    min-height: 400px;
-    width: 100%;
-	background: transparent;
+/* Parallax
+* ======================================== */
+
+.parallax-window
+{
+    min-height:                 800px;
+    background-attachment:      fixed;
+    background-position:        center;
+    background-repeat:          no-repeat;
+    background-size:            cover;
 }

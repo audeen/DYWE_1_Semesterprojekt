@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,29 +32,31 @@
     <body>
 
 <!-- Allumfassender Container -->
-<div class="parallax-window" data-parallax="scroll" data-image-src="{{ siteUrl }}assets/imgs/bg_platine_hoch.jpg">
+        <div class="parallax-window" data-parallax="scroll" data-image-src="{{ siteUrl }}assets/imgs/bg_platine_hoch.jpg">
+
         <div class="site">
-           
+
+
 
 <!-- Container für Kopfbereich mit Logo & Navigation -->
 
             <header id="myHead">
                 <div>
                     <div onclick="window.location='{{ siteUrl }}';">
-                        <img class="logo" src="{{ siteUrl }}assets/imgs/FPB%20Header.png" alt="Forschungsgruppe Perfect Beat">
+                        <img class="logo" src="{{ siteUrl }}assets/imgs/FPB_Header.png" alt="Forschungsgruppe Perfect Beat">
                     </div>
                 </div>
             </header>
             <div class="nav" id="mytopNav">
-                        <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
-                        <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
-                        <a class="{{ projekte }}" href="{{ siteUrl }}projekteOverview">Projekte</a>
-                        <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
-                        <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
-                        <a href="javascript:void(0);" class="icon" onclick="HH_topMenu()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="logo_nav_hidden" id="scroll_nav"><img src="{{ siteUrl }}assets/imgs/FPB-Logo.png"></div>
+                <a href="javascript:void(0);" class="icon" onclick="HH_topMenu()">
+                    <i class="fa fa-flask"></i>
+                </a>
+                <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
+                <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
+                <a class="{{ projekte }}" href="{{ siteUrl }}projekteOverview">Projekte</a>
+                <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
+                <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
+                <div class="nav_logo_hidden" id="scroll_nav"><img src="{{ siteUrl }}assets/imgs/FPB_Header_scroll.png"></div>
             </div>
 
 <!-- Scripte für responsive Nav, müssen noch in JS ausgelagert werden ;) -->
@@ -73,6 +75,7 @@
                     }
                 }
             </script>
+
             <script>
                 window.onscroll = function() {scrollNav()};
                 var offsetHeight;
@@ -82,17 +85,16 @@
                     offsetHeight = document.getElementById('myHead').offsetHeight;
                     if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
                     {
-                        document.getElementById("scroll_nav", "mytopNav").className = "logo_nav", "nav";
+                        document.getElementById("scroll_nav").className = "nav_logo";
                     }
                     else
                     {
-                        document.getElementById("scroll_nav", "mytopNav").className = "logo_nav_hidden", "nav border_hidden";
+                        document.getElementById("scroll_nav").className = "nav_logo_hidden";
                     }
                 }
             </script>
 
 <!-- Container für Content -->
-
             <div class="content">
                 {% block aktuelles %}
                 {% endblock aktuelles %}
@@ -128,14 +130,14 @@
 
             <footer>
                 <div class="nav" id="mydownNav">
-                        <a href="{{ siteUrl }}impressum">Impressum</a>
-                        <a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a>
-                        <a href="{{ siteUrl }}kontakt">Kontakt</a>
-                        <a href="{{ siteUrl }}links">Links</a>
-                        <a href="javascript:void(0);" class="icon" onclick="HH_downMenu()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="copy">&copy; HotDocs</div>
+                    <a href="javascript:void(0);" class="icon" onclick="HH_downMenu()">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <a href="{{ siteUrl }}impressum">Impressum</a>
+                    <a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a>
+                    <a href="{{ siteUrl }}kontakt">Kontakt</a>
+                    <a href="{{ siteUrl }}links">Links</a>
+                    <div class="copy">&copy; HotDocs</div>
                 </div>
                 <script>
                 function HH_downMenu()
