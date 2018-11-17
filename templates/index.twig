@@ -10,7 +10,12 @@
     <div class="artikel_1">
     {% for block in entry.artikel.all() %}
     
-	{% switch block.type %}
+    {% switch block.type %}
+    
+        {% case "bilder" %}
+			{% for image in block.artikelThumbnail.all() %}
+            <img src="{{ image.getUrl() }}" width="330px" height="{{ image.getHeight() }}" alt="{{ image.title }}">
+            {% endfor %}
 
         {% case "artikelTitel" %}
         <a href="aktuellesOverview">
@@ -29,10 +34,7 @@
             <a class="button" href="{{ entry.url }}">weiterlesen</a>
             </p>
 
-        {% case "bilder" %}
-			{% for image in block.artikelThumbnail %}
-            <img src="{{ image.getUrl() }}" width="330px" height="{{ image.getHeight() }}" alt="{{ image.title }}">
-            {% endfor %}
+        
 
 		{% default %}
 			...
