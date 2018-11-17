@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Icon -->
-
         <!--<link rel="shortcut icon" href="/favicon.ico">-->
         <link rel="icon" type="image/png" href="{{ siteUrl }}assets/imgs/FPB-Logo-Icon.png" sizes="32x32">
         <link rel="icon" type="image/png" href="{{ siteUrl }}assets/imgs/FPB-Logo-Icon.png" sizes="96x96">
@@ -15,24 +14,25 @@
 
 
 <!-- CSS -->
-
         <link   rel="stylesheet"
                 type="text/css"
                 media="screen"
                 href="{{ siteUrl }}assets/css/style.css"/>
 
 <!-- CSS Einbindung für fa fa -->
+        <link   rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link   rel="stylesheet" 
+                href="https://www.w3schools.com/w3css/4/w3.css">
 
     </head>
     <body>
 
-<!-- Allumfassender Container -->
-        <div class="parallax-window" data-parallax="scroll" data-image-src="{{ siteUrl }}assets/imgs/bg_platine_hoch.jpg">
+<!-- Parallax -->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="{{ siteUrl }}assets/imgs/bg_platine_hoch.jpg">
 
+<!-- Allumfassender Container -->
         <div class="site">
 
 <!-- Container für Kopfbereich mit Logo & Navigation -->
@@ -43,8 +43,8 @@
                     </div>
                 </div>
             </header>
-            <div class="nav" id="topNav">
-                <a href="javascript:void(0);" class="icon" onclick="HH_topMenu()">
+            <div class="nav" id="HH_Nav">
+                <a href="javascript:void(0);" class="icon" onclick="HH_Menu()">
                     <i class="fa fa-flask"></i>
                 </a>
                 <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
@@ -85,13 +85,10 @@
                 {% endblock links %}
             </div>
 
-
-
 <!-- Container für Footer -->
-
             <footer>
-                <div class="nav" id="mydownNav">
-                    <a href="javascript:void(0);" class="icon" onclick="HH_downMenu()">
+                <div class="nav" id="HH_Nav">
+                    <a href="javascript:void(0);" class="icon" onclick="HH_Menu()">
                         <i class="fa fa-wrench"></i>
                     </a>
                     <a href="{{ siteUrl }}impressum">Impressum</a>
@@ -100,20 +97,6 @@
                     <a href="{{ siteUrl }}links">Links</a>
                     <div class="copy">&copy; HotDocs</div>
                 </div>
-                <script>
-                function HH_downMenu()
-                {
-                    var x = document.getElementById("mydownNav");
-                    if (x.className === "nav")
-                    {
-                    x.className += " responsive";
-                    }
-                    else
-                    {
-                    x.className = "nav";
-                    }
-                }
-            </script>
             </footer>
         </div>
     </div>
@@ -123,7 +106,7 @@
     <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
     <script src="{{ siteUrl }}assets/js/parallax.js"></script>
     <script src="{{ siteUrl }}assets/js/scroll_nav.js"></script>
-    <script src="{{ siteUrl }}assets/js/HH_topMenu.js"></script>
+    <script src="{{ siteUrl }}assets/js/HH_Menu.js"></script>
 
     </body>
 </html>

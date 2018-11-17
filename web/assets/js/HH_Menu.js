@@ -1,6 +1,6 @@
-function HH_topMenu()
+function HH_Menu()
 {
-    var x = document.getElementById("topNav");
+    var x = document.getElementById("HH_Nav");
     if (x.className === "nav")
     {
         x.className += " responsive";

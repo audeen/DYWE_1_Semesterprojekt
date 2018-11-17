@@ -533,7 +533,7 @@ footer
 .artikel_3 a
 {
     text-decoration:            none;
-    color:                      inherit;
+    color:                      #CC0000;
 }
 
 /* .artikel_3 img
@@ -541,12 +541,30 @@ footer
 
 } */
 
+
+
 .artikel_3 p
 {
     padding-left:               2.5rem;
     font-weight:                normal;
     margin:                     0;
     word-wrap:                  break-word;
+}
+
+/* Bilderklassen
+* ======================================== */
+
+.dreiBilder img
+{
+    display:                    inline-flex;
+    size:                       cover;
+    height:                     250px;
+    width:                      auto;
+    margin:                     2rem;
+    float:                      right;
+    border-color:               rgba(255, 255, 255, 0.5);
+    border-width:               1rem;
+    border-style:               solid;
 }
 
 
