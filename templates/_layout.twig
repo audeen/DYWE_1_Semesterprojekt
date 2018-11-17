@@ -36,18 +36,15 @@
 
         <div class="site">
 
-
-
 <!-- Container für Kopfbereich mit Logo & Navigation -->
-
-            <header id="myHead">
+            <header id="Head">
                 <div>
                     <div onclick="window.location='{{ siteUrl }}';">
                         <img class="logo" src="{{ siteUrl }}assets/imgs/FPB_Header.png" alt="Forschungsgruppe Perfect Beat">
                     </div>
                 </div>
             </header>
-            <div class="nav" id="mytopNav">
+            <div class="nav" id="topNav">
                 <a href="javascript:void(0);" class="icon" onclick="HH_topMenu()">
                     <i class="fa fa-flask"></i>
                 </a>
@@ -57,15 +54,35 @@
                 <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
                 <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
                 <div class="nav_logo_hidden" id="scroll_nav" onclick="window.location='{{ siteUrl }}';"><img src="{{ siteUrl }}assets/imgs/FPB_Header_scroll.png"></div>
-
             </div>
 
-<!-- Scripte für responsive Nav, müssen noch in JS ausgelagert werden ;) -->
+<!-- Scripte für responsive + scroll Nav, müssen noch in JS ausgelagert werden ;) -->
+
+            <script>
+                window.onscroll = function() {scrollNav()};
+                var offsetHeight;
+
+                function scrollNav()
+                {
+                    offsetHeight = document.getElementById('Head').offsetHeight;
+                    if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
+                    {
+                        document.getElementById("scroll_nav").className = "nav_logo";
+                        document.getElementById("topNav").className = "nav_border";
+
+                    }
+                    else
+                    {
+                        document.getElementById("scroll_nav").className = "nav_logo_hidden";
+                        document.getElementById("topNav").className = "nav";
+                    }
+                }
+            </script>
 
             <script>
                 function HH_topMenu()
                 {
-                    var x = document.getElementById("mytopNav");
+                    var x = document.getElementById("topNav");
                     if (x.className === "nav")
                     {
                     x.className += " responsive";
@@ -77,23 +94,6 @@
                 }
             </script>
 
-            <script>
-                window.onscroll = function() {scrollNav()};
-                var offsetHeight;
-
-                function scrollNav()
-                {
-                    offsetHeight = document.getElementById('myHead').offsetHeight;
-                    if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
-                    {
-                        document.getElementById("scroll_nav").className = "nav_logo";
-                    }
-                    else
-                    {
-                        document.getElementById("scroll_nav").className = "nav_logo_hidden";
-                    }
-                }
-            </script>
 
 <!-- Container für Content -->
             <div class="content">

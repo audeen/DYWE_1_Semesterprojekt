@@ -53,7 +53,6 @@ html
 
 body
 {
-    background-color:           rgba(0, 0, 0, 1);
     margin:                     0;
 }
 
@@ -162,13 +161,26 @@ header
     position:                   sticky;
     top:                        0;
     z-index:                    3000;
-    border-color:               rgba(255, 0, 0, 0.3);
+}
+
+.nav_border
+{
+    overflow:                   hidden;
+    padding-top:                0.4rem;
+    padding-bottom:             0.4rem;
+    background-color:           rgba(1, 0, 0, 1);
+    position:                   relative;
+    position:                   -webkit-sticky;
+    position:                   sticky;
+    top:                        0;
+    z-index:                    3000;
+    border-color:               rgba(255, 0, 0, 1);
     border-style:               solid;
     border-width:               0;
     border-bottom-width:        0.3rem;
 }
 
-.nav a
+.nav a, .nav_border a
 {
     display:                    inline-flex;
     text-decoration:            none;
@@ -182,13 +194,13 @@ header
     border-width:               0.1rem;
 }
 
-.nav a.current
+.nav a.current, .nav_border a.current
 {
     color:                      #fff000;
     border-color:               #fff000;
 }
 
-.nav a:hover
+.nav a:hover, .nav_border a:hover
 {
     color:                      #ff66cc;
     border-color:               #ff66cc;
@@ -196,7 +208,7 @@ header
     border-width:               0.1rem;
 }
 
-.nav .icon
+.nav .icon, .nav_border .icon
 {
     display:                    none;
 }
@@ -219,19 +231,19 @@ header
 
 @media all and (max-width: 770px)
 {
-    .nav a
+    .nav a, .nav_border a
     {
         display:                none;
     }
 
-    .nav a.current
+    .nav a.current, .nav_border a.current
     {
         display:                inline-flex;
         float:                  right;
     }
 
 
-    .nav a.icon
+    .nav a.icon, .nav_border a.icon
     {
         float:                  right;
         display:                inline-flex;
@@ -330,9 +342,9 @@ footer
 {
     display:                    flex;
     flex-direction:             column;
-    background-color:           rgba(0, 0, 0, 0.5);
+    background-color:           rgba(0, 0, 0, 0);
     list-style:                 none;
-    padding-bottom:             3rem;
+    padding-bottom:             2rem;
 }
 
 /* Artikel für Übersichtsseiten
@@ -341,7 +353,7 @@ footer
 .artikel_1
 {
     margin:                     0;
-    margin-top:                 1rem;
+    margin-top:                 2rem;
     padding:                    1.3rem;
     padding-right:              2rem;
     background-color:           rgba(11, 11, 11, 0.5);
@@ -388,7 +400,7 @@ footer
     margin:                     0;
     margin-top:                 1rem;
     padding:                    1.3rem;
-    padding-right:              3rem;
+    padding-right:              2rem;
     background-color:           rgba(11, 11, 11, 0.5);
     color:                      #ffffff;
 }
@@ -476,11 +488,11 @@ footer
     flex-flow:                  row wrap;
     justify-content:            space-around;
     margin:                     0;
-    margin-top:                 1rem;
+    margin-top:                 2rem;
     padding:                    0;
     padding-top:                0.8rem;
     padding-bottom:             0.8rem;
-    background-color:           #000000;
+    background-color:           rgba(0, 0, 0, 0.3);
 }
 
 .cta
@@ -494,13 +506,23 @@ footer
     .cta0
     {
         flex-flow:              column wrap;
-        padding:                1rem;
-
+        margin:                 auto;
+        padding:                0.5rem
     }
 
     .cta
     {
         width:                  100%;
+        margin:                 auto;
+        margin-bottom:          0.25rem;
+        margin-top:             0.25rem;
+    }
+
+    .cta_t
+    {
+        position:               absolute;
+        width:                  inherit;
+        top:                    70%;
     }
 }
 
@@ -531,12 +553,15 @@ footer
     text-transform:             uppercase;
 }
 
+
 /* Parallax
 * ======================================== */
 
 .parallax-window
 {
+    background-color:           rgba(0, 0, 0, 0.5);
     min-height:                 800px;
+    width:                      100%;
     background-attachment:      fixed;
     background-position:        center;
     background-repeat:          no-repeat;
