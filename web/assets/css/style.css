@@ -194,9 +194,9 @@ header
     border-color:               #CC0000;
     border-style:               solid;
     border-width:               0.1rem;
-    -moz-animation:             fadein 1s; /* Firefox */
-    -webkit-animation:          fadein 1s; /* Safari and Chrome */
-    -o-animation:               fadein 1s; /* Opera */
+    -moz-animation:             fadein 3s; /* Firefox */
+    -webkit-animation:          fadein 3s; /* Safari and Chrome */
+    -o-animation:               fadein 3s; /* Opera */
 }
 
 .nav a.current, .nav_border a.current
@@ -216,9 +216,9 @@ header
 .nav .icon, .nav_border .icon
 {
     display:                    none;
-    -moz-animation:         fadein 3s; /* Firefox */
-    -webkit-animation:      fadein 3s; /* Safari and Chrome */
-    -o-animation:           fadein 3s; /* Opera */
+    -moz-animation:             fadein 1s; /* Firefox */
+    -webkit-animation:          fadein 1s; /* Safari and Chrome */
+    -o-animation:               fadein 1s; /* Opera */
 }
 
 .nav_logo
@@ -230,10 +230,10 @@ header
     display:                    inline-flex;
     width:                      4rem;
     height:                     3rem;
-    animation:                  fadein 3s;
-    -moz-animation:             fadein 3s; /* Firefox */
-    -webkit-animation:          fadein 3s; /* Safari and Chrome */
-    -o-animation:               fadein 3s; /* Opera */
+    animation:                  fadein 5s;
+    -moz-animation:             fadein 5s; /* Firefox */
+    -webkit-animation:          fadein 5s; /* Safari and Chrome */
+    -o-animation:               fadein 5s; /* Opera */
 
 }
     @keyframes fadein {
@@ -342,9 +342,9 @@ header
         float:                  none;
         display:                block;
         text-align:             center;
-        -moz-animation:         fadein 1s; /* Firefox */
-        -webkit-animation:      fadein 1s; /* Safari and Chrome */
-        -o-animation:           fadein 1s; /* Opera */
+        -moz-animation:         fadein 0s; /* Firefox */
+        -webkit-animation:      fadein 0s; /* Safari and Chrome */
+        -o-animation:           fadein 0s; /* Opera */
     }
 
     .nav.responsive a:hover, .nav_border.responsive a:hover
@@ -418,6 +418,7 @@ footer
 .button
 {
     display:                    inline-flex;
+    left:                       0%;
     background-color:           rgba(11, 11, 11, 0);
     text-decoration:            none;
     color:                      rgba(255, 0, 0, 0.7);
@@ -431,11 +432,10 @@ footer
 
 .artikel_1 img
 {
-    display:                    flex;
+    display:                    inline-flex;
     flex-flow:                  column;
     float:                      left;
-    margin-right:               1rem;
-    margin-bottom:              1rem;
+    margin:                     1rem;
 }
 
 .artikel_1 figure
