@@ -203,7 +203,6 @@ header
 
 .nav_logo
 {
-    border-color:               #ffffff;
     position:                   absolute;
     right:                      0;
     padding:                    0;
@@ -243,6 +242,7 @@ header
 
     .nav_logo
     {
+        position:               absolute;
         display:                inline-flex;
         left:                   0;
         float:                  left;
