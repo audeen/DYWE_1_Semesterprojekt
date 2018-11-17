@@ -7,7 +7,7 @@
 {% block aktuelles %}
 
     {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
-    <div class="artikel_1">
+        <div class="artikel_1">
     {% for block in entry.artikel.all() %}
     
     {% switch block.type %}

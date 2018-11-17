@@ -6,35 +6,71 @@
 {% block mods %}
 
 <div class="artikel_3">
-    <a href="{{ entry.url }}">
-        <h1>{{ entry.title }}</h1>
-    </a>
-    <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>{{ entry.artikelBody }}</h4>
+    {% for block in entry.artikel.all() %}
 
+	{% switch block.type %}
 
-    {% for asset in entry.artikelAssets %}
-        <img src="{{ asset.url }}" alt="{{ asset.title }}">
-    {% endfor %}
+        {% case "artikelTitel" %}
+			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
 
+		{% case "artikelTeaser" %}
+			<h3>{{ block.teaser }}</h3> {# Type: Reiner Text #}
 
+		{% case "artikelBody" %}
+			<p>{{ block.body }}</p> {# Type: CKEditor #}
+        
+        {% case "bilder" %}
 
-{#     {# Create an asset query with the 'volume' and 'kind' parameters 
-{% set myAssetQuery = craft.assets()
-    .volume('Assets')
-    .kind('asset') %}
+        {% for image in block.bildSmall.all() %}
+            <figure class="bildSmall">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
 
-{# Fetch the assets 
-{% set images = myAssetQuery.all() %}
+        {% for image in block.bildMedium.all() %}
+            <figure class="bildMedium">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.bildLarge.all() %}
+            <figure class="bildLarge">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.zweiBilder.all() %}
+            <figure class="zweiBilder">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.dreiBilder.all() %}
+            <figure class="dreiBilder">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.artikelThumbnail.all() %}
+            <figure class="artikelThumbnail">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.bildergalerie.all() %}
+            <figure class="bildergalerie">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %} 
+        
+        <figcaption>{{ block.bu }}</figcaption>
 
-{# Display the thumbnail list 
-<ul>
-    {% for asset in images %}
-        <li><img src="{{ image.geturl('smallThumb') }}" alt="{{ image.title }}"></li>
-    {% endfor %}
-</ul>
- #}
+		{% default %}
+			...
 
+    {% endswitch %}
+
+{% endfor %}
 </div>
 <br>
 {% endblock mods %}
