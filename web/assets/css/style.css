@@ -201,18 +201,19 @@ header
     display:                    none;
 }
 
-.logo_nav
+.nav_logo
 {
+    border-color:               #ffffff;
     position:                   absolute;
     right:                      0;
     padding:                    0;
     padding-right:              1.5rem;
     display:                    inline-flex;
-    width:                      3rem;
+    width:                      4rem;
     height:                     3rem;
 }
 
-.logo_nav_hidden
+.nav_logo_hidden
 {
     display:                    none;
 }
@@ -242,6 +243,7 @@ header
 
     .nav_logo
     {
+        display:                inline-flex;
         left:                   0;
         float:                  left;
         padding:                0;
@@ -376,8 +378,8 @@ footer
         padding-right:          1rem;
         background-color:       rgba(11, 11, 11, 0.5);
         color:                  #ffffff;
+    }
 }
-
 /* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
 * ======================================== */
 
