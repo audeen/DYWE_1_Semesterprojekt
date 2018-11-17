@@ -4,33 +4,49 @@
 {% set aktuelles, projekte, opensource, mods = '','','','' %}
 
 
-{# {% block aktuelles %}
+{% block aktuelles %}
+
+    {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
+    <div class="artikel_1">
+    {% for block in entry.artikel.all() %}
     
-{% for entry in craft.entries.section('aktuelles').limit(1).all() %}
+	{% switch block.type %}
 
-<div class="artikel_1">
-    <a href='aktuellesOverview'>
-    <h2>{{ entry.section }}</h2>
-    </a>
-    <a href="{{ entry.url }}">
-    <h1>{{ entry.title }}</h1>
-    </a>
-    <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>
-        {% for image in entry.artikelImage.limit(2).all() %}
-            <div>
-                <img src="{{ image.geturl ('smallThumb') }}">
-            </div>
-        {% endfor %}
+        {% case "artikelTitel" %}
+        <a href="aktuellesOverview">
+        <h2>{{ entry.section }}</h2>
+        </a>
 
-        {{ entry.artikelBody|chop(limit=1, unit='p', allowedTags="<p>,<h4>") }}
-        <a href="{{ entry.url }}">weiterlesen...</a>
-    </h4>
-</div>
+        <a href="{{ entry.url }}">
+			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
+        </a>
+
+		{% case "artikelTeaser" %}
+			<h3>{{ block.teaser }}</h3> {# Type: Reiner Text #}
+
+		{% case "artikelBody" %}
+			<p>{{ block.body|chop(limit=1, unit='p') }} {# Type: CKEditor #}
+            <button><a href="{{ entry.url }}">weiterlesen...</a></button>
+            </p>
+		{% case "bilder" %}
+			{# <img src="{{ block.bildLarge.one.url }}"> #} {# Type: Dateien #}
+			{# {{ block.bildExtern }} #} {# Type: URL #}
+			{# {{ block.artikelThumbnail }} #} {# Type: Dateien #}
+
+		{% for image in block.bildLarge.all %}
+    		<img src="{{ image.url }}">
+		{% endfor %}
+
+		{% default %}
+			...
+
+    {% endswitch %}
 
 {% endfor %}
+</div>
+{% endfor %}
 
-{% endblock aktuelles %} #}
+    {% endblock aktuelles %}
 
 
 {% block projekte %}

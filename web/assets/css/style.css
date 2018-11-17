@@ -103,7 +103,7 @@ h3
 }
 
 /* Artikel Body */
-h4
+p
 {
     font-family:                'Inconsolata';
 	font-size:                  1em;
@@ -123,7 +123,7 @@ h4
         text-align:              justify;
     }
 
-    h4
+    p
     {
         padding-left:            1rem;
         text-align:              justify;
@@ -193,9 +193,9 @@ header
     border-color:               #CC0000;
     border-style:               solid;
     border-width:               0.1rem;
-    -moz-animation:         fadein 3s; /* Firefox */
-    -webkit-animation:      fadein 3s; /* Safari and Chrome */
-    -o-animation:           fadein 3s; /* Opera */
+    -moz-animation:             fadein 1s; /* Firefox */
+    -webkit-animation:          fadein 1s; /* Safari and Chrome */
+    -o-animation:               fadein 1s; /* Opera */
 }
 
 .nav a.current, .nav_border a.current
@@ -341,6 +341,9 @@ header
         float:                  none;
         display:                block;
         text-align:             center;
+        -moz-animation:         fadein 1s; /* Firefox */
+        -webkit-animation:      fadein 1s; /* Safari and Chrome */
+        -o-animation:           fadein 1s; /* Opera */
     }
 
     .nav.responsive a:hover, .nav_border.responsive a:hover
@@ -410,6 +413,20 @@ footer
 {
     text-decoration:            none;
     color:                      #fff000;
+}
+
+.artikel_1 button
+{
+    background-color:           rgba(11, 11, 11, 0);
+    border:                     none;
+    color:                      white;
+    padding:                    15px 32px;
+    text-align:                 center;
+    text-decoration:            none;
+    display:                    inline-block;
+    margin:                     4px 2px;
+    cursor:                     pointer;
+
 }
 
 .artikel_1 img
