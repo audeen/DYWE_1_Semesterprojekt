@@ -197,6 +197,7 @@ header
     -moz-animation:             fadein 3s; /* Firefox */
     -webkit-animation:          fadein 3s; /* Safari and Chrome */
     -o-animation:               fadein 3s; /* Opera */
+    animation:                  fadein 3s;
 }
 
 .nav a.current, .nav_border a.current
@@ -219,6 +220,8 @@ header
     -moz-animation:             fadein 1s; /* Firefox */
     -webkit-animation:          fadein 1s; /* Safari and Chrome */
     -o-animation:               fadein 1s; /* Opera */
+    animation:                  fadein 1s;
+
 }
 
 .nav_logo
@@ -234,6 +237,8 @@ header
     -moz-animation:             fadein 5s; /* Firefox */
     -webkit-animation:          fadein 5s; /* Safari and Chrome */
     -o-animation:               fadein 5s; /* Opera */
+    animation:                  fadein 5s;
+
 
 }
     @keyframes fadein {
@@ -288,6 +293,8 @@ header
         -moz-animation:         fadein 3s; /* Firefox */
         -webkit-animation:      fadein 3s; /* Safari and Chrome */
         -o-animation:           fadein 3s; /* Opera */
+        animation:              fadein 3s;
+
     }
 
     .nav a.icon, .nav_border a.icon
@@ -345,6 +352,8 @@ header
         -moz-animation:         fadein 0s; /* Firefox */
         -webkit-animation:      fadein 0s; /* Safari and Chrome */
         -o-animation:           fadein 0s; /* Opera */
+        animation:              fadein 0s;
+
     }
 
     .nav.responsive a:hover, .nav_border.responsive a:hover
