@@ -61,6 +61,20 @@
         
         <figcaption>{{ block.bu }}</figcaption>
 
+        {% case "externeLinks" %}
+
+        {% for block in entry.artikel %}
+
+        {% set asset = block.exteernalAssets.first() %}
+      
+        {% set embed = craft.embeddedAssets.fromAsset(asset) %}
+      
+        {% if embed %}
+          {{ embed.safeHtml|raw }}
+        {% endif %}
+      
+      {% endfor %}
+
     {% endswitch %}
 
 {% endfor %}
