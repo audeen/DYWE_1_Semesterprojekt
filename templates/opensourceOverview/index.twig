@@ -7,18 +7,30 @@
 
 {% block opensource %}
 
-{% for entry in craft.entries.section('opensource').limit(10).all() %}
-
+{% for entry in craft.entries.section('opensource').all() %}
 <div class="artikel_1">
-    <a href="{{ entry.url }}">
-        <h1>{{ entry.title }}</h1>
-    </a>
-    <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>
-        {{ entry.artikelBody|chop(limit=1, unit='p') }}
-        <a href="{{ entry.url }}">Weiterlesen...</a>
-    </h4>
+{% for block in entry.artikel.all() %}
+
+{% switch block.type %}
+
+	{% case "artikelPreview" %}
+	<a href="{{ entry.url }}">
+		<h1>{{ block.previewtitel }}</h1>
+	</a>
+	<h3>{{ block.previewteaser }}</h3>
+	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
+
+	{% case "bilder" %}
+	{% for image in block.artikelThumbnail.all() %}
+		<figure class="artikelThumbnail">
+			<img src="{{ image.getUrl() }}">
+		</figure>
+	{% endfor %}
+
+{% endswitch %}	
 
 {% endfor %}
-<br>
+<a class="button" href="{{ entry.url }}">weiterlesen</a>
+</div>
+{% endfor %}
 {% endblock opensource %}

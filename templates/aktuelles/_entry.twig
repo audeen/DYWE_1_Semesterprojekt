@@ -17,7 +17,8 @@
 		{% case "artikelTeaser" %}
 			<h3>{{ block.teaser }}</h3> {# Type: Reiner Text #}
 
-		{% case "artikelBody" %}
+        {% case "artikelBody" %}
+        
 			<p>{{ block.body }}</p> {# Type: CKEditor #}
         
         {% case "bilder" %}
@@ -51,13 +52,7 @@
                 <img src="{{ image.getUrl() }}">
             </figure>
         {% endfor %}
-        
-        {% for image in block.artikelThumbnail.all() %}
-            <figure class="artikelThumbnail">
-                <img src="{{ image.getUrl() }}">
-            </figure>
-        {% endfor %}
-        
+              
         {% for image in block.bildergalerie.all() %}
             <figure class="bildergalerie">
                 <img src="{{ image.getUrl() }}">

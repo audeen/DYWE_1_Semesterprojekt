@@ -51,12 +51,6 @@
             </figure>
         {% endfor %}
         
-        {% for image in block.artikelThumbnail.all() %}
-            <figure class="artikelThumbnail">
-                <img src="{{ image.getUrl() }}">
-            </figure>
-        {% endfor %}
-        
         {% for image in block.bildergalerie.all() %}
             <figure class="bildergalerie">
                 <img src="{{ image.getUrl() }}">

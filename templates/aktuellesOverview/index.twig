@@ -7,45 +7,36 @@
 
 {% block aktuelles %}
 
-    {% for entry in craft.entries.section('aktuelles').limit(10).all() %}
-    <div class="artikel_1">
-    {% for block in entry.artikel.all() %}
-    
-	{% switch block.type %}
 
-		{% case "artikelTitel" %}
-        <a href="{{ entry.url}}">
-			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
-        </a>
+{% for entry in craft.entries.section('aktuelles').all() %}
+<div class="artikel_1">
+{% for block in entry.artikel.all() %}
 
-		{% case "artikelTeaser" %}
-			<h2>{{ block.teaser }}</h2> {# Type: Reiner Text #}
+{% switch block.type %}
 
-		{% case "artikelBody" %}
-			{{ block.body }} {# Type: CKEditor #}
+	{% case "artikelPreview" %}
+	<a href="{{ entry.url }}">
+		<h1>{{ block.previewtitel }}</h1>
+	</a>
+	<h3>{{ block.previewteaser }}</h3>
+	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
 
-		{% case "bilder" %}
-			{# <img src="{{ block.bildLarge.one.url }}"> #} {# Type: Dateien #}
-			{# {{ block.bildExtern }} #} {# Type: URL #}
-			{# {{ block.artikelThumbnail }} #} {# Type: Dateien #}
+	{% case "bilder" %}
+	{% for image in block.artikelThumbnail.all() %}
+		<figure class="artikelThumbnail">
+			<img src="{{ image.getUrl() }}">
+		</figure>
+	{% endfor %}
 
-		{% for image in block.bildLarge.all %}
-    		<img src="{{ image.url }}">
-		{% endfor %}
-
-		{% case "videos" %}
-			{{ block.youtubeEmbed }} {# Type: URL #}
-
-		{% default %}
-			...
-
-    {% endswitch %}
+{% endswitch %}	
 
 {% endfor %}
+<a class="button" href="{{ entry.url }}">weiterlesen</a>
 </div>
 {% endfor %}
-    
-    {% endblock aktuelles %}
+
+
+{% endblock aktuelles %}
 
 
 
