@@ -110,7 +110,7 @@
 
 {% switch block.type %}
 
-    {% case "previewText" %}
+	{% case "artikelPreview" %}
 	
 	{% for image in block.artikelThumbnail.all() %}
 		<figure class="artikelThumbnail">
@@ -118,7 +118,7 @@
 		</figure>
 	{% endfor %}
 
-	<div class="artikelPreview">
+	<div class="previewText">
 			<a href='opensourceOverview'>
 				<h2>{{ entry.section }}</h2>
 			</a>
@@ -128,7 +128,6 @@
 			<h3>{{ block.previewteaser }}</h3>
 			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
 	</div>
-
 {% endswitch %}	
 
 {% endfor %}
