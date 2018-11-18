@@ -67,10 +67,10 @@
 
         {% set asset = block.externalAssets.first() %}
       
-        {% set embed = craft.embeddedAssets.fromAsset(asset) %}
+        {% set embed = craft.embeddedAssets.get(asset) %}
       
         {% if embed %}
-          {{ embed.safeHtml|raw }}
+            {{ embeddedAsset ? embeddedAsset.html }}
         {% endif %}
       
       {% endfor %}
