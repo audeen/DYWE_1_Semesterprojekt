@@ -12,7 +12,13 @@
 
 {% switch block.type %}
 
-    {% case "artikelPreview" %}
+	{% case "artikelPreview" %}
+	
+	{% for image in block.artikelThumbnail.all() %}
+		<figure class="artikelThumbnail">
+			<img src="{{ image.getUrl('smallThumb') }}">
+		</figure>
+	{% endfor %}
     
     <a href='aktuellesOverview'>
             <h2>{{ entry.section }}</h2>
@@ -23,12 +29,6 @@
 	<h3>{{ block.previewteaser }}</h3>
 	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
 
-	
-	{% for image in block.artikelThumbnail.all() %}
-		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl('mediumThumb') }}">
-		</figure>
-	{% endfor %}
 
 {% endswitch %}	
 
@@ -39,7 +39,6 @@
 
 {% endblock aktuelles %}
 
-
 {% block projekte %}
     
 {% for entry in craft.entries.section('projekte').limit(1).all() %}
@@ -49,7 +48,13 @@
 {% switch block.type %}
 
     {% case "artikelPreview" %}
-    
+
+	{% for image in block.artikelThumbnail.all() %}
+		<figure class="artikelThumbnail">
+			<img src="{{ image.getUrl('smallThumb') }}">
+		</figure>
+	{% endfor %}	
+	
     <a href='projekteOverview'>
             <h2>{{ entry.section }}</h2>
         </a>
@@ -58,13 +63,6 @@
 	</a>
 	<h3>{{ block.previewteaser }}</h3>
 	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
-
-	
-	{% for image in block.artikelThumbnail.all() %}
-		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl('mediumThumb') }}">
-		</figure>
-	{% endfor %}
 
 {% endswitch %}	
 
@@ -111,7 +109,13 @@
 {% switch block.type %}
 
     {% case "artikelPreview" %}
-    
+	
+	{% for image in block.artikelThumbnail.all() %}
+		<figure class="artikelThumbnail">
+			<img src="{{ image.getUrl('smallThumb') }}">
+		</figure>
+	{% endfor %}
+
     <a href='opensourceOverview'>
             <h2>{{ entry.section }}</h2>
         </a>
@@ -120,13 +124,6 @@
 	</a>
 	<h3>{{ block.previewteaser }}</h3>
 	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
-
-
-	{% for image in block.artikelThumbnail.all() %}
-		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl('mediumThumb') }}">
-		</figure>
-	{% endfor %}
 
 {% endswitch %}	
 
@@ -146,7 +143,12 @@
 
 {% switch block.type %}
 
-    {% case "artikelPreview" %}
+	{% case "artikelPreview" %}
+
+	{% for image in block.artikelThumbnail.all() %}
+	<figure class="artikelThumbnail">
+		<img src="{{ image.getUrl('smallThumb') }}">
+	</figure>
     
     <a href='modsOverview'>
             <h2>{{ entry.section }}</h2>
@@ -157,11 +159,6 @@
 	<h3>{{ block.previewteaser }}</h3>
 	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
 
-
-	{% for image in block.artikelThumbnail.all() %}
-		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl('smallThumb') }}">
-		</figure>
 	{% endfor %}
 
 {% endswitch %}	

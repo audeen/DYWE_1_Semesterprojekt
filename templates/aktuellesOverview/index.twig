@@ -7,7 +7,6 @@
 
 {% block aktuelles %}
 
-
 {% for entry in craft.entries.section('aktuelles').all() %}
 <div class="artikel_1">
 {% for block in entry.artikel.all() %}
@@ -15,17 +14,18 @@
 {% switch block.type %}
 
 	{% case "artikelPreview" %}
-	<a href="{{ entry.url }}">
-		<h1>{{ block.previewtitel }}</h1>
-	</a>
-	<h3>{{ block.previewteaser }}</h3>
-	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
 
 	{% for image in block.artikelThumbnail.all() %}
 		<figure class="artikelThumbnail">
 			<img src="{{ image.getUrl('smallThumb') }}">
 		</figure>
-	{% endfor %}
+	{% endfor %}	
+
+	<a href="{{ entry.url }}">
+		<h1>{{ block.previewtitel }}</h1>
+	</a>
+	<h3>{{ block.previewteaser }}</h3>
+	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
 
 {% endswitch %}	
 
