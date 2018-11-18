@@ -3,7 +3,7 @@ function HHfootMenu()
     var x = document.getElementById("HHfootNav");
     if (x.className === "nav")
     {
-        x.className += " responsive";
+        x.className += " responsive_foot";
     }
     else
     {

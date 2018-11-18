@@ -194,10 +194,10 @@ header
     border-color:               #CC0000;
     border-style:               solid;
     border-width:               0.1rem;
+    animation:                  fadein 3s;
     -moz-animation:             fadein 3s; /* Firefox */
     -webkit-animation:          fadein 3s; /* Safari and Chrome */
     -o-animation:               fadein 3s; /* Opera */
-    animation:                  fadein 3s;
 }
 
 .nav a.current, .nav_border a.current
@@ -217,10 +217,10 @@ header
 .nav .icon, .nav_border .icon
 {
     display:                    none;
+    animation:                  fadein 0s;
     -moz-animation:             fadein 1s; /* Firefox */
     -webkit-animation:          fadein 1s; /* Safari and Chrome */
     -o-animation:               fadein 1s; /* Opera */
-    animation:                  fadein 0s;
 }
 
 .nav_logo
@@ -232,10 +232,10 @@ header
     display:                    inline-flex;
     width:                      4rem;
     height:                     3rem;
+    animation:                  fadein 0s;
     -moz-animation:             fadein 5s; /* Firefox */
     -webkit-animation:          fadein 5s; /* Safari and Chrome */
     -o-animation:               fadein 5s; /* Opera */
-    animation:                  fadein 0s;
 }
     @keyframes fadein {
         from {
@@ -286,10 +286,10 @@ header
     {
         display:                inline-flex;
         float:                  right;
+        animation:              fadein 0s;
         -moz-animation:         fadein 3s; /* Firefox */
         -webkit-animation:      fadein 3s; /* Safari and Chrome */
         -o-animation:           fadein 3s; /* Opera */
-        animation:              fadein 0s;
 
     }
 
@@ -345,10 +345,10 @@ header
         float:                  none;
         display:                block;
         text-align:             center;
+        animation:              fadein 0s;
         -moz-animation:         fadein 3s; /* Firefox */
         -webkit-animation:      fadein 3s; /* Safari and Chrome */
         -o-animation:           fadein 3s; /* Opera */
-        animation:              fadein 0s;
     }
 
     .nav.responsive a:hover, .nav_border.responsive a:hover
@@ -365,6 +365,16 @@ header
         border-color:           #fff000;
     }
 
+    .nav.responsive_foot a
+    {
+        float:                  none;
+        display:                block;
+        text-align:             center;
+        animation:              fadein 0s;
+        -moz-animation:         fadein 3s; /* Firefox */
+        -webkit-animation:      fadein 3s; /* Safari and Chrome */
+        -o-animation:           fadein 3s; /* Opera */
+    }
 }
 
 
@@ -379,15 +389,30 @@ footer
 .copy
 {
     display:                    block;
-    float:                      left;
-    left:                       0;
+    float:                      right;
+    right:                      0;
     margin:                     auto;
-    padding:                    0.3rem;
+    padding:                    auto;
     padding-right:              1rem;
+    padding-top:                2rem;
     text-transform:             uppercase;
     color:                      #b3b3b3;
 }
 
+@media all and (max-width: 770px)
+{
+    .copy
+    {
+        float:                  left;
+        left:                   0;
+        margin:                 auto;
+        padding:                auto;
+        padding-left:           1rem;
+        padding-top:            1rem;
+        
+    }
+
+}
 
 /* Inhalt
 * ======================================== */
