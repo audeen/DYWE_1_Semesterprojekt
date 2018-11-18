@@ -23,7 +23,7 @@
 	{% case "bilder" %}
 	{% for image in block.artikelThumbnail.all() %}
 		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl() }}">
+			<img src="{{ image.getUrl('mediumThumb') }}">
 		</figure>
 	{% endfor %}
 
