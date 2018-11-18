@@ -21,11 +21,16 @@
 		</figure>
 	{% endfor %}	
 
-	<a href="{{ entry.url }}">
-		<h1>{{ block.previewtitel }}</h1>
-	</a>
-	<h3>{{ block.previewteaser }}</h3>
-	<p>{{ block.previewbody|chop(limit=1, unit='p') }}
+	<div class="artikelPreview">
+			<a href='aktuellesOverview'>
+				<h2>{{ entry.section }}</h2>
+			</a>
+			<a href="{{ entry.url }}">
+				<h1>{{ block.previewtitel }}</h1>
+			</a>
+			<h3>{{ block.previewteaser }}</h3>
+			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
+	</div>
 
 {% endswitch %}	
 
