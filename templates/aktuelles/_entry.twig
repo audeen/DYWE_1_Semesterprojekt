@@ -71,6 +71,16 @@
  #}
     {% endswitch %}
 
+    {% if block.type == "embedVideo" %}
+    {% set asset = block.embedVideo.first() %}
+    {% set embed = craft.embeddedAssets.fromAsset(asset) %}
+        {% if embed %}
+        <div id="video-box" class="videobox">
+              {{ embed.safeHtml|raw }}
+        </div>
+        {% endif %}
+{% endif %}
+
 {% endfor %}
 </div>
 
