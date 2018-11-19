@@ -64,11 +64,11 @@
     {% endswitch %}
 
     {% if block.type == "embedvideo" %}
-    {% set asset = block.embedvideo.first() %}
-    {% set embed = craft.embeddedAssets.fromAsset(asset) %}
+    {% set asset = block.embedvideo.one() %}
+    {% set embed = craft.embeddedAssets.get(asset) %}
         {% if embed %}
         <div id="video-box" class="videobox">
-              {{ embed.safeHtml|raw }}
+            {{ embeddedAsset ? embeddedAsset.html }}
         </div>
         {% endif %}
     {% endif %}
