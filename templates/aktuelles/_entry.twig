@@ -68,7 +68,7 @@
     {% set embed = craft.embeddedAssets.get(asset) %}
         {% if embed %}
         <div id="video-box" class="videobox">
-            {{ embeddedAsset ? embeddedAsset.html }}
+            {{ embed ? embed.html }}
         </div>
         {% endif %}
     {% endif %}
