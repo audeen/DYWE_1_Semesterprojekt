@@ -63,8 +63,8 @@
 
     {% endswitch %}
 
-    {% if block.type == "embedvideo" %}
-    {% set asset = block.embedvideo.one() %}
+    {% if block.type == "video" %}
+    {% set asset = block.video.one() %}
     {% set embed = craft.embeddedAssets.get(asset) %}
         {% if embed %}
         <div id="video-box" class="videobox">
