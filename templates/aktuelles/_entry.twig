@@ -83,6 +83,16 @@
         {% endif %}
     {% endif %}
 
+    {% if block.type == "posts" %}
+    {% set asset = block.posts.one() %}
+    {% set embed = craft.embeddedAssets.get(asset) %}
+        {% if embed %}
+        <div class="posts">
+            {{ embed ? embed.html }}
+        </div>
+        {% endif %}
+    {% endif %}
+
 
 {% endfor %}
 </div>
