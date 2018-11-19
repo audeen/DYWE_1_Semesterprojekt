@@ -61,14 +61,6 @@
         
         <figcaption>{{ block.bu }}</figcaption>
 
-{#         {% case "externeLinks" %}
-
-        {% for asset in block.externalAssets.all() %} 
-
-        {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
-            {{ embeddedAsset ? embeddedAsset.html }}
-        {% endfor %}
- #}
     {% endswitch %}
 
     {% if block.type == "embedvideo" %}
@@ -79,12 +71,10 @@
               {{ embed.safeHtml|raw }}
         </div>
         {% endif %}
-{% endif %}
+    {% endif %}
 
 {% endfor %}
 </div>
-
-
 
 {% endblock aktuelles %}
 

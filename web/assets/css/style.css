@@ -681,3 +681,9 @@ footer
     background-repeat:          no-repeat;
     background-size:            cover;
 }
+
+.videobox 
+{
+    max-width:                  1200px;
+    height:                     auto;
+}
