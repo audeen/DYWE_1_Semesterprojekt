@@ -73,6 +73,17 @@
         {% endif %}
     {% endif %}
 
+    {% if block.type == "audio" %}
+    {% set asset = block.audio.one() %}
+    {% set embed = craft.embeddedAssets.get(asset) %}
+        {% if embed %}
+        <div class="audio">
+            {{ embed ? embed.html }}
+        </div>
+        {% endif %}
+    {% endif %}
+
+
 {% endfor %}
 </div>
 
