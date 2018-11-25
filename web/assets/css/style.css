@@ -444,7 +444,7 @@ footer
 .button
 {
     display:                    inline-flex;
-    left:                       0%;
+    right:                      0%;
     background-color:           rgba(11, 11, 11, 0);
     text-decoration:            none;
     color:                      rgba(255, 0, 0, 0.7);
@@ -472,7 +472,7 @@ footer
         margin-top:             1rem;
         padding:                0.3rem;
         padding-right:          1rem;
-        background-color:       rgba(11, 11, 11, 0.8);
+        background-color:       rgba(11, 11, 11, 1);
         color:                  #ffffff;
     }
 
@@ -494,7 +494,7 @@ footer
     margin-top:                 1rem;
     padding:                    1.3rem;
     padding-right:              2rem;
-    background-color:           rgba(11, 11, 11, 0.8);
+    background-color:           rgba(11, 11, 11, 1);
     color:                      #ffffff;
 }
 
@@ -548,7 +548,7 @@ footer
     margin-top:                 1rem;
     padding:                    1.3rem;
     padding-right:              2rem;
-    background-color:           rgba(11, 11, 11, 0.8);
+    background-color:           rgba(11, 11, 11, 1);
     color:                      #ffffff;
 }
 
