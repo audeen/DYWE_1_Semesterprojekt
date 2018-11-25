@@ -194,10 +194,10 @@ header
     border-color:               #CC0000;
     border-style:               solid;
     border-width:               0.1rem;
-    animation:                  fadein 3s;
-    -moz-animation:             fadein 3s; /* Firefox */
-    -webkit-animation:          fadein 3s; /* Safari and Chrome */
-    -o-animation:               fadein 3s; /* Opera */
+    animation:                  fadein 1s;
+    -moz-animation:             fadein 1s; /* Firefox */
+    -webkit-animation:          fadein 1s; /* Safari and Chrome */
+    -o-animation:               fadein 1s; /* Opera */
 }
 
 .nav a.current, .nav_border a.current
@@ -475,7 +475,7 @@ footer
         margin-top:             1rem;
         padding:                0.3rem;
         padding-right:          1rem;
-        background-color:       rgba(11, 11, 11, 0.5);
+        background-color:       rgba(11, 11, 11, 0.8);
         color:                  #ffffff;
     }
 
@@ -497,7 +497,7 @@ footer
     margin-top:                 1rem;
     padding:                    1.3rem;
     padding-right:              2rem;
-    background-color:           rgba(11, 11, 11, 0.5);
+    background-color:           rgba(11, 11, 11, 0.8);
     color:                      #ffffff;
 }
 
@@ -551,7 +551,7 @@ footer
     margin-top:                 1rem;
     padding:                    1.3rem;
     padding-right:              2rem;
-    background-color:           rgba(11, 11, 11, 0.5);
+    background-color:           rgba(11, 11, 11, 0.8);
     color:                      #ffffff;
 }
 
