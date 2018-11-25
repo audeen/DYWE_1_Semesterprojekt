@@ -227,6 +227,7 @@ header
 {
     position:                   absolute;
     right:                      0;
+    margin:                     auto;
     padding:                    0;
     padding-right:              1.5rem;
     display:                    inline-flex;
@@ -287,9 +288,9 @@ header
         display:                inline-flex;
         float:                  right;
         animation:              fadein 0s;
-        -moz-animation:         fadein 3s; /* Firefox */
-        -webkit-animation:      fadein 3s; /* Safari and Chrome */
-        -o-animation:           fadein 3s; /* Opera */
+        -moz-animation:         fadein 1s; /* Firefox */
+        -webkit-animation:      fadein 1s; /* Safari and Chrome */
+        -o-animation:           fadein 1s; /* Opera */
 
     }
 
