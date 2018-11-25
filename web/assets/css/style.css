@@ -682,7 +682,7 @@ footer
     background-size:            cover;
 }
 
-.parallax-window background-attachment
+.parallax-window data-image-src
 {
     -webkit-filter:             blur(5px);
     -moz-filter:                blur(5px);
