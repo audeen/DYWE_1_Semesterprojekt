@@ -211,7 +211,7 @@ header
     text-decoration:            underline;
 }
 
-.nav .icon, .nav_border .icon
+.nav .icon, .nav_border .icon, .fa
 {
     display:                    none;
     animation:                  fadein 0s;
