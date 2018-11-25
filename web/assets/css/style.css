@@ -367,6 +367,18 @@ header
         border-color:           #ffffff;
     }
 
+    .nav.responsive_foot
+    {
+        transform:              rotate(-180deg);
+        -moz-transform:         rotate(-180deg); /* Firefox */
+        -webkit-transform:      rotate(-180deg); /* Safari */
+        -o-transform: rotate(-180deg); /* Opera */
+        -ms-transform:          rotate(-180deg); /* IE */
+        filter:                 progid:DXImageTransform.Microsoft.BasicImage(rotation=6); /* Internet Explorer */ 
+        top:                    auto;
+        bottom:                 100% !important;
+    }
+
     .nav.responsive_foot a
     {
         float:                  none;
@@ -376,14 +388,6 @@ header
         -moz-animation:         fadein 1s; /* Firefox */
         -webkit-animation:      fadein 1s; /* Safari and Chrome */
         -o-animation:           fadein 1s; /* Opera */
-        transform:              rotate(-180deg);
-        -moz-transform:         rotate(-180deg); /* Firefox */
-        -webkit-transform:      rotate(-180deg); /* Safari */
-        -o-transform: rotate(-180deg); /* Opera */
-        -ms-transform:          rotate(-180deg); /* IE */
-        filter:                 progid:DXImageTransform.Microsoft.BasicImage(rotation=6); /* Internet Explorer */ 
-        top:                    auto;
-        bottom:                 100% !important;
     }
 }
 
