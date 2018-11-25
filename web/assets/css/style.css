@@ -293,7 +293,7 @@ header
 
     }
 
-    .nav a.icon, .nav_border a.icon
+    .nav .icon, .nav_border .icon
     {
         float:                  right;
         display:                inline-flex;
