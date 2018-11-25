@@ -376,6 +376,7 @@ header
         -moz-animation:         fadein 1s; /* Firefox */
         -webkit-animation:      fadein 1s; /* Safari and Chrome */
         -o-animation:           fadein 1s; /* Opera */
+        transform:              rotate(-180deg);
         -moz-transform:         rotate(-180deg); /* Firefox */
         -webkit-transform:      rotate(-180deg); /* Safari */
         -o-transform: rotate(-180deg); /* Opera */
