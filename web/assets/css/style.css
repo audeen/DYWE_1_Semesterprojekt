@@ -182,7 +182,7 @@ header
     border-bottom-width:        0.3rem;
 }
 
-.nav a, .nav_border a, .fa
+.nav a, .nav_border a
 {
     display:                    inline-flex;
     color:                      rgba(255, 255, 255, 1);
@@ -211,23 +211,19 @@ header
     text-decoration:            underline;
 }
 
-.nav .icon, .nav_border .icon,
+.nav .icon, .nav_border .icon
 {
     display:                    none;
     animation:                  fadein 0s;
     -moz-animation:             fadein 1s; /* Firefox */
     -webkit-animation:          fadein 1s; /* Safari and Chrome */
     -o-animation:               fadein 1s; /* Opera */
-    border-color:             #ffffff;
-    border-style:               solid;
-    border-width:               0.1rem;
 }
 
 .nav_logo
 {
     position:                   absolute;
     right:                      0;
-    margin:                     auto;
     padding:                    0;
     padding-right:              1.5rem;
     display:                    inline-flex;
@@ -288,23 +284,19 @@ header
         display:                inline-flex;
         float:                  right;
         animation:              fadein 0s;
-        -moz-animation:         fadein 1s; /* Firefox */
-        -webkit-animation:      fadein 1s; /* Safari and Chrome */
-        -o-animation:           fadein 1s; /* Opera */
+        -moz-animation:         fadein 3s; /* Firefox */
+        -webkit-animation:      fadein 3s; /* Safari and Chrome */
+        -o-animation:           fadein 3s; /* Opera */
 
     }
 
-    .nav .icon, .nav_border .icon
+    .nav a.icon, .nav_border a.icon
     {
         float:                  right;
         display:                inline-flex;
-        margin:                 auto;
         padding:                0.5rem;
         padding-left:           0.6rem;
         padding-right:          0.6rem;
-        border-color:         #ffffff;
-        border-style:           solid;
-        border-width:           0.1rem;
     }
 
     .nav_logo
@@ -315,7 +307,6 @@ header
         float:                  left;
         padding:                0;
         padding-left:           0.1rem;
-        margin:                 auto;
         width:                  5rem;
         height:                 3rem;
     }
@@ -337,15 +328,14 @@ header
         z-index:                3000;
     }
 
-    .nav.responsive .icon, .nav_border.responsive .icon
+    .nav.responsive a.icon, .nav_border.responsive a.icon
     {
         right:                  0;
         top:                    0;
-        margin:                 auto;
         padding:                0.5rem;
         padding-left:           0.6rem;
         padding-right:          0.6rem;
-        border-color:         #000000;
+        border-color:         #ffffff;
         border-style:           solid;
         border-width:           0.1rem;
     }
@@ -356,9 +346,9 @@ header
         display:                block;
         text-align:             center;
         animation:              fadein 0s;
-        -moz-animation:         fadein 1s; /* Firefox */
-        -webkit-animation:      fadein 1s; /* Safari and Chrome */
-        -o-animation:           fadein 1s; /* Opera */
+        -moz-animation:         fadein 3s; /* Firefox */
+        -webkit-animation:      fadein 3s; /* Safari and Chrome */
+        -o-animation:           fadein 3s; /* Opera */
     }
 
     .nav.responsive a:hover, .nav_border.responsive a:hover
@@ -366,23 +356,20 @@ header
         text-decoration:        underline;
     }
 
-    .nav.responsive a.current, .nav_border.responsive a.current, .fa
+    .nav.responsive a.current, .nav_border.responsive a.current
     {
         border-color:           #ffffff;
     }
 
-    .nav.responsive_foot, .nav.responsive_foot a
+    .nav.responsive_foot a
     {
-        position:               absolute;
-        margin-top:             1rem;
-        bottom:                 100%;
         float:                  none;
         display:                block;
         text-align:             center;
         animation:              fadein 0s;
-        -moz-animation:         fadein 1s; /* Firefox */
-        -webkit-animation:      fadein 1s; /* Safari and Chrome */
-        -o-animation:           fadein 1s; /* Opera */
+        -moz-animation:         fadein 3s; /* Firefox */
+        -webkit-animation:      fadein 3s; /* Safari and Chrome */
+        -o-animation:           fadein 3s; /* Opera */
     }
 }
 
@@ -491,30 +478,6 @@ footer
         float:                  left;
         width:                  100%;
     }
-
-    .artikel_1 img
-{
-        display:                inline-flex;
-        flex-flow:              column;
-        width:                  100%;
-        margin:                 0;
-}
-
-    .button
-{
-        display:                inline-flex;
-        right:                  0%;
-        background-color:     rgba(11, 11, 11, 0);
-        text-align:             left;    
-        text-decoration:        none;
-        color:                rgba(255, 0, 0, 0.7);
-        margin:                 0.5rem;
-        padding:                0.2rem;
-        font-weight:            bold;
-        border-color:         #CC0000;
-        border-style:           solid;
-        border-width:           0.1rem;
-}
 }
 /* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
 * ======================================== */

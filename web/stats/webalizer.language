@@ -1,0 +1,5 @@
+# Possible values for language are catalan, chinese, czech, danish, dutch,
+# english, estonian, finnish, french, german, greek, hungarian, indonesian,
+# italian, korean, polish, portuguese, portuguese_brazil, romanian,
+# russian, slovak, slovene, spanish, swedish, turkish
+language=german
