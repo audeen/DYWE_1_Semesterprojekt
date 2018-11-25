@@ -479,6 +479,14 @@ footer
         width:                  100%;
     }
 
+    .artikel_1 img
+{
+    display:                    inline-flex;
+    flex-flow:                  column;
+    width:                      100%;
+    margin:                     1rem;
+}
+
     .button
 {
         display:                inline-flex;
