@@ -182,7 +182,7 @@ header
     border-bottom-width:        0.3rem;
 }
 
-.nav a, .nav_border a
+.nav a, .nav_border a, .fa
 {
     display:                    inline-flex;
     color:                      rgba(255, 255, 255, 1);
@@ -211,7 +211,7 @@ header
     text-decoration:            underline;
 }
 
-.nav .icon, .nav_border .icon, .fa
+.nav .icon, .nav_border .icon,
 {
     display:                    none;
     animation:                  fadein 0s;
@@ -365,7 +365,7 @@ header
         text-decoration:        underline;
     }
 
-    .nav.responsive a.current, .nav_border.responsive a.current
+    .nav.responsive a.current, .nav_border.responsive a.current, .fa
     {
         border-color:           #ffffff;
     }
