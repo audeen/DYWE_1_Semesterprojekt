@@ -370,20 +370,11 @@ header
         border-color:           #ffffff;
     }
 
-    .nav.responsive_foot
-    {
-        transform:              rotate(-180deg);
-        -moz-transform:         rotate(-180deg); /* Firefox */
-        -webkit-transform:      rotate(-180deg); /* Safari */
-        -o-transform: rotate(-180deg); /* Opera */
-        -ms-transform:          rotate(-180deg); /* IE */
-        filter:                 progid:DXImageTransform.Microsoft.BasicImage(rotation=6); /* Internet Explorer */ 
-        top:                    auto;
-        bottom:                 100% !important;
-    }
-
     .nav.responsive_foot a
     {
+        position:               absolute;
+        margin-top:             1rem;
+        bottom:                 100%;
         float:                  none;
         display:                block;
         text-align:             center;
