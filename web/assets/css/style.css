@@ -370,7 +370,7 @@ header
         border-color:           #ffffff;
     }
 
-    .nav.responsive_foot a
+    .nav.responsive_foot, .nav.responsive_foot a
     {
         position:               absolute;
         margin-top:             1rem;
