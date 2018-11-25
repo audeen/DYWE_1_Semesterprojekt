@@ -336,7 +336,7 @@ header
         z-index:                3000;
     }
 
-    .nav.responsive a.icon, .nav_border.responsive a.icon
+    .nav.responsive .icon, .nav_border.responsive .icon
     {
         right:                  0;
         top:                    0;
