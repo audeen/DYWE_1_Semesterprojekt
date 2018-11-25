@@ -680,6 +680,10 @@ footer
     background-position:        center;
     background-repeat:          no-repeat;
     background-size:            cover;
+}
+
+.parallax-window img
+{
     -webkit-filter:             blur(5px);
     -moz-filter:                blur(5px);
     -o-filter:                  blur(5px);
