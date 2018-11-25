@@ -202,16 +202,13 @@ header
 
 .nav a.current, .nav_border a.current
 {
-    color:                      #fff000;
-    border-color:               #fff000;
+    color:                      #CC0000;
+    border-color:               #CC0000;
 }
 
 .nav a:hover, .nav_border a:hover
 {
-    text-decoration:            #ffffff;
-    border-color:               #ffffff;
-    border-style:               solid;
-    border-width:               0.1rem;
+    text-decoration:            underline;
 }
 
 .nav .icon, .nav_border .icon
