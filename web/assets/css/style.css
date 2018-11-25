@@ -290,7 +290,7 @@ header
 
     }
 
-    .nav a.icon, .nav_border a.icon
+    .nav a.icon, .nav_border a.icon, .fa fa-flask
     {
         float:                  right;
         display:                inline-flex;
@@ -367,7 +367,7 @@ header
         border-color:           #ffffff;
     }
 
-    .nav .responsive_foot
+    .nav.responsive_foot
     {
         transform:              rotate(-180deg);
         -moz-transform:         rotate(-180deg); /* Firefox */
@@ -379,7 +379,7 @@ header
         bottom:                 100% !important;
     }
 
-    .nav .responsive_foot a
+    .nav.responsive_foot a
     {
         float:                  none;
         display:                block;
