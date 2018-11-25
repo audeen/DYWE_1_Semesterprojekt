@@ -382,6 +382,8 @@ header
         -o-transform: rotate(-180deg); /* Opera */
         -ms-transform:          rotate(-180deg); /* IE */
         filter:                 progid:DXImageTransform.Microsoft.BasicImage(rotation=6); /* Internet Explorer */ 
+        top:                    auto;
+        bottom:                 100% !important;
     }
 }
 
