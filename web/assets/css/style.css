@@ -478,6 +478,22 @@ footer
         float:                  left;
         width:                  100%;
     }
+
+    .button
+{
+        display:                inline-flex;
+        right:                  0%;
+        background-color:     rgba(11, 11, 11, 0);
+        text-align:             left;    
+        text-decoration:        none;
+        color:                rgba(255, 0, 0, 0.7);
+        margin:                 0.5rem;
+        padding:                0.2rem;
+        font-weight:            bold;
+        border-color:         #CC0000;
+        border-style:           solid;
+        border-width:           0.1rem;
+}
 }
 /* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
 * ======================================== */
