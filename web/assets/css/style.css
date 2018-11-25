@@ -214,6 +214,9 @@ header
 .nav .icon, .nav_border .icon
 {
     display:                    none;
+    border-color:             #ffffff;
+    border-style:               solid;
+    border-width:               0.1rem;
     animation:                  fadein 0s;
     -moz-animation:             fadein 1s; /* Firefox */
     -webkit-animation:          fadein 1s; /* Safari and Chrome */
@@ -294,6 +297,7 @@ header
     {
         float:                  right;
         display:                inline-flex;
+        margin:                 auto;
         padding:                0.5rem;
         padding-left:           0.6rem;
         padding-right:          0.6rem;
@@ -332,12 +336,10 @@ header
     {
         right:                  0;
         top:                    0;
+        margin:                 auto;
         padding:                0.5rem;
         padding-left:           0.6rem;
         padding-right:          0.6rem;
-        border-color:         #ffffff;
-        border-style:           solid;
-        border-width:           0.1rem;
     }
 
     .nav.responsive a, .nav_border.responsive a
@@ -481,10 +483,10 @@ footer
 
     .artikel_1 img
 {
-    display:                    inline-flex;
-    flex-flow:                  column;
-    width:                      100%;
-    margin:                     1rem;
+        display:                inline-flex;
+        flex-flow:              column;
+        width:                  100%;
+        margin:                 0;
 }
 
     .button
