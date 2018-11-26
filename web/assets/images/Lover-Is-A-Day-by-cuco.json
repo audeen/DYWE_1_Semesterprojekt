@@ -1,0 +1,77 @@
+{
+    "title": "Lover Is A Day by cuco",
+    "description": "yes\ntwitter : https://twitter.com/Icryduringsex\ninstagram: https://www.instagram.com/cucopuffs \nfacebook: https://www.facebook.com/Thefineforest/\nbooking: adavidman@paradigmagency.com & dlandau@paradi",
+    "url": "https://soundcloud.com/trappedindeathstar/lover-is-a-day",
+    "type": "rich",
+    "tags": [
+        "record",
+        "sounds",
+        "share",
+        "sound",
+        "audio",
+        "tracks",
+        "music",
+        "soundcloud"
+    ],
+    "feeds": [],
+    "images": [
+        {
+            "url": "http://i1.sndcdn.com/artworks-000158962222-2wc9n2-t500x500.jpg",
+            "width": 500,
+            "height": 500,
+            "size": 250000,
+            "mime": "image/jpeg"
+        },
+        {
+            "url": "https://i1.sndcdn.com/artworks-000158962222-2wc9n2-t500x500.jpg",
+            "width": 500,
+            "height": 500,
+            "size": 250000,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "http://i1.sndcdn.com/artworks-000158962222-2wc9n2-t500x500.jpg",
+    "imageWidth": 500,
+    "imageHeight": 500,
+    "code": "<iframe width=\"720\" height=\"400\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?visual=true&url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F259932444&show_artwork=true&maxwidth=720&maxheight=576\"></iframe>",
+    "width": 720,
+    "height": 400,
+    "aspectRatio": 55.556,
+    "authorName": "cuco",
+    "authorUrl": "http://soundcloud.com/trappedindeathstar",
+    "providerIcons": [
+        {
+            "url": "https://soundcloud.com/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14b.ico",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://a-v2.sndcdn.com/assets/images/sc-icons/ios-a62dfc8f.png",
+            "width": 114,
+            "height": 114,
+            "size": 12996,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://a-v2.sndcdn.com/assets/images/sc-icons/win8-2dc974a1.png",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": "image/png"
+        }
+    ],
+    "providerIcon": "https://a-v2.sndcdn.com/assets/images/sc-icons/win8-2dc974a1.png",
+    "providerName": "SoundCloud",
+    "providerUrl": "http://soundcloud.com",
+    "publishedTime": null,
+    "license": null
+}
