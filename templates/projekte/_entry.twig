@@ -1,0 +1,97 @@
+{% extends "_layout" %}
+
+{% set projekte = 'current' %}
+{% set start, aktuelles, opensource, mods = '','','','' %}
+
+{% block projekte %}
+
+<div class="artikel_3">
+    {% for block in entry.artikel.all() %}
+
+	{% switch block.type %}
+
+        {% case "artikelTitel" %}
+			<h1>{{ block.titel }}</h1> {# Type: Reiner Text #}
+
+		{% case "artikelTeaser" %}
+			<h3>{{ block.teaser }}</h3> {# Type: Reiner Text #}
+
+		{% case "artikelBody" %}
+			<p>{{ block.body }}</p> {# Type: CKEditor #}
+        
+        {% case "bilder" %}
+
+        {% for image in block.bildSmall.all() %}
+            <figure class="bildSmall">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+
+        {% for image in block.bildMedium.all() %}
+            <figure class="bildMedium">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.bildLarge.all() %}
+            <figure class="bildLarge">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.zweiBilder.all() %}
+            <figure class="zweiBilder">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.dreiBilder.all() %}
+            <figure class="dreiBilder">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %}
+        
+        {% for image in block.bildergalerie.all() %}
+            <figure class="bildergalerie">
+                <img src="{{ image.getUrl() }}">
+            </figure>
+        {% endfor %} 
+        
+        <figcaption>{{ block.bu }}</figcaption>
+
+    {% endswitch %}
+
+    {% if block.type == "video" %}
+    {% set asset = block.video.one() %}
+    {% set embed = craft.embeddedAssets.get(asset) %}
+        {% if embed %}
+        <div id="video-box" class="videobox">
+            {{ embed ? embed.html }}
+        </div>
+        {% endif %}
+    {% endif %}
+
+    {% if block.type == "audio" %}
+    {% set asset = block.audio.one() %}
+    {% set embed = craft.embeddedAssets.get(asset) %}
+        {% if embed %}
+        <div class="audio">
+            {{ embed ? embed.html }}
+        </div>
+        {% endif %}
+    {% endif %}
+
+    {% if block.type == "posts" %}
+    {% set asset = block.posts.one() %}
+    {% set embed = craft.embeddedAssets.get(asset) %}
+        {% if embed %}
+        <div class="posts">
+            {{ embed ? embed.html }}
+        </div>
+        {% endif %}
+    {% endif %}
+
+{% endfor %}
+</div>
+
+{% endblock projekte %}

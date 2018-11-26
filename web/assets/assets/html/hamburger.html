@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Hamburger Menu nach Tutorial von https://www.youtube.com/channel/UCT5mYUgfTseT1axSXiA-ODQ -->
+
+    <style type="text/css">
+        html{font-size: 16px;}
+
+        #wrapper{
+            background: #000;
+            display: inline-block;
+            margin: 10px;
+            color:                      rgba(255, 0, 0, 0.7);
+            border-color:               #CC0000;
+            border-style:               solid;
+            border-width:               0.1rem;
+            position: relative;
+            cursor: pointer;
+            padding: 0.5rem;
+
+        }
+
+        .square {
+            height: 3rem;
+            width: auto;
+            position: relative;
+        }
+
+        .line {
+            position: absolute;
+            height: 6px;
+            width: 60%;
+            background:  rgba(255, 0, 0);
+            border-radius: 8px;
+            transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.25s;
+            
+        }
+        
+        .top{
+            top: 17.5%;
+        }
+        .middle{
+            top: 50%;
+        }
+        .bottom{
+            top: 82.5%;
+        }
+
+        .icon.close .top {
+            transform: rotate(45deg);
+            top: 50%;
+        }
+
+        .icon.close .middle, .icon.close .bottom {
+            transform: rotate(-45deg);
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div class="square icon">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $("#wrapper").click(function(){
+            $(".icon").toggleClass("close");
+        });
+    </script>
+    
+</body>
+</html>
