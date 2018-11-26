@@ -1,0 +1,16 @@
+RewriteEngine Off
+#Access file
+order allow,deny
+allow from all
+require group site25
+Authname WebStats
+Authtype Basic
+<IfModule mod_auth_pam_external.c>
+AuthAuthoritative off
+AuthPAM_Enabled on
+</IfModule>
+<IfModule mod_authnz_external.c>
+AuthzUnixgroup on
+AuthBasicProvider external
+AuthExternal systemuser
+</IfModule>

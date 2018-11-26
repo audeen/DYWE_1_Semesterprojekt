@@ -1,9 +1,13 @@
 {
   "require": {
-    "craftcms/cms": "3.0.28",
+    "craftcms/cms": "3.0.32",
     "vlucas/phpdotenv": "^2.4.0",
     "craftcms/ckeditor": "1.0.0-beta.2",
-    "topshelfcraft/wordsmith": "3.0.4"
+    "topshelfcraft/wordsmith": "3.0.4",
+    "focuslabllc/craft-cheat-sheet": "2.0.3",
+    "charliedev/advanced-url-field": "1.0.0",
+    "mikestecker/craft-videoembedder": "1.1.1",
+    "benjamminf/craft-embedded-assets": "1.0.2"
   },
   "autoload": {
     "psr-4": {
