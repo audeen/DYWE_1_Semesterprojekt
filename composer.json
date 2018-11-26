@@ -1,9 +1,7 @@
 {
   "require": {
     "craftcms/cms": "3.0.28",
-    "vlucas/phpdotenv": "^2.4.0",
-    "craftcms/ckeditor": "1.0.0-beta.2",
-    "topshelfcraft/wordsmith": "3.0.4"
+    "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {
     "psr-4": {
