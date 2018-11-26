@@ -1,0 +1,61 @@
+{
+    "title": "Katja Kipping on Twitter",
+    "description": "“Trotz Privatjet & Millioneneinkommen sei er Teil der Mittelschicht, weil fleißig und diszipliniert? #Merz verhöhnt die hartarbeitenden Menschen im Niedriglohnbereich - und es fällt ihm nicht einmal auf... https://t.co/z6dBMAK0Y8”",
+    "url": "https://twitter.com/katjakipping/status/1064072283126472704",
+    "type": "rich",
+    "tags": [],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://pbs.twimg.com/profile_images/1054707447292674049/DszjhUQH_400x400.jpg",
+            "width": 400,
+            "height": 400,
+            "size": 160000,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://pbs.twimg.com/profile_images/1054707447292674049/DszjhUQH_400x400.jpg",
+    "imageWidth": 400,
+    "imageHeight": 400,
+    "code": "<blockquote class=\"twitter-tweet\" data-width=\"550\"><p lang=\"de\" dir=\"ltr\">Trotz Privatjet &amp; Millioneneinkommen sei er Teil der Mittelschicht, weil fleißig und diszipliniert? <a href=\"https://twitter.com/hashtag/Merz?src=hash&amp;ref_src=twsrc%5Etfw\">#Merz</a> verhöhnt die hartarbeitenden Menschen im Niedriglohnbereich - und es fällt ihm nicht einmal auf... <a href=\"https://t.co/z6dBMAK0Y8\">https://t.co/z6dBMAK0Y8</a></p>&mdash; Katja Kipping (@katjakipping) <a href=\"https://twitter.com/katjakipping/status/1064072283126472704?ref_src=twsrc%5Etfw\">November 18, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+    "width": 550,
+    "height": null,
+    "aspectRatio": null,
+    "authorName": "Katja Kipping",
+    "authorUrl": "https://twitter.com/katjakipping",
+    "providerIcons": [
+        {
+            "url": "https://twitter.com/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://abs.twimg.com/favicons/favicon.ico",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/vnd.microsoft.icon"
+        },
+        {
+            "url": "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
+            "width": 192,
+            "height": 192,
+            "size": 36864,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://abs.twimg.com/favicons/win8-tile-144.png",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": "image/png"
+        }
+    ],
+    "providerIcon": "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
+    "providerName": "Twitter",
+    "providerUrl": "https://twitter.com",
+    "publishedTime": null,
+    "license": null
+}

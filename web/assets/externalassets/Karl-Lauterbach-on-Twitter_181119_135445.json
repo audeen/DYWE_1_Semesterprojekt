@@ -1,0 +1,61 @@
+{
+    "title": "Karl Lauterbach on Twitter",
+    "description": "“Merz sagt er verdiene eine Million und gehöre damit zur Mittelschicht. Wo hat er in den letzten Jahren gelebt? 60 % der Frauen verdienen weniger als 20.000 Euro brutto im Jahr. Das verdient Merz in 1 Woche. Auf ihn wartet die deutsche Sozialpolitik nicht! https://t.co/FD3YGT0s0b”",
+    "url": "https://twitter.com/Karl_Lauterbach/status/1064090912639332352",
+    "type": "rich",
+    "tags": [],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://pbs.twimg.com/profile_images/601388878554079232/db5tdAsW_400x400.jpg",
+            "width": 256,
+            "height": 256,
+            "size": 65536,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://pbs.twimg.com/profile_images/601388878554079232/db5tdAsW_400x400.jpg",
+    "imageWidth": 256,
+    "imageHeight": 256,
+    "code": "<blockquote class=\"twitter-tweet\" data-width=\"550\"><p lang=\"de\" dir=\"ltr\">Merz sagt er verdiene eine Million und gehöre damit zur Mittelschicht. Wo hat er in den letzten Jahren gelebt? 60 % der Frauen verdienen weniger als 20.000 Euro brutto im Jahr. Das verdient Merz in 1 Woche. Auf ihn wartet die deutsche Sozialpolitik nicht! <a href=\"https://t.co/FD3YGT0s0b\">https://t.co/FD3YGT0s0b</a></p>&mdash; Karl Lauterbach (@Karl_Lauterbach) <a href=\"https://twitter.com/Karl_Lauterbach/status/1064090912639332352?ref_src=twsrc%5Etfw\">November 18, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+    "width": 550,
+    "height": null,
+    "aspectRatio": null,
+    "authorName": "Karl Lauterbach",
+    "authorUrl": "https://twitter.com/Karl_Lauterbach",
+    "providerIcons": [
+        {
+            "url": "https://twitter.com/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://abs.twimg.com/favicons/favicon.ico",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/vnd.microsoft.icon"
+        },
+        {
+            "url": "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
+            "width": 192,
+            "height": 192,
+            "size": 36864,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://abs.twimg.com/favicons/win8-tile-144.png",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": "image/png"
+        }
+    ],
+    "providerIcon": "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
+    "providerName": "Twitter",
+    "providerUrl": "https://twitter.com",
+    "publishedTime": null,
+    "license": null
+}
