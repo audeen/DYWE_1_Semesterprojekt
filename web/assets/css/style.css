@@ -201,7 +201,7 @@ header
 .nav a, .nav_border a
 {
     display:                    inline-flex;
-    color:                      rgba(0, 0, 254, 1);
+    color:                      rgba(0, 0, 255, 1);
     margin:                     1rem;
     margin-left:                1.5rem;
     padding:                    0.5rem;
