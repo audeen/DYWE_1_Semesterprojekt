@@ -394,6 +394,8 @@ header
 footer
 {
     max-width:                  100%;
+    position:                   absolute;
+    bottom:                     0;
 }
 
 .copy
