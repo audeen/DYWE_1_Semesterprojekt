@@ -578,11 +578,12 @@ foot
 .kontakt
 {
     display:                    flex;
+    width:                      100%; 
 }
 
 .maps
 {
-
+    width:                      60%; 
     margin-top:                 1rem;
     margin-left:                1rem;
 }
