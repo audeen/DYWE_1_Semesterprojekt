@@ -11,7 +11,7 @@
         {% set aktuelles = 'current' %}
 		{% set page_title = 'Aktuelles' %}
 		{% set blockart = aktuelles %}
-		{% set sectionart = 'aktuelles' %}
+		{% set sectionart = craft.entries.section('aktuelles').all() %}
 
     {% case "projekteOverview" %}
         {% set projekte = 'current' %}
@@ -38,7 +38,7 @@
 
 {% block blockart %}
 
-{% for entry in craft.entries.section(current).all() %}
+{% for entry in sectionart %}
 <div class="artikel_1">
 {% for block in entry.artikel.all() %}
 
