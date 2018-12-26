@@ -10,34 +10,29 @@
     {% case "aktuellesOverview" %}
         {% set aktuelles = 'current' %}
 		{% set page_title = 'Aktuelles' %}
-		{% set parameter = aktuelles %}
 		{% set sectionart = craft.entries.section('aktuelles').all() %}
-		aktuelles
+		
 
     {% case "projekteOverview" %}
         {% set projekte = 'current' %}
 		{% set page_title = 'Projekte' %}
-		{% set blockart = projekte %}
 		{% set sectionart = 'projekte' %}
-		projekte
+		
 
     {% case "opensourceOverview" %}
         {% set opensource = 'current' %}
 		{% set page_title = 'Open-Source' %}
-		{% set blockart = opensource %}
 		{% set sectionart = 'opensource' %}
-		open
+		
 
     {% case "modsOverview" %}
         {% set mods = 'current' %}
 		{% set page_title = 'Mods' %}
-		{% set blockart = mods %}
 		{% set sectionart = 'mods' %}
-		mods
-
+		
 {% endswitch %}
 
-{% block parameter %}
+{% block content %}
 
 TEST
 
