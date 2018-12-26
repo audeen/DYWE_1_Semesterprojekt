@@ -36,12 +36,11 @@
 
 
   <div class="artikel_3">
+    <h1>{{ entry.titel }}</h1> {# Type: Reiner Text #}
+    
     {% for block in entry.artikel.all() %}
 
 	{% switch block.type %}
-
-        {% case "artikelTitel" %}
-			<h1>{{ entry.titel }}</h1> {# Type: Reiner Text #}
 
 		{% case "artikelTeaser" %}
 			<h3>{{ block.teaser }}</h3> {# Type: Reiner Text #}
