@@ -1,7 +1,24 @@
 {% extends "_layout" %}
 
-{% set aktuelles = 'current' %}
+{# {% set aktuelles = 'current' %} #}
 {% set start, projekte, opensource, mods = '','','','' %}
+
+{% set segment = craft.request.getSegment(1) %}
+{% switch segment %}
+
+    {% case "aktuellesOverview" %}
+        {% set aktuelles = 'current' %}
+
+    {% case "projekteOverview" %}
+        {% set projekte = 'current' %}
+
+    {% case "opensourceOverview" %}
+        {% set opensource = 'current' %}
+
+    {% case "modsOverview" %}
+        {% set mods = 'current' %}
+
+{% endswitch %}
 
 {% block aktuelles %}
 

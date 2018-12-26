@@ -1,13 +1,42 @@
 {% extends "_layout" %}
 
-{% set page_title = 'Aktuelles' %}
-{% set aktuelles = 'current' %}
-{% set start, projekte, opensource, mods = '','','','' %}
 
 
-{% block aktuelles %}
+{% set start, projekte, opensource, aktuelles, mods = '','','','','' %}
 
-{% for entry in craft.entries.section('aktuelles').all() %}
+{% set segment = craft.request.getSegment(1) %}
+{% switch segment %}
+
+    {% case "aktuellesOverview" %}
+        {% set aktuelles = 'current' %}
+		{% set page_title = 'Aktuelles' %}
+		{% set sectionart = craft.entries.section('aktuelles').all() %}
+		
+
+    {% case "projekteOverview" %}
+        {% set projekte = 'current' %}
+		{% set page_title = 'Projekte' %}
+		{% set sectionart = 'projekte' %}
+		
+
+    {% case "opensourceOverview" %}
+        {% set opensource = 'current' %}
+		{% set page_title = 'Open-Source' %}
+		{% set sectionart = 'opensource' %}
+		
+
+    {% case "modsOverview" %}
+        {% set mods = 'current' %}
+		{% set page_title = 'Mods' %}
+		{% set sectionart = 'mods' %}
+		
+{% endswitch %}
+
+{% block content %}
+
+TEST
+
+{% for entry in sectionart %}
 <div class="artikel_1">
 {% for block in entry.artikel.all() %}
 
@@ -23,10 +52,10 @@
 
 	<div class="artikelPreview">
 			<a href="{{ entry.url }}">
-				<h1>{{ block.previewtitel }}</h1>
+				<h1>{{ entry.title }}</h1>
 			</a>
 			<h3>{{ block.previewteaser }}</h3>
-			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
+			<p>{{ block.previewbody }}
 	</div>
 
 {% endswitch %}	
@@ -37,7 +66,7 @@
 {% endfor %}
 
 
-{% endblock aktuelles %}
+{% endblock %}
 
 
 
