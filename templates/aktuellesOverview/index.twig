@@ -1,9 +1,25 @@
 {% extends "_layout" %}
 
-{% set page_title = 'Aktuelles' %}
-{% set aktuelles = 'current' %}
+
+
 {% set start, projekte, opensource, mods = '','','','' %}
 
+{% segment = craft.request.getSegement(1) %}
+{% switch segment %}
+
+    {% case "aktuellesOverview" %}
+        {% set aktuelles = 'current' %}
+
+    {% case "projekteOverview" %}
+        {% set projekte = 'current' %}
+
+    {% case "opensourceOverview" %}
+        {% set opensource = 'current' %}
+
+    {% case "modsOverview" %}
+        {% set mods = 'current' %}
+
+{% set current = page_title %}
 
 {% block aktuelles %}
 
@@ -23,10 +39,10 @@
 
 	<div class="artikelPreview">
 			<a href="{{ entry.url }}">
-				<h1>{{ block.previewtitel }}</h1>
+				<h1>{{ entry.title }}</h1>
 			</a>
 			<h3>{{ block.previewteaser }}</h3>
-			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
+			<p>{{ block.previewbody }}
 	</div>
 
 {% endswitch %}	
