@@ -36,9 +36,9 @@
 
 
   <div class="artikel_3">
-    
+    {% for block in entry.artikel.all() %}
         <h1>{{ entry.title }}</h1> {# Type: Reiner Text #}
-   
+    {% endfor %}
 
     {% for block in entry.artikel.all() %}
 
