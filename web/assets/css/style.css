@@ -203,7 +203,7 @@ header
 {
     display:                    inline-flex;
     color:                      rgba(255, 255, 255, 1);
-    margin:                     1rem;
+    margin:                     0.5rem;
     margin-left:                1.5rem;
     padding:                    0.5rem;
     text-decoration:            none;
@@ -242,7 +242,7 @@ header
 {
     position:                   absolute;
     right:                      0;
-    margin:                     1rem;
+    margin:                     0.5rem;
     padding:                    0;
     padding-right:              1.5rem;
     display:                    inline-flex;
@@ -391,10 +391,10 @@ header
 /* Footer + Copyright
 * ======================================== */
 
-footer
+foot
 {
     max-width:                  100%;
-    position:                   absolute;
+    position:                   fixed;
     bottom:                     0;
 }
 
@@ -465,7 +465,7 @@ footer
 .artikel_1
 {
     margin:                     0;
-    margin-top:                 2rem;
+    margin-top:                 1.5rem;
     padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
@@ -647,7 +647,7 @@ footer
     flex-flow:                  row wrap;
     justify-content:            space-around;
     margin:                     0;
-    margin-top:                 2rem;
+    margin-top:                 1.5rem;
     padding:                    0;
     padding-top:                0.8rem;
     padding-bottom:             0.8rem;
