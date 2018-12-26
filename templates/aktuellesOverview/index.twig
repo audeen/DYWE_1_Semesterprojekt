@@ -38,7 +38,7 @@
 
 {% block blockart %}
 
-{% for entry in craft.entries.section(sectionart).all() %}
+{% for entry in craft.entries.section('current').all() %}
 <div class="artikel_1">
 {% for block in entry.artikel.all() %}
 
