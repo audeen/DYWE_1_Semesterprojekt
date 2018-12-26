@@ -4,7 +4,7 @@
 
 {% set start, projekte, opensource, mods = '','','','' %}
 
-{% segment = craft.request.getSegment(1) %}
+{% set segment = craft.request.getSegment(1) %}
 {% switch segment %}
 
     {% case "aktuellesOverview" %}
