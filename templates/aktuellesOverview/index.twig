@@ -2,7 +2,7 @@
 
 
 
-{% set start, projekte, opensource, mods = '','','','' %}
+{% set start, projekte, opensource, aktuelles, mods = '','','','','' %}
 
 {% set segment = craft.request.getSegment(1) %}
 {% switch segment %}
@@ -30,7 +30,7 @@
 		{% set page_title = 'Mods' %}
 		{% set blockart = mods %}
 		{% set sectionart = 'mods' %}
-		
+
 {% endswitch %}
 
 {% block parameter %}
