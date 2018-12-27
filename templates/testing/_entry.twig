@@ -52,15 +52,15 @@
                         {% for image in block.image.all() %}
                             {% switch block.size %}
 
-                                {% case "smallThumb" %}
+                                {% case "small" %}
                                     <div class="{{ block.quantity }}">
                                         <img src="{{ image.getUrl('smallThumb') }}">
                                     </div>
-                                {% case "mediumThumb" %}
+                                {% case "medium" %}
                                     <div class="{{ block.quantity }}">
                                         <img src="{{ image.getUrl('mediumThumb') }}">
                                     </div>
-                                {% case "largeThumb" %}
+                                {% case "large" %}
                                     <div class="{{ block.quantity }}">
                                         <img src="{{ image.getUrl('largeThumb') }}">
                                     </div>
