@@ -50,7 +50,7 @@
             	{% case "images" %}
                     <div class="">
                         {% for image in block.image.all() %}
-                            {% switch block.size%}
+                            {% switch block.size %}
 
                                 {% case "smallThumb" %}
                                     <div class="{{ block.quantity }}">
@@ -64,6 +64,7 @@
                                     <div class="{{ block.quantity }}">
                                         <img src="{{ image.getUrl('mediumThumb') }}">
                                     </div>
+
                             {% endswitch %}                                
                         {% endfor %}
 
