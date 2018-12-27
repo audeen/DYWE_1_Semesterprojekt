@@ -50,9 +50,9 @@
             	{% case "images" %}
                     <div class="">
                         {% for image in block.image.all() %}
-                        
+
                             <div class="{{ block.quantity }}">
-                                <img src="{{ image.getUrl() }}">
+                                <img src="{{ image.getUrl(block.size) }}">
                             </div>
 
                         {% endfor %}
