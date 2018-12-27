@@ -49,26 +49,14 @@
 
             	{% case "images" %}
                     <div class="">
-                        {% for image in block.image %}
+                        {% for image in block.image.all() %}
+                        
                             <div class="{{ block.quantity }}">
-                                <img 
-                                    style="
-                                            {% switch block.alignment %}
-                                                {% case "left" %}
-                                                    
-                                                {% case "center" %}
-                                                
-                                                {% case "right" %}
-
-                                            {% endswitch %}
-                                        ;
-                                    "
-
-                                    src="{{ image.getUrl(block.size) }}">
+                                <img src="{{ image.getUrl() }}">
                             </div>
 
                         {% endfor %}
-                        {# HÄÄÄÄ #}
+
                     </div>
 
             {% endswitch %}
