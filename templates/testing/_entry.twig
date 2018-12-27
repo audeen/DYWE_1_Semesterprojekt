@@ -1,0 +1,107 @@
+{% extends "_layout" %}
+
+{% set start, projekte, opensource, aktuelles, mods, about = '','','','','','' %}
+
+{% set segment = craft.app.request.getSegment(1) %}
+{% switch segment %}
+    {% case "aktuellesOverview" %}
+        {% set aktuelles = 'current' %}
+		{% set page_title = 'Aktuelles' %}
+		{% set sectionart = craft.entries.section('aktuelles').all() %}
+    {% case "projekteOverview" %}
+        {% set projekte = 'current' %}
+		{% set page_title = 'Projekte' %}
+		{% set sectionart = craft.entries.section('projekte').all() %}
+    {% case "opensourceOverview" %}
+        {% set opensource = 'current' %}
+		{% set page_title = 'Open-Source' %}
+		{% set sectionart = craft.entries.section('opensource').all() %}
+    {% case "modsOverview" %}
+        {% set mods = 'current' %}
+		{% set page_title = 'Mods' %}
+		{% set sectionart = craft.entries.section('mods').all() %}
+{% endswitch %}
+
+{% block content %}
+    <div class="artikel_3">
+
+        {% if entry.artikel %}
+            <div class="headline">{{ entry.title }}</div> 
+        {% endif %}
+
+        {% for block in entry.artikel.all() %}
+            {% switch block.type %}
+
+                {% case "text" %}
+
+                    {% switch block.textformat %}
+
+                        {% case "teaser" %}
+                            <div class="teaser">{{ block.text }}</div>
+
+                        {% case "caption" %}
+                            <div class="">{{ block.text }}</div>
+
+                        {% default %}
+                            <div class="abody">{{ block.text }}</div>
+
+                    {% endswitch %}
+
+            	{% case "images" %}
+                    <div class="">
+                        {% for image in block.image %}
+                            <div class="{{ block.quantity }}">
+                                <img 
+                                    style="
+                                            {% switch block.alignment %}
+                                                {% case "left" %}
+                                                    
+                                                {% case "center" %}
+                                                
+                                                {% case "right" %}
+
+                                            {% endswitch %}
+                                        ;
+                                    "
+
+                                    src="{{ image.getUrl(block.size) }}">
+                            </div>
+
+                        {% endfor %}
+                        {# HÄÄÄÄ #}
+                    </div>
+
+            {% endswitch %}
+
+                {% if block.type == "video" %}
+                    {% set asset = block.video.one() %}
+                    {% set embed = craft.embeddedAssets.get(asset) %}
+                        {% if embed %}
+                            <div id="video-box" class="videobox">
+                                {{ embed ? embed.html }}
+                            </div>
+                        {% endif %}
+                {% endif %}
+                {% if block.type == "audio" %}
+                    {% set asset = block.audio.one() %}
+                    {% set embed = craft.embeddedAssets.get(asset) %}
+                        {% if embed %}
+                            <div class="audio">
+                                {{ embed ? embed.html }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% if block.type == "posts" %}
+                    {% set asset = block.posts.one() %}
+                    {% set embed = craft.embeddedAssets.get(asset) %}
+                        {% if embed %}
+                            <div class="posts">
+                                {{ embed ? embed.html }}
+                            </div>
+                        {% endif %}
+                {% endif %}
+        {% endfor %}
+    </div>
+{% endblock  %}
+
+
