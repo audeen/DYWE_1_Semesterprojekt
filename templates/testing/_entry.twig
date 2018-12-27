@@ -37,13 +37,18 @@
                     <div class="abody">{{ block.previewbody   }}</div>
 
                 {% case "text" %}
-                    {% if entry.dropdownFieldHandle.value = null %}
-                        <div class="abody">{{ block.text }}</div>
-                    {% if entry.dropdownFieldHandle.value = teaser %}
-                        <div class="teaser">{{ block.text }}</div>
-                    {% if entry.dropdownFieldHandle.value = caption %}
-                        <div class="">{{ block.text }}</div>
 
+                    {% switch entry.dropdownFieldHandle %}
+
+                        {% case "none" %}
+                            <div class="abody">{{ block.text }}</div>
+
+                        {% case "teaser" %}
+                            <div class="teaser">{{ block.text }}</div>
+
+                        {% case "caption" %}
+                        <div class="">{{ block.text }}</div>
+                    {% endswitch %}
                 {% case "bilder" %}
                     {% for image in block.bildSmall.all() %}
                         <figure class="bildSmall">
