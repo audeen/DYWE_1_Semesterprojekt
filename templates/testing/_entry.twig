@@ -30,25 +30,19 @@
         {% for block in entry.artikel.all() %}
             {% switch block.type %}
 
-                {% case "artikelPreview" %}
-
-                
-                    <div class="teaser">{{ block.previewteaser  }}</div>
-                    <div class="abody">{{ block.previewbody   }}</div>
-
                 {% case "text" %}
 
                     {% switch block.textformat %}
 
-                        {% case "none" %}
+                        {% default %}
                             <div class="abody">{{ block.text }}</div>
 
                         {% case "teaser" %}
                             <div class="teaser">{{ block.text }}</div>
 
                         {% case "caption" %}
-                        <div class="">{{ block.text }}</div>
-                        
+                            <div class="">{{ block.text }}</div>
+
                     {% endswitch %}
                 {% case "bilder" %}
                     {% for image in block.bildSmall.all() %}
