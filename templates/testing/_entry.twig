@@ -52,7 +52,7 @@
                         {% for image in block.image.all() %}
 
                             <div class="{{ block.quantity }}">
-                                <img src="{{ image.getUrl(entry.dropdownFieldHandle) }}">
+                                <img src="{{ image.getUrl() }}">
                             </div>
 
                         {% endfor %}
