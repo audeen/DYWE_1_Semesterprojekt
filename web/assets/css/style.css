@@ -383,6 +383,8 @@ img
     position:                   sticky;
     top:                        0;
     z-index:                    3000;
+    transition:                 0.5s;
+
 }
 
 .headerline
@@ -394,6 +396,7 @@ img
     text-transform:             uppercase;
     color:                      #ffffff;
     font-variant:               normal;
+    transition:                 0.5s;
 }
 
 .logo
@@ -403,6 +406,7 @@ img
     width:                      15vw;
     height:                     auto;
     cursor:                     pointer;
+    transition:                 0.5s;
 }
 
 /* JS scroll Klassen */ 
@@ -423,15 +427,18 @@ img
     border-style:               solid;
     border-width:               0;
     border-bottom-width:        0.1rem;
-    animation:                  fadein 2s;
-    -moz-animation:             fadein 2s; /* Firefox */
-    -webkit-animation:          fadein 2s; /* Safari and Chrome */
-    -o-animation:               fadein 2s; /* Opera */
+    transition:                 0.5s;
 }
 
 .headerline_scroll
 {
-    display:                    none;
+    margin-left:                1rem;
+    font-size:                  1.5vw;
+    line-height:                2;
+    text-transform:             uppercase;
+    color:                      #ffffff;
+    font-variant:               normal;
+    transition:                 0.5s;
 }
 
 .logo_scroll
@@ -441,6 +448,7 @@ img
     width:                      3vw;
     height:                     auto;
     cursor:                     pointer;
+    transition:                 0.5s;
 }
 
 @media all and (max-width: 770px)
