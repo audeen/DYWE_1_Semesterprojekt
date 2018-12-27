@@ -6,20 +6,20 @@
         <title>{% if page_title is defined %} {{ page_title }} | {% endif %}Forschungsgruppe Perfect Beat</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Icon -->
+        <!-- Fav-Icon -->
         <!--<link rel="shortcut icon" href="/favicon.ico">-->
         <link rel="icon" type="image/png" href="{{ siteUrl }}assets/imgs/FPB-Logo-Icon.png" sizes="32x32">
         <link rel="icon" type="image/png" href="{{ siteUrl }}assets/imgs/FPB-Logo-Icon.png" sizes="96x96">
         <!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">-->
 
 
-<!-- CSS -->
+        <!-- CSS -->
         <link   rel="stylesheet"
                 type="text/css"
                 media="screen"
                 href="{{ siteUrl }}assets/css/style.css"/>
 
-<!-- CSS Einbindung für fa fa -->
+        <!-- CSS Einbindung für fa fa -->
         <link   rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -28,34 +28,31 @@
 
     </head>
     <body>
-
-<!-- Parallax -->
-    <div class="parallax-window" data-parallax="scroll" data-image-src="{{ siteUrl }}assets/imgs/bg_platine_hoch.jpg">
-
-<!-- Allumfassender Container -->
+        <!-- Body Background -->
+        <div class="body-bg"></div>
+        <!-- Allumfassender Container -->
         <div class="site">
-
-<!-- Container für Kopfbereich mit Logo & Navigation -->
-            <header id="Head">
-                <div>
-                    <div onclick="window.location='{{ siteUrl }}';">
-                        <img class="logo" src="{{ siteUrl }}assets/imgs/FPB_Header.png" alt="Forschungsgruppe Perfect Beat">
+            <!-- Container für Kopfbereich mit Logo & Navigation -->
+            <header class="head" id="Head">
+                <a href="{{ siteUrl }}">
+                    <img class="logo" id="logo" src="{{ siteUrl }}assets/imgs/FPB-Logo.png" alt="Forschungsgruppe Perfect Beat">
+                </a>
+                <div>    
+                    <div class="headerline" id="headerline">Forschungsgruppe Perfect Beat</div>
+                    <div class="nav" id="HHheadNav">
+                            <a href="javascript:void(0);" class="icon" onclick="HHheadMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
+                            <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
+                            <a class="{{ projekte }}" href="{{ siteUrl }}projekteOverview">Projekte</a>
+                            <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
+                            <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
                     </div>
                 </div>
             </header>
-            <div class="nav" id="HHheadNav">
-                <a href="javascript:void(0);" class="icon" onclick="HHheadMenu()">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
-                <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
-                <a class="{{ projekte }}" href="{{ siteUrl }}projekteOverview">Projekte</a>
-                <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
-                <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
-                <div class="nav_logo_hidden" id="scroll_nav" onclick="window.location='{{ siteUrl }}';"><img src="{{ siteUrl }}assets/imgs/FPB_Header_scroll.png"></div>
-            </div>
-
-<!-- Container für Content -->
+            
+            <!-- Container für Content -->
             <div class="content">
 
                 {% block content %}
@@ -89,9 +86,9 @@
                 {% endblock links %}
             </div>
 
-<!-- Container für Footer -->
+            <!-- Container für Footer -->
             <footer class="foot">
-                <div class="nav" id="HHfootNav">
+                <div class="foot_nav" id="HHfootNav">
                     <a href="javascript:void(0);" class="icon" onclick="HHfootMenu()">
                         <i class="fa fa-wrench"></i>
                     </a>
@@ -99,16 +96,14 @@
                     <a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a>
                     <a href="{{ siteUrl }}kontakt">Kontakt</a>
                     <a href="{{ siteUrl }}links">Links</a>
-                    <div class="copy">&copy; HotDocs</div>
                 </div>
+                <div class="copy">&copy;HotDocs</div>
             </footer>
         </div>
-    </div>
 
-<!-- Java Einbindungen -->
+    <!-- Java Einbindungen -->
     <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
-    <script src="{{ siteUrl }}assets/js/parallax.js"></script>
-    <script src="{{ siteUrl }}assets/js/scroll_nav.js"></script>
+    <script src="{{ siteUrl }}assets/js/scroll_Head.js"></script>
     <script src="{{ siteUrl }}assets/js/HHheadMenu.js"></script>
     <script src="{{ siteUrl }}assets/js/HHfootMenu.js"></script>
 
