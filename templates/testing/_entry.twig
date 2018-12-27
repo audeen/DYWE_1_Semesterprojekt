@@ -24,7 +24,7 @@
 
 {% block content %}
     <div class="artikel_3">
-    
+
         {% if entry.artikel %}
             <div class="headline">{{ entry.title }}</div> 
         {% endif %}
@@ -66,7 +66,7 @@
 
                                     src="{{ image.getUrl(block.size) }}">
                             </div>
-
+                        {% endfor %}
                     </div>
 
             {% endswitch %}
