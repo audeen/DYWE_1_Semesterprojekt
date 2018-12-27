@@ -42,41 +42,31 @@
 
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
-                    {% endswitch %}
-                    
-                {% case "bilder" %}
-                    {% for image in block.bildSmall.all() %}
-                        <figure class="bildSmall">
-                            <img src="{{ image.getUrl() }}">
-                        </figure>
-                    {% endfor %}
-                    {% for image in block.bildMedium.all() %}
-                        <figure class="bildMedium">
-                            <img src="{{ image.getUrl() }}">
-                        </figure>
-                    {% endfor %}
-                    {% for image in block.bildLarge.all() %}
-                        <figure class="bildLarge">
-                            <img src="{{ image.getUrl() }}">
-                        </figure>
-                    {% endfor %}
-                    {% for image in block.zweiBilder.all() %}
-                        <figure class="zweiBilder">
-                            <img src="{{ image.getUrl() }}">
-                        </figure>
-                    {% endfor %}
-                    {% for image in block.dreiBilder.all() %}
-                        <figure class="dreiBilder">
-                            <img src="{{ image.getUrl() }}">
-                        </figure>
-                    {% endfor %}
-                    {% for image in block.bildergalerie.all() %}
-                        <figure class="bildergalerie">
-                            <img src="{{ image.getUrl() }}">
-                        </figure>
-                    {% endfor %} 
-                    <figcaption>{{ block.bu }}</figcaption>
+
                 {% endswitch %}
+
+            	{% case "images" %}
+                    <div class="">
+                        {% for image in block.image %}
+                            <div class="{{ block.quantity }}">
+                                <img 
+                                    style="
+                                            {% switch block.alignment %}
+                                                {% case "left" %}
+                                                    
+                                                {% case "center" %}
+                                                
+                                                {% case "right" %}
+
+                                            {% endswitch %}
+                                        ;
+                                    "
+
+                                    src="{{ image.getUrl(block.size) }}">
+                            </div>
+
+                    </div>
+
                 {% if block.type == "video" %}
                     {% set asset = block.video.one() %}
                     {% set embed = craft.embeddedAssets.get(asset) %}
