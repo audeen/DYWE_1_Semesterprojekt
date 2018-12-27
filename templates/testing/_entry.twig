@@ -38,7 +38,7 @@
 
                 {% case "text" %}
 
-                    {% switch entry.dropdownFieldHandle %}
+                    {% switch block.textformat %}
 
                         {% case "none" %}
                             <div class="abody">{{ block.text }}</div>
@@ -48,6 +48,7 @@
 
                         {% case "caption" %}
                         <div class="">{{ block.text }}</div>
+                        
                     {% endswitch %}
                 {% case "bilder" %}
                     {% for image in block.bildSmall.all() %}
