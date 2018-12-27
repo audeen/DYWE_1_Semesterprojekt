@@ -3,81 +3,71 @@
 {% set start = 'current' %}
 {% set aktuelles, projekte, opensource, mods = '','','','' %}
 
-
 {% block aktuelles %}
-
-{% for entry in craft.entries.section('aktuelles').limit(1).all() %}
-<div class="artikel_1">
-{% for block in entry.artikel.all() %}
-
-{% switch block.type %}
-
-	{% case "artikelPreview" %}
-	
-	{% for image in block.artikelThumbnail.all() %}
-		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl('smallThumb') }}">
-		</figure>
-	{% endfor %}
-
-	<div class="previewText">
-			<a href='aktuellesOverview'>
-				<p class="section">{{ entry.section }}</p>
-			</a>
-			<a href="{{ entry.url }}">
-				<h1>{{ entry.title }}</h1>
-			</a>
-			<h3>{{ block.previewteaser }}</h3>
-			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
-	</div>
-{% endswitch %}	
-
-{% endfor %}
-<a class="button" href="{{ entry.url }}">weiterlesen</a>
-</div>
-{% endfor %}
-
+    {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
+        <div class="artikel_1">
+            {% for block in entry.artikel.all() %}
+                {% switch block.type %}
+                    {% case "artikelPreview" %}
+	                    {% for image in block.artikelThumbnail.all() %}
+		                    <figure class="artikelThumbnail">
+			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+		                    </figure>
+	                    {% endfor %}
+	                    <div>
+                            <div class="section">
+                                <a href='aktuellesOverview'>{{ entry.section }}</a>
+                            </div>
+                            <div class="headline">
+                                <a href="{{ entry.url }}">{{ entry.title }}</a>
+                            </div>
+			                <div class="teaser">{{ block.previewteaser }}</div>
+			                <div class="abody">
+                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                <button class="button">
+                                        <a href="{{ entry.url }}">weiterlesen</a>
+                                </button>
+                            </div>
+	                    </div>
+                {% endswitch %}	
+            {% endfor %}
+        </div>
+    {% endfor %}
 {% endblock aktuelles %}
 
 {% block projekte %}
-    
-{% for entry in craft.entries.section('projekte').limit(1).all() %}
-<div class="artikel_1">
-{% for block in entry.artikel.all() %}
-
-{% switch block.type %}
-
-    {% case "artikelPreview" %}
-
-	{% for image in block.artikelThumbnail.all() %}
-		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl('smallThumb') }}">
-		</figure>
-	{% endfor %}	
-	
-	<div class="previewText">
-			<a href='projekteOverview'>
-				<p class="section">{{ entry.section }}</p>
-			</a>
-			<a href="{{ entry.url }}">
-				<h1>{{ entry.title }}</h1>
-			</a>
-			<h3>{{ block.previewteaser }}</h3>
-			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
-	</div>
-
-{% endswitch %}	
-
-{% endfor %}
-<a class="button" href="{{ entry.url }}">weiterlesen</a>
-</div>
-{% endfor %}
-
+    {% for entry in craft.entries.section('projekte').limit(1).all() %}
+        <div class="artikel_1">
+            {% for block in entry.artikel.all() %}
+                {% switch block.type %}
+                    {% case "artikelPreview" %}
+	                    {% for image in block.artikelThumbnail.all() %}
+		                    <figure class="artikelThumbnail">
+			                    <img src="{{ image.getUrl('smallThumb') }}">
+		                    </figure>
+	                    {% endfor %}	
+		                <div>
+                            <div class="section"> 
+                                <a href='projekteOverview'>{{ entry.section }}</a>
+                            </div>
+                            <div class="headline">
+                                <a href="{{ entry.url }}">{{ entry.title }}</a>
+                            </div>
+			                <div class="teaser">{{ block.previewteaser }}</div>
+                            <div class="abody">
+                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                <button class="button">
+                                    <a href="{{ entry.url }}">weiterlesen</a>
+                                </button>    
+                            </div>
+	                    </div>
+                {% endswitch %}	
+            {% endfor %}  
+        </div>
+    {% endfor %}
 {% endblock projekte %}
 
-
 {% block calltoaction %}
-
                 <div class="cta0">
                     <div class="cta">
                         <a href="{{ siteUrl }}projekteOverview">
@@ -98,79 +88,68 @@
                         </a>
                     </div>
                 </div>
-
 {% endblock calltoaction %}
 
-
 {% block opensource %}
-    
-{% for entry in craft.entries.section('opensource').limit(1).all() %}
-<div class="artikel_1">
-{% for block in entry.artikel.all() %}
-
-{% switch block.type %}
-
-	{% case "artikelPreview" %}
-	
-	{% for image in block.artikelThumbnail.all() %}
-		<figure class="artikelThumbnail">
-			<img src="{{ image.getUrl('smallThumb') }}">
-		</figure>
-	{% endfor %}
-
-	<div class="previewText">
-			<a href='opensourceOverview'>
-				<p class="section">{{ entry.section }}</p>
-			</a>
-			<a href="{{ entry.url }}">
-				<h1>{{ entry.title }}</h1>
-			</a>
-			<h3>{{ block.previewteaser }}</h3>
-			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
-	</div>
-{% endswitch %}	
-
-{% endfor %}
-<a class="button" href="{{ entry.url }}">weiterlesen</a>
-</div>
-{% endfor %}
-
+    {% for entry in craft.entries.section('opensource').limit(1).all() %}
+        <div class="artikel_1">
+            {% for block in entry.artikel.all() %}
+                {% switch block.type %}
+                    {% case "artikelPreview" %}
+		                {% for image in block.artikelThumbnail.all() %}
+		                    <figure class="artikelThumbnail">
+			                    <img src="{{ image.getUrl('smallThumb') }}">
+		                    </figure>
+	                    {% endfor %}
+	                    <div>
+                            <div class="section">    
+                                <a href='opensourceOverview'>{{ entry.section }}</a>
+                            </div>
+                            <div class="headline">
+                                <a href="{{ entry.url }}">{{ entry.title }}</a>
+                            </div>
+			                <div class="teaser">{{ block.previewteaser }}</div>
+			                <div class="abody">
+                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                <button class="button">
+                                        <a href="{{ entry.url }}">weiterlesen</a>
+                                </button>
+                            </div>
+	                    </div>
+                {% endswitch %}	
+            {% endfor %}
+        </div>
+    {% endfor %}
 {% endblock opensource %}
 
-
 {% block mods %}
-
-{% for entry in craft.entries.section('mods').limit(1).all() %}
-<div class="artikel_1">
-{% for block in entry.artikel.all() %}
-
-{% switch block.type %}
-
-	{% case "artikelPreview" %}
-
-	{% for image in block.artikelThumbnail.all() %}
-	<figure class="artikelThumbnail">
-		<img src="{{ image.getUrl('smallThumb') }}">
-	</figure>
-    
-	<div class="previewText">
-			<a href='modsOverview'>
-				<p class="section">{{ entry.section }}</p>
-			</a>
-			<a href="{{ entry.url }}">
-				<h1>{{ entry.title }}</h1>
-			</a>
-			<h3>{{ block.previewteaser }}</h3>
-			<p>{{ block.previewbody|chop(limit=1, unit='p') }}
-	</div>
-
-	{% endfor %}
-
-{% endswitch %}	
-
-{% endfor %}
-<a class="button" href="{{ entry.url }}">weiterlesen</a>
-</div>
-{% endfor %}
-
+    {% for entry in craft.entries.section('mods').limit(1).all() %}
+        <div class="artikel_1">
+            {% for block in entry.artikel.all() %}
+                {% switch block.type %}
+                    {% case "artikelPreview" %}
+                        {% for image in block.artikelThumbnail.all() %}
+	                        <figure class="artikelThumbnail">
+		                        <img src="{{ image.getUrl('smallThumb') }}">
+	                        </figure>
+    	                {% endfor %}
+	                    <div>
+                            <div class="section">    
+                                <a href='modsOverview'>{{ entry.section }}</a>
+                            </div>
+                            <div class="headline">
+			                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                            </div>
+			                <div class="teaser">{{ block.previewteaser }}</div>
+                            <div class="abody">
+                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                <button class="button">
+                                        <a href="{{ entry.url }}">weiterlesen</a>
+                                </button>
+                            </div>
+	                    </div>
+                {% endswitch %}	
+            {% endfor %}
+        </div>
+    {% endfor %}
 {% endblock mods %}

@@ -9,6 +9,11 @@ CSS-Dateien nach Sinn aufteilen
 /* Allgemeine Definitionen
  * ======================================== */
 
+ @font-face
+ {
+     font-family:                'DIN1451h';
+     src:                        url('../fonts/DIN1451_4H/DIN1451_4H_08.87.ttf') format('truetype');
+ }
 @font-face
 {
     font-family:                'Inconsolata';
@@ -40,7 +45,7 @@ CSS-Dateien nach Sinn aufteilen
 
 html
 {
-    font:                       16px/1.6 'Montserrat', helvetica, arial, sans-serif;
+    font:                       16px/1.6 'DIN1451h', helvetica, arial, sans-serif;
 }
 
 .site
@@ -60,93 +65,267 @@ body
 img
 {
     max-width:                  100%;
-    height:                     auto;
 }
 
+
+/* Inhalt
+* ======================================== */
+
+.content
+{
+    display:                    flex;
+    flex-direction:             column;
+    background-color:           rgba(0, 0, 0, 0);
+    padding-bottom:             1rem;
+}
 
 /* Überschriften, Text und Listen
  * ======================================== */
 
-/* Artikel Titel */
-h1
-{
-    font-family:                'Inconsolata';
-    font-size:                  2.25em;
-    line-height:                1.2;
-    color:                      #cc0000;
-    font-variant:               normal;
-    margin:                     0.5rem;
-    margin-top:                 0;
-    padding-left:               0.5rem;
-}
-
 /* Section */
-h2
-{
-    font-family:                'Inconsolata';
-	font-size:                  0.8rem;
-	line-height:                0.8;
-    width:                      auto;
-    text-transform:             uppercase;
-    color:                      #b3b3b3;
-    margin:                     0;
-    padding:                    0; 
-    letter-spacing:             0.2rem;
-}
-
 .section
 {
-    font-family:                'Inconsolata';
-    font-size:                  1.5rem;
+    font-family:                'DIN1451h';
+    font-size:                  1.4rem;
     font-weight:                bold; 
-	line-height:                0.8;
-    width:                      auto;
+	line-height:                1.2;
     text-transform:             uppercase;
     color:                      #b3b3b3;
     margin:                     0;
+    margin-top:                 0.2rem;
     padding:                    0; 
-    letter-spacing:             0.2rem;
+    letter-spacing:             0.4rem;
+}
+
+/* Artikel Titel */
+.headline
+{
+    font-family:                'DIN1451h';
+    font-size:                  2.5rem;
+    line-height:                1;
+    text-transform:             uppercase;
+    color:                      #cc0000;
+    margin:                     0.5rem;
+    font-variant:               normal;
 }
 
 /* Artikel Teaser */
-h3
+.teaser
 {
-    font-family:                'Inconsolata';
-	font-size:                  1.5em;
-	line-height:                1.2;
+    width:                      60%;
+    font-family:                'DIN1451h';
+	font-size:                  1.6rem;
+	line-height:                1;
     color:                      #ffffff;
-    padding-left:               2rem;
-    font-stretch:               expanded;
+    margin:                     0.5rem;
+    margin-left:                2rem;
+    letter-spacing:             0.1rem;
     hyphens:                    auto;
 }
 
 /* Artikel Body */
-p
+.abody
 {
-    font-family:                'Inconsolata';
-	font-size:                  1em;
-	line-height:                1.2;
+    width:                      65%;
+    font-family:                'DIN1451h';
+	font-size:                  1.2rem;
+	line-height:                1.4;
     color:                      #ffffff;
-    padding-left:               2.5rem;
+    margin-left:                2rem;
     font-weight:                normal;
-    margin:                     0;
     hyphens:                    auto;
 }
 
 @media all and (max-width: 770px)
 {
-    h3
+    .teaser
     {
-        padding-left:            1rem;
-        text-align:              justify;
+        width:                   100%;
+        margin:                  0.5rem;
+        margin-left:             1rem;
+        letter-spacing:          0.1rem;
     }
 
-    p
+    .abody
     {
-        padding-left:            1rem;
-        text-align:              justify;
+        width:                   100%;
+        margin:                  1rem;
+        margin-left:             1rem;
     }
 }
+
+
+/* Artikel für Übersichtsseiten
+* ======================================== */
+
+.artikel_1
+{
+    position:                   relative;
+    margin:                     0;
+    margin-top:                 1rem;
+    padding:                    1rem;
+    background-color:           rgba(0, 0, 0, 1);
+    color:                      #ffffff;
+}
+
+.artikel_1 a
+{
+    text-decoration:            none;
+    padding:                    0.5rem; 
+}
+
+.artikel_1 a:hover
+{
+    color:                      #ffffff;
+    border-color:               #ffffff;
+}
+
+.artikelThumbnail
+{
+    float:                      right;
+    padding:                    0;
+    margin:                     0;
+    width:                      35%;
+}
+
+.artikel_1 img
+{
+    width:                      100%;
+    height:                     100%; 
+    object-fit:                 cover; 
+}
+
+.button
+{
+    background-color:           rgba(0, 0, 0, 1);
+    color:                      #cc0000;
+    border-width:               0.01rem;
+    border-style:               dashed;
+    border-color:               #cc0000;
+    font-size:                  1.2rem;
+    letter-spacing:             0.2rem;
+}
+
+.artikel_1 button:hover
+{
+    text-decoration:            underline;
+    background-color:           #cc0000;
+    border-color:               #ffffff;
+}
+
+@media all and (max-width: 770px)
+{
+    .artikel_1
+    {
+        margin:                 0;
+        margin-top:             1rem;
+        padding:                0.3rem;
+        padding-right:          1rem;
+        background-color:       rgba(0, 0, 0, 1);
+        color:                  #ffffff;
+        display:                inline-flex;
+        flex-flow:              column;
+        float:                  left;
+        width:                  100%;
+    }
+    
+    .artikelThumbnail
+    {
+        margin:                 0.5rem;
+        width:                  100%;
+        height:                 auto;
+    }
+}
+/* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
+* ======================================== */
+
+.artikel_2
+{
+    margin:                     0;
+    margin-top:                 1rem;
+    padding:                    1.3rem;
+    padding-right:              2rem;
+    background-color:           rgba(0, 0, 0, 1);
+    color:                      #ffffff;
+}
+
+.artikel_2 a
+{
+    text-decoration:            none;
+    color:                      inherit;
+}
+
+.artikel_2 p
+{
+    line-height:                1.6rem;
+    padding-left:               2.5rem;
+    margin-bottom:              2rem;
+}
+
+.artikel_2 h3
+{
+    margin-top:                 2rem;
+    font-family:                'Inconsolata';
+	line-height:                1.2;
+    color:                      #ffffff;
+    padding-left:               2rem;
+    font-stretch:               expanded;
+}
+
+.artikel_2 h4
+{
+    color:                      #ffffff;
+    padding-left:               2rem;
+}
+
+.kontakt
+{
+    display:                    flex;
+    width:                      100%; 
+}
+
+.maps
+{
+    width:                      60%; 
+    margin-top:                 1rem;
+    margin-left:                1rem;
+}
+
+/* Artikel für Artikel selbst
+* ======================================== */
+
+.artikel_3
+{
+    margin:                     0;
+    margin-top:                 1rem;
+    padding:                    1.3rem;
+    padding-right:              2rem;
+    background-color:           rgba(0, 0, 0, 1);
+    color:                      #ffffff;
+}
+
+.artikel_3 a
+{
+    text-decoration:            none;
+    color:                      #CC0000;
+}
+
+/* .artikel_3 img
+{
+
+} */
+
+
+
+.artikel_3 p
+{
+    padding-left:               2.5rem;
+    font-weight:                normal;
+    margin:                     0;
+    word-wrap:                  break-word;
+}
+
+
 /* Logo + Navigation
 * ======================================== */
 
@@ -171,22 +350,19 @@ header
 
 .nav
 {
+    font-family:                'DIN1451h';
+    font-size:                  1.2rem;
     overflow:                   hidden;
-    padding-top:                0.4rem;
-    padding-bottom:             0.4rem;
+    padding-left:               13rem;
     background-color:           rgba(0, 0, 0, 1);
-    position:                   relative;
-    position:                   -webkit-sticky;
-    position:                   sticky;
-    top:                        0;
-    z-index:                    3000;
 }
 
 .nav_border
 {
+    font-family:                'DIN1451h';
+    font-size:                  1.2rem;
     overflow:                   hidden;
-    padding-top:                0.4rem;
-    padding-bottom:             0.4rem;
+    padding-left:               13rem;
     background-color:           rgba(1, 0, 0, 1);
     position:                   relative;
     position:                   -webkit-sticky;
@@ -203,9 +379,8 @@ header
 {
     display:                    inline-flex;
     color:                      rgba(255, 255, 255, 1);
-    margin:                     0.5rem;
-    margin-left:                1.5rem;
-    padding:                    0.5rem;
+    margin:                     0.3rem;
+    padding:                    0.3rem;
     text-decoration:            none;
     text-transform:             uppercase;
     font-weight:                bold;   
@@ -241,10 +416,8 @@ header
 .nav_logo
 {
     position:                   absolute;
-    right:                      0;
-    margin:                     0.5rem;
-    padding:                    0;
-    padding-right:              1.5rem;
+    left:                       1rem;
+    margin:                     auto;
     display:                    inline-flex;
     width:                      5rem;
     height:                     3rem;
@@ -322,7 +495,7 @@ header
         padding:                0.5rem;
         padding-left:           0.8rem;
         padding-right:          0.8rem;
-        border-color:         #ffffff;
+        border-color:           #ffffff;
         border-style:           solid;
         border-width:           0.1rem;
     }
@@ -447,180 +620,6 @@ foot
     }
 }
 
-/* Inhalt
-* ======================================== */
-
-.content
-{
-    display:                    flex;
-    flex-direction:             column;
-    background-color:           rgba(0, 0, 0, 0);
-    list-style:                 none;
-    padding-bottom:             2rem;
-}
-
-/* Artikel für Übersichtsseiten
-* ======================================== */
-
-.artikel_1
-{
-    margin:                     0;
-    margin-top:                 1.5rem;
-    padding:                    1rem;
-    background-color:           rgba(0, 0, 0, 1);
-    color:                      #ffffff;
-}
-
-.artikel_1 a
-{
-    text-decoration:            none;
-}
-
-.artikel_1 a:hover
-{
-    color:                      #ffffff;
-    border-color:               #ffffff;  
-}
-
-.artikelThumbnail
-{
-    margin:                     0;
-    padding:                    0;
-
-}
-
-.previewText
-{
-    margin:                     0.5rem;
-    margin-top:                 0; 
-    padding:                    0.5rem;
-    padding-top:                0;  
-}
-
-.button
-{
-    color:                      rgba(204, 0, 0, 1);
-    margin:                     0.5rem;
-    padding:                    0.5rem;
-    font-weight:                bold;
-    border-color:               #CC0000;
-    border-style:               dotted;
-    border-width:               0.1rem;
-}
-
-.artikel_1 img
-{
-    float:                      left;
-    margin:                     0;
-    margin-right:               1rem;
-    margin-bottom:              1rem;
-}
-
-
-@media all and (max-width: 770px)
-{
-    .artikel_1
-    {
-        margin:                 0;
-        margin-top:             1rem;
-        padding:                0.3rem;
-        padding-right:          1rem;
-        background-color:       rgba(0, 0, 0, 1);
-        color:                  #ffffff;
-        display:                inline-flex;
-        flex-flow:              column;
-        float:                  left;
-        width:                  100%;
-    }
-}
-/* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
-* ======================================== */
-
-.artikel_2
-{
-    margin:                     0;
-    margin-top:                 1rem;
-    padding:                    1.3rem;
-    padding-right:              2rem;
-    background-color:           rgba(0, 0, 0, 1);
-    color:                      #ffffff;
-}
-
-.artikel_2 a
-{
-    text-decoration:            none;
-    color:                      inherit;
-}
-
-.artikel_2 p
-{
-    line-height:                1.6rem;
-    padding-left:               2.5rem;
-    margin-bottom:              2rem;
-}
-
-.artikel_2 h3
-{
-    margin-top:                 2rem;
-    font-family:                'Inconsolata';
-	line-height:                1.2;
-    color:                      #ffffff;
-    padding-left:               2rem;
-    font-stretch:               expanded;
-}
-
-.artikel_2 h4
-{
-    color:                      #ffffff;
-    padding-left:               2rem;
-}
-
-.kontakt
-{
-    display:                    flex;
-    width:                      100%; 
-}
-
-.maps
-{
-    width:                      60%; 
-    margin-top:                 1rem;
-    margin-left:                1rem;
-}
-
-/* Artikel für Artikel selbst
-* ======================================== */
-
-.artikel_3
-{
-    margin:                     0;
-    margin-top:                 1rem;
-    padding:                    1.3rem;
-    padding-right:              2rem;
-    background-color:           rgba(0, 0, 0, 1);
-    color:                      #ffffff;
-}
-
-.artikel_3 a
-{
-    text-decoration:            none;
-    color:                      #CC0000;
-}
-
-/* .artikel_3 img
-{
-
-} */
-
-
-
-.artikel_3 p
-{
-    padding-left:               2.5rem;
-    font-weight:                normal;
-    margin:                     0;
-    word-wrap:                  break-word;
-}
 
 /* Bilderklassen
 * ======================================== */
@@ -661,6 +660,35 @@ foot
     position:                   relative;
 }
 
+.cta a
+{
+    text-decoration:            none;
+}
+
+.cta img
+{
+    position:                   relative;
+    width:                      100%;
+    height:                     100%;
+    background-size:            cover;
+}
+
+.cta_t
+{
+    font-family:                'DIN1451h';
+    background-color:           rgba(255,255,255,0.8);
+    color:                      #CC0000;
+    position:                   absolute;
+    width:                      100%;
+    top:                        70%;
+    z-index:                    1000;
+    text-align:                 center;
+    font-size:                  1.8rem;
+    font-weight:                bold;
+    text-transform:             uppercase;
+    letter-spacing:             0.3rem;
+}
+
 @media all and (max-width: 770px)
 {
     .cta0
@@ -677,55 +705,15 @@ foot
         margin-bottom:          0.25rem;
         margin-top:             0.25rem;
     }
-
-    .cta_t
-    {
-        position:               absolute;
-        width:                  inherit;
-        top:                    70%;
-    }
 }
-
-.cta a
-{
-    text-decoration:            none;
-}
-
-.cta img
-{
-    position:                   relative;
-    width:                      100%;
-    height:                     100%;
-    background-size:            cover;
-}
-
-.cta_t
-{
-    background-color:           rgba(255,255,255,0.83);
-    color:                      #CC0000;
-    position:                   absolute;
-    width:                      100%;
-    top:                        70%;
-    z-index:                    1000;
-    text-align:                 center;
-    font-size:                  1.5rem;
-    font-weight:                bold;
-    text-transform:             uppercase;
-}
-
 
 /* Parallax
 * ======================================== */
 
 .parallax-window
 {
-    background-color:           rgba(0, 0, 0, 0.6);
+    background-color:           rgba(0, 0, 0, 0.5);
     min-height:                 800px;
-    width:                      100%;
-    background-attachment:      fixed;
-    background-position:        center;
-    background-repeat:          no-repeat;
-    background-size:            cover;
 }
 
 
