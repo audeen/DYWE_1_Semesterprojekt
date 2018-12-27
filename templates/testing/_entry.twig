@@ -24,9 +24,11 @@
 
 {% block content %}
     <div class="artikel_3">
+    
         {% if entry.artikel %}
             <div class="headline">{{ entry.title }}</div> 
         {% endif %}
+
         {% for block in entry.artikel.all() %}
             {% switch block.type %}
 
@@ -43,7 +45,7 @@
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
 
-                {% endswitch %}
+                    {% endswitch %}
 
             	{% case "images" %}
                     <div class="">
@@ -66,6 +68,8 @@
                             </div>
 
                     </div>
+
+            {% endswitch %}
 
                 {% if block.type == "video" %}
                     {% set asset = block.video.one() %}
