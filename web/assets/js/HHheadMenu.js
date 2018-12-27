@@ -1,16 +1,16 @@
 function HHheadMenu()
 {
     var x = document.getElementById("HHheadNav");
-    if (x.className === "nav")
+    if (x.className === "nav_scroll")
     {
         x.className += " responsive";
     }
-    else if (x.className === "nav_border")
+    else if (x.className === "nav")
     {
         x.className += " responsive";
     }
-        else
+    else
     {
-        x.className = "nav";
+        x.className = "nav_scroll";
     }
 }

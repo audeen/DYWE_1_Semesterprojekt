@@ -3,20 +3,13 @@
 {% set start, aktuelles, projekte, opensource, mods = '','','','','' %}
 
 {% block kontakt %}
-
-<div class="kontakt">
-<div class="artikel_2">
-    <h1>{{ entry.title }}</h1>
-    <h3>{{ entry.artikelTeaser }}</h3>
-    <h4>{{ entry.artikelBody }}</h4>
-</div>
-
-<!-- Einbindung von Google-Maps-Karte -->
-
-<iframe class="maps" src="https://www.openstreetmap.org/export/embed.html?bbox=10.13320326805115%2C54.32438279511453%2C10.151120424270632%2C54.32976972764168&amp;layer=mapnik&amp;marker=54.327073221270766%2C10.142161846160889">
-</iframe>
-
-</div>
-
-
+    <div class="kontakt">
+        <div class="artikel_2">
+            <div class="headline">{{ entry.title }}</div>
+            <div class="teaser">{{ entry.artikelTeaser }}</div>
+            <div class="abody">{{ entry.artikelBody }}</div>
+        </div>
+    <!-- Einbindung von Open-Street-Maps -->
+        <iframe class="maps" src="https://www.openstreetmap.org/export/embed.html?bbox=10.13320326805115%2C54.32438279511453%2C10.151120424270632%2C54.32976972764168&amp;layer=mapnik&amp;marker=54.327073221270766%2C10.142161846160889"></iframe>
+    </div>
 {% endblock kontakt %}

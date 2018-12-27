@@ -1,12 +1,12 @@
 function HHfootMenu()
 {
     var x = document.getElementById("HHfootNav");
-    if (x.className === "nav")
+    if (x.className === "foot_nav")
     {
-        x.className += " responsive_foot";
+        x.className += " responsive";
     }
     else
     {
-        x.className = "nav";
+        x.className = "foot_nav";
     }
 }
