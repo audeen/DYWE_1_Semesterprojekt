@@ -16,20 +16,21 @@
                             <div class="">{{ block.text }}</div>
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
-                {% endswitch %}
+                    {% endswitch %}
+            {% endswitch %}
             {% for block in entry.links.all() %}
 	            {% switch block.type %}
                     {% case "linkImage" %}
-                            <div class="">
-                                {% for image in block.linkImage.all() %}
-                                    <div class="">
-                                        <a href="{{ block.linkUrl }}" target="_blank">
-                                            <img src="{{ image.getUrl('link') }}">
-                                        </a>
-                                    </div>                               
-                                {% endfor %}
-                                </div>
-	                {% endswitch %}
-                {% endfor %}
+                        <div class="">
+                            {% for image in block.linkImage.all() %}
+                                <div class="">
+                                    <a href="{{ block.linkUrl }}" target="_blank">
+                                        <img src="{{ image.getUrl('link') }}">
+                                    </a>
+                                </div>                               
+                            {% endfor %}
+                        </div>
+	            {% endswitch %}
+            {% endfor %}
         </div>
 {% endblock %}
