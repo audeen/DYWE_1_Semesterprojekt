@@ -19,7 +19,8 @@
 
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
-
+	                {% endswitch %}
+                    
                 {% case "images" %}
                         <div class="">
                             {% for image in block.image.all() %}
