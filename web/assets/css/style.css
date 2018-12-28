@@ -293,16 +293,22 @@ img
 .link-div
 {
     display:                    flex;
-    flex-flow:                  row;
-    justify-content:            center;
-    align-content:              space-around;
-    
+    flex-wrap:                  wrap;
+    align-items:                baseline;
+    padding:                    0 1rem;
 }
 
 .link-img
 {
-    display:                    flex;
-    padding:                    1rem;
+    flex:                       25%;
+    max-width:                  25%;
+    padding:                    0 1rem;
+}
+
+.link-img img
+{
+    margin-top:                 1rem;
+    vertical-align:             middle;
 }
 
 /* Artikel für Artikel selbst
