@@ -288,58 +288,7 @@ img
     color:                      inherit;
 }
 
-/* LINK Seite */
-
-.link-div
-{
-    display:                    flex;
-    flex-wrap:                  wrap;
-    align-items:                baseline;
-    padding:                    0 1rem;
-}
-
-.link-img
-{
-    flex:                       25%;
-    max-width:                  25%;
-    padding:                    0 1rem;
-}
-
-.link-img img
-{
-    margin-top:                 1rem;
-    vertical-align:             middle;
-}
-
-/* Artikel für Artikel selbst
-* ======================================== */
-
-.artikel_3
-{
-    margin:                     0;
-    margin-top:                 1rem;
-    padding:                    1.3rem;
-    padding-right:              2rem;
-    background-color:           rgba(0, 0, 0, 1);
-    color:                      #ffffff;
-}
-
-.artikel_3 a
-{
-    text-decoration:            none;
-    color:                      #CC0000;
-}
-
-.artikel_3 p
-{
-    padding-left:               2.5rem;
-    font-weight:                normal;
-    margin:                     0;
-    word-wrap:                  break-word;
-}
-
-/* Kontakt Seite
-* ======================================== */
+/* Kontakt Seite */
 
 .kontakt
 {
@@ -368,6 +317,83 @@ img
         height:                 50vh;
         margin-left:            0;
     }
+}
+
+/* LINK Seite */
+
+.link-div
+{
+    display:                    flex;
+    flex-wrap:                  wrap;
+    align-items:                baseline;
+    padding:                    0 1rem;
+}
+
+.link-img
+{
+    flex:                       25%;
+    max-width:                  25%;
+    padding:                    0 1rem;
+}
+
+.link-img img
+{
+    margin-top:                 1rem;
+}
+
+@media all and (max-width: 800px)
+{
+    .link-img
+    {
+        flex:                   50%;
+        max-width:              50%;
+    }
+    
+    .link-img img
+    {
+        margin-top:             1rem;
+    }
+}
+
+@media all and (max-width: 600px)
+{
+    .link-img
+    {
+        flex:                   100%;
+        max-width:              100%;
+    }
+    
+    .link-img img
+    {
+        margin-top:             2rem;
+    }
+}
+
+/* Artikel für Artikel selbst
+* ======================================== */
+
+.artikel_3
+{
+    margin:                     0;
+    margin-top:                 1rem;
+    padding:                    1.3rem;
+    padding-right:              2rem;
+    background-color:           rgba(0, 0, 0, 1);
+    color:                      #ffffff;
+}
+
+.artikel_3 a
+{
+    text-decoration:            none;
+    color:                      #CC0000;
+}
+
+.artikel_3 p
+{
+    padding-left:               2.5rem;
+    font-weight:                normal;
+    margin:                     0;
+    word-wrap:                  break-word;
 }
 
 /* Head, Logo + Navigation
