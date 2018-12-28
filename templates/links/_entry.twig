@@ -2,11 +2,24 @@
 
 {% set start, aktuelles, projekte, opensource, mods = '','','','','' %}
 
-{% block links %}
+{% block content %}
     <div class="artikel_2">
-        <div class="headline">LINKS</div>
-        <div class="teaser">Von der Forschungsgruppe Perfect Beat empfohlen:</div>
-        {# mit for alles ausgeben#}
-        <div class="link"> {# Einbindung von Bildern mit Links#} </div>
-    </div>
-{% endblock links %}
+        <div class="headline">
+            {{ entry.title }}
+        </div>
+            {% for block in entry.links.all() %}
+	            {% switch block.type %}
+                    {% case "linkImage" %}
+                            <div class="">
+                                {% for image in block.linkImage.all() %}
+                                    <div class="">
+                                        <a href="{{ block.linkUrl }}">
+                                            <img src="{{ image.getUrl('link') }}">
+                                        </a>
+                                    </div>                               
+                                {% endfor %}
+                                </div>
+	                {% endswitch %}
+                {% endfor %}
+        </div>
+{% endblock %}
