@@ -4,6 +4,10 @@
 
 {% block content %}
     <div class="artikel_2">
+        {# TEST #}
+    <div class="headline">
+        {{ entry.title }}
+    </div>
         {% for block in entry.standartseite.all() %}
 	        {% switch block.type %}
 
@@ -20,7 +24,7 @@
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
 	                {% endswitch %}
-                    
+
                 {% case "images" %}
                         <div class="">
                             {% for image in block.image.all() %}
