@@ -7,6 +7,16 @@
         <div class="headline">
             {{ entry.title }}
         </div>
+            {% switch block.type %}
+                {% case "text" %}
+                    {% switch block.textformat %}
+                        {% case "teaser" %}
+                            <div class="teaser">{{ block.text }}</div>
+                        {% case "caption" %}
+                            <div class="">{{ block.text }}</div>
+                        {% default %}
+                            <div class="abody">{{ block.text }}</div>
+                {% endswitch %}
             {% for block in entry.links.all() %}
 	            {% switch block.type %}
                     {% case "linkImage" %}
