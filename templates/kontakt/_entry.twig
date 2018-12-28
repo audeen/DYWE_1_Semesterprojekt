@@ -4,32 +4,25 @@
 
 {% block content %}
     <div class="artikel_2">
-    {# TEST #}
-    <div class="headline">
-        {{ entry.title }}
-    </div>
-        {% for block in entry.standartseite.all() %}
-	        {% switch block.type %}
-
-                {% case "text" %}
-
-                    {% switch block.textformat %}
-
-                        {% case "teaser" %}
-                            <div class="teaser">{{ block.text }}</div>
-
-                        {% case "caption" %}
-                            <div class="">{{ block.text }}</div>
-
-                        {% default %}
-                            <div class="abody">{{ block.text }}</div>
-	                {% endswitch %}
-                    
-                {% case "images" %}
+        {# TEST #}
+        <div class="headline">
+            {{ entry.title }}
+        </div>
+            {% for block in entry.standartseite.all() %}
+	            {% switch block.type %}
+                    {% case "text" %}
+                        {% switch block.textformat %}
+                            {% case "teaser" %}
+                                <div class="teaser">{{ block.text }}</div>
+                            {% case "caption" %}
+                                <div class="">{{ block.text }}</div>
+                            {% default %}
+                                <div class="abody">{{ block.text }}</div>
+	                    {% endswitch %}
+                    {% case "images" %}
                         <div class="">
                             {% for image in block.image.all() %}
                                 {% switch block.size %}
-
                                     {% case "smallThumb" %}
                                         div class="">
                                             <img src="{{ image.getUrl('smallThumb') }}">
@@ -47,9 +40,6 @@
                         </div>
 	    {% endswitch %}
     {% endfor %}
-
-
-
 
     <!-- Einbindung von Open-Street-Maps -->
         <iframe class="maps" src="https://www.openstreetmap.org/export/embed.html?bbox=10.13320326805115%2C54.32438279511453%2C10.151120424270632%2C54.32976972764168&amp;layer=mapnik&amp;marker=54.327073221270766%2C10.142161846160889"></iframe>
