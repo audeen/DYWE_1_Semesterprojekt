@@ -94,12 +94,6 @@ body
     filter:                     blur(5px);
 }
 
-img
-{
-    max-width:                  100%;
-}
-
-
 /* Inhalt
 * ======================================== */
 
@@ -157,7 +151,7 @@ img
 /* Artikel Body */
 .abody
 {
-    width:                      65%;
+    width:                      60%;
     font-family:                'DIN1451h';
 	font-size:                  1.2rem;
 	line-height:                1.4;
@@ -390,27 +384,112 @@ img
 
 .artikel_3
 {
+    display:                    flex;
+    flex-direction:             column;
     margin:                     0;
     margin-top:                 1rem;
-    padding:                    1.3rem;
+    padding:                    1rem;
     padding-right:              2rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
 }
 
-.artikel_3 a
+.artikel_3 .abody
 {
-    text-decoration:            none;
-    color:                      #CC0000;
+    display:                    flex;
+    flex-direction:             column;
+    margin:                     1rem;
+    margin-left:                3rem;
+    width:                      95%;
 }
 
-.artikel_3 p
+.artikel_3 img
 {
-    padding-left:               2.5rem;
-    font-weight:                normal;
-    margin:                     0;
-    word-wrap:                  break-word;
 }
+
+/* Bilderklassen
+* ======================================== */
+
+.bildSmall
+{
+    display:                    flex;
+    align-self:                 flex-start;
+    width:                      30%;
+}
+
+.bildMedium
+{
+    display:                    flex;
+    align-self:                 flex-start;
+}
+
+.bildMedium img
+{
+    display:                    flex;
+    width:                      50%;
+}
+
+.bildLarge
+{
+    display:                    flex;
+    flex-direction:             column;
+    align-self:                 center;
+}
+
+.bildLarge img
+{
+    display:                    flex;
+    width:                      100%;   
+}
+
+.zweiBilder
+{
+    display:                    flex;
+    width:                      100%;
+    margin:                     0;
+}
+
+.dreiBilder
+{
+    width:                      30%;
+}
+
+.bildergalerie
+{
+
+}
+
+@media all and (max-width: 770px)
+{
+    .zweiBilder
+    {
+        flex:                   100%;
+        flex-direction:         column;
+        max-width:              100%;
+    }
+    
+    .link-img img
+    {
+        margin-top:             2rem;
+    }
+}
+
+
+/*
+.dreiBilder img
+{
+    display:                    inline-flex;
+    size:                       cover;
+    height:                     250px;
+    width:                      auto;
+    margin:                     2rem;
+    float:                      right;
+    border-color:               rgba(255, 255, 255, 0.5);
+    border-width:               1rem;
+    border-style:               solid;
+}
+*/
+
 
 /* Head, Logo + Navigation
 * ======================================== */
@@ -953,23 +1032,6 @@ img
         display:                block;
     }
 }
-
-/* Bilderklassen
-* ======================================== */
-
-.dreiBilder img
-{
-    display:                    inline-flex;
-    size:                       cover;
-    height:                     250px;
-    width:                      auto;
-    margin:                     2rem;
-    float:                      right;
-    border-color:               rgba(255, 255, 255, 0.5);
-    border-width:               1rem;
-    border-style:               solid;
-}
-
 
 /* Call to Action
 * ======================================== */
