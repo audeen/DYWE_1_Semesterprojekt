@@ -272,6 +272,8 @@ img
 
 .artikel_2
 {
+    display:                    flex;
+    flex-direction:             column;
     margin:                     0;
     margin-top:                 1rem;
     padding:                    1.3rem;
@@ -286,27 +288,21 @@ img
     color:                      inherit;
 }
 
-.artikel_2 p
+/* LINK Seite */
+
+.link-div
 {
-    line-height:                1.6rem;
-    padding-left:               2.5rem;
-    margin-bottom:              2rem;
+    display:                    flex;
+    flex-flow:                  row;
+    justify-content:            center;
+    align-content:              space-around;
+    
 }
 
-.artikel_2 h3
+.link-img
 {
-    margin-top:                 2rem;
-    font-family:                'Inconsolata';
-	line-height:                1.2;
-    color:                      #ffffff;
-    padding-left:               2rem;
-    font-stretch:               expanded;
-}
-
-.artikel_2 h4
-{
-    color:                      #ffffff;
-    padding-left:               2rem;
+    display:                    flex;
+    padding:                    1rem;
 }
 
 /* Artikel für Artikel selbst
