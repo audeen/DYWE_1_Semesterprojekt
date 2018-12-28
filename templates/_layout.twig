@@ -33,21 +33,29 @@
         <!-- Allumfassender Container -->
         <div class="site">
             <!-- Container für Kopfbereich mit Logo & Navigation -->
+            <div></div>
             <header class="head" id="Head">
                 <a href="{{ siteUrl }}">
                     <img class="logo" id="logo" src="{{ siteUrl }}assets/imgs/FPB-Logo.png" alt="Forschungsgruppe Perfect Beat">
                 </a>
-                <div>    
+                <div class="hl_nav" id="hlnav">    
                     <div class="headerline" id="headerline">Forschungsgruppe Perfect Beat</div>
                     <div class="nav" id="HHheadNav">
-                            <a href="javascript:void(0);" class="icon" onclick="HHheadMenu()">
-                                <i class="fa fa-bars"></i>
-                            </a>
+                        <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
+                        <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
+                        <a class="{{ projekte }}" href="{{ siteUrl }}projekteOverview">Projekte</a>
+                        <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
+                        <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
+                        <button class="dropbtn">
+                                Menu
+                        </button>
+                        <div class="dropdown-nav">
                             <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
                             <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
                             <a class="{{ projekte }}" href="{{ siteUrl }}projekteOverview">Projekte</a>
                             <a class="{{ opensource }}" href="{{ siteUrl }}opensourceOverview">Open Source</a>
                             <a class="{{ mods }}" href="{{ siteUrl }}modsOverview">Mods</a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -96,15 +104,14 @@
                     <a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a>
                     <a href="{{ siteUrl }}kontakt">Kontakt</a>
                     <a href="{{ siteUrl }}links">Links</a>
+                    <div class="copy">&copy;HotDocs</div>
                 </div>
-                <div class="copy">&copy;HotDocs</div>
             </footer>
         </div>
 
     <!-- Java Einbindungen -->
     <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
     <script src="{{ siteUrl }}assets/js/scroll_Head.js"></script>
-    <script src="{{ siteUrl }}assets/js/HHheadMenu.js"></script>
     <script src="{{ siteUrl }}assets/js/HHfootMenu.js"></script>
 
     </body>
