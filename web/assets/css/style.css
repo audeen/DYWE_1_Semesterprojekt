@@ -3,8 +3,9 @@
 Mobile first!
 CSS-Dateien nach Sinn aufteilen
 
-*/
+Es wird um Nachsicht gebeten in Bezug auf Dopplungen und Verhältnisse zwischen Parent-Child Klassen. Dies ist eine gewachsene CSS im Rahmen eines Semesterprojektes und beinhaltet viele Experimente, Tests und Learning-By-Doing als Lernprozess.
 
+*/
 
 /* Allgemeine Definitionen
  * ======================================== */
@@ -384,6 +385,10 @@ img
     top:                        0;
     transition:                 0.5s;
     -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
     z-index:                    3000;
 }
 
@@ -402,14 +407,17 @@ img
     display:                    flex;
     margin-right:               auto;
     padding-left:               1rem;
-    font-size:                  3.5vw;
+    font-size:                  2.5vw;
     line-height:                2;
     text-transform:             uppercase;
     color:                      #ffffff;
     font-variant:               normal;
     transition:                 2s;
     -webkit-transform:          translateZ(0);
-}
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);}
 
 .logo
 {
@@ -422,6 +430,10 @@ img
     cursor:                     pointer;
     transition:                 0.5s;
     -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 /* JS scroll Klassen */ 
@@ -441,12 +453,16 @@ img
     position:                   sticky;
     top:                        0;
     transition:                 0.5s;
-    -webkit-transform:          translateZ(0);
     z-index:                    3000;
     border-color:               rgba(255, 255, 255, 1);
     border-style:               solid;
     border-width:               0;
     border-bottom-width:        0.1rem;
+    -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 .hl_nav_scroll
@@ -470,6 +486,10 @@ img
     font-variant:               normal;
     transition:                 0;
     -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 .logo_scroll
@@ -481,16 +501,32 @@ img
     cursor:                     pointer;
     transition:                 0.5s;
     -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 @media all and (max-width: 770px)
 {    
-    .headerline
+    .logo
     {
-        display:                none;
+        display:                    flex;
+        align-self:                 center;
+        margin:                     0.5rem;
+        float:                      left;
+        width:                      20vw;
+        height:                     auto;
+        cursor:                     pointer;
+        transition:                 0.5s;
+        -webkit-transform:          translateZ(0);
+        -moz-transform:             translateZ(0);
+        -ms-transform:              translateZ(0);
+        -o-transform:               translateZ(0);
+        transform:                  translateZ(0);
     }
     
-    .hl_nav_scroll
+    .hl_nav
     {
         display:                flex;
         flex-direction:         column;
@@ -498,14 +534,28 @@ img
         align-items:            baseline;
         align-self:             flex-end;
         width:                  100%;
-        height:                 auto;
+    }
+    
+    .headerline
+    {
+        display:                flex;
+        margin-right:           auto;
+        padding-left:           1rem;
+        font-size:              4vw;
+        line-height:            1;
+        transition:             0.5s;
+        -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
     }
     
     .logo_scroll
     {
         margin:                 0.5rem;
         float:                  left;
-        width:                  14vw;
+        width:                  10vw;
         height:                 auto;
         cursor:                 pointer;
     }
@@ -513,6 +563,12 @@ img
     .headerline_scroll
     {
         display:                none;
+        transition:             0.5s;
+        -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
     }
 }
 
@@ -528,6 +584,10 @@ img
     margin-left:                auto;
     transition:                 0.5s;
     -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 .nav_scroll
@@ -540,6 +600,10 @@ img
     margin-left:                auto;
     transition:                 0.5s;
     -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 .nav a, .nav_scroll a
@@ -551,6 +615,10 @@ img
     text-transform:             uppercase;
     transition:                 0.5s;
     -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 .nav a.current, .nav_scroll a.current
@@ -560,7 +628,6 @@ img
     border-color:               #ffffff;
     border-style:               solid;
     border-width:               0.1rem;
-    font-weight:                bold;
     transition:                 0.5s;
 }
 
@@ -584,25 +651,20 @@ img
 {    
     .nav
     {
-        font-size:              1.2rem;
         margin:                 0.5rem;
         margin-left:            auto;
-        transition:             0.5s;
-        -webkit-transform:      translateZ(0);
     }
 
     .nav a, .nav_scroll a
     {
-        display:                none; 
+        display:                none;
+        margin:                 0;
     }
 
     .nav_scroll
     {
-        font-size:              1.2rem;
         margin:                 0.5rem;
         margin-left:            auto;
-        transition:             0.5s;
-        -webkit-transform:      translateZ(0);
     }
     
     .dropdown-nav
@@ -610,37 +672,52 @@ img
         display:                none;
         flex-flow:              column;
         text-align:             center;
-        padding:                0.5rem;
+        padding:                0rem;
         position:               absolute;
+        top:                    100%;
         right:                  0;
-        top:                    10vw;
         background-color:       #000000;
         width:                  60vw;
         transition:             1s;
         -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
         z-index:                1;
     }
     
-    .dropdown-nav
-    {
-        display:                none; 
-    }
-
     .dropbtn
     {
         display:                flex;
+        margin-left:            1rem;
         font-family:            'DIN1451h';
         font-size:              1.2rem;
         text-transform:         uppercase;
         background-color:       #000000;
         color:                  #ffffff;
+        padding:                0.3rem 0.5rem;
         border-style:           solid;
         border-width:           0.1rem;
         border-color:           #ffffff;
         transition:             0.5s;
         -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
         z-index:                2;
-
+    }
+        
+    .nav_scroll .dropbtn
+    {
+        font-size:              1rem;
+        -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
+        z-index:                2;
     }
     
     .nav:hover .dropbtn, .nav_scroll:hover .dropbtn
@@ -657,15 +734,19 @@ img
     .nav:hover .dropdown-nav a, .nav_scroll:hover .dropdown-nav a
     {
         display:                block;
-    }
+    }    
 
     .nav a.current 
     {
         display:                flex;
-        font-size:              1rem;
+        font-size:              1.2rem;
         z-index:                2;
         transition:             0.5s;
-        -webkit-transform:      translateZ(0); 
+        -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
     }
     
     .nav_scroll a.current
@@ -675,6 +756,10 @@ img
         z-index:                2; 
         transition:             0.5s;
         -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
     }
 }
 
@@ -688,6 +773,7 @@ img
     width:                      100%;
     background-color:           rgba(0, 0, 0, 1);
     margin-top:                 1rem;
+    padding:                    0.5rem;
     font-family:                'DIN1451h';
     font-size:                  1.2rem;
     text-transform:             uppercase;
@@ -697,7 +783,6 @@ img
 
 .foot_nav
 {
-    
     display:                    flex;
     flex-direction:             row;
     justify-content:            space-between; 
@@ -706,7 +791,7 @@ img
 
 .foot_nav a
 {
-    margin-left:                2rem;
+    margin-left:                1rem;
     padding:                    0.5rem;
     text-decoration:            none;
 }
@@ -721,12 +806,17 @@ img
 {
     position:                   absolute;
     margin:                     0.5rem;
-    margin-right:               2.5rem;
+    margin-right:               1.5rem;
     right:                      0;
     
 }
 
-.foot_nav .icon
+.dropup-foot
+{
+    display:                    none;
+}
+
+.dropbtn2
 {
     display:                    none;
 }
@@ -735,55 +825,88 @@ img
 {
     .foot
     {
-        justify-content:        flex-end;
+        justify-content:        space-between;
+    }
+    
+    .foot_nav
+    {
+        display:                flex;
+        flex-direction:         row;
+        justify-content:        space-between; 
+        align-items:            baseline;
     }
     
     .foot_nav a
     {
         display:                none;
+        margin:                 0;
     }
     
     .copy
     {
-        right:                  0;
+        position:               absolute;
         margin:                 0.5rem;
-        padding:                auto;
-        padding-left:           1rem;
-        padding-top:            1rem;
-    }
-
-    .foot_nav .icon
-    {
-        font-size:              1.2rem;
-        display:                block;
-        margin:                 1rem;
-        padding:                0.5rem;
-        padding-left:           0.8rem;
-        padding-right:          0.8rem;
-        border-color:           #ffffff;
-        border-style:           solid;
-        border-width:           0.1rem;
+        margin-right:           2.5rem;
+        right:                  0;
     }
     
-    .foot_nav.responsive
+    .dropup-foot
     {
-        flex-direction:         column;
-        justify-content:        center;
-        position:               fixed;
+        display:                none;
+        flex-flow:              column;
+        text-align:             center;
+        padding:                0.5rem;
+        position:               absolute;
+        bottom:                 100%;
+        left:                   0;
         background-color:       #000000;
-        width:                  100%;
-        height:                 auto; 
-        top:                    auto;
-        bottom:                 0;
+        width:                  auto;
+        transition:             1s;
+        -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
+        z-index:                1;
     }
-
-    .foot_nav.responsive a
+    
+    .dropbtn2
+    {
+        display:                flex;
+        margin-left:            1rem;
+        font-family:            'DIN1451h';
+        font-size:              1.2rem;
+        text-transform:         uppercase;
+        background-color:       #000000;
+        color:                  #ffffff;
+        padding:                0.3rem 0.5rem;
+        border-style:           solid;
+        border-width:           0.1rem;
+        border-color:           #ffffff;
+        transition:             0.5s;
+        -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
+        z-index:                2;
+    }
+    
+    .foot:hover .dropbtn2
+    {
+        background-color:       #ffffff;
+        color:                  #000000;
+    }
+    
+    .foot:hover .dropup-foot
     {
         display:                block;
-        float:                  none; 
-        text-align:             center;
-        transition:             0.5s;
-        margin-bottom:          1rem;
+    }
+    
+    
+    .foot_nav:hover .dropup-foot a
+    {
+        display:                block;
     }
 }
 
@@ -861,6 +984,7 @@ img
     {
         flex-flow:              column wrap;
         margin:                 auto;
+        margin-top:             1rem;
         padding:                0.5rem
     }
 

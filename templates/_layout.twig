@@ -19,13 +19,6 @@
                 media="screen"
                 href="{{ siteUrl }}assets/css/style.css"/>
 
-        <!-- CSS Einbindung für fa fa -->
-        <link   rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link   rel="stylesheet" 
-                href="https://www.w3schools.com/w3css/4/w3.css">
-
     </head>
     <body>
         <!-- Body Background -->
@@ -49,6 +42,7 @@
                         <button class="dropbtn">
                                 Menu
                         </button>
+                        <!-- Content für responsive Dropdown Navigation -->
                         <div class="dropdown-nav">
                             <a class="{{ start }}" href="{{ siteUrl }}">Start</a>
                             <a class="{{ aktuelles }}" href="{{ siteUrl }}aktuellesOverview">Aktuelles</a>
@@ -96,15 +90,22 @@
 
             <!-- Container für Footer -->
             <footer class="foot">
-                <div class="foot_nav" id="HHfootNav">
-                    <a href="javascript:void(0);" class="icon" onclick="HHfootMenu()">
-                        <i class="fa fa-wrench"></i>
-                    </a>
+                <div class="foot_nav">
                     <a href="{{ siteUrl }}impressum">Impressum</a>
                     <a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a>
                     <a href="{{ siteUrl }}kontakt">Kontakt</a>
                     <a href="{{ siteUrl }}links">Links</a>
                     <div class="copy">&copy;HotDocs</div>
+                    <button class="dropbtn2">
+                        Info
+                    </button>
+                    <!-- Content für responsiven DropUp Foot -->
+                    <div class="dropup-foot">
+                        <a href="{{ siteUrl }}impressum">Impressum</a>
+                        <a href="{{ siteUrl }}datenschutz">Datenschutzerklärung</a>
+                        <a href="{{ siteUrl }}kontakt">Kontakt</a>
+                        <a href="{{ siteUrl }}links">Links</a>
+                    </div>
                 </div>
             </footer>
         </div>
@@ -112,7 +113,6 @@
     <!-- Java Einbindungen -->
     <script src="{{ siteUrl }}assets/js/jquery-3.3.1.js"></script>
     <script src="{{ siteUrl }}assets/js/scroll_Head.js"></script>
-    <script src="{{ siteUrl }}assets/js/HHfootMenu.js"></script>
 
     </body>
 </html>
