@@ -63,6 +63,17 @@ html
     font:                       16px/1.6 'DIN1451h', helvetica, arial, sans-serif;
 }
 
+body
+{
+    margin:                     auto;
+    background-color:           rgba(0, 0, 0, 1);
+    background-image:           url(../imgs/body-background.png);
+    background-repeat:          no-repeat;
+    background-attachment:      local;
+    background-position:        center;
+    background-size:            cover;
+}
+
 .site
 {
     position:                   relative;
@@ -72,27 +83,6 @@ html
     min-height:                 100vh;
 }
 
-body
-{
-    margin:                     0;
-    min-height:                 100vh;
-}
-
-.body-bg
-{
-    background:                 url(../imgs/body-background.jpg);
-    width:                      100vw;
-    height:                     100vh;
-    position:                   fixed;
-    top:                        0;
-    left:                       0;
-    z-index:                    -1;
-    -webkit-filter:             blur(5px);
-    -moz-filter:                blur(5px);
-    -o-filter:                  blur(5px);
-    -ms-filter:                 blur(5px);
-    filter:                     blur(5px);
-}
 
 /* Inhalt
 * ======================================== */
@@ -101,10 +91,9 @@ body
 {
     display:                    flex;
     flex-direction:             column;
-    background-color:           rgba(0, 0, 0, 0);
 }
 
-/* Überschriften, Text und Listen
+/* Überschriften, Teaser, Text und Artikel Body
  * ======================================== */
 
 /* Section */
@@ -179,7 +168,7 @@ body
     }
 }
 
-/* Artikel für Übersichtsseiten
+/* Artikel Klasse für Übersichtsseiten
 * ======================================== */
 
 .artikel_1
@@ -261,7 +250,7 @@ body
     }
 }
 
-/* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
+/* Artikel Klasse für Einzelseiten (About, Impressum, Datenschutz, Kontakt, Links)
 * ======================================== */
 
 .artikel_2
@@ -273,12 +262,32 @@ body
     padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
+    hyphens:                    auto;
+    -webkit-hyphens: auto;
 }
 
 .artikel_2 a
 {
     text-decoration:            none;
     color:                      inherit;
+}
+
+.artikel_2 .abody
+{
+    display:                    block;
+    width:                      100%;
+    margin:                     0;
+    padding-left:               1rem;
+}
+
+@media all and (max-width: 770px)
+{
+    .artikel_2 .abody
+    {
+        display:                block;
+        width:                  100%;
+        padding:                0;
+    }
 }
 
 /* Kontakt Seite */
