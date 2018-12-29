@@ -44,8 +44,10 @@
                         </div>
 	            {% endswitch %}
             {% endfor %}
-            <!-- Einbindung von Open-Street-Maps -->
-            <iframe class="maps" src="https://www.openstreetmap.org/export/embed.html?bbox=10.13320326805115%2C54.32438279511453%2C10.151120424270632%2C54.32976972764168&amp;layer=mapnik&amp;marker=54.327073221270766%2C10.142161846160889"></iframe>
+            <div class="maps">
+                <!-- Einbindung von Open-Street-Maps -->
+                <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=10.13320326805115%2C54.32438279511453%2C10.151120424270632%2C54.32976972764168&amp;layer=mapnik&amp;marker=54.327073221270766%2C10.142161846160889"></iframe>
+            </div>
         </div>
     </div>
 {% endblock %}
