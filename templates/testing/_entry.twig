@@ -67,9 +67,26 @@
 
                             {% endswitch %}                                
                         {% endfor %}
-
                     </div>
-..
+
+                {% case "pdf" %}
+                    {% switch block.textformat %}
+
+                        {% for pdf in block.pdf.all() %}
+
+                            {% case "teaser" %}
+                                <div class="teaser">{{ block.text }}</div>
+
+                            {% case "caption" %}
+                                <div class="">{{ block.text }}</div>
+
+                            {% default %}
+                                <div class="abody">{{ block.text }}</div>
+                    {% endswitch %}
+
+                    {% if block.pdf %}
+                        <button src="{{ block.pdf }}">TEST</button>
+                    {% endif %}
             {% endswitch %}
 
                 {% if block.type == "video" %}
