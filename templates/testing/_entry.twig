@@ -107,16 +107,17 @@
                         {% switch block.source %}
 
                             {% case "youtube" %}
+                                {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
 
-                                {% set embed = craft.embeddedAssets.get(asset) %}
                                     {% if embed %}
                                 {# VIDEOBOX NOCH AKTUELL?? #}
                                         <div id="video-box" class="videobox">
-                                            {{ embed ? embed.html }}
+                                            {{ embeddedAsset ? embeddedAsset.html }}
                                         </div>
                                     {% endif %}
 
-                            {% case "soundcloud" %}
+                     {#        {% case "soundcloud" %}
+                                {% set asset = block.embedded.one() %}
                                 {% set embed = craft.embeddedAssets.get(asset) %}
                                     {% if embed %}
                                         <div  class="soundcloud">
@@ -124,12 +125,13 @@
                                         </div>
                                     {% endif %}
                             {% default %}
+                                {% set asset = block.embedded.one() %}
                                 {% set embed = craft.embeddedAssets.get(asset) %}
                                     {% if embed %}
                                         <div  class="embedded">
                                             {{ embed ? embed.html }}
                                         </div>
-                                    {% endif %}
+                                    {% endif %} #}
                         {% endswitch %}
                     </div>
                 {% endswitch %}
