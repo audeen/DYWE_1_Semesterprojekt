@@ -105,34 +105,26 @@
 
                         {% endswitch %}
                         {% switch block.source %}
-
+                            {# VIDEOBOX NOCH AKTUELL?? #}
                             {% case "youtube" %}
                                 {% for asset in block.embeddedLink.all() %}
-
                                     {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
-
-                                {# VIDEOBOX NOCH AKTUELL?? #}
                                         <div id="video-box" class="videobox">
                                             {{ embeddedAsset ? embeddedAsset.html }}
                                         </div>
                                 {% endfor %}
-
-                     {#        {% case "soundcloud" %}
-                                {% set asset = block.embedded.one() %}
-                                {% set embed = craft.embeddedAssets.get(asset) %}
-                                    {% if embed %}
-                                        <div  class="soundcloud">
-                                            {{ embed ? embed.html }}
-                                        </div>
-                                    {% endif %}
+                            {% case "soundcloud" %}
+                                {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+                                    <div class="soundcloud">
+                                        {{ embeddedAsset ? embeddedAsset.html }}
+                                    </div>
+                                {% endfor %}
                             {% default %}
-                                {% set asset = block.embedded.one() %}
-                                {% set embed = craft.embeddedAssets.get(asset) %}
-                                    {% if embed %}
-                                        <div  class="embedded">
-                                            {{ embed ? embed.html }}
-                                        </div>
-                                    {% endif %} #}
+                                {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+                                    <div class="">
+                                        {{ embeddedAsset ? embeddedAsset.html }}
+                                    </div>
+                                {% endfor %}
                         {% endswitch %}
                     </div>
                 {% endswitch %}
