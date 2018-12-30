@@ -117,7 +117,6 @@
                                     {% endif %}
 
                             {% case "soundcloud" %}
-                                {% set asset = block.embedded.one() %}
                                 {% set embed = craft.embeddedAssets.get(asset) %}
                                     {% if embed %}
                                         <div  class="soundcloud">
@@ -125,7 +124,6 @@
                                         </div>
                                     {% endif %}
                             {% default %}
-                                {% set asset = block.embedded.one() %}
                                 {% set embed = craft.embeddedAssets.get(asset) %}
                                     {% if embed %}
                                         <div  class="embedded">
