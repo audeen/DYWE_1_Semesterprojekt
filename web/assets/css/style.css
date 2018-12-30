@@ -219,7 +219,7 @@ body
     letter-spacing:             0.2rem;
 }
 
-.artikel_1 button:hover
+.button:hover
 {
     color:                      #ffffff;
     background-color:           #cc0000;

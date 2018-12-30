@@ -84,10 +84,12 @@
 
                     {% endswitch %}
 
-                    <a href="{{ pdf.getUrl }}" download>
-                        <button class="button">Download PDF</button>
-                    </a>
-
+                    <button class="button">
+                        <a href="{{ pdf.getUrl }}" download>
+                            Download PDF
+                        </a>    
+                    </button>
+                    
                 {% endfor %}
 
                 {% case "embedded" %}
