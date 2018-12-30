@@ -47,4 +47,7 @@ return [
         // Base site URL
         'siteUrl' => null,
     ],
+    // Nötig für Embedded Assets
+    'extraAllowedFileExtensions' => 'json'
+    
 ];
