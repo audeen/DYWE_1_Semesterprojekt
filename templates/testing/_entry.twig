@@ -107,14 +107,15 @@
                         {% switch block.source %}
 
                             {% case "youtube" %}
-                                {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+                                {% for asset in block.embeddedLink.all() %}
 
-                                    {% if embed %}
+                                    {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+
                                 {# VIDEOBOX NOCH AKTUELL?? #}
                                         <div id="video-box" class="videobox">
                                             {{ embeddedAsset ? embeddedAsset.html }}
                                         </div>
-                                    {% endif %}
+                                {% endfor %}
 
                      {#        {% case "soundcloud" %}
                                 {% set asset = block.embedded.one() %}
