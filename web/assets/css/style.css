@@ -63,6 +63,17 @@ html
     font:                       16px/1.6 'DIN1451h', helvetica, arial, sans-serif;
 }
 
+body
+{
+    margin:                     auto;
+    background-color:           rgba(0, 0, 0, 1);
+    background-image:           url(../imgs/body-background.png);
+    background-repeat:          no-repeat;
+    background-attachment:      local;
+    background-position:        center;
+    background-size:            cover;
+}
+
 .site
 {
     position:                   relative;
@@ -70,33 +81,6 @@ html
     min-width:                  320px;
     max-width:                  1200px;
     min-height:                 100vh;
-}
-
-body
-{
-    margin:                     0;
-    min-height:                 100vh;
-}
-
-.body-bg
-{
-    background:                 url(../imgs/body-background.jpg);
-    width:                      100vw;
-    height:                     100vh;
-    position:                   fixed;
-    top:                        0;
-    left:                       0;
-    z-index:                    -1;
-    -webkit-filter:             blur(5px);
-    -moz-filter:                blur(5px);
-    -o-filter:                  blur(5px);
-    -ms-filter:                 blur(5px);
-    filter:                     blur(5px);
-}
-
-img
-{
-    max-width:                  100%;
 }
 
 
@@ -107,10 +91,9 @@ img
 {
     display:                    flex;
     flex-direction:             column;
-    background-color:           rgba(0, 0, 0, 0);
 }
 
-/* Überschriften, Text und Listen
+/* Überschriften, Teaser, Text und Artikel Body
  * ======================================== */
 
 /* Section */
@@ -157,7 +140,7 @@ img
 /* Artikel Body */
 .abody
 {
-    width:                      65%;
+    width:                      60%;
     font-family:                'DIN1451h';
 	font-size:                  1.2rem;
 	line-height:                1.4;
@@ -185,7 +168,7 @@ img
     }
 }
 
-/* Artikel für Übersichtsseiten
+/* Artikel Klasse für Übersichtsseiten
 * ======================================== */
 
 .artikel_1
@@ -241,6 +224,7 @@ img
     color:                      #ffffff;
     background-color:           #cc0000;
     border-color:               #ffffff;
+    border-style:               solid;
 }
 
 @media all and (max-width: 770px)
@@ -267,17 +251,20 @@ img
     }
 }
 
-/* Artikel für Einzelseiten (Impressum, Datenschutz, Kontakt, Links)
+/* Artikel Klasse für Einzelseiten (About, Impressum, Datenschutz, Kontakt, Links)
 * ======================================== */
 
 .artikel_2
 {
+    display:                    flex;
+    flex-direction:             column;
     margin:                     0;
     margin-top:                 1rem;
-    padding:                    1.3rem;
-    padding-right:              2rem;
+    padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
+    hyphens:                    auto;
+    -webkit-hyphens: auto;
 }
 
 .artikel_2 a
@@ -286,71 +273,60 @@ img
     color:                      inherit;
 }
 
-.artikel_2 p
+.artikel_2 .abody
 {
-    line-height:                1.6rem;
-    padding-left:               2.5rem;
-    margin-bottom:              2rem;
-}
-
-.artikel_2 h3
-{
-    margin-top:                 2rem;
-    font-family:                'Inconsolata';
-	line-height:                1.2;
-    color:                      #ffffff;
-    padding-left:               2rem;
-    font-stretch:               expanded;
-}
-
-.artikel_2 h4
-{
-    color:                      #ffffff;
-    padding-left:               2rem;
-}
-
-/* Artikel für Artikel selbst
-* ======================================== */
-
-.artikel_3
-{
+    display:                    block;
+    width:                      auto;
     margin:                     0;
-    margin-top:                 1rem;
-    padding:                    1.3rem;
-    padding-right:              2rem;
-    background-color:           rgba(0, 0, 0, 1);
-    color:                      #ffffff;
+    padding-left:               1rem;
 }
 
-.artikel_3 a
+@media all and (max-width: 770px)
 {
-    text-decoration:            none;
-    color:                      #CC0000;
+    .artikel_2
+    {
+        padding:                0.5rem;
+        width:                  100vw;
+    }
+    
+    .artikel_2 .abody
+    {
+        display:                block;
+        width:                  100%;
+        padding:                0;
+    }
 }
 
-.artikel_3 p
-{
-    padding-left:               2.5rem;
-    font-weight:                normal;
-    margin:                     0;
-    word-wrap:                  break-word;
-}
-
-/* Kontakt Seite
-* ======================================== */
+/* Kontakt Seite */
 
 .kontakt
 {
     display:                    flex;
+    flex-direction:             row;
     width:                      100%;
     height:                     100%;
 }
 
+.kontakt-img
+{
+    display:                    flex;
+    width:                      40%;
+}
+
+.kontakt-img img
+{
+    width:                      100%;
+}
+
 .maps
 {
+    display:                    flex;
     width:                      60%; 
-    margin-top:                 1rem;
-    margin-left:                1rem;
+}
+
+.maps iframe
+{
+    width:                      100%;
 }
 
 @media all and (max-width: 770px)
@@ -358,15 +334,196 @@ img
     .kontakt
     {
         flex-direction:         column;
+        width:                  100vw;    
+    }
+    
+    .kontakt-img
+    {
+        width:                  100%;    
+    }
+    
+    .kontakt-img img
+    {
+        width:                  95%;
     }
     
     .maps
     {
-        width:                  100vh;
-        height:                 50vh;
+        width:                  100%;
+        height:                 70vh;
+        margin-top:             1rem;
         margin-left:            0;
     }
+    
+    .maps iframe
+    {
+        width:                  95%;
+    }
 }
+
+/* LINK Seite */
+
+.link-div
+{
+    display:                    flex;
+    flex-wrap:                  wrap;
+    align-items:                baseline;
+    padding:                    0 1rem;
+}
+
+.link-img
+{
+    flex:                       25%;
+    max-width:                  25%;
+    padding:                    0 1rem;
+}
+
+.link-img img
+{
+    width:                      100%;
+    margin-top:                 1rem;
+}
+
+@media all and (max-width: 800px)
+{
+    .link-img
+    {
+        flex:                   50%;
+        max-width:              50%;
+    }
+    
+    .link-img img
+    {
+        width:                  100%;
+        margin-top:             1rem;
+    }
+}
+
+@media all and (max-width: 600px)
+{
+    .link-img
+    {
+        flex:                   100%;
+        max-width:              100%;
+    }
+    
+    .link-img img
+    {
+        margin-top:             2rem;
+    }
+}
+
+/* Artikel für Artikel selbst
+* ======================================== */
+
+.artikel_3
+{
+    display:                    flex;
+    flex-direction:             column;
+    margin:                     0;
+    margin-top:                 1rem;
+    padding:                    1rem;
+    padding-right:              2rem;
+    background-color:           rgba(0, 0, 0, 1);
+    color:                      #ffffff;
+}
+
+.artikel_3 .abody
+{
+    display:                    flex;
+    flex-direction:             column;
+    margin:                     1rem;
+    margin-left:                3rem;
+    width:                      95%;
+}
+
+.artikel_3 img
+{
+}
+
+/* Bilderklassen
+* ======================================== */
+
+.bildSmall
+{
+    display:                    flex;
+    align-self:                 flex-start;
+    width:                      30%;
+}
+
+.bildMedium
+{
+    display:                    flex;
+    align-self:                 flex-start;
+}
+
+.bildMedium img
+{
+    display:                    flex;
+    width:                      50%;
+}
+
+.bildLarge
+{
+    display:                    flex;
+    flex-direction:             column;
+    align-self:                 center;
+}
+
+.bildLarge img
+{
+    display:                    flex;
+    width:                      100%;   
+}
+
+.zweiBilder
+{
+    display:                    flex;
+    width:                      100%;
+    margin:                     0;
+}
+
+.dreiBilder
+{
+    width:                      30%;
+}
+
+.bildergalerie
+{
+
+}
+
+@media all and (max-width: 770px)
+{
+    .zweiBilder
+    {
+        flex:                   100%;
+        flex-direction:         column;
+        max-width:              100%;
+    }
+    
+    .link-img img
+    {
+        margin-top:             2rem;
+    }
+}
+
+
+/*
+.dreiBilder img
+{
+    display:                    inline-flex;
+    size:                       cover;
+    height:                     250px;
+    width:                      auto;
+    margin:                     2rem;
+    float:                      right;
+    border-color:               rgba(255, 255, 255, 0.5);
+    border-width:               1rem;
+    border-style:               solid;
+}
+*/
+
 
 /* Head, Logo + Navigation
 * ======================================== */
@@ -383,7 +540,7 @@ img
     position:                   -webkit-sticky;
     position:                   sticky;
     top:                        0;
-    transition:                 0.5s;
+    transition:                 2s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -412,12 +569,13 @@ img
     text-transform:             uppercase;
     color:                      #ffffff;
     font-variant:               normal;
-    transition:                 2s;
+    transition:                 0.5s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
     -o-transform:               translateZ(0);
-    transform:                  translateZ(0);}
+    transform:                  translateZ(0);
+}
 
 .logo
 {
@@ -452,12 +610,12 @@ img
     position:                   -webkit-sticky;
     position:                   sticky;
     top:                        0;
-    transition:                 0.5s;
     z-index:                    3000;
     border-color:               rgba(255, 255, 255, 1);
     border-style:               solid;
     border-width:               0;
     border-bottom-width:        0.1rem;
+    transition:                 0.5s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -582,7 +740,7 @@ img
     font-size:                  1.2rem;
     margin:                     0.5rem;
     margin-left:                auto;
-    transition:                 0.5s;
+    transition:                 0.1s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -598,7 +756,7 @@ img
     font-size:                  1rem;
     margin:                     0.5rem;
     margin-left:                auto;
-    transition:                 0.5s;
+    transition:                 0.1s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -909,23 +1067,6 @@ img
         display:                block;
     }
 }
-
-/* Bilderklassen
-* ======================================== */
-
-.dreiBilder img
-{
-    display:                    inline-flex;
-    size:                       cover;
-    height:                     250px;
-    width:                      auto;
-    margin:                     2rem;
-    float:                      right;
-    border-color:               rgba(255, 255, 255, 0.5);
-    border-width:               1rem;
-    border-style:               solid;
-}
-
 
 /* Call to Action
 * ======================================== */
