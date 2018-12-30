@@ -84,7 +84,9 @@
 
                     {% endswitch %}
 
-                    <button href="{{ pdf.getUrl }}" download>Download</button>
+                    <a href="{{ pdf.getUrl }}" download>
+                        <button>Download PDF</button>
+                    </a>
 
                 {% endfor %}
 
