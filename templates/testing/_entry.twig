@@ -87,7 +87,8 @@
                     {% if block.pdf %}
                         <button src="{{ block.pdf }}">TEST</button>
                     {% endif %}
-            {% endswitch %}
+                    {% endswitch %}
+                {% endswitch %}
 
                 {% if block.type == "video" %}
                     {% set asset = block.video.one() %}
