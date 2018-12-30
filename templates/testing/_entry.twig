@@ -91,41 +91,51 @@
                 {% endfor %}
 
                 {% case "embedded" %}
-                    {% switch block.textformat %}
+                    <div class="">
+                        {% switch block.textformat %}
 
-                        {% case "teaser" %}
-                            <div class="teaser">{{ block.text }}</div>
+                            {% case "teaser" %}
+                                <div class="teaser">{{ block.text }}</div>
 
-                        {% case "caption" %}
-                            <div class="">{{ block.text }}</div>
+                            {% case "caption" %}
+                                <div class="">{{ block.text }}</div>
 
-                        {% default %}
-                            <div class="abody">{{ block.text }}</div>
+                            {% default %}
+                                <div class="abody">{{ block.text }}</div>
 
-                    {% endswitch %}
-                    {% switch block.source %}
+                        {% endswitch %}
+                        {% switch block.source %}
 
-                        {% case "youtube" %}
-                            {% set asset = block.embedded.one() %}
-                            {% set embed = craft.embeddedAssets.get(asset) %}
-                                {% if embed %}
-{# VIDEOBOX NOCH AKTUELL?? #}
-                                    <div id="video-box" class="videobox">
-                                        {{ embed ? embed.html }}
-                                    </div>
-                                {% endif %}
+                            {% case "youtube" %}
+                                {% set asset = block.embedded.one() %}
+                                {% set embed = craft.embeddedAssets.get(asset) %}
+                                    {% if embed %}
+                                {# VIDEOBOX NOCH AKTUELL?? #}
+                                        <div id="video-box" class="videobox">
+                                            {{ embed ? embed.html }}
+                                        </div>
+                                    {% endif %}
 
-                        {% case "soundcloud" %}
-                            {% set asset = block.embedded.one() %}
-                            {% set embed = craft.embeddedAssets.get(asset) %}
-                                {% if embed %}
-                                    <div  class="soundcloud">
-                                        {{ embed ? embed.html }}
-                                    </div>
-                                {% endif %}
-                    {% endswitch %}
-            {% endswitch %}
-        {% endfor %}
+                            {% case "soundcloud" %}
+                                {% set asset = block.embedded.one() %}
+                                {% set embed = craft.embeddedAssets.get(asset) %}
+                                    {% if embed %}
+                                        <div  class="soundcloud">
+                                            {{ embed ? embed.html }}
+                                        </div>
+                                    {% endif %}
+                            {% default %}
+                                {% set asset = block.embedded.one() %}
+                                {% set embed = craft.embeddedAssets.get(asset) %}
+                                    {% if embed %}
+                                        <div  class="embedded">
+                                            {{ embed ? embed.html }}
+                                        </div>
+                                    {% endif %}
+                        {% endswitch %}
+                    </div>
+                {% endswitch %}
+            {% endfor %}
     </div>
 {% endblock  %}
 
