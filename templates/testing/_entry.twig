@@ -107,7 +107,7 @@
                         {% switch block.source %}
 
                             {% case "youtube" %}
-                                {% set asset = block.embedded.one() %}
+
                                 {% set embed = craft.embeddedAssets.get(asset) %}
                                     {% if embed %}
                                 {# VIDEOBOX NOCH AKTUELL?? #}
