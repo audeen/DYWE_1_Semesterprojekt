@@ -82,11 +82,15 @@
 
                             {% default %}
                                 <div class="abody">{{ block.text }}</div>
+
+                            {% break %}
+
+                            <button src="{{ block.pdf }}">TEST</button>
+
+                        {% endfor %}
                     {% endswitch %}
 
-                    {% if block.pdf %}
-                        <button src="{{ block.pdf }}">TEST</button>
-                    {% endif %}
+
 
                 {% endswitch %}
 
