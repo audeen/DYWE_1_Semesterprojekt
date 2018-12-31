@@ -77,6 +77,8 @@ body
 .site
 {
     position:                   relative;
+    display:                    flex;
+    flex-wrap:                  wrap;
     margin:                     auto;
     min-width:                  320px;
     max-width:                  1200px;
@@ -90,6 +92,7 @@ body
 .content
 {
     display:                    flex;
+    width:                      100%;
     flex-direction:             column;
 }
 
@@ -289,14 +292,14 @@ body
 .artikel_2
 {
     display:                    flex;
+    width:                      100%;
     flex-direction:             column;
-    margin:                     0;
     margin-top:                 1rem;
     padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
     hyphens:                    auto;
-    -webkit-hyphens: auto;
+    -webkit-hyphens:            auto;
 }
 
 .artikel_2 a
@@ -564,10 +567,10 @@ body
 {
     display:                    flex;
     flex-flow:                  nowrap;
+    align-self:                 flex-start;
     font-family:                'DIN1451h';
     background-color:           rgba(0, 0, 0, 1);
-    max-width:                  100%;
-    margin:                     auto;
+    width:                      100%;
     position:                   relative; 
     position:                   -webkit-sticky;
     position:                   sticky;
@@ -612,7 +615,7 @@ body
     width:                      15vw;
     height:                     auto;
     cursor:                     pointer;
-    transition:                 1s;
+    transition:                 1.5s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -630,8 +633,7 @@ body
     align-items:                center;
     font-family:                'DIN1451h';
     background-color:           rgba(0, 0, 0, 1);
-    max-width:                  100%;
-    margin:                     auto;
+    width:                      100%;
     position:                   relative;
     position:                   -webkit-sticky;
     position:                   sticky;
@@ -762,7 +764,8 @@ body
 {
     display:                    flex;
     align-items:                baseline;
-    align-self:                 flex-end;
+    justify-content:            flex-end;
+    width:                      100%; 
     font-size:                  1.2rem;
     margin:                     0.5rem;
     margin-left:                auto;
@@ -778,6 +781,8 @@ body
 {
     display:                    flex;
     align-items:                baseline;
+    justify-content:            flex-end;
+    width:                      100%;
     right:                      0;   
     font-size:                  1rem;
     margin:                     0.5rem;
@@ -828,6 +833,8 @@ body
 {    
     .nav
     {
+        display:                flex;
+        justify-content:        flex-end;
         margin:                 0.5rem;
         margin-left:            auto;
     }
@@ -837,7 +844,7 @@ body
         display:                none;
         margin:                 0;
     }
-
+    
     .nav_scroll
     {
         margin:                 0.5rem;
@@ -849,25 +856,19 @@ body
         display:                none;
         flex-flow:              column;
         text-align:             center;
-        padding:                0rem;
+        padding:                0.5em;
         position:               absolute;
         top:                    100%;
-        right:                  0;
         background-color:       #000000;
-        width:                  60vw;
-        transition:             0.3s;
-        -webkit-transform:      translateZ(0);
-        -moz-transform:         translateZ(0);
-        -ms-transform:          translateZ(0);
-        -o-transform:           translateZ(0);
-        transform:              translateZ(0);
-        z-index:                1;
+        width:                  100%;
+        z-index:                2;
     }
     
     .dropbtn
     {
         display:                flex;
         margin-left:            1rem;
+        margin-right:           0.5rem;
         font-family:            'DIN1451h';
         font-size:              1.2rem;
         text-transform:         uppercase;
@@ -877,7 +878,7 @@ body
         border-style:           solid;
         border-width:           0.1rem;
         border-color:           #ffffff;
-        transition:             0.3s;
+        transition:             0.5s;
         -webkit-transform:      translateZ(0);
         -moz-transform:         translateZ(0);
         -ms-transform:          translateZ(0);
@@ -889,6 +890,8 @@ body
     .nav_scroll .dropbtn
     {
         font-size:              1rem;
+        margin-left:            0.5rem;
+        margin-right:           0;
         z-index:                2;
     }
     
@@ -900,7 +903,7 @@ body
     
     .nav:hover .dropdown-nav, .nav_scroll:hover .dropdown-nav
     {
-        display:                block;
+        display:                flex;
     }
     
     .nav:hover .dropdown-nav a, .nav_scroll:hover .dropdown-nav a
@@ -940,13 +943,12 @@ body
 
 .foot
 {
-    position:                   relative;
     display:                    flex;
+    align-self:                 flex-end;
     width:                      100%;
     background-color:           rgba(0, 0, 0, 1);
     margin-top:                 1rem;
     padding:                    0.5rem;
-    font-family:                'DIN1451h';
     font-size:                  1.2rem;
     text-transform:             uppercase;
     letter-spacing:             0.1rem;
@@ -959,6 +961,7 @@ body
     flex-direction:             row;
     justify-content:            space-between; 
     align-items:                baseline;
+    width:                      auto;
 }
 
 .foot_nav a
@@ -998,6 +1001,7 @@ body
     .foot
     {
         justify-content:        space-between;
+        font-size:              1rem;
     }
     
     .foot_nav
@@ -1017,9 +1021,9 @@ body
     .copy
     {
         position:               absolute;
-        margin:                 0.5rem;
-        margin-right:           2.5rem;
         right:                  0;
+        bottom:                 0;
+        margin:                 0.5rem;
     }
     
     .dropup-foot
@@ -1029,23 +1033,26 @@ body
         text-align:             center;
         padding:                0.5rem;
         position:               absolute;
-        bottom:                 100%;
+        bottom:                 0;
         left:                   0;
         background-color:       #000000;
-        width:                  auto;
+        width:                  100%;
         transition:             1s;
         -webkit-transform:      translateZ(0);
         -moz-transform:         translateZ(0);
         -ms-transform:          translateZ(0);
         -o-transform:           translateZ(0);
         transform:              translateZ(0);
+        border-width:           0;
+        border-top-width:       0.1rem;
+        border-color:           #ffffff;
+        border-style:           solid;
         z-index:                1;
     }
     
     .dropbtn2
     {
         display:                flex;
-        margin-left:            1rem;
         font-family:            'DIN1451h';
         font-size:              1.2rem;
         text-transform:         uppercase;
@@ -1072,7 +1079,7 @@ body
     
     .foot:hover .dropup-foot
     {
-        display:                block;
+        display:                flex;
     }
     
     

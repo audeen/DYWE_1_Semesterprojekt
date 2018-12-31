@@ -3,7 +3,7 @@
 
     function scrollHead()
     {
-        offsetHeight = document.getElementById('Head').offsetHeight;
+        offsetHeight = document.getElementById('Head').offsetHeight-40;
         if (document.body.scrollTop > offsetHeight || document.documentElement.scrollTop > offsetHeight)
         {
             document.getElementById("HHheadNav").className = "nav_scroll";
