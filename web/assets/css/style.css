@@ -666,7 +666,7 @@ body
 {
     margin-left:                1rem;
     font-size:                  1.6vw;
-    line-height:                2;
+    line-height:                1;
     text-transform:             uppercase;
     color:                      #ffffff;
     font-variant:               normal;
@@ -1001,7 +1001,6 @@ body
     .foot
     {
         justify-content:        space-between;
-        font-size:              1rem;
     }
     
     .foot_nav
