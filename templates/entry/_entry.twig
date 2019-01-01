@@ -10,15 +10,15 @@
         {% set aktuelles = 'current' %}
 		{% set page_title = 'Aktuelles' %}
 		{% set sectionart = craft.entries.section('aktuelles').all() %}
-    {% case "projekteOverview" %}
+    {% case "Projekte" %}
         {% set projekte = 'current' %}
 		{% set page_title = 'Projekte' %}
 		{% set sectionart = craft.entries.section('projekte').all() %}
-    {% case "opensourceOverview" %}
+    {% case "OpenSource" %}
         {% set opensource = 'current' %}
 		{% set page_title = 'Open-Source' %}
 		{% set sectionart = craft.entries.section('opensource').all() %}
-    {% case "modsOverview" %}
+    {% case "Mods" %}
         {% set mods = 'current' %}
 		{% set page_title = 'Mods' %}
 		{% set sectionart = craft.entries.section('mods').all() %}
