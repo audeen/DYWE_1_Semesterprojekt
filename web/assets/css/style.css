@@ -1010,7 +1010,9 @@ body
     
     .nav:hover .dropdown-nav, .nav_scroll:hover .dropdown-nav
     {
-        display:                flex;
+        display:                block;
+        position:               absolute;
+        left:                   0;
     }
     
     .nav:hover .dropdown-nav a, .nav_scroll:hover .dropdown-nav a
