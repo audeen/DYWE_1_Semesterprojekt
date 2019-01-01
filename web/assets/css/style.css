@@ -591,14 +591,15 @@ body
 .headerline
 {
     display:                    flex;
+    align-self:                 auto;
     margin-right:               auto;
+    margin-bottom:              2rem;
     padding-left:               1rem;
     font-size:                  2.5vw;
-    line-height:                2;
+    line-height:                1;
     text-transform:             uppercase;
     color:                      #ffffff;
-    font-variant:               normal;
-    transition:                 3s;
+    transition:                 2s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -615,7 +616,7 @@ body
     width:                      15vw;
     height:                     auto;
     cursor:                     pointer;
-    transition:                 1.5s;
+    transition:                 1s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -701,7 +702,7 @@ body
         align-self:             center;
         margin:                 0.5rem;
         float:                  left;
-        width:                  20vw;
+        width:                  25vw;
         height:                 auto;
         cursor:                 pointer;
         transition:             0.3s;
@@ -725,8 +726,9 @@ body
     .headerline
     {
         display:                flex;
-        margin-right:           auto;
-        padding-left:           1rem;
+        margin-bottom:          auto;
+        margin-right:           0;
+        padding-left:           0;
         font-size:              4vw;
         line-height:            1;
         transition:             0.3s;
@@ -741,7 +743,7 @@ body
     {
         margin:                 0.5rem;
         float:                  left;
-        width:                  10vw;
+        width:                  13vw;
         height:                 auto;
         cursor:                 pointer;
     }
@@ -766,7 +768,7 @@ body
     align-items:                baseline;
     justify-content:            flex-end;
     width:                      100%; 
-    font-size:                  1.2rem;
+    font-size:                  1.4rem;
     margin:                     0.5rem;
     margin-left:                auto;
     transition:                 3s;
@@ -784,7 +786,7 @@ body
     justify-content:            flex-end;
     width:                      100%;
     right:                      0;   
-    font-size:                  1rem;
+    font-size:                  1.6rem;
     margin:                     0.5rem;
     margin-left:                auto;
     transition:                 0.3s;
@@ -856,7 +858,7 @@ body
         display:                none;
         flex-flow:              column;
         text-align:             center;
-        padding:                0.5em;
+        padding:                0.3em;
         position:               absolute;
         top:                    100%;
         background-color:       #000000;
@@ -909,6 +911,7 @@ body
     .nav:hover .dropdown-nav a, .nav_scroll:hover .dropdown-nav a
     {
         display:                block;
+        font-size:              1rem;
     }    
 
     .nav a.current 
@@ -980,10 +983,9 @@ body
 .copy
 {
     position:                   absolute;
+    right:                      0;
     margin:                     0.5rem;
     margin-right:               1.5rem;
-    right:                      0;
-    
 }
 
 .dropup-foot
@@ -1020,8 +1022,6 @@ body
     .copy
     {
         position:               absolute;
-        right:                  0;
-        bottom:                 0;
         margin:                 0.5rem;
     }
     
@@ -1081,10 +1081,10 @@ body
         display:                flex;
     }
     
-    
     .foot_nav:hover .dropup-foot a
     {
         display:                block;
+        font-size:              1.2rem;
     }
 }
 
