@@ -600,13 +600,14 @@ body
     display:                    flex;
     flex-direction:             column;
     flex:                       100%;
+    margin:                     auto;
     margin-top:                 1rem;
     padding:                    0.5rem;
 }
 
 .embedded iframe
 {
-    width:                      100%;
+    max-width:                  100%;
     min-height:                 auto;
 }
 
