@@ -43,7 +43,7 @@
                     {% case "artikelPreview" %}
 	                    {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('smallThumb') }}">
+			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
 		                    </figure>
 	                    {% endfor %}	
 		                <div>
@@ -98,7 +98,7 @@
                     {% case "artikelPreview" %}
 		                {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('smallThumb') }}">
+			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
 		                    </figure>
 	                    {% endfor %}
 	                    <div>
@@ -130,7 +130,7 @@
                     {% case "artikelPreview" %}
                         {% for image in block.artikelThumbnail.all() %}
 	                        <figure class="artikelThumbnail">
-		                        <img src="{{ image.getUrl('smallThumb') }}">
+		                        <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
 	                        </figure>
     	                {% endfor %}
 	                    <div>

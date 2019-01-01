@@ -2,6 +2,8 @@
 
 {% set start, projekte, opensource, aktuelles, mods, about = '','','','','','' %}
 
+{# Der Segment Switch Case zieht nicht auf Artikel Einzelseiten?? 
+
 {% set segment = craft.app.request.getSegment(1) %}
 {% switch segment %}
     {% case "aktuellesOverview" %}
@@ -22,6 +24,8 @@
 		{% set sectionart = craft.entries.section('mods').all() %}
 {% endswitch %}
 
+#}
+
 {% block content %}
     <div class="artikel_3">
 
@@ -33,36 +37,31 @@
             {% switch block.type %}
 
                 {% case "text" %}
-
                     {% switch block.textformat %}
-
                         {% case "teaser" %}
                             <div class="teaser">{{ block.text }}</div>
-
                         {% case "caption" %}
-                            <div class="">{{ block.text }}</div>
-
+                            <div class="caption">{{ block.text }}</div>
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
-
                     {% endswitch %}
 
             	{% case "images" %}
-                    <div class="">
+                    <div class="images_3">
                         {% for image in block.image.all() %}
                             {% switch block.size %}
 
                                 {% case "smallThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('smallThumb') }}">
+                                        <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
                                     </div>
                                 {% case "mediumThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('mediumThumb') }}">
+                                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
                                     </div>
                                 {% case "largeThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('largeThumb') }}">
+                                        <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
                                     </div>
 
                             {% endswitch %}                                
@@ -77,30 +76,30 @@
                             <div class="teaser">{{ block.text }}</div>
 
                         {% case "caption" %}
-                            <div class="">{{ block.text }}</div>
+                            <div class="caption">{{ block.text }}</div>
 
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
 
                     {% endswitch %}
 
-                    <button class="button">
-                        <a href="{{ pdf.getUrl }}" download>
+                    <div class="pdf">
+                        <a class="button" href="{{ pdf.getUrl }}" download>
                             Download PDF
                         </a>    
-                    </button>
+                    </div>
                     
                 {% endfor %}
 
                 {% case "embedded" %}
-                    <div class="">
+                    <div class="embedded">
                         {% switch block.textformat %}
 
                             {% case "teaser" %}
                                 <div class="teaser">{{ block.text }}</div>
 
                             {% case "caption" %}
-                                <div class="">{{ block.text }}</div>
+                                <div class="caption">{{ block.text }}</div>
 
                             {% default %}
                                 <div class="abody">{{ block.text }}</div>
@@ -108,19 +107,23 @@
                         {% endswitch %}
                         {% switch block.source %}
                             {% case "youtube" %}
-                                {% for asset in block.embeddedLink.all() %}
-                                {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
-                                    <div class="youtube"{# id="video-box" class="videobox" #}>
-                                        {{ embeddedAsset ? embeddedAsset.html }}
-                                    </div>
-                                {% endfor %}
+                                <div class="youtube">
+                                    {% for asset in block.embeddedLink.all() %}
+                                    {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+                                        <div class="video">
+                                            {{ embeddedAsset ? embeddedAsset.html }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
                             {% case "soundcloud" %}
-                                {% for asset in block.embeddedLink.all() %}
-                                {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
-                                    <div class="soundcloud">
-                                        {{ embeddedAsset ? embeddedAsset.html }}
-                                    </div>
-                                {% endfor %}
+                                <div class="soundcloud">
+                                    {% for asset in block.embeddedLink.all() %}
+                                    {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+                                        <div class="sound">
+                                            {{ embeddedAsset ? embeddedAsset.html }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
                             {% default %}
                                 {% for asset in block.embeddedLink.all() %}
                                 {% set embeddedAsset = craft.embeddedAssets.get(asset) %}

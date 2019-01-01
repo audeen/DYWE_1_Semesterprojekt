@@ -65,6 +65,7 @@ html
 
 body
 {
+    font-family:                'DIN1451h';
     margin:                     auto;
     background-color:           rgba(0, 0, 0, 1);
     background-image:           url(../imgs/body-background.png);
@@ -217,7 +218,6 @@ body
     background-color:           rgba(0, 0, 0, 1);
     color:                      #cc0000;
     margin-left:                2rem;
-    
     padding:                    0.2rem; 
     border-width:               0.01rem;
     border-style:               dashed;
@@ -455,7 +455,7 @@ body
 {
     display:                    flex;
     flex-direction:             column;
-    margin:                     0;
+    margin:                     auto;
     margin-top:                 1rem;
     padding:                    1rem;
     padding-right:              2rem;
@@ -463,102 +463,129 @@ body
     color:                      #ffffff;
 }
 
+.artikel_3 .headline
+{
+    margin-bottom:              0;
+    font-size:                  3rem;
+}
+
 .artikel_3 .abody
 {
-    display:                    flex;
-    flex-direction:             column;
-    margin:                     1rem;
-    margin-left:                3rem;
-    width:                      95%;
-}
-
-.artikel_3 img
-{
-}
-
-/* Bilderklassen
-* ======================================== */
-
-.bildSmall
-{
-    display:                    flex;
-    align-self:                 flex-start;
-    width:                      30%;
-}
-
-.bildMedium
-{
-    display:                    flex;
-    align-self:                 flex-start;
-}
-
-.bildMedium img
-{
-    display:                    flex;
-    width:                      50%;
-}
-
-.bildLarge
-{
-    display:                    flex;
-    flex-direction:             column;
-    align-self:                 center;
-}
-
-.bildLarge img
-{
-    display:                    flex;
-    width:                      100%;   
-}
-
-.zweiBilder
-{
-    display:                    flex;
     width:                      100%;
+    margin:                     0.5rem;
+    padding-right:              1rem;
+}
+
+.artikel_3 .caption
+{
+    font-family:                'DIN1451h';
+    font-size:                  1.2rem;
     margin:                     0;
-}
-
-.dreiBilder
-{
-    width:                      30%;
-}
-
-.bildergalerie
-{
-
+    margin-right:               auto;
+    padding-left:               1rem;
 }
 
 @media all and (max-width: 770px)
 {
-    .zweiBilder
+   .artikel_3
+    {
+        display:                flex;
+    }
+}
+
+/* PDF */
+
+.pdf
+{
+    display:                    flex;
+}
+
+/* Bilderklassen */
+
+.images_3
+{
+    display:                    flex;
+    flex-wrap:                  wrap;
+    flex:                       100%;
+}
+
+.one
+{
+    flex:                       100%;
+    margin:                     auto;
+}
+
+.one img
+{
+    width:                      100%;
+    padding:                    0.5;
+}
+
+.two
+{
+    flex:                       50%;
+    margin:                     auto;
+}
+
+.two img
+{
+    width:                      100%;
+    padding:                    0.5rem;
+}
+
+.three
+{
+    flex:                       30%;
+    margin:                     auto;
+}
+
+.three img
+{
+    width:                      100%;
+    padding:                    0.5rem;
+}
+
+@media all and (max-width: 770px)
+{
+    .two
     {
         flex:                   100%;
-        flex-direction:         column;
-        max-width:              100%;
     }
     
-    .link-img img
+    .three
     {
-        margin-top:             2rem;
+        flex:                   100%;
     }
 }
 
+/* Boxen */
 
-/*
-.dreiBilder img
+.embedded
 {
-    display:                    inline-flex;
-    size:                       cover;
-    height:                     250px;
-    width:                      auto;
-    margin:                     2rem;
-    float:                      right;
-    border-color:               rgba(255, 255, 255, 0.5);
-    border-width:               1rem;
-    border-style:               solid;
+    padding:                    0.5rem;
 }
-*/
 
+.youtube 
+{
+    margin:                     auto;
+    flex:                       100%;
+}
+
+.video
+{
+    width:                      100%;
+}
+
+.soundcloud
+{
+    margin:                     auto;
+    flex:                       100%;
+}
+
+.sound
+{
+    width:                      100%; 
+}
 
 /* Head, Logo + Navigation
 * ======================================== */
@@ -771,7 +798,7 @@ body
     font-size:                  1.4rem;
     margin:                     0.5rem;
     margin-left:                auto;
-    transition:                 3s;
+    transition:                 2s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -786,7 +813,7 @@ body
     justify-content:            flex-end;
     width:                      100%;
     right:                      0;   
-    font-size:                  1.6rem;
+    font-size:                  1.2rem;
     margin:                     0.5rem;
     margin-left:                auto;
     transition:                 0.3s;
@@ -831,7 +858,7 @@ body
     display:                    none;
 }
 
-@media all and (max-width: 770px)
+@media all and (max-width: 800px)
 {    
     .nav
     {
@@ -952,7 +979,7 @@ body
     background-color:           rgba(0, 0, 0, 1);
     margin-top:                 1rem;
     padding:                    0.5rem;
-    font-size:                  1.2rem;
+    font-size:                  1rem;
     text-transform:             uppercase;
     letter-spacing:             0.1rem;
     color:                      #ffffff;
@@ -1156,13 +1183,4 @@ body
         margin-bottom:          0.25rem;
         margin-top:             0.25rem;
     }
-}
-
-/* Boxen
-* ======================================== */
-
-.videobox 
-{
-    max-width:                  1200px;
-    height:                     auto;
 }
