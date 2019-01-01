@@ -529,8 +529,17 @@ body
 
 .pdf .button
 {
+    display:                    flex;
     margin:                     0;
-    margin-left:                0.5rem;
+    margin-left:                1rem;
+    text-decoration:            none;
+    letter-spacing:             0;
+    border-width:               0.1rem; 
+}
+
+.pdf .button p
+{
+    margin:                     0;
 }
 
 /* Bilderklassen */
