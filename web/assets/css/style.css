@@ -94,7 +94,7 @@ body
 {
     display:                    flex;
     width:                      100%;
-    flex-direction:             column;
+    flex-flow:                  column;
 }
 
 /* Überschriften, Teaser, Text und Artikel Body
@@ -419,7 +419,7 @@ body
     margin-top:                 1rem;
 }
 
-@media all and (max-width: 800px)
+@media all and (max-width: 770px)
 {
     .link-img
     {
@@ -461,6 +461,8 @@ body
     padding-right:              2rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
+    hyphens:                    auto;
+    -webkit-hyphens:            auto;
 }
 
 .artikel_3 .headline
@@ -469,27 +471,52 @@ body
     font-size:                  3rem;
 }
 
+.artikel_3 .teaser
+{
+    margin:                     0;
+    margin-top:                 2rem;
+    font-size:                  2rem;
+}
+
+.artikel_3 .teaser p
+{
+    margin:                     0;
+}
+
 .artikel_3 .abody
 {
+    font-size:                  1.4rem;
     width:                      100%;
     margin:                     0.5rem;
     padding-right:              1rem;
+    padding-left:               0.5rem;
 }
 
 .artikel_3 .caption
 {
     font-family:                'DIN1451h';
-    font-size:                  1.2rem;
+    font-size:                  1rem;
     margin:                     0;
     margin-right:               auto;
     padding-left:               1rem;
+    letter-spacing:             0.1rem;
+}
+
+.artikel_3 .caption p
+{
+    margin:                     0;
 }
 
 @media all and (max-width: 770px)
 {
-   .artikel_3
+    .artikel_3
     {
-        display:                flex;
+        padding:                0.5rem;
+    }
+    
+    .artikel_3 .caption
+    {
+        padding:                0.5rem;
     }
 }
 
@@ -500,6 +527,12 @@ body
     display:                    flex;
 }
 
+.pdf .button
+{
+    margin:                     0;
+    margin-left:                0.5rem;
+}
+
 /* Bilderklassen */
 
 .images_3
@@ -507,6 +540,7 @@ body
     display:                    flex;
     flex-wrap:                  wrap;
     flex:                       100%;
+    margin-top:                 1rem;
 }
 
 .one
@@ -517,8 +551,9 @@ body
 
 .one img
 {
-    width:                      100%;
-    padding:                    0.5;
+    margin:                     auto;
+    width:                      auto;
+    padding:                    0.5rem;
 }
 
 .two
@@ -562,12 +597,21 @@ body
 
 .embedded
 {
+    display:                    flex;
+    flex-direction:             column;
+    flex:                       100%;
+    margin-top:                 1rem;
     padding:                    0.5rem;
+}
+
+.embedded iframe
+{
+    width:                      100%;
+    min-height:                 auto;
 }
 
 .youtube 
 {
-    margin:                     auto;
     flex:                       100%;
 }
 
@@ -578,13 +622,20 @@ body
 
 .soundcloud
 {
-    margin:                     auto;
     flex:                       100%;
 }
 
 .sound
 {
     width:                      100%; 
+}
+
+@media all and (max-width: 770px)
+{
+    .embedded
+    {
+        flex-direction:         column;
+    }
 }
 
 /* Head, Logo + Navigation
@@ -813,7 +864,7 @@ body
     justify-content:            flex-end;
     width:                      100%;
     right:                      0;   
-    font-size:                  1.2rem;
+    font-size:                  1rem;
     margin:                     0.5rem;
     margin-left:                auto;
     transition:                 0.3s;
@@ -858,7 +909,7 @@ body
     display:                    none;
 }
 
-@media all and (max-width: 800px)
+@media all and (max-width: 770px)
 {    
     .nav
     {
