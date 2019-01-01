@@ -2,8 +2,6 @@
 
 {% set start, projekte, opensource, aktuelles, mods, about = '','','','','','' %}
 
-{# Der Segment Switch Case zieht nicht auf Artikel Einzelseiten??  #}
-
 {% set segment = craft.app.request.getSegment(1) %}
 {% switch segment %}
     {% case "Aktuelles" %}

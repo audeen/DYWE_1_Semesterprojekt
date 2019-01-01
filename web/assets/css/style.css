@@ -552,7 +552,7 @@ body
 .one img
 {
     margin:                     auto;
-    width:                      auto;
+    max-width:                  100%;
     padding:                    0.5rem;
 }
 
@@ -632,10 +632,7 @@ body
 
 @media all and (max-width: 770px)
 {
-    .embedded
-    {
-        flex-direction:         column;
-    }
+    
 }
 
 /* Head, Logo + Navigation
