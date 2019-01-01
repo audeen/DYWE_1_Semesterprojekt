@@ -12,7 +12,7 @@ Es wird um Nachsicht gebeten in Bezug auf Dopplungen und Verhältnisse zwischen 
 
 /* Fonts */
 
- @font-face
+@font-face
  {
      font-family:                'DIN1451h';
      src:                        url('../fonts/DIN1451_4H/DIN1451_4H_08.87.ttf') format('truetype');
@@ -67,12 +67,15 @@ body
 {
     font-family:                'DIN1451h';
     margin:                     auto;
-    background-color:           rgba(0, 0, 0, 1);
+    background-color:           rgba(0, 0, 0, 0.8);
+/*
     background-image:           url(../imgs/body-background.png);
     background-repeat:          no-repeat;
     background-attachment:      local;
     background-position:        center;
     background-size:            cover;
+*/
+    
 }
 
 .site
@@ -105,14 +108,15 @@ body
 {
     font-family:                'DIN1451h';
     font-size:                  1.4rem;
-    font-weight:                bold; 
-	line-height:                1.2;
+    font-weight:                bold;
+    font-style:                 italic;
+	line-height:                1;
     text-transform:             uppercase;
     color:                      #b3b3b3;
     margin:                     0;
     margin-top:                 0.2rem;
     padding:                    0; 
-    letter-spacing:             0.4rem;
+    letter-spacing:             0.3rem;
 }
 
 /* Artikel Titel */
@@ -137,7 +141,6 @@ body
     color:                      #ffffff;
     margin:                     0.5rem;
     margin-left:                2rem;
-    letter-spacing:             0.1rem;
     hyphens:                    auto;
 }
 
@@ -222,7 +225,7 @@ body
     border-width:               0.01rem;
     border-style:               dashed;
     border-color:               #cc0000;
-    font-size:                  1.2rem;
+    font-size:                  1rem;
     letter-spacing:             0.2rem;
 }
 
@@ -751,7 +754,7 @@ body
 .headerline_scroll
 {
     margin-left:                1rem;
-    font-size:                  1.6vw;
+    font-size:                  1.5vw;
     line-height:                1;
     text-transform:             uppercase;
     color:                      #ffffff;
@@ -768,7 +771,7 @@ body
 {
     margin:                     0.5rem;
     float:                      left;
-    width:                      4vw;
+    width:                      3.5vw;
     height:                     auto;
     cursor:                     pointer;
     transition:                 0.3s;
@@ -856,6 +859,7 @@ body
     font-size:                  1.4rem;
     margin:                     0.5rem;
     margin-left:                auto;
+    margin-top:                 auto;
     transition:                 2s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
@@ -871,9 +875,10 @@ body
     justify-content:            flex-end;
     width:                      100%;
     right:                      0;   
-    font-size:                  1rem;
+    font-size:                  1.4rem;
     margin:                     0.5rem;
     margin-left:                auto;
+    margin-top:                 auto;
     transition:                 0.3s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
@@ -894,7 +899,8 @@ body
 .nav a.current, .nav_scroll a.current
 {
     color:                      #ffffff;
-    text-decoration:            none;  
+    text-decoration:            none;
+    padding:                    0.3rem 0.5em;
     border-color:               #ffffff;
     border-style:               solid;
     border-width:               0.1rem;
@@ -916,6 +922,14 @@ body
     display:                    none;
 }
 
+@media all and (max-width: 1000px)
+{  
+    .nav_scroll
+    {
+        font-size:              1rem;
+    }
+}
+    
 @media all and (max-width: 770px)
 {    
     .nav
@@ -943,7 +957,7 @@ body
         display:                none;
         flex-flow:              column;
         text-align:             center;
-        padding:                0.3em;
+        padding:                0.3rem;
         position:               absolute;
         top:                    100%;
         background-color:       #000000;
@@ -976,7 +990,7 @@ body
         
     .nav_scroll .dropbtn
     {
-        font-size:              1rem;
+        font-size:              1.2rem;
         margin-left:            0.5rem;
         margin-right:           0;
         z-index:                2;
@@ -996,7 +1010,7 @@ body
     .nav:hover .dropdown-nav a, .nav_scroll:hover .dropdown-nav a
     {
         display:                block;
-        font-size:              1rem;
+        font-size:              1.2rem;
     }    
 
     .nav a.current 
@@ -1015,7 +1029,7 @@ body
     .nav_scroll a.current
     {
         display:                flex;
-        font-size:              1rem;
+        font-size:              1.2rem;
         z-index:                2; 
         transition:             0.3s;
         -webkit-transform:      translateZ(0);
@@ -1037,7 +1051,8 @@ body
     background-color:           rgba(0, 0, 0, 1);
     margin-top:                 1rem;
     padding:                    0.5rem;
-    font-size:                  1rem;
+    font-family:                'DIN1451h';
+    font-size:                  1.4rem;
     text-transform:             uppercase;
     letter-spacing:             0.1rem;
     color:                      #ffffff;
