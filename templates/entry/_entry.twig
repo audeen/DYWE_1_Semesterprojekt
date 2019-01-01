@@ -2,29 +2,29 @@
 
 {% set start, projekte, opensource, aktuelles, mods, about = '','','','','','' %}
 
-{# Der Segment Switch Case zieht nicht auf Artikel Einzelseiten?? 
+{# Der Segment Switch Case zieht nicht auf Artikel Einzelseiten??  #}
 
 {% set segment = craft.app.request.getSegment(1) %}
 {% switch segment %}
-    {% case "aktuellesOverview" %}
+    {% case "Aktuelles" %}
         {% set aktuelles = 'current' %}
 		{% set page_title = 'Aktuelles' %}
 		{% set sectionart = craft.entries.section('aktuelles').all() %}
-    {% case "projekteOverview" %}
+    {% case "Projekte" %}
         {% set projekte = 'current' %}
 		{% set page_title = 'Projekte' %}
 		{% set sectionart = craft.entries.section('projekte').all() %}
-    {% case "opensourceOverview" %}
+    {% case "OpenSource" %}
         {% set opensource = 'current' %}
 		{% set page_title = 'Open-Source' %}
 		{% set sectionart = craft.entries.section('opensource').all() %}
-    {% case "modsOverview" %}
+    {% case "Mods" %}
         {% set mods = 'current' %}
 		{% set page_title = 'Mods' %}
 		{% set sectionart = craft.entries.section('mods').all() %}
 {% endswitch %}
 
-#}
+
 
 {% block content %}
     <div class="artikel_3">
