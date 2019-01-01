@@ -687,7 +687,7 @@ body
     line-height:                1;
     text-transform:             uppercase;
     color:                      #ffffff;
-    transition:                 2s;
+    transition:                 1s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -732,12 +732,6 @@ body
     border-style:               solid;
     border-width:               0;
     border-bottom-width:        0.1rem;
-    transition:                 0.3s;
-    -webkit-transform:          translateZ(0);
-    -moz-transform:             translateZ(0);
-    -ms-transform:              translateZ(0);
-    -o-transform:               translateZ(0);
-    transform:                  translateZ(0);
 }
 
 .hl_nav_scroll
@@ -759,12 +753,16 @@ body
     text-transform:             uppercase;
     color:                      #ffffff;
     font-variant:               normal;
-    transition:                 0s;
+    transition:                 0.2s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
     -o-transform:               translateZ(0);
     transform:                  translateZ(0);
+    -moz-animation:             fadein 2s; /* Firefox */
+    -webkit-animation:          fadein 2s; /* Safari and Chrome */
+    -o-animation:               fadein 2s; /* Opera */
+    animation:                  fadein 2s;
 }
 
 .logo_scroll
@@ -774,12 +772,16 @@ body
     width:                      3.5vw;
     height:                     auto;
     cursor:                     pointer;
-    transition:                 0.3s;
+    transition:                 1s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
     -o-transform:               translateZ(0);
     transform:                  translateZ(0);
+    -moz-animation:             fadein 2s; /* Firefox */
+    -webkit-animation:          fadein 2s; /* Safari and Chrome */
+    -o-animation:               fadein 2s; /* Opera */
+    animation:                  fadein 2s;
 }
 
 @media all and (max-width: 770px)
@@ -856,11 +858,11 @@ body
     align-items:                baseline;
     justify-content:            flex-end;
     width:                      100%; 
-    font-size:                  1.4rem;
+    font-size:                  1.2rem;
     margin:                     0.5rem;
     margin-left:                auto;
     margin-top:                 auto;
-    transition:                 2s;
+    transition:                 3s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -875,16 +877,14 @@ body
     justify-content:            flex-end;
     width:                      100%;
     right:                      0;   
-    font-size:                  1.4rem;
+    font-size:                  1.2rem;
     margin:                     0.5rem;
     margin-left:                auto;
     margin-top:                 auto;
-    transition:                 0.3s;
-    -webkit-transform:          translateZ(0);
-    -moz-transform:             translateZ(0);
-    -ms-transform:              translateZ(0);
-    -o-transform:               translateZ(0);
-    transform:                  translateZ(0);
+    -moz-animation:             fadein 2s; /* Firefox */
+    -webkit-animation:          fadein 2s; /* Safari and Chrome */
+    -o-animation:               fadein 2s; /* Opera */
+    animation:                  fadein 2s;
 }
 
 .nav a, .nav_scroll a
@@ -894,6 +894,12 @@ body
     padding:                    0.3rem 0.5rem;
     text-decoration:            none;
     text-transform:             uppercase;
+    transition:                 0.3s;
+    -webkit-transform:          translateZ(0);
+    -moz-transform:             translateZ(0);
+    -ms-transform:              translateZ(0);
+    -o-transform:               translateZ(0);
+    transform:                  translateZ(0);
 }
 
 .nav a.current, .nav_scroll a.current
@@ -1052,7 +1058,7 @@ body
     margin-top:                 1rem;
     padding:                    0.5rem;
     font-family:                'DIN1451h';
-    font-size:                  1.4rem;
+    font-size:                  1.2rem;
     text-transform:             uppercase;
     letter-spacing:             0.1rem;
     color:                      #ffffff;
