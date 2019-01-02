@@ -1230,9 +1230,9 @@ body
     position:                   relative;
 }
 
-.cta:hover .cta_t
+.cta:hover img
 {
-    opacity:                    1;
+    opacity:                    0.5;
 }
 
 .cta a
@@ -1263,6 +1263,11 @@ body
     text-transform:             uppercase;
     letter-spacing:             0.3rem;
     opacity:                    0;
+}
+
+.cta:hover .cta_t
+{
+    opacity:                    1;
 }
 
 @media all and (max-width: 770px)
