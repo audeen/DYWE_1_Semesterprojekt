@@ -69,24 +69,11 @@
                 {% case "pdf" %}
 
                 {% for pdf in block.pdf.all() %}
-                    {% switch block.textformat %}
-                        {% case "teaser" %}
-                            <div class="teaser">{{ block.text }}</div>
-
-                        {% case "caption" %}
-                            <div class="caption">{{ block.text }}</div>
-
-                        {% default %}
-                            <div class="abody">{{ block.text }}</div>
-
-                    {% endswitch %}
-
                     <div class="pdf">
                         <a class="button" href="{{ pdf.getUrl }}" download>
                             Download &nbsp; {{ block.text  }}
                         </a>    
                     </div>
-                    
                 {% endfor %}
 
                 {% case "embedded" %}
