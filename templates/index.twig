@@ -11,7 +11,7 @@
                     {% case "artikelPreview" %}
 	                    {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
 		                    </figure>
 	                    {% endfor %}
 	                    <div>
@@ -23,7 +23,7 @@
                             </div>
 			                <div class="teaser">{{ block.previewteaser }}</div>
 			                <div class="abody">
-                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                {{ block.previewbody }}
                             </div>
                             <div class="button">
                                 <a href="{{ entry.url }}">weiterlesen</a>
@@ -43,7 +43,7 @@
                     {% case "artikelPreview" %}
 	                    {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
 		                    </figure>
 	                    {% endfor %}	
 		                <div>
@@ -55,7 +55,7 @@
                             </div>
 			                <div class="teaser">{{ block.previewteaser }}</div>
                             <div class="abody">
-                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                {{ block.previewbody }}
                             </div>
                             <div class="button">
                                 <a href="{{ entry.url }}">weiterlesen</a>
@@ -98,7 +98,7 @@
                     {% case "artikelPreview" %}
 		                {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+			                    <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
 		                    </figure>
 	                    {% endfor %}
 	                    <div>
@@ -110,7 +110,7 @@
                             </div>
 			                <div class="teaser">{{ block.previewteaser }}</div>
 			                <div class="abody">
-                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                {{ block.previewbody }}
                             </div>
                             <div class="button">
                                 <a href="{{ entry.url }}">weiterlesen</a>
@@ -130,7 +130,7 @@
                     {% case "artikelPreview" %}
                         {% for image in block.artikelThumbnail.all() %}
 	                        <figure class="artikelThumbnail">
-		                        <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+		                        <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
 	                        </figure>
     	                {% endfor %}
 	                    <div>
@@ -142,7 +142,7 @@
                             </div>
 			                <div class="teaser">{{ block.previewteaser }}</div>
                             <div class="abody">
-                                {{ block.previewbody|chop(limit=1, unit='p') }}
+                                {{ block.previewbody }}
                             </div>
                             <div class="button">
                                 <a href="{{ entry.url }}">weiterlesen</a>

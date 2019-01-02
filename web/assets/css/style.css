@@ -68,6 +68,9 @@ body
     font-family:                'DIN1451h';
     margin:                     auto;
     background-color:           rgba(0, 0, 0, 0.8);
+    background:                 -moz-linear-gradient(to right, rgba(105,105,105,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(105,105,105,1) 100%);
+    background:                 -webkit-linear-gradient(to right, rgba(105,105,105,1) 0%,rgba(0,0,0,1) 10%,rgba(0,0,0,1) 90%,rgba(105,105,105,1) 100%); 
+    background:                 linear-gradient(to right, rgba(105,105,105,1) 0%,rgba(0,0,0, 0.8) 10%,rgba(0,0,0, 0.8) 90%,rgba(105,105,105,1) 100%); 
 /*
     background-image:           url(../imgs/body-background.png);
     background-repeat:          no-repeat;
@@ -82,13 +85,23 @@ body
 {
     position:                   relative;
     display:                    flex;
+    align-content:              space-between;
     flex-wrap:                  wrap;
+    background-color:           rgba(0, 0, 0, 0.4);
     margin:                     auto;
+    padding:                    0rem 0.5rem;
     min-width:                  320px;
     max-width:                  1200px;
     min-height:                 100vh;
 }
 
+@media all and (max-width: 770px)
+{
+    .site
+    {
+        padding:                0;
+    }
+}
 
 /* Inhalt
 * ======================================== */
@@ -203,7 +216,7 @@ body
 .artikelThumbnail
 {
     float:                      right;
-    padding:                    0;
+    padding:                    0.5rem;
     margin:                     0;
     width:                      35%;
 }
@@ -244,7 +257,7 @@ body
     {
         margin:                 0;
         margin-top:             1rem;
-        padding:                0.3rem;
+        padding:                0;
         padding-right:          1rem;
         background-color:       rgba(0, 0, 0, 1);
         color:                  #ffffff;
@@ -297,6 +310,7 @@ body
     display:                    flex;
     width:                      100%;
     flex-direction:             column;
+    margin:                     auto;
     margin-top:                 1rem;
     padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
@@ -1207,14 +1221,13 @@ body
     margin:                     0;
     margin-top:                 1rem;
     padding:                    0;
-    padding-top:                0.8rem;
-    padding-bottom:             0.8rem;
     background-color:           rgba(0, 0, 0, 1);
 }
 
 .cta
 {
-    width:                      31%;
+    align-content:              center;
+    width:                      33.3%;
     position:                   relative;
 }
 
@@ -1233,12 +1246,14 @@ body
 
 .cta_t
 {
+    display:                    inherit;
     font-family:                'DIN1451h';
-    background-color:           rgba(255,255,255,0.8);
+    background-color:           rgba(255,255,255,0.9);
     color:                      #CC0000;
     position:                   absolute;
-    width:                      100%;
-    top:                        70%;
+    left:                       5%;
+    width:                      90%;
+    top:                        80%;
     z-index:                    1000;
     text-align:                 center;
     font-size:                  1.8rem;
@@ -1254,14 +1269,11 @@ body
         flex-flow:              column wrap;
         margin:                 auto;
         margin-top:             1rem;
-        padding:                0.5rem
     }
 
     .cta
     {
         width:                  100%;
         margin:                 auto;
-        margin-bottom:          0.25rem;
-        margin-top:             0.25rem;
     }
 }

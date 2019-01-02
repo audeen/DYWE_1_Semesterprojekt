@@ -27,7 +27,7 @@
                             {% for image in block.linkImage.all() %}
                                 <div class="link-img">
                                     <a href="{{ block.linkUrl }}" target="_blank">
-                                        <img src="{{ image.getUrl('link') }}">
+                                        <img src="{{ image.getUrl('link') }}" alt="{{ image }}">
                                     </a>
                                 </div>                               
                             {% endfor %}

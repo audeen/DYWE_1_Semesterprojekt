@@ -29,15 +29,15 @@
                                 {% switch block.size %}
                                     {% case "smallThumb" %}
                                         div class="">
-                                            <img src="{{ image.getUrl('smallThumb') }}">
+                                            <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
                                         </div>
                                     {% case "mediumThumb" %}
                                         <div class="">
-                                            <img src="{{ image.getUrl('mediumThumb') }}">
+                                            <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
                                         </div>
                                     {% case "largeThumb" %}
                                         <div class="">
-                                            <img src="{{ image.getUrl('largeThumb') }}">
+                                            <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image }}">
                                         </div>
                                 {% endswitch %}                                
                             {% endfor %}

@@ -51,15 +51,15 @@
 
                                 {% case "smallThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+                                        <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
                                     </div>
                                 {% case "mediumThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+                                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
                                     </div>
                                 {% case "largeThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+                                        <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image }}">
                                     </div>
 
                             {% endswitch %}                                

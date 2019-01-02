@@ -30,7 +30,7 @@
                     {% case "artikelPreview" %}
                         {% for image in block.artikelThumbnail.all() %}
                             <figure class="artikelThumbnail">
-                                <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image.getUrl('smallThumb') }}">
+                                <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
                             </figure>
                         {% endfor %}	
                         <div>
