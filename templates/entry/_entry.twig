@@ -48,7 +48,6 @@
                     <div class="images_3">
                         {% for image in block.image.all() %}
                             {% switch block.size %}
-
                                 {% case "smallThumb" %}
                                     <div class="{{ block.quantity }}">
                                         <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
@@ -61,20 +60,18 @@
                                     <div class="{{ block.quantity }}">
                                         <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image }}">
                                     </div>
-
                             {% endswitch %}                                
                         {% endfor %}
                     </div>
 
                 {% case "pdf" %}
-
-                {% for pdf in block.pdf.all() %}
                     <div class="pdf">
-                        <a class="button" href="{{ pdf.getUrl }}" download>
-                            Download &nbsp; {{ block.text  }}
-                        </a>    
+                        {% for pdf in block.pdf.all() %}
+                            <a class="button" href="{{ pdf.getUrl }}" download>
+                                Download &nbsp; {{ block.text  }}
+                            </a>    
+                        {% endfor %}
                     </div>
-                {% endfor %}
 
                 {% case "embedded" %}
                     <div class="embedded">

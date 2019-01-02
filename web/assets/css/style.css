@@ -302,7 +302,7 @@ body
     }
 }
 
-/* Artikel Klasse für Einzelseiten (About, Impressum, Datenschutz, Kontakt, Links)
+/* Artikel Klasse für Einzelseiten (About, Kontakt, Links, Standard (Impressum, Datenschutz))
 * ======================================== */
 
 .artikel_2
@@ -465,6 +465,31 @@ body
     }
 }
 
+/* Standard (Impressum, Datenschutz) */
+
+.standard_div
+{
+    width:                      100%;
+}
+
+.standard_s
+{
+    width:                      100%;
+    height:                     auto;
+}
+
+.standard_m
+{
+    width:                      100%;
+    height:                     auto;
+}
+
+.standard_l img
+{
+    width:                      100%;
+    height:                     auto;
+}
+
 /* Artikel für Artikel selbst
 * ======================================== */
 
@@ -542,12 +567,15 @@ body
 .pdf
 {
     display:                    flex;
+    flex-flow:                  column;
+    align-items:                flex-start;
 }
 
 .pdf .button
 {
     display:                    flex;
     margin:                     0;
+    margin-top:                 1rem;
     margin-left:                1rem;
     text-decoration:            none;
     letter-spacing:             0;
