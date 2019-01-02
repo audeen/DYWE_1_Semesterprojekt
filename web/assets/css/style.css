@@ -87,7 +87,7 @@ body
     display:                    flex;
     align-content:              space-between;
     flex-wrap:                  wrap;
-    background-color:           rgba(0, 0, 0, 0.4);
+    background-color:           rgba(0, 0, 0, 1);
     margin:                     auto;
     padding:                    0rem 0.5rem;
     min-width:                  320px;
@@ -1254,7 +1254,7 @@ body
 .cta
 {
     align-content:              center;
-    width:                      33%;
+    width:                      32%;
     position:                   relative;
 }
 
