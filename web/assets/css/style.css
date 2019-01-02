@@ -67,18 +67,15 @@ body
 {
     font-family:                'DIN1451h';
     margin:                     auto;
-    background-color:           rgba(0, 0, 0, 0.8);
-    background:                 -moz-linear-gradient(to right, rgba(105,105,105,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(105,105,105,1) 100%);
-    background:                 -webkit-linear-gradient(to right, rgba(105,105,105,1) 0%,rgba(0,0,0,1) 10%,rgba(0,0,0,1) 90%,rgba(105,105,105,1) 100%); 
-    background:                 linear-gradient(to right, rgba(105,105,105,1) 0%,rgba(0,0,0, 0.8) 10%,rgba(0,0,0, 0.8) 90%,rgba(105,105,105,1) 100%); 
+    background-color:           rgba(0, 0, 0, 0.9);
+    background:                 -moz-linear-gradient(to right, rgba(100, 100, 100, 1) 0vw, rgba( 50, 50, 50, 1) 10vw, rgba(0, 0, 0, 1) 20vw, rgba(0, 0, 0, 1) 80vw, rgba(50, 50, 50, 1) 90vw, rgba(100, 100, 100, 1) 100vw);
+    background:                 -webkit-linear-gradient(to right, rgba(100, 100, 100, 1) 0vw, rgba( 50, 50, 50, 1) 10vw, rgba(0, 0, 0, 1) 20vw, rgba(0, 0, 0, 1) 80vw, rgba(50, 50, 50, 1) 90vw, rgba(100, 100, 100, 1) 100vw);
+    background:                 linear-gradient(to right, rgba(100, 100, 100, 1) 0vw, rgba(50, 50, 50, 1) 5vw, rgba(0, 0, 0, 1) 20vw, rgba(0, 0, 0, 1) 80vw, rgba(50, 50, 50, 1) 95vw, rgba(100, 100, 100, 1) 100vw);     
 /*
-    background-image:           url(../imgs/body-background.png);
-    background-repeat:          no-repeat;
-    background-attachment:      local;
-    background-position:        center;
-    background-size:            cover;
+    background-image:           linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+    height:                     100vh;
+    background-size:            5vw 5vw;
 */
-    
 }
 
 .site
@@ -172,19 +169,24 @@ body
 
 @media all and (max-width: 770px)
 {
+    .headline
+    {
+        width:                  100%;    
+    }
+    
     .teaser
     {
-        width:                   100%;
-        margin:                  0.5rem;
-        margin-left:             1rem;
-        letter-spacing:          0.1rem;
+        width:                  100%;
+        margin:                 0.5rem;
+        margin-left:            1rem;
+        letter-spacing:         0.1rem;
     }
 
     .abody
     {
-        width:                   100%;
-        margin:                  1rem;
-        margin-left:             1rem;
+        width:                  100%;
+        margin:                 1rem;
+        margin-left:            1rem;
     }
 }
 
@@ -317,6 +319,11 @@ body
     color:                      #ffffff;
     hyphens:                    auto;
     -webkit-hyphens:            auto;
+}
+
+.artikel_2 .headline
+{
+    font-size:                  2rem;
 }
 
 .artikel_2 a
@@ -723,13 +730,13 @@ body
     display:                    flex;
     align-self:                 auto;
     margin-right:               auto;
-    margin-bottom:              2rem;
+    margin-bottom:              1rem;
     padding-left:               1rem;
     font-size:                  2.5vw;
     line-height:                1;
     text-transform:             uppercase;
     color:                      #ffffff;
-    transition:                 1s;
+    transition:                 0.5s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -743,10 +750,10 @@ body
     align-self:                 center;
     margin:                     0.5rem;
     float:                      left;
-    width:                      15vw;
+    width:                      10vw;
     height:                     auto;
     cursor:                     pointer;
-    transition:                 1s;
+    transition:                 0.5s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
@@ -790,7 +797,7 @@ body
 .headerline_scroll
 {
     margin-left:                1rem;
-    font-size:                  1.5vw;
+    font-size:                  1.3vw;
     line-height:                1;
     text-transform:             uppercase;
     color:                      #ffffff;
@@ -801,29 +808,29 @@ body
     -ms-transform:              translateZ(0);
     -o-transform:               translateZ(0);
     transform:                  translateZ(0);
-    -moz-animation:             fadein 2s; /* Firefox */
-    -webkit-animation:          fadein 2s; /* Safari and Chrome */
-    -o-animation:               fadein 2s; /* Opera */
-    animation:                  fadein 2s;
+    -moz-animation:             fadein 1s; /* Firefox */
+    -webkit-animation:          fadein 1s; /* Safari and Chrome */
+    -o-animation:               fadein 1s; /* Opera */
+    animation:                  fadein 1s;
 }
 
 .logo_scroll
 {
     margin:                     0.5rem;
     float:                      left;
-    width:                      3.5vw;
+    width:                      3vw;
     height:                     auto;
     cursor:                     pointer;
-    transition:                 1s;
+    transition:                 0.2s;
     -webkit-transform:          translateZ(0);
     -moz-transform:             translateZ(0);
     -ms-transform:              translateZ(0);
     -o-transform:               translateZ(0);
     transform:                  translateZ(0);
-    -moz-animation:             fadein 2s; /* Firefox */
-    -webkit-animation:          fadein 2s; /* Safari and Chrome */
-    -o-animation:               fadein 2s; /* Opera */
-    animation:                  fadein 2s;
+    -moz-animation:             fadein 1s; /* Firefox */
+    -webkit-animation:          fadein 1s; /* Safari and Chrome */
+    -o-animation:               fadein 1s; /* Opera */
+    animation:                  fadein 1s;
 }
 
 @media all and (max-width: 770px)
@@ -858,10 +865,11 @@ body
     .headerline
     {
         display:                flex;
+        flex-wrap:              wrap;
         margin-bottom:          auto;
         margin-right:           0;
         padding-left:           0;
-        font-size:              4vw;
+        font-size:              3vw;
         line-height:            1;
         transition:             0.3s;
         -webkit-transform:      translateZ(0);
@@ -923,10 +931,10 @@ body
     margin:                     0.5rem;
     margin-left:                auto;
     margin-top:                 auto;
-    -moz-animation:             fadein 2s; /* Firefox */
-    -webkit-animation:          fadein 2s; /* Safari and Chrome */
-    -o-animation:               fadein 2s; /* Opera */
-    animation:                  fadein 2s;
+    -moz-animation:             fadein 0.5s; /* Firefox */
+    -webkit-animation:          fadein 0.5s; /* Safari and Chrome */
+    -o-animation:               fadein 0.5s; /* Opera */
+    animation:                  fadein 0.5s;
 }
 
 .nav a, .nav_scroll a
@@ -1246,21 +1254,26 @@ body
     display:                    flex;
     flex-flow:                  row wrap;
     justify-content:            space-around;
-    margin:                     0;
-    margin-top:                 1rem;
+    margin:                     1rem;
+    margin-bottom:              0;
     padding:                    0;
 }
 
 .cta
 {
     align-content:              center;
-    width:                      32%;
+    width:                      30%;
     position:                   relative;
 }
 
 .cta:hover img
 {
-    opacity:                    0.5;
+    opacity:                    0.6;
+    -webkit-filter:             blur(3px);
+    -moz-filter:                blur(3px);
+    -o-filter:                  blur(3px);
+    -ms-filter:                 blur(3px);
+    filter:                     blur(3px);
 }
 
 .cta a
@@ -1278,14 +1291,14 @@ body
 
 .cta_t
 {
-    font-family:                'DIN1451h';
     background-color:           rgba(255,255,255,1);
     color:                      #CC0000;
     position:                   absolute;
     width:                      100%;
-    top:                        80%;
+    top:                        70%;
     z-index:                    1000;
     text-align:                 center;
+    font-family:                'DIN1451h';
     font-size:                  1.8rem;
     font-weight:                bold;
     text-transform:             uppercase;
