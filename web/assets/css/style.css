@@ -1221,14 +1221,18 @@ body
     margin:                     0;
     margin-top:                 1rem;
     padding:                    0;
-    background-color:           rgba(0, 0, 0, 1);
 }
 
 .cta
 {
     align-content:              center;
-    width:                      33.3%;
+    width:                      33%;
     position:                   relative;
+}
+
+.cta:hover .cta_t
+{
+    opacity:                    1;
 }
 
 .cta a
@@ -1246,13 +1250,11 @@ body
 
 .cta_t
 {
-    display:                    inherit;
     font-family:                'DIN1451h';
-    background-color:           rgba(255,255,255,0.9);
+    background-color:           rgba(255,255,255,1);
     color:                      #CC0000;
     position:                   absolute;
-    left:                       5%;
-    width:                      90%;
+    width:                      100%;
     top:                        80%;
     z-index:                    1000;
     text-align:                 center;
@@ -1260,6 +1262,7 @@ body
     font-weight:                bold;
     text-transform:             uppercase;
     letter-spacing:             0.3rem;
+    opacity:                    0;
 }
 
 @media all and (max-width: 770px)
@@ -1275,5 +1278,10 @@ body
     {
         width:                  100%;
         margin:                 auto;
+    }
+    
+    .cta_t
+    {
+        opacity:                1;
     }
 }
