@@ -6,19 +6,19 @@
 {% switch segment %}
     {% case "Aktuelles" %}
         {% set aktuelles = 'current' %}
-		{% set page_title = 'Aktuelles' %}
+		{% set page_title = {{ entry.title }} %}
 		{% set sectionart = craft.entries.section('aktuelles').all() %}
     {% case "Projekte" %}
         {% set projekte = 'current' %}
-		{% set page_title = 'Projekte' %}
+		{% set page_title = {{ entry.title }} %}
 		{% set sectionart = craft.entries.section('projekte').all() %}
     {% case "OpenSource" %}
         {% set opensource = 'current' %}
-		{% set page_title = 'Open-Source' %}
+		{% set page_title = {{ entry.title }} %}
 		{% set sectionart = craft.entries.section('opensource').all() %}
     {% case "Mods" %}
         {% set mods = 'current' %}
-		{% set page_title = 'Mods' %}
+		{% set page_title = {{ entry.title }} %}
 		{% set sectionart = craft.entries.section('mods').all() %}
 {% endswitch %}
 
@@ -50,15 +50,21 @@
                             {% switch block.size %}
                                 {% case "smallThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
+                                        <a href="{{ image.getUrl() }}" target="_blank">
+                                            <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
+                                        </a>
                                     </div>
                                 {% case "mediumThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                        <a href="{{ image.getUrl() }}" target="_blank">
+                                            <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                        </a>
                                     </div>
                                 {% case "largeThumb" %}
                                     <div class="{{ block.quantity }}">
-                                        <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image }}">
+                                        <a href="{{ image.getUrl() }}" target="_blank">
+                                            <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image }}">
+                                        </a>
                                     </div>
                             {% endswitch %}                                
                         {% endfor %}
