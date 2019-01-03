@@ -6,19 +6,19 @@
 {% switch segment %}
     {% case "Aktuelles" %}
         {% set aktuelles = 'current' %}
-		{% set page_title = {{ entry.title }} %}
+		{% set page_title = entry.title %}
 		{% set sectionart = craft.entries.section('aktuelles').all() %}
     {% case "Projekte" %}
         {% set projekte = 'current' %}
-		{% set page_title = {{ entry.title }} %}
+		{% set page_title = entry.title %}
 		{% set sectionart = craft.entries.section('projekte').all() %}
     {% case "OpenSource" %}
         {% set opensource = 'current' %}
-		{% set page_title = {{ entry.title }} %}
+		{% set page_title = entry.title %}
 		{% set sectionart = craft.entries.section('opensource').all() %}
     {% case "Mods" %}
         {% set mods = 'current' %}
-		{% set page_title = {{ entry.title }} %}
+		{% set page_title = entry.title %}
 		{% set sectionart = craft.entries.section('mods').all() %}
 {% endswitch %}
 
