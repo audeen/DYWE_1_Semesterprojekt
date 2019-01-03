@@ -1,0 +1,13 @@
+{% extends "_layout" %}
+
+{% set start, aktuelles, projekte, opensource, mods = '','','','','' %}
+{% set page_title = "404 - Seite nicht gefunden" %}
+
+{% block content %}
+    <div class="404">
+        Fehler 404 - Seite konnte nicht gefunden werden
+    </div>
+    <div class="button">
+        <a href="{{ siteUrl }}">Home</a>
+    </div>
+{% endblock %}
