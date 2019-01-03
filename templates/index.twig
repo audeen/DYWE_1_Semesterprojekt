@@ -11,7 +11,9 @@
                     {% case "artikelPreview" %}
 	                    {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                <a href="{{ image.getUrl() }}">
+			                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                </a>
 		                    </figure>
 	                    {% endfor %}
 	                    <div>
@@ -43,7 +45,9 @@
                     {% case "artikelPreview" %}
 	                    {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                <a href="{{ image.getUrl() }}">
+			                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                </a>
 		                    </figure>
 	                    {% endfor %}	
 		                <div>
@@ -98,7 +102,9 @@
                     {% case "artikelPreview" %}
 		                {% for image in block.artikelThumbnail.all() %}
 		                    <figure class="artikelThumbnail">
-			                    <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                <a href="{{ image.getUrl() }}">
+			                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                </a>
 		                    </figure>
 	                    {% endfor %}
 	                    <div>
@@ -129,9 +135,11 @@
                 {% switch block.type %}
                     {% case "artikelPreview" %}
                         {% for image in block.artikelThumbnail.all() %}
-	                        <figure class="artikelThumbnail">
-		                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
-	                        </figure>
+		                    <figure class="artikelThumbnail">
+                                <a href="{{ image.getUrl() }}">
+			                        <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                </a>
+		                    </figure>
     	                {% endfor %}
 	                    <div>
                             <div class="section">    
