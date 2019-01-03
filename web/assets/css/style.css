@@ -534,7 +534,7 @@ body
 
 .artikel_3 .abody
 {
-    font-size:                  1.4rem;
+    font-size:                  1.2rem;
     width:                      100%;
     margin:                     0.5rem;
     padding-right:              1rem;
@@ -546,8 +546,8 @@ body
     font-family:                'DIN1451h';
     font-size:                  1rem;
     margin:                     0;
+    margin-top:                 0.3rem;
     margin-right:               auto;
-    padding-left:               1rem;
     letter-spacing:             0.1rem;
 }
 
@@ -576,17 +576,21 @@ body
     display:                    flex;
     flex-flow:                  column;
     align-items:                flex-start;
+    margin-top:                 1rem;
+    margin-right:               auto;
+    border-width:               0.01rem;
+    border-style:               dashed;
+    border-color:               #cc0000;
 }
 
 .pdf .button
 {
     display:                    flex;
-    margin:                     0;
-    margin-top:                 1rem;
-    margin-left:                1rem;
+    margin:                     1rem;
+    padding:                    0.5rem;
     text-decoration:            none;
     letter-spacing:             0;
-    border-width:               0.1rem; 
+    border-width:               0.05rem; 
 }
 
 .pdf .button p
@@ -601,7 +605,7 @@ body
     display:                    flex;
     flex-wrap:                  wrap;
     flex:                       100%;
-    margin-top:                 1rem;
+    margin-top:                 1.5rem;
 }
 
 .one
@@ -614,7 +618,6 @@ body
 {
     margin:                     auto;
     max-width:                  100%;
-    padding:                    0.5rem;
 }
 
 .two
@@ -639,6 +642,7 @@ body
 {
     width:                      100%;
     padding:                    0.5rem;
+
 }
 
 @media all and (max-width: 770px)
