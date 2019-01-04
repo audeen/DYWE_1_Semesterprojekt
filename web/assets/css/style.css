@@ -1396,6 +1396,7 @@ body
     display:                    flex;
     justify-content:            space-around;
     align-items:                baseline;
+    max-width:                  100%;
     position:                   relative;
     margin:                     auto;
     margin-bottom:              2rem;
@@ -1420,8 +1421,8 @@ body
 
 .pagination .aktuell
 {
-    margin-left:                15rem;
-    margin-right:               15rem;
+    margin-left:                12vw;
+    margin-right:               12vw;
 }
 
 .pagination .button_hover:hover .button
@@ -1485,4 +1486,26 @@ body
     left:                       35%;
     font-size:                  1rem;
     color:                      #ffffff;
+}
+
+@media all and (max-width: 770px)
+{
+    .pagination .aktuell
+    {
+        display:                none;
+    }
+    
+    .pagination .button
+    {
+        display:                none;
+    }
+    
+    .pagination .button_back, .pagination .button_pre
+    {
+        display:                flex;
+        margin-left:            7vw;
+        margin-right:           7vw;
+        font-size:              1rem;
+        color:                  #ffffff;
+    }
 }
