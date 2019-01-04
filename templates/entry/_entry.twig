@@ -7,23 +7,19 @@
     {% case "Aktuelles" %}
         {% set aktuelles = 'current' %}
 		{% set page_title = entry.title %}
-        {% set sectionart = craft.entries.section('aktuelles').all() %}
-        {% paginate craft.entries.section('aktuelles').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
+		{% set sectionart = craft.entries.section('aktuelles').all() %}
     {% case "Projekte" %}
         {% set projekte = 'current' %}
 		{% set page_title = entry.title %}
-        {% set sectionart = craft.entries.section('projekte').all() %}
-        {% paginate craft.entries.section('projekte').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
+		{% set sectionart = craft.entries.section('projekte').all() %}
     {% case "OpenSource" %}
         {% set opensource = 'current' %}
 		{% set page_title = entry.title %}
-        {% set sectionart = craft.entries.section('opensource').all() %}
-        {% paginate craft.entries.section('opensource').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
+		{% set sectionart = craft.entries.section('opensource').all() %}
     {% case "Mods" %}
         {% set mods = 'current' %}
 		{% set page_title = entry.title %}
-        {% set sectionart = craft.entries.section('mods').all() %}
-        {% paginate craft.entries.section('mods').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
+		{% set sectionart = craft.entries.section('mods').all() %}
 {% endswitch %}
 
 
@@ -127,21 +123,6 @@
                     </div>
             {% endswitch %}
         {% endfor %}
-
-    <div class="pagination">
-	{# Vorherige Seite, falls verfügbar: #}
-	{% if pageInfo.prevUrl %}
-		<a href="{{ pageInfo.prevUrl }}">Vorherige Seite</a>
-	{% endif %}
-	{# Aktuelle Seitenzahl: #}
-	Seite {{ pageInfo.currentPage }}
-	{# Nächste Seite, falls verfügbar: #}
-	{% if pageInfo.nextUrl %}
-		<a href="{{ pageInfo.nextUrl }}">Nächste Seite</a>
-    {% endif %}
-    
-</div>    
-
     </div>
 {% endblock  %}
 
