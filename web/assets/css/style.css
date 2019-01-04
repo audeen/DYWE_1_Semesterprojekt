@@ -1338,3 +1338,57 @@ body
         opacity:                1;
     }
 }
+
+/* 404 Site
+* ======================================== */
+
+.fourofour
+{
+    display:                    inherit;
+    flex:                       100%;
+    align-content:              center;
+    background-image:           url(../imgs/404.JPG);
+    background-size:            cover;
+    background-attachment:      fixed;
+    min-height:                 100vh;
+    
+}
+
+.fourofour .abody
+{
+    display:                    flex;
+    flex-direction:             column;
+    justify-content:            space-around;
+    flex:                       100%;
+    font-size:                  2rem;
+    text-transform:             uppercase;
+    color:                      #000000;
+    margin:                     auto;
+    padding:                    auto;
+}
+
+.fourofour .text
+{
+    margin:                     auto;
+}
+
+.fourofour .button
+{
+    display:                    flex;
+    font-size:                  2rem;
+    background-color:           rgba(255, 255, 255, 0);
+    margin:                     auto;
+    padding:                    1rem;
+    border-width:               0;
+}
+
+.fourofour a
+{
+    text-decoration:            none;
+    color:                      #000000;
+}
+
+.fourofour a:hover
+{
+    color:                      #cc0000;
+}

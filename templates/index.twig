@@ -2,6 +2,7 @@
 
 {% set start = 'current' %}
 {% set aktuelles, projekte, opensource, mods = '','','','' %}
+{% set page_title = "Start" %}
 
 {% block aktuelles %}
     {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
