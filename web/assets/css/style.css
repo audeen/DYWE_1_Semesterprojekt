@@ -1345,30 +1345,28 @@ body
 .fourofour
 {
     display:                    inherit;
-    flex:                       100%;
-    align-content:              center;
     background-image:           url(../imgs/404.JPG);
     background-size:            cover;
     background-attachment:      fixed;
-    min-height:                 100vh;
-    
 }
 
 .fourofour .abody
 {
     display:                    flex;
     flex-direction:             column;
-    justify-content:            space-around;
+    align-content:              center;
+    min-height:                 100vh;
+    min-width:                  100vh;
+    z-index:                    30000;
+    margin:                     0;
     flex:                       100%;
-    font-size:                  2rem;
     text-transform:             uppercase;
-    color:                      #000000;
-    margin:                     auto;
-    padding:                    auto;
 }
 
 .fourofour .text
 {
+    font-size:                  2rem;
+    color:                      #000000;
     margin:                     auto;
 }
 
@@ -1391,4 +1389,9 @@ body
 .fourofour a:hover
 {
     color:                      #cc0000;
+}
+
+.fourofour .foot, .fourofour .head
+{
+    display:                    none;
 }
