@@ -76,7 +76,7 @@ a
 {
     text-decoration:            none;
     background-color:           transparent;
-    line-height:                1.2;
+    line-height:                1.5;
 }
 
 a:active,a:hover
@@ -125,7 +125,7 @@ body
     
     hr
     {
-        margin-top:             1rem;
+        margin:                 1rem;
     }
 }
 
@@ -951,16 +951,10 @@ body
     align-items:                baseline;
     justify-content:            flex-end;
     width:                      100%; 
-    font-size:                  1.2rem;
+    font-size:                  1.4rem;
     margin:                     0.5rem;
     margin-left:                auto;
     margin-top:                 auto;
-    transition:                 3s;
-    -webkit-transform:          translateZ(0);
-    -moz-transform:             translateZ(0);
-    -ms-transform:              translateZ(0);
-    -o-transform:               translateZ(0);
-    transform:                  translateZ(0);
 }
 
 .nav_scroll
@@ -968,7 +962,8 @@ body
     display:                    flex;
     align-items:                baseline;
     justify-content:            flex-end;
-    right:                      0;   
+    right:                      0;
+    font-size:                  1.2rem;
     margin:                     0.5rem;
     margin-left:                auto;
     margin-top:                 auto;
@@ -1029,41 +1024,51 @@ body
     .nav
     {
         display:                flex;
-        justify-content:        flex-end;
         margin:                 0.5rem;
+        margin-bottom:          0;
         margin-left:            auto;
-    }
-
-    .nav a, .nav_scroll a
-    {
-        display:                none;
-        margin:                 0;
     }
     
     .nav_scroll
     {
         margin:                 0.5rem;
+        margin-bottom:          0;
         margin-left:            auto;
+    }
+    
+    .nav a, .nav_scroll a
+    {
+        display:                none;
+        margin:                 0;
+        margin-bottom:          0.5rem;
+        border-color:           #ffffff;
+        border-style:           solid;
+        border-width:           0.01rem;
     }
     
     .dropdown-nav
     {
         display:                none;
         flex-flow:              column;
-        text-align:             center;
         padding:                0.3rem;
         position:               absolute;
         top:                    100%;
+        left:                   0;
         background-color:       #000000;
         width:                  100%;
         z-index:                2;
+        border-width:           0;
+        border-bottom-width:    0.01rem;
+        border-style:           solid;
+        border-color:           #ffffff;
     }
     
     .dropbtn
     {
         display:                flex;
         margin:                 0 0.5rem 0 1rem;
-        font-size:              1.4rem;
+        font-size:              1.2rem;
+        line-height:            1.5;
         text-transform:         uppercase;
         background-color:       #000000;
         color:                  #ffffff;
@@ -1071,7 +1076,7 @@ body
         border-style:           solid;
         border-width:           0.1rem;
         border-color:           #ffffff;
-        transition:             0.5s;
+        transition:             1s;
         -webkit-transform:      translateZ(0);
         -moz-transform:         translateZ(0);
         -ms-transform:          translateZ(0);
@@ -1096,22 +1101,30 @@ body
     
     .nav:hover .dropdown-nav, .nav_scroll:hover .dropdown-nav
     {
-        display:                block;
-        position:               absolute;
-        left:                   0;
+        display:                flex;
     }
     
     .nav:hover .dropdown-nav a, .nav_scroll:hover .dropdown-nav a
     {
-        display:                block;
+        display:                flex;
+        align-self:             center;
+        justify-content:        space-around;
+        width:                  100%;
         font-size:              1.2rem;
+        transition:             3s;
+        -webkit-transform:      translateZ(0);
+        -moz-transform:         translateZ(0);
+        -ms-transform:          translateZ(0);
+        -o-transform:           translateZ(0);
+        transform:              translateZ(0);
     }    
 
     .nav a.current 
     {
         display:                flex;
         margin:                 0;
-        font-size:              1.4rem;
+        margin-bottom:          0.5rem;
+        font-size:              1.2rem;
         text-transform:         uppercase;
         background-color:       #000000;
         color:                  #ffffff;
@@ -1119,7 +1132,7 @@ body
         border-style:           solid;
         border-width:           0.1rem;
         border-color:           #ffffff;
-        transition:             0.5s;
+        transition:             1s;
         -webkit-transform:      translateZ(0);
         -moz-transform:         translateZ(0);
         -ms-transform:          translateZ(0);
@@ -1132,12 +1145,18 @@ body
         display:                flex;
         font-size:              1.2rem;
         z-index:                2; 
-        transition:             0.3s;
+        transition:             1s;
         -webkit-transform:      translateZ(0);
         -moz-transform:         translateZ(0);
         -ms-transform:          translateZ(0);
         -o-transform:           translateZ(0);
         transform:              translateZ(0);
+    }
+    
+    .nav:hover a.current, .nav_scroll:hover a.current
+    {
+        color:                  #cc0000;
+        border-color:           #cc0000;
     }
 }
 
@@ -1231,6 +1250,7 @@ body
         flex-flow:              column;
         text-align:             center;
         padding:                0.5rem;
+        padding-bottom:         3rem;
         position:               absolute;
         bottom:                 0;
         left:                   0;
@@ -1253,6 +1273,7 @@ body
     {
         display:                flex;
         font-size:              1.2rem;
+        line-height:            1.5;
         text-transform:         uppercase;
         background-color:       #000000;
         color:                  #ffffff;
@@ -1284,6 +1305,12 @@ body
     {
         display:                block;
         font-size:              1.2rem;
+    }
+    
+    .foot:hover .copy
+    {
+        z-index:                10;
+        opacity:                0.3;
     }
 }
 
@@ -1537,6 +1564,7 @@ body
 {
     .pagination
     {
+        margin-top:             1rem;
         width:                  100%;
     }
     
