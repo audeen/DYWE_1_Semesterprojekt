@@ -27,7 +27,7 @@
 {% endswitch %}
 
 {% block content %}
-    {% for entry in sectionart %}
+    {% for entry in pageEntries %}
         <div class="artikel_1">
             {% for block in entry.artikel.all() %}
                 {% switch block.type %}
