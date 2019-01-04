@@ -1338,3 +1338,60 @@ body
         opacity:                1;
     }
 }
+
+/* 404 Site
+* ======================================== */
+
+.fourofour
+{
+    display:                    inherit;
+    background-image:           url(../imgs/404.JPG);
+    background-size:            cover;
+    background-attachment:      fixed;
+}
+
+.fourofour .abody
+{
+    display:                    flex;
+    flex-direction:             column;
+    align-content:              center;
+    min-height:                 100vh;
+    min-width:                  100vh;
+    z-index:                    30000;
+    margin:                     0;
+    flex:                       100%;
+    text-transform:             uppercase;
+}
+
+.fourofour .text
+{
+    font-size:                  2rem;
+    color:                      #000000;
+    margin:                     auto;
+}
+
+.fourofour .button
+{
+    display:                    flex;
+    font-size:                  2rem;
+    background-color:           rgba(255, 255, 255, 0);
+    margin:                     auto;
+    padding:                    1rem;
+    border-width:               0;
+}
+
+.fourofour a
+{
+    text-decoration:            none;
+    color:                      #000000;
+}
+
+.fourofour a:hover
+{
+    color:                      #cc0000;
+}
+
+.fourofour .foot, .fourofour .head
+{
+    display:                    none;
+}
