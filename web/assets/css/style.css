@@ -1490,6 +1490,11 @@ body
 
 @media all and (max-width: 770px)
 {
+    .pagination
+    {
+        width:                  100%;
+    }
+    
     .pagination .aktuell
     {
         display:                none;
@@ -1500,12 +1505,26 @@ body
         display:                none;
     }
     
-    .pagination .button_back, .pagination .button_pre
+    .pagination .button_back
     {
         display:                flex;
-        margin-left:            7vw;
-        margin-right:           7vw;
         font-size:              1rem;
         color:                  #ffffff;
+        margin-right:           1rem;
+    }
+    
+    .pagination .button_pre
+    {
+        display:                flex;
+        font-size:              1rem;
+        color:                  #ffffff;
+        margin-left:            1rem;
+    }
+    
+    .pagination .button_hover:hover .button_back, .pagination .button_hover:hover .button_pre
+    {
+        display:                flex;
+        position:               relative;
+        top:                    0;
     }
 }
