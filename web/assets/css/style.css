@@ -147,7 +147,6 @@ body
     color:                      #ffffff;
     margin:                     0.5rem;
     margin-left:                2rem;
-    hyphens:                    auto;
 }
 
 /* Artikel Body */
@@ -161,6 +160,7 @@ body
     margin-left:                2rem;
     font-weight:                normal;
     hyphens:                    auto;
+    -webkit-hyphens:            auto;
 }
 
 @media all and (max-width: 770px)
@@ -311,8 +311,6 @@ body
     padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
-    hyphens:                    auto;
-    -webkit-hyphens:            auto;
 }
 
 .artikel_2 .headline
@@ -332,6 +330,8 @@ body
     width:                      auto;
     margin:                     0;
     padding-left:               1rem;
+    hyphens:                    auto;
+    -webkit-hyphens:            auto;
 }
 
 @media all and (max-width: 770px)
@@ -504,8 +504,6 @@ body
     padding-right:              2rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
-    hyphens:                    auto;
-    -webkit-hyphens:            auto;
 }
 
 .artikel_3 .headline
@@ -533,6 +531,8 @@ body
     margin:                     0.5rem;
     padding-right:              1rem;
     padding-left:               0.5rem;
+    hyphens:                    auto;
+    -webkit-hyphens:            auto;
 }
 
 .artikel_3 .caption
