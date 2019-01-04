@@ -7,22 +7,18 @@
     {% case "aktuellesOverview" %}
         {% set aktuelles = 'current' %}
 		{% set page_title = 'Aktuelles' %}
-
         {% paginate craft.entries.section('aktuelles').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
     {% case "projekteOverview" %}
         {% set projekte = 'current' %}
 		{% set page_title = 'Projekte' %}
-        {% set sectionart = craft.entries.section('projekte').all() %}
         {% paginate craft.entries.section('projekte').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
     {% case "opensourceOverview" %}
         {% set opensource = 'current' %}
 		{% set page_title = 'Open-Source' %}
-        {% set sectionart = craft.entries.section('opensource').all() %}
         {% paginate craft.entries.section('opensource').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
     {% case "modsOverview" %}
         {% set mods = 'current' %}
 		{% set page_title = 'Mods' %}
-        {% set sectionart = craft.entries.section('mods').all() %}
         {% paginate craft.entries.section('mods').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
 {% endswitch %}
 
@@ -53,7 +49,7 @@
             {% endfor %}
         </div>
     {% endfor %}
-<div class="pagination">
+<div class="pagination" style="color:#fff">
 	{# Vorherige Seite, falls verfügbar: #}
 	{% if pageInfo.prevUrl %}
 		<a href="{{ pageInfo.prevUrl }}">Vorherige Seite</a>
