@@ -74,6 +74,13 @@ body
     background:                 linear-gradient(to right, rgba(100, 100, 100, 1) 0vw, rgba(50, 50, 50, 1) 5vw, rgba(0, 0, 0, 1) 20vw, rgba(0, 0, 0, 1) 80vw, rgba(50, 50, 50, 1) 95vw, rgba(100, 100, 100, 1) 100vw);     
 }
 
+hr
+{
+    border:                     0;
+    border-top:                 0.1rem solid #ffffff;
+    margin:                     0.5rem;
+}
+
 .site
 {
     position:                   relative;
@@ -125,6 +132,11 @@ body
     letter-spacing:             0.3rem;
 }
 
+.section a
+{
+    color:                      #b3b3b3;
+}
+
 /* Artikel Titel */
 .headline
 {
@@ -135,6 +147,11 @@ body
     color:                      #cc0000;
     margin:                     0.5rem;
     font-variant:               normal;
+}
+
+.headline a
+{
+    color:                      #cc0000;
 }
 
 /* Artikel Teaser */
@@ -237,6 +254,11 @@ body
     border-color:               #cc0000;
     font-size:                  1rem;
     letter-spacing:             0.2rem;
+}
+
+.button a
+{
+    color:                      #cc0000;
 }
 
 .button:hover
@@ -1127,6 +1149,7 @@ body
     margin-left:                1rem;
     padding:                    0.5rem;
     text-decoration:            none;
+    color:                      #ffffff;
 }
 
 .foot_nav a:hover
@@ -1407,6 +1430,7 @@ body
 .pagination a
 {
     text-decoration:            none;
+    color:                      #CC0000;
 }
 
 .pagination .button
@@ -1421,24 +1445,28 @@ body
 
 .pagination .aktuell
 {
-    margin-left:                12vw;
-    margin-right:               12vw;
+    margin-left:                10vw;
+    margin-right:               10vw;
 }
 
 .pagination .button_hover:hover .button
 {
     border-width:               0;
-    color:                      #000000;
     background-color:           #000000;
     padding:                    0;
     cursor:                     default;
 }
 
+.pagination .button_hover:hover .button a
+{
+    color:                      #000000;
+}
+
 .pagination .aktuell:hover .button
 {
     border-width:               0;
-    color:                      #000000;
     background-color:           #000000;
+    color:                      #000000;
     cursor:                     default;
     padding:                    0;
 }
@@ -1457,6 +1485,10 @@ body
     position:                   absolute;
     top:                        20%;
     font-size:                  1rem;
+}
+
+.pagination .button_hover:hover .button_back a, .pagination .button_hover:hover .button_pre a
+{
     color:                      #ffffff;
 }
 
@@ -1495,6 +1527,11 @@ body
         width:                  100%;
     }
     
+    .pagination a
+    {
+        color:                  #ffffff;
+    }
+
     .pagination .aktuell
     {
         display:                none;
