@@ -7,7 +7,7 @@
     {% case "aktuellesOverview" %}
         {% set aktuelles = 'current' %}
 		{% set page_title = 'Aktuelles' %}
-        {% set sectionart = craft.entries.section('aktuelles').all() %}
+        <!-- {% set sectionart = craft.entries.section('aktuelles').all() %} -->
         {% paginate craft.entries.section('aktuelles').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
     {% case "projekteOverview" %}
         {% set projekte = 'current' %}
@@ -53,7 +53,7 @@
             {% endfor %}
         </div>
     {% endfor %}
-    <div class="pagination">
+<div class="pagination">
 	{# Vorherige Seite, falls verfügbar: #}
 	{% if pageInfo.prevUrl %}
 		<a href="{{ pageInfo.prevUrl }}">Vorherige Seite</a>
