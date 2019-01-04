@@ -2,13 +2,13 @@
 
 {% set start, aktuelles, projekte, opensource, mods, impressum, datenschutz, kontakt, links = '','','','','','','','','' %}
 
-
+{# 
 {% set segment = craft.app.request.getSegment(1) %}
 {% switch segment %}
-    {% case "Kontakt" %}
+    {% case "Kontakt" %} #}
         {% set kontakt = 'current' %}
 		{% set page_title = entry.title %}
-{% endswitch %}
+{# {% endswitch %} #}
 
 
 {% block content %}
