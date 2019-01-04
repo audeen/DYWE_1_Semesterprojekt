@@ -63,6 +63,7 @@ html
     font:                       16px/1.6 'DIN1451h', helvetica, arial, sans-serif;
 }
 
+
 body
 {
     font-family:                'DIN1451h';
@@ -71,11 +72,6 @@ body
     background:                 -moz-linear-gradient(to right, rgba(100, 100, 100, 1) 0vw, rgba( 50, 50, 50, 1) 10vw, rgba(0, 0, 0, 1) 20vw, rgba(0, 0, 0, 1) 80vw, rgba(50, 50, 50, 1) 90vw, rgba(100, 100, 100, 1) 100vw);
     background:                 -webkit-linear-gradient(to right, rgba(100, 100, 100, 1) 0vw, rgba( 50, 50, 50, 1) 10vw, rgba(0, 0, 0, 1) 20vw, rgba(0, 0, 0, 1) 80vw, rgba(50, 50, 50, 1) 90vw, rgba(100, 100, 100, 1) 100vw);
     background:                 linear-gradient(to right, rgba(100, 100, 100, 1) 0vw, rgba(50, 50, 50, 1) 5vw, rgba(0, 0, 0, 1) 20vw, rgba(0, 0, 0, 1) 80vw, rgba(50, 50, 50, 1) 95vw, rgba(100, 100, 100, 1) 100vw);     
-/*
-    background-image:           linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
-    height:                     100vh;
-    background-size:            5vw 5vw;
-*/
 }
 
 .site
@@ -196,8 +192,7 @@ body
 .artikel_1
 {
     position:                   relative;
-    margin:                     0;
-    margin-top:                 1rem;
+    margin:                     1rem 0;
     padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
@@ -226,7 +221,7 @@ body
 .artikel_1 img
 {
     width:                      100%;
-    height:                     100%; 
+    height:                     100%;
     object-fit:                 cover; 
 }
 
@@ -312,8 +307,7 @@ body
     display:                    flex;
     width:                      100%;
     flex-direction:             column;
-    margin:                     auto;
-    margin-top:                 1rem;
+    margin:                     1rem 0;
     padding:                    1rem;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #ffffff;
@@ -1257,15 +1251,14 @@ body
     display:                    flex;
     flex-flow:                  row wrap;
     justify-content:            space-around;
-    margin:                     1rem;
-    margin-bottom:              0;
+    margin:                     2rem;
     padding:                    0;
 }
 
 .cta
 {
     align-content:              center;
-    width:                      30%;
+    width:                      32%;
     position:                   relative;
 }
 
@@ -1344,10 +1337,13 @@ body
 
 .fourofour
 {
-    display:                    inherit;
+    display:                    flex;
     background-image:           url(../imgs/404.JPG);
     background-size:            cover;
     background-attachment:      fixed;
+    background-repeat:          no-repeat;
+    height:                     100%;
+    width:                      auto;
 }
 
 .fourofour .abody
@@ -1355,11 +1351,12 @@ body
     display:                    flex;
     flex-direction:             column;
     align-content:              center;
-    min-height:                 100vh;
-    min-width:                  100vh;
+    min-height:                 70vh;
+    min-width:                  100%;
     z-index:                    30000;
     margin:                     0;
     flex:                       100%;
+    text-align:                 center;
     text-transform:             uppercase;
 }
 
@@ -1374,7 +1371,7 @@ body
 {
     display:                    flex;
     font-size:                  2rem;
-    background-color:           rgba(255, 255, 255, 0);
+    background-color:           rgba(0, 0, 0, 0);
     margin:                     auto;
     padding:                    1rem;
     border-width:               0;
@@ -1391,7 +1388,84 @@ body
     color:                      #cc0000;
 }
 
-.fourofour .foot, .fourofour .head
+/* Pagination
+* ======================================== */
+
+.pagination
+{
+    display:                    flex;
+    justify-content:            space-around;
+    align-items:                baseline;
+    position:                   relative;
+    margin:                     auto;
+    font-family:                'DIN1451h';
+    text-transform:             uppercase;
+
+}
+
+.pagination a
+{
+    text-decoration:            none;
+    margin-left:                3rem;
+    margin-right:               3rem;
+}
+
+.pagination .button
+{
+    display:                    block;
+    font-size:                  1.2rem;
+    letter-spacing:             0.3rem;
+    border-width:               0;
+    margin:                     1rem;
+    padding:                    1rem;
+}
+
+.pagination .button_hover:hover .button
+{
+    border-width:               0;
+    color:                      #000000;
+    background-color:           #000000;
+    cursor:                     default;
+}
+
+.pagination .aktuell:hover .button
+{
+    border-width:               0;
+    color:                      #000000;
+    background-color:           #000000;
+    cursor:                     default;
+}
+
+.pagination .button_back, .pagination .button_pre
 {
     display:                    none;
+    position:                   absolute;
+    top:                        13%;
+    letter-spacing:             0.3rem;
+    border-width:               0;
+    margin:                     1rem;
+}
+
+.pagination .button_hover:hover .button_back, .pagination .button_hover:hover .button_pre
+{
+    display:                    flex;
+    font-size:                  1.4rem;
+    color:                      #ffffff;
+}
+
+.pagination .aktuell_hover
+{
+    display:                    none;
+    position:                   absolute;
+    top:                        13%;
+    letter-spacing:             0.3rem;
+    border-width:               0;
+    margin:                     1rem;
+}
+
+.pagination .aktuell:hover .aktuell_hover
+{
+    display:                    flex;
+    font-size:                  1.4rem;
+    color:                      #ffffff;
 }

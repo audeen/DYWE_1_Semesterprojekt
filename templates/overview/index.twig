@@ -49,23 +49,39 @@
                         </div>
                 {% endswitch %}	
             {% endfor %}
+            <hr>
         </div>
     {% endfor %}
     <div class="pagination">
         {# Vorherige Seite, falls verfügbar: #}
         {% if pageInfo.prevUrl %}
-            <div class="button">
-                <a href="{{ pageInfo.prevUrl }}">Vorherige Seite</a>
+            <div class="button_hover">
+                <div class="button">
+                    <a href="{{ pageInfo.prevUrl }}"><<</a>
+                </div>
+                <div class="button_back">
+                    <a href="{{ pageInfo.prevUrl }}">zur&uuml;ck</a>
+                </div>
             </div>
         {% endif %}
         {# Aktuelle Seitenzahl: #}
-        <div class="button">
-            Seite {{ pageInfo.currentPage }}
+        <div class="aktuell">
+            <div class="button">
+                Seite {{ pageInfo.currentPage }}
+            </div>
+            <div class="aktuell_hover">
+                aktuell
+            </div>
         </div>
         {# Nächste Seite, falls verfügbar: #}
         {% if pageInfo.nextUrl %}
-            <div class="button">
-                <a href="{{ pageInfo.nextUrl }}">Nächste Seite</a>
+            <div class="button_hover">
+                <div class="button">
+                    <a href="{{ pageInfo.nextUrl }}">>></a>
+                </div>
+                <div class="button_pre">
+                    <a href="{{ pageInfo.nextUrl }}">vor</a>
+                </div>
             </div>
         {% endif %}
     </div>
