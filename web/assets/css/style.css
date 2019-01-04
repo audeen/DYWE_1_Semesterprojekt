@@ -77,8 +77,8 @@ body
 hr
 {
     border:                     0;
-    border-top:                 0.1rem solid #ffffff;
-    margin:                     0.5rem;
+    border-top:                 0.05rem solid #ffffff;
+    margin:                     0.3rem;
 }
 
 .site
