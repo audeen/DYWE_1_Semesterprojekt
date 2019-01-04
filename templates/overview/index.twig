@@ -7,7 +7,7 @@
     {% case "aktuellesOverview" %}
         {% set aktuelles = 'current' %}
 		{% set page_title = 'Aktuelles' %}
-        <!-- {% set sectionart = craft.entries.section('aktuelles').all() %} -->
+
         {% paginate craft.entries.section('aktuelles').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
     {% case "projekteOverview" %}
         {% set projekte = 'current' %}
