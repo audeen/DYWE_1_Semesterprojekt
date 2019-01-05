@@ -3,7 +3,7 @@
 {% set start, aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links = '','','','','','','','','' %}
 
 
-{% set segment = craft.app.request.getSegment(1) %}
+{% set segment = craft.app.request.getSegment(2) %}
     {% switch segment %}
         {% case "Impressum" %} 
             {% set Impressum = 'current' %}
