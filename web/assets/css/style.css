@@ -553,6 +553,7 @@ body
 {
     display:                    flex;
     flex-direction:             column;
+    max-width:                  100%;
     margin:                     auto;
     margin-top:                 1rem;
     padding:                    1rem;
@@ -712,6 +713,8 @@ body
     display:                    flex;
     flex-direction:             column;
     flex:                       100%;
+    max-width:                  100%;
+    min-height:                 auto;
     margin:                     auto;
     margin-top:                 1rem;
     padding:                    0.5rem;
@@ -721,6 +724,11 @@ body
 {
     max-width:                  100%;
     min-height:                 auto;
+}
+
+.embedded
+{
+
 }
 
 .youtube 
@@ -741,6 +749,16 @@ body
 .sound
 {
     width:                      100%; 
+}
+
+.default
+{
+    flex:                       100%;
+}
+
+.default .def
+{
+    width:                      100%;
 }
 
 @media all and (max-width: 770px)

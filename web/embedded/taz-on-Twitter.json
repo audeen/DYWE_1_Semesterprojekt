@@ -1,0 +1,61 @@
+{
+    "title": "taz on Twitter",
+    "description": "“Die chinesische Raumsonde #ChangE4 ist auf der Rückseite des Mondes gelandet. Kurz danach funkte sie die ersten Bilder. https://t.co/FfqOJsI0xT”",
+    "url": "https://twitter.com/tazgezwitscher/status/1080744324567130113",
+    "type": "rich",
+    "tags": [],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://pbs.twimg.com/profile_images/1073126949525118981/7nnQaMXZ_400x400.jpg",
+            "width": 343,
+            "height": 343,
+            "size": 117649,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://pbs.twimg.com/profile_images/1073126949525118981/7nnQaMXZ_400x400.jpg",
+    "imageWidth": 343,
+    "imageHeight": 343,
+    "code": "<blockquote class=\"twitter-tweet\" data-width=\"550\"><p lang=\"de\" dir=\"ltr\">Die chinesische Raumsonde <a href=\"https://twitter.com/hashtag/ChangE4?src=hash&amp;ref_src=twsrc%5Etfw\">#ChangE4</a> ist auf der Rückseite des Mondes gelandet. Kurz danach funkte sie die ersten Bilder. <a href=\"https://t.co/FfqOJsI0xT\">https://t.co/FfqOJsI0xT</a></p>&mdash; taz (@tazgezwitscher) <a href=\"https://twitter.com/tazgezwitscher/status/1080744324567130113?ref_src=twsrc%5Etfw\">January 3, 2019</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+    "width": 550,
+    "height": null,
+    "aspectRatio": null,
+    "authorName": "taz",
+    "authorUrl": "https://twitter.com/tazgezwitscher",
+    "providerIcons": [
+        {
+            "url": "https://twitter.com/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://abs.twimg.com/favicons/favicon.ico",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/vnd.microsoft.icon"
+        },
+        {
+            "url": "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
+            "width": 192,
+            "height": 192,
+            "size": 36864,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://abs.twimg.com/favicons/win8-tile-144.png",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": "image/png"
+        }
+    ],
+    "providerIcon": "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
+    "providerName": "Twitter",
+    "providerUrl": "https://twitter.com",
+    "publishedTime": null,
+    "license": null
+}

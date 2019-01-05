@@ -113,12 +113,14 @@
                                     {% endfor %}
                                 </div>
                             {% default %}
-                                {% for asset in block.embeddedLink.all() %}
-                                {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
-                                    <div class="">
-                                        {{ embeddedAsset ? embeddedAsset.html }}
-                                    </div>
-                                {% endfor %}
+                                <div class="default">
+                                    {% for asset in block.embeddedLink.all() %}
+                                    {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+                                        <div class="def">
+                                            {{ embeddedAsset ? embeddedAsset.html }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
                         {% endswitch %}
                     </div>
             {% endswitch %}
