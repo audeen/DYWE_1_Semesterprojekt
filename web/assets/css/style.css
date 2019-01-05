@@ -725,13 +725,6 @@ body
     min-height:                 auto;
 }
 
-.def blockquote
-{
-    display:                    flex;
-    position:                   relative;
-    margin:                     0;
-}
-
 .youtube 
 {
     flex:                       100%;
