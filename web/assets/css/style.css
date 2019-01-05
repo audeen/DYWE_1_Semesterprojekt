@@ -597,6 +597,11 @@ body
     letter-spacing:             0.1rem;
 }
 
+.artikel_3 img:hover
+{
+    opacity:                    0.5;
+}
+
 .artikel_3 .caption p
 {
     margin:                     0;
