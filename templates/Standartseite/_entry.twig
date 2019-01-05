@@ -1,16 +1,14 @@
 {% extends "_layout" %}
 
 {% set start, aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links = '','','','','','','','','' %}
-
+{% set page_title = entry.title %} 
 
 {% set segment = craft.app.request.getSegment(1) %}
     {% switch segment %}
         {% case "impressum" %} 
             {% set Impressum = 'current' %}
-            {% set page_title = entry.title %}
         {% case "datenschutz" %}
             {% set Datenschutz = 'current' %}
-            {% set page_title = entry.title %} 
     {% endswitch %}
 
 
