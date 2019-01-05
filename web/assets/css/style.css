@@ -249,7 +249,6 @@ body
 .artikel_1 a:hover
 {
     color:                      #ffffff;
-    border-color:               #ffffff;
 }
 
 .artikelThumbnail
@@ -297,9 +296,8 @@ body
 
 .button:hover
 {
-    color:                      #ffffff;
+    color:                      #000000;
     background-color:           #cc0000;
-    border-color:               #ffffff;
     border-style:               solid;
     cursor:                     pointer;
 }
