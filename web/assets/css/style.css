@@ -1204,6 +1204,13 @@ body
     color:                      #000000;
 }
 
+.foot a.current
+{
+    border-color:               #ffffff;
+    border-style:               solid;
+    border-width:               0.1rem;
+}
+
 .copy
 {
     position:                   absolute;

@@ -1,8 +1,8 @@
 {% extends "_layout" %}
 
 {% set start = 'current' %}
-{% set aktuelles, projekte, opensource, mods, impressum, datenschutz, kontakt, links = '','','','','','','','' %}
-{% set page_title = "Start" %}
+{% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links = '','','','','','','','' %}
+{% set page_title = 'Start' %}
 
 {% block aktuelles %}
     {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
