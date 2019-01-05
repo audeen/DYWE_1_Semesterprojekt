@@ -710,13 +710,12 @@ body
 
 .embedded
 {
-    display:                    flex;
+    display:                    block;
     flex-direction:             column;
     flex:                       100%;
     max-width:                  100%;
-    min-height:                 auto;
     margin:                     auto;
-    margin-top:                 1rem;
+    margin-top:                 0.5rem;
     padding:                    0.5rem;
 }
 
@@ -726,9 +725,11 @@ body
     min-height:                 auto;
 }
 
-.embedded
+.def blockquote
 {
-
+    display:                    flex;
+    position:                   relative;
+    margin:                     0;
 }
 
 .youtube 
