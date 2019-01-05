@@ -259,16 +259,21 @@ body
     margin:                     0;
 }
 
-.artikelThumbnail a
-{
-    margin:                     0;
-    padding:                    0;
-}
-
 .artikel_1 img
 {
     width:                      100%;
     object-fit:                 cover;
+}
+
+.artikel_1 img:hover
+{
+    opacity:                    0.5;
+}
+
+.artikelThumbnail a
+{
+    margin:                     0;
+    padding:                    0;
 }
 
 .button
@@ -1555,7 +1560,7 @@ body
     display:                    flex;
     position:                   absolute;
     top:                        20%;
-    left:                       35%;
+    left:                       30%;
     font-size:                  1rem;
     color:                      #ffffff;
 }
