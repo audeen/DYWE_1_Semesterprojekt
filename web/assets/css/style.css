@@ -291,7 +291,7 @@ body
     color:                      #cc0000;
 }
 
-.button:hover
+.button:hover, button a:hover
 {
     color:                      #000000;
     background-color:           #cc0000;
