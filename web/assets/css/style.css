@@ -1,8 +1,5 @@
 /*           
 
-Mobile first!
-CSS-Dateien nach Sinn aufteilen
-
 Es wird um Nachsicht gebeten in Bezug auf Dopplungen und Verhältnisse zwischen Parent-Child Klassen. Dies ist eine gewachsene CSS im Rahmen eines Semesterprojektes und beinhaltet viele Experimente, Tests und Learning-By-Doing als Lernprozess.
 
 */
@@ -596,6 +593,11 @@ body
     margin-top:                 0.3rem;
     margin-right:               auto;
     letter-spacing:             0.1rem;
+}
+
+.artikel_3 img:hover
+{
+    opacity:                    0.5;
 }
 
 .artikel_3 .caption p
