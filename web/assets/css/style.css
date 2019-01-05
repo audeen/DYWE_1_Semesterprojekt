@@ -85,7 +85,7 @@ hr
 {
     border:                     0;
     border-top:                 0.06rem solid #ffffff;
-    margin:                     0 5rem;
+    margin:                     0;
 }
 
 /* Seite */
@@ -168,6 +168,7 @@ body
     color:                      #cc0000;
     margin:                     0.5rem;
     font-variant:               normal;
+    text-indent:                -0.5rem;
 }
 
 .headline a
@@ -178,22 +179,22 @@ body
 /* Artikel Teaser */
 .teaser
 {
-    width:                      60%;
+    width:                      70%;
 	font-size:                  1.6rem;
 	line-height:                1;
     color:                      #ffffff;
     margin:                     0.5rem;
-    margin-left:                2rem;
+    margin-left:                1rem;
 }
 
 /* Artikel Body */
 .abody
 {
-    width:                      60%;
+    width:                      65%;
 	font-size:                  1.2rem;
 	line-height:                1.4;
     color:                      #ffffff;
-    margin-left:                2rem;
+    margin-left:                1rem;
     font-weight:                normal;
     hyphens:                    auto;
     -webkit-hyphens:            auto;
@@ -250,15 +251,14 @@ body
 
 .artikelThumbnail
 {
-    width:                      30%;
+    width:                      25%;
     float:                      right;
-    margin:                     0;
+    margin:                     1rem 1rem 0 0;
 }
 
 .artikel_1 img
 {
     width:                      100%;
-    object-fit:                 cover;
 }
 
 .artikel_1 img:hover
@@ -277,13 +277,14 @@ body
     display:                    inline-block;
     background-color:           rgba(0, 0, 0, 1);
     color:                      #cc0000;
-    margin-left:                2rem;
+    margin-left:                1rem;
     padding:                    0.2rem; 
     border-width:               0.01rem;
     border-style:               dashed;
     border-color:               #cc0000;
     font-size:                  1rem;
     letter-spacing:             0.2rem;
+    text-transform:             uppercase;
 }
 
 .button a
@@ -291,12 +292,17 @@ body
     color:                      #cc0000;
 }
 
-.button:hover, button a:hover
+.button:hover
 {
     color:                      #000000;
     background-color:           #cc0000;
     border-style:               solid;
     cursor:                     pointer;
+}
+
+.button:hover a
+{
+    color:                      #000000;
 }
 
 .artikel_1 .button
@@ -358,6 +364,7 @@ body
 {
     display:                    flex;
     width:                      100%;
+    min-height:                 70vh;
     flex-direction:             column;
     margin:                     1rem 0;
     background-color:           rgba(0, 0, 0, 1);
@@ -408,13 +415,12 @@ body
     flex-direction:             row;
     padding:                    0.5rem;
     width:                      100%;
-    height:                     100%;
 }
 
 .kontakt-img
 {
     display:                    flex;
-    width:                      40%;
+    flex:                       40%;
 }
 
 .kontakt-img img
@@ -425,7 +431,7 @@ body
 .maps
 {
     display:                    flex;
-    width:                      60%; 
+    flex:                       60%; 
 }
 
 .maps iframe
@@ -471,20 +477,36 @@ body
 {
     display:                    flex;
     flex-wrap:                  wrap;
-    align-items:                baseline;
+    justify-content:            space-around;
     padding:                    0.5rem;
+    height:                     60vh;
 }
 
 .link-img
 {
     flex:                       25%;
+    align-items:                center;
     max-width:                  25%;
+    margin:                     auto;
 }
 
 .link-img img
 {
+    display:                    flex;
+    width:                      80%;
+    margin:                     auto;
+    -webkit-filter:             brightness(80%);
+    -webkit-transition:         all 0.5s ease;
+    -moz-transition:            all 0.5s ease;
+    -o-transition:              all 0.5s ease;
+    -ms-transition:             all 0.5s ease;
+    transition:                 all 0.5s ease;
+}
+
+.link-img img:hover
+{
     width:                      100%;
-    margin-top:                 1rem;
+    -webkit-filter:             brightness(150%);
 }
 
 @media all and (max-width: 770px)
@@ -769,6 +791,7 @@ body
     flex-flow:                  nowrap;
     align-self:                 flex-start;
     background-color:           rgba(0, 0, 0, 1);
+    padding:                    0.5rem;
     width:                      100%;
     position:                   relative; 
     position:                   -webkit-sticky;
@@ -781,7 +804,6 @@ body
 {
     display:                    flex;
     flex-direction:             column;
-    justify-content:            center;
     align-items:                center;
     align-self:                 flex-end;
     width:                      100%;
@@ -810,7 +832,7 @@ body
 {
     display:                    flex;
     align-self:                 center;
-    margin:                     0.5rem;
+    margin:                     0;
     float:                      left;
     width:                      10vw;
     height:                     auto;
@@ -833,6 +855,7 @@ body
     align-items:                center;
     background-color:           rgba(0, 0, 0, 1);
     width:                      100%;
+    padding:                    0.5rem;
     position:                   relative;
     position:                   -webkit-sticky;
     position:                   sticky;
@@ -858,6 +881,7 @@ body
 .headerline_scroll
 {
     margin-left:                1rem;
+    max-width:                  10%;
     font-size:                  1.3vw;
     line-height:                1;
     text-transform:             uppercase;
@@ -877,9 +901,8 @@ body
 
 .logo_scroll
 {
-    margin:                     0.5rem;
     float:                      left;
-    width:                      3vw;
+    width:                      5vw;
     height:                     auto;
     cursor:                     pointer;
     transition:                 0.2s;
@@ -900,7 +923,6 @@ body
     {
         display:                flex;
         align-self:             center;
-        margin:                 0.5rem;
         float:                  left;
         width:                  25vw;
         height:                 auto;
@@ -926,9 +948,8 @@ body
     .headerline
     {
         display:                flex;
-        margin-bottom:          auto;
-        margin-right:           0;
-        padding-left:           0;
+        margin:                 auto;
+        padding-left:           0.5rem;
         font-size:              4vw;
         line-height:            1;
         transition:             0.3s;
@@ -941,9 +962,8 @@ body
     
     .logo_scroll
     {
-        margin:                 0.5rem;
         float:                  left;
-        width:                  13vw;
+        width:                  15vw;
         height:                 auto;
         cursor:                 pointer;
     }
@@ -969,7 +989,7 @@ body
     justify-content:            flex-end;
     width:                      100%; 
     font-size:                  1.4rem;
-    margin:                     0.5rem;
+    margin:                     0;
     margin-left:                auto;
     margin-top:                 auto;
 }
@@ -981,9 +1001,8 @@ body
     justify-content:            flex-end;
     right:                      0;
     font-size:                  1.2rem;
-    margin:                     0.5rem;
+    margin:                     0;
     margin-left:                auto;
-    margin-top:                 auto;
     -moz-animation:             fadein 0.5s; /* Firefox */
     -webkit-animation:          fadein 0.5s; /* Safari and Chrome */
     -o-animation:               fadein 0.5s; /* Opera */
@@ -1186,7 +1205,6 @@ body
     align-self:                 flex-end;
     width:                      100%;
     background-color:           rgba(0, 0, 0, 1);
-    margin-top:                 1rem;
     padding:                    0.5rem;
     font-size:                  1.2rem;
     text-transform:             uppercase;
