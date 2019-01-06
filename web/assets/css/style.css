@@ -479,7 +479,7 @@ body
     flex-wrap:                  wrap;
     justify-content:            space-around;
     padding:                    0.5rem;
-    height:                     60vh;
+    min-height:                 60vh;
 }
 
 .link-img
@@ -535,6 +535,11 @@ body
     .link-img img
     {
         margin-top:             2rem;
+    }
+    
+    .maps
+    {
+        height:                 45vh;
     }
 }
 
@@ -1047,6 +1052,11 @@ body
     display:                    none;
 }
 
+.top-foot
+{
+    display:                    none;
+}
+
 @media all and (max-width: 1000px)
 {  
     .nav_scroll
@@ -1092,11 +1102,29 @@ body
         left:                   0;
         background-color:       #000000;
         width:                  100%;
+        height:                 100vh;
         z-index:                2;
         border-width:           0;
         border-bottom-width:    0.01rem;
         border-style:           solid;
         border-color:           #ffffff;
+    }
+    
+    .dropdown-nav a
+    {
+        margin-bottom:          1rem;
+    }
+    
+    .dropdown-nav .copy
+    {
+        display:                flex;
+        position:               static;
+        margin:                 0.3rem;
+        margin-right:           auto;
+        font-size:              1.2rem;
+        color:                  #ffffff;
+        text-transform:         uppercase;
+        z-index:                30000;
     }
     
     .dropbtn
@@ -1159,7 +1187,7 @@ body
     {
         display:                flex;
         margin:                 0;
-        margin-bottom:          0.5rem;
+        margin-bottom:          1rem;
         font-size:              1.2rem;
         text-transform:         uppercase;
         background-color:       #000000;
@@ -1193,6 +1221,11 @@ body
     {
         color:                  #cc0000;
         border-color:           #cc0000;
+    }
+    
+    .top-foot
+    {
+        display:                flex;
     }
 }
 
@@ -1249,110 +1282,11 @@ body
     margin-right:               1.5rem;
 }
 
-.dropup-foot
-{
-    display:                    none;
-}
-
-.dropbtn2
-{
-    display:                    none;
-}
-
 @media all and (max-width: 770px)
 {
-    .foot
-    {
-        justify-content:        space-between;
-    }
-    
     .foot_nav
     {
-        display:                flex;
-        flex-direction:         row;
-        justify-content:        space-between; 
-        align-items:            baseline;
-    }
-    
-    .foot_nav a
-    {
         display:                none;
-        margin:                 0;
-    }
-    
-    .copy
-    {
-        position:               absolute;
-        margin:                 0.5rem;
-    }
-    
-    .dropup-foot
-    {
-        display:                none;
-        flex-flow:              column;
-        text-align:             center;
-        padding:                0.5rem;
-        padding-bottom:         3rem;
-        position:               absolute;
-        bottom:                 0;
-        left:                   0;
-        background-color:       #000000;
-        width:                  100%;
-        transition:             1s;
-        -webkit-transform:      translateZ(0);
-        -moz-transform:         translateZ(0);
-        -ms-transform:          translateZ(0);
-        -o-transform:           translateZ(0);
-        transform:              translateZ(0);
-        border-width:           0;
-        border-top-width:       0.1rem;
-        border-color:           #ffffff;
-        border-style:           solid;
-        z-index:                1;
-    }
-    
-    .dropbtn2
-    {
-        display:                flex;
-        font-size:              1.2rem;
-        line-height:            1.5;
-        text-transform:         uppercase;
-        background-color:       #000000;
-        color:                  #ffffff;
-        padding:                0.3rem 0.5rem;
-        border-style:           solid;
-        border-width:           0.1rem;
-        border-color:           #ffffff;
-        transition:             0.5s;
-        -webkit-transform:      translateZ(0);
-        -moz-transform:         translateZ(0);
-        -ms-transform:          translateZ(0);
-        -o-transform:           translateZ(0);
-        transform:              translateZ(0);
-        z-index:                2;
-    }
-    
-    .foot:hover .dropbtn2
-    {
-        background-color:       #ffffff;
-        color:                  #000000;
-    }
-    
-    .foot:hover .dropup-foot
-    {
-        display:                flex;
-    }
-    
-    .foot_nav:hover .dropup-foot a
-    {
-        display:                block;
-        font-size:              1.2rem;
-    }
-    
-    .foot:hover .copy
-    {
-        z-index:                10;
-        opacity:                0.3;
     }
 }
 
@@ -1460,7 +1394,7 @@ body
     align-content:              center;
     min-height:                 70vh;
     min-width:                  100%;
-    z-index:                    30000;
+    z-index:                    10;
     margin:                     0;
     flex:                       100%;
     text-align:                 center;
