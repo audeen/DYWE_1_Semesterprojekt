@@ -559,6 +559,11 @@ body
     height:                     auto;
 }
 
+.standard_m img
+{
+    width:                      100%;
+}
+
 .standard_l img
 {
     width:                      100%;
