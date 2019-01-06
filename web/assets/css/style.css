@@ -85,7 +85,7 @@ hr
 {
     border:                     0;
     border-top:                 0.06rem solid #ffffff;
-    margin:                     0;
+    margin:                     1rem;
 }
 
 /* Seite */
@@ -122,7 +122,7 @@ body
     
     hr
     {
-        margin:                 1rem;
+        margin:                 0.5rem;
     }
 }
 
@@ -162,7 +162,7 @@ body
 /* Artikel Titel */
 .headline
 {
-    font-size:                  2.5rem;
+    font-size:                  3rem;
     line-height:                1;
     text-transform:             uppercase;
     color:                      #cc0000;
@@ -241,7 +241,8 @@ body
 
 .artikel_1 a
 {
-    padding:                    0.5rem; 
+    padding:                    0.5rem;
+    line-height:                1;
 }
 
 .artikel_1 a:hover
@@ -258,7 +259,7 @@ body
 
 .artikel_1 img
 {
-    width:                      100%;
+    max-width:                  100%;
 }
 
 .artikel_1 img:hover
@@ -305,16 +306,11 @@ body
     color:                      #000000;
 }
 
-.artikel_1 .button
-{
-    align-self:                 flex-end;
-}
-
 @media all and (max-width: 770px)
 {
     .artikel_1
     {
-        display:                inline-flex;
+        display:                flex;
         flex-flow:              column;
         margin:                 0;
         margin-top:             1rem;
@@ -329,30 +325,31 @@ body
     
     .artikel_1 .headline
     {
-        font-size:              2rem;    
+        font-size:              2.2rem;
     }
     
     .artikel_1 .teaser
     {
         font-size:              1.4rem;
+        margin:                 0.5rem;
     }
     
     .artikel_1 .abody
     {
         font-size:              1rem;
+        margin:                 0.5rem;
     }
     
     .artikelThumbnail
     {
         margin:                 0.5rem;
         width:                  100%;
-        height:                 auto;
     }
     
-    .button
+    .artikel_1 .button
     {
-        margin-left:            1rem;
-        margin-bottom:          0.3rem;
+        align-self:             flex-end;
+        margin:                 0.5rem;
         font-size:              1rem;
     }
 }
@@ -431,7 +428,6 @@ body
 .maps
 {
     display:                    flex;
-    flex:                       60%; 
 }
 
 .maps iframe
@@ -460,7 +456,6 @@ body
     .maps
     {
         width:                  100%;
-        height:                 70vh;
         margin-top:             1rem;
         margin-left:            0;
     }
@@ -641,9 +636,10 @@ body
         padding:                0.5rem;
     }
     
-    .artikel_3 .caption
+    .artikel_3 .abody
     {
-        padding:                0.5rem;
+        margin:                 0;
+        padding:                0;
     }
 }
 
@@ -729,9 +725,21 @@ body
         flex:                   100%;
     }
     
+    .two img
+    {
+        margin-top:             0.5rem;
+        padding:                0;
+    }
+    
     .three
     {
         flex:                   100%;
+    }
+    
+    .three img
+    {
+        margin-top:             0.5rem;
+        padding:                0;
     }
 }
 
@@ -798,7 +806,7 @@ body
     flex-flow:                  nowrap;
     align-self:                 flex-start;
     background-color:           rgba(0, 0, 0, 1);
-    padding:                    0.5rem;
+    padding-top:                0.5rem;
     width:                      100%;
     position:                   relative; 
     position:                   -webkit-sticky;
@@ -1286,9 +1294,10 @@ body
 
 @media all and (max-width: 770px)
 {
-    .foot_nav
+    .foot
     {
         display:                none;
+        
     }
 }
 
@@ -1359,14 +1368,14 @@ body
         flex-flow:              column wrap;
         margin:                 auto;
         margin-top:             1rem;
-        padding:                0rem 1rem;
+        padding:                0rem 0.5rem;
     }
 
     .cta
     {
         width:                  100%;
         margin:                 0;
-        margin-top:             1rem;
+        margin-top:             0.5rem;
     }
     
     .cta_t
@@ -1543,6 +1552,7 @@ body
     .pagination
     {
         margin-top:             1rem;
+        margin-bottom:          1rem;
         width:                  100%;
     }
     
