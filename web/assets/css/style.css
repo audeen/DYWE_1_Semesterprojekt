@@ -402,6 +402,12 @@ body
         width:                  100%;
         padding:                0;
     }
+    
+    .artikel_2 .teaser
+    {
+        margin:                 0;
+    }
+    
 }
 
 /* Kontakt Seite */
@@ -416,7 +422,6 @@ body
 
 .kontakt-img
 {
-    display:                    flex;
     flex:                       40%;
 }
 
@@ -428,6 +433,7 @@ body
 .maps
 {
     display:                    flex;
+    flex:                       60%;
 }
 
 .maps iframe
@@ -440,14 +446,10 @@ body
     .kontakt
     {
         flex-direction:         column;
-        width:                  100vw;    
+        width:                  100vw;
+        padding:                0;
     }
-    
-    .kontakt-img
-    {
-        width:                  100%;    
-    }
-    
+        
     .kontakt-img img
     {
         width:                  95%;
@@ -455,14 +457,13 @@ body
     
     .maps
     {
-        width:                  100%;
-        margin-top:             1rem;
+        width:                  95%;
         margin-left:            0;
     }
     
     .maps iframe
     {
-        width:                  95%;
+        height:                 70vw;
     }
 }
 
@@ -532,11 +533,6 @@ body
     .link-img img
     {
         margin-top:             2rem;
-    }
-    
-    .maps
-    {
-        height:                 45vh;
     }
 }
 
