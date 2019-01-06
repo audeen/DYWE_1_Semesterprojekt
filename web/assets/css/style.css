@@ -507,7 +507,7 @@ body
 .link-img img:hover
 {
     width:                      100%;
-    filter:                     brightness(80%);
+    filter:                     brightness(150%);
     -webkit-filter:             brightness(150%);
 }
 
