@@ -1,16 +1,20 @@
 {% extends "_layout" %}
-
-{% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
-{% set Kontakt = 'current' %}
+{# Page-Title für Browser-Tab setzen #}
 {% set page_title = entry.title %}
-
+{# Variablen für die CSS-Klasse current setzen, um besuchte Seite in der Navigation hervorzuheben #}
+{% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
+{# Kontakt current setzen #}
+{% set Kontakt = 'current' %}
+{# Inhaltsblock für Kontakt #}
 {% block content %}
     <div class="artikel_2">
         <div class="headline">
             {{ entry.title }}
         </div>
+        {# for-loop für jeden Block im Eintragsfeld #}
         {% for block in entry.standartseite.all() %}
             {% switch block.type %}
+            {# Textformatierungen abfragen und ausgeben #}
                 {% case "text" %}
                     {% switch block.textformat %}
                         {% case "teaser" %}
@@ -24,8 +28,11 @@
         {% endfor %}
         <div class="kontakt">
             {% for block in entry.standartseite.all() %}
+            {# for-loop für jeden Block im Eintragsfeld #}
                 {% switch block.type %}
+                {# Eintrags-Blöcke durchlaufen #}
 	                {% case "images" %}
+                    {# Bildgröße abfragen und ausgeben #}
                         <div class="kontakt-img">
                             {% for image in block.image.all() %}
                                 {% switch block.size %}
@@ -47,7 +54,7 @@
 	            {% endswitch %}
             {% endfor %}
             <div class="maps">
-                <!-- Einbindung von Open-Street-Maps -->
+                {# Einbindung von Open-Street-Maps #}
                 <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=10.13320326805115%2C54.32438279511453%2C10.151120424270632%2C54.32976972764168&amp;layer=mapnik&amp;marker=54.327073221270766%2C10.142161846160889"></iframe>
             </div>
         </div>

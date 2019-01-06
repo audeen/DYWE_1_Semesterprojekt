@@ -1,9 +1,11 @@
 {% extends "_layout" %}
-
+{# Page-Title für Browser-Tab setzen #}
+{% set page_title = entry.title %}
+{# Variablen für die CSS-Klasse current setzen, um besuchte Seite in der Navigation hervorzuheben #} 
 {% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
-{% set page_title = entry.title %} 
-
+{# Variable segment für nachfolgenden switch-case setzen #}
 {% set segment = craft.app.request.getSegment(1) %}
+{# Switch-Case-Abfrage, um besuchte Seite in der Navigation hervorzuheben #}
     {% switch segment %}
         {% case "impressum" %} 
             {% set Impressum = 'current' %}
@@ -12,16 +14,18 @@
         {% case "about" %}
             {% set about = 'current' %}
     {% endswitch %}
-
-
+{# Inhaltsblock für Artikel #}
 {% block content %}
     <div class="artikel_2">
         <div class="headline">
             {{ entry.title }}
         </div>
+        {# for-loop für jeden Block im Eintragsfeld #}
         {% for block in entry.standartseite.all() %}
-	        {% switch block.type %}
+	        {# Eintrags-Blöcke durchlaufen #}
+            {% switch block.type %}
                 {% case "text" %}
+                {# Textformatierungen abfragen und ausgeben #}
                     {% switch block.textformat %}
                         {% case "teaser" %}
                             <div class="teaser">{{ block.text }}</div>
@@ -30,6 +34,7 @@
                         {% default %}
                             <div class="abody">{{ block.text }}</div>
 	                {% endswitch %}
+                {# Bildgröße abfragen und ausgeben #}
                 {% case "images" %}
                     <div class="standard_div">
                         {% for image in block.image.all() %}

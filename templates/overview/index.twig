@@ -1,8 +1,9 @@
 {% extends "_layout" %}
-
+{# Variablen für die CSS-Klasse current setzen #}
 {% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
-
+{# Variable segment für nachfolgenden switch-case setzen #}
 {% set segment = craft.app.request.getSegment(1) %}
+{# Switch-Case-Abfrage, um besuchte Seite in der Navigation hervorzuheben & Abfrage, aus welcher Sektion der Artikel ausgegeben werden soll, sowie Pagetitle überschreiben #}
 {% switch segment %}
     {% case "aktuellesOverview" %}
         {% set aktuelles = 'current' %}
@@ -21,13 +22,15 @@
 		{% set page_title = 'Mods' %}
         {% paginate craft.entries.section('mods').limit(settings.articlesPerPage) as pageInfo, pageEntries %}
 {% endswitch %}
-
+{# Inhaltsblock für Übersichtsseiten #}
 {% block content %}
     {% for entry in pageEntries %}
         <div class="artikel_1">
+            {# For-Loop mit Switch-Case für jeden Block im Matrixfeld #}
             {% for block in entry.artikel.all() %}
                 {% switch block.type %}
                     {% case "artikelPreview" %}
+                        {# For-Loop für Thumbnail-Ausgabe #}
                         {% for image in block.artikelThumbnail.all() %}
                             <figure class="artikelThumbnail">
                                 <a href="{{ image.getUrl() }}" target="_blank">
@@ -36,6 +39,7 @@
                             </figure>
                         {% endfor %}	
                         <div>
+                            {# Textelemente ausgeben #}
                             <div class="headline">
                                 <a href="{{ entry.url }}">{{ entry.title }}</a>
                             </div>

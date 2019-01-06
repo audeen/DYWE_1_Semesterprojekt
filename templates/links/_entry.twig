@@ -1,38 +1,44 @@
 {% extends "_layout" %}
-
-{% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
+{# Page-Title für Browser-Tab setzen #}
 {% set page_title = entry.title %}
+{# Variablen für die CSS-Klasse current setzen, um besuchte Seite in der Navigation hervorzuheben #}
+{% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
+{# Links current setzen #}
 {% set Links = 'current' %}
-
+{# Inhaltsblock für Links #}
 {% block content %}
     <div class="artikel_2">
         <div class="headline">
             {{ entry.title }}
         </div>
         {% for block in entry.links.all() %}
-                {% switch block.type %}
-                    {% case "text" %}
-                        {% switch block.textformat %}
-                            {% case "teaser" %}
-                                <div class="teaser">{{ block.text }}</div>
-                            {% case "caption" %}
-                                <div class="">{{ block.text }}</div>
-                            {% default %}
-                                <div class="abody">{{ block.text }}</div>
-                        {% endswitch %}
+        {# for-loop für jeden Block im Eintragsfeld #}
+            {% switch block.type %}
+            {# Textformatierungen abfragen und ausgeben #}
+                {% case "text" %}
+                    {% switch block.textformat %}
+                        {% case "teaser" %}
+                            <div class="teaser">{{ block.text }}</div>
+                        {% case "caption" %}
+                            <div class="">{{ block.text }}</div>
+                        {% default %}
+                            <div class="abody">{{ block.text }}</div>
+                    {% endswitch %}
                 {% endswitch %}
         {% endfor %}
         <div class="link-div">
             {% for block in entry.links.all() %}
+            {# for-loop für jeden Block im Eintragsfeld #}
                 {% switch block.type %}
                     {% case "linkImage" %}
-                            {% for image in block.linkImage.all() %}
-                                <div class="link-img">
-                                    <a href="{{ block.linkUrl }}" target="_blank">
-                                        <img src="{{ image.getUrl('link') }}" alt="{{ image }}">
-                                    </a>
-                                </div>                               
-                            {% endfor %}
+                    {# Logos einbinden und als href ausgeben #}
+                        {% for image in block.linkImage.all() %}
+                            <div class="link-img">
+                                <a href="{{ block.linkUrl }}" target="_blank">
+                                    <img src="{{ image.getUrl('link') }}" alt="{{ image }}">
+                                </a>
+                            </div>                               
+                        {% endfor %}
                 {% endswitch %}
             {% endfor %}
         </div>
