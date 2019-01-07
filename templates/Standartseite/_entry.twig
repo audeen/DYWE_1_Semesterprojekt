@@ -2,7 +2,7 @@
 {# Page-Title für Browser-Tab setzen #}
 {% set page_title = entry.title %}
 {# Variablen für die CSS-Klasse current setzen, um besuchte Seite in der Navigation hervorzuheben #} 
-{% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
+{% set start, aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, about = '','','','','','','','','','' %}
 {# Variable segment für nachfolgenden switch-case setzen #}
 {% set segment = craft.app.request.getSegment(1) %}
 {# Switch-Case-Abfrage, um besuchte Seite in der Navigation hervorzuheben #}

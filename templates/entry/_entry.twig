@@ -2,7 +2,7 @@
 {# Page-Title für Browser-Tab setzen #}
 {% set page_title = entry.title %}
 {# Variablen für die CSS-Klasse current setzen #}
-{% set aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, About = '','','','','','','','','' %}
+{% set start, aktuelles, projekte, opensource, mods, Impressum, Datenschutz, Kontakt, Links, about = '','','','','','','','','','' %}
 {# Variable segment für nachfolgenden switch-case setzen #}
 {% set segment = craft.app.request.getSegment(1) %}
 {# Switch-Case-Abfrage, um besuchte Seite in der Navigation hervorzuheben & Abfrage, aus welcher Sektion der Artikel ausgegeben werden soll #}
@@ -43,28 +43,30 @@
             	{% case "images" %}
                 {# Bildgröße abfragen und ausgeben #}
                     <div class="images_3">
-                        {% for image in block.image.all() %}
-                            {% switch block.size %}
-                                {% case "smallThumb" %}
-                                    <div class="{{ block.quantity }}">
-                                        <a href="{{ image.getUrl() }}" target="_blank">
-                                            <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
-                                        </a>
-                                    </div>
-                                {% case "mediumThumb" %}
-                                    <div class="{{ block.quantity }}">
-                                        <a href="{{ image.getUrl() }}" target="_blank">
-                                            <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
-                                        </a>
-                                    </div>
-                                {% case "largeThumb" %}
-                                    <div class="{{ block.quantity }}">
-                                        <a href="{{ image.getUrl() }}" target="_blank">
-                                            <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image }}">
-                                        </a>
-                                    </div>
-                            {% endswitch %}                                
-                        {% endfor %}
+                        <div class="{{ block.quantity }}">
+                            {% for image in block.image.all() %}
+                                {% switch block.size %}
+                                    {% case "smallThumb" %}
+                                        <div class="{{ block.quantity }}_img">
+                                            <a href="{{ image.getUrl() }}" target="_blank">
+                                                <img src="{{ image.getUrl('smallThumb') }}" alt="{{ image }}">
+                                            </a>
+                                        </div>
+                                    {% case "mediumThumb" %}
+                                        <div class="{{ block.quantity }}_img">
+                                            <a href="{{ image.getUrl() }}" target="_blank">
+                                                <img src="{{ image.getUrl('mediumThumb') }}" alt="{{ image }}">
+                                            </a>
+                                        </div>
+                                    {% case "largeThumb" %}
+                                        <div class="{{ block.quantity }}_img">
+                                            <a href="{{ image.getUrl() }}" target="_blank">
+                                                <img src="{{ image.getUrl('largeThumb') }}" alt="{{ image }}">
+                                            </a>
+                                        </div>
+                                {% endswitch %}                                
+                            {% endfor %}
+                        </div>
                     </div>
                 {# Abfrage für PDF-Download #}
                 {% case "pdf" %}
