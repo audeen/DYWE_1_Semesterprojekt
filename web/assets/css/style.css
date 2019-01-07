@@ -261,6 +261,7 @@ body
 
 .artikelThumbnail
 {
+    display:                    inline-flex;
     width:                      100%;
 }
 
