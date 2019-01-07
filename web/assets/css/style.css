@@ -250,11 +250,18 @@ body
     color:                      #ffffff;
 }
 
+.thumbs
+{
+    display:                    flex;
+    flex-flow:                  column;
+    float:                      right;
+    width:                      25%;
+    margin:                     1rem 1rem 0 0;
+}
+
 .artikelThumbnail
 {
-    width:                      25%;
-    float:                      right;
-    margin:                     1rem 1rem 0 0;
+    width:                      100%;
 }
 
 .artikel_1 img
@@ -339,7 +346,7 @@ body
         font-size:              1rem;
         margin:                 0.5rem;
     }
-    
+
     .artikelThumbnail
     {
         margin:                 0.5rem;
