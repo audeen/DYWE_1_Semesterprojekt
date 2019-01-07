@@ -7,7 +7,7 @@
 {% block aktuelles %}
     {% for entry in craft.entries.section('aktuelles').limit(1).all() %}
         <div class="artikel_1">
-            {% for block in entry.artikel.all() %}
+            {% for block in entry.artikel.limit(1).all() %}
                 {% switch block.type %}
                     {% case "artikelPreview" %}
                         <div class="thumbs">
@@ -44,7 +44,7 @@
 {% block projekte %}
     {% for entry in craft.entries.section('projekte').limit(1).all() %}
         <div class="artikel_1">
-            {% for block in entry.artikel.all() %}
+            {% for block in entry.artikel.limit(1).all() %}
                 {% switch block.type %}
                     {% case "artikelPreview" %}
                     <div class="thumbs">
@@ -105,7 +105,7 @@
 {% block opensource %}
     {% for entry in craft.entries.section('opensource').limit(1).all() %}
         <div class="artikel_1">
-            {% for block in entry.artikel.all() %}
+            {% for block in entry.artikel.limit(1).all() %}
                 {% switch block.type %}
                     {% case "artikelPreview" %}
                     <div class="thumbs">
@@ -142,7 +142,7 @@
 {% block mods %}
     {% for entry in craft.entries.section('mods').limit(1).all() %}
         <div class="artikel_1">
-            {% for block in entry.artikel.all() %}
+            {% for block in entry.artikel.limit(1).all() %}
                 {% switch block.type %}
                     {% case "artikelPreview" %}
                     <div class="thumbs">
