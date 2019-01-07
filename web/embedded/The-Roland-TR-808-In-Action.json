@@ -1,0 +1,85 @@
+{
+    "title": "The Roland TR-808 In Action",
+    "description": "Here's the iconic TR-808 in action, one of the best drum machines ever made. Do you want us to record the 808 on your track? Learn more about our online Remi...",
+    "url": "https://www.youtube.com/watch?v=KC7UaUD5rEA",
+    "type": "video",
+    "tags": [
+        "roland",
+        "TR-808"
+    ],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://i.ytimg.com/vi/KC7UaUD5rEA/hqdefault.jpg",
+            "width": 480,
+            "height": 360,
+            "size": 172800,
+            "mime": "image/jpeg"
+        },
+        {
+            "url": "https://i.ytimg.com/vi/KC7UaUD5rEA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720,
+            "size": 921600,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://i.ytimg.com/vi/KC7UaUD5rEA/hqdefault.jpg",
+    "imageWidth": 480,
+    "imageHeight": 360,
+    "code": "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/KC7UaUD5rEA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+    "width": 720,
+    "height": 405,
+    "aspectRatio": 56.25,
+    "authorName": "Doctor Mix",
+    "authorUrl": "https://www.youtube.com/user/DoctorMixTV",
+    "providerIcons": [
+        {
+            "url": "https://www.youtube.com/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_32-vflOogEID.png",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_48-vflVjB_Qk.png",
+            "width": 48,
+            "height": 48,
+            "size": 2304,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_96-vflW9Ec0w.png",
+            "width": 96,
+            "height": 96,
+            "size": 9216,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_144-vfliLAfaB.png",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": "image/png"
+        }
+    ],
+    "providerIcon": "https://www.youtube.com/yts/img/favicon_144-vfliLAfaB.png",
+    "providerName": "YouTube",
+    "providerUrl": "https://www.youtube.com/",
+    "publishedTime": "2017-10-31",
+    "license": null
+}

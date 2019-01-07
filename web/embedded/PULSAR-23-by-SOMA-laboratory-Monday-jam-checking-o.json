@@ -1,0 +1,91 @@
+{
+    "title": "PULSAR-23 by SOMA laboratory. Monday jam  (checking of the recorders. prototype demo)",
+    "description": "I've finished the upgrade of PULSAR recorders. Now they have 96 times better resolution and three levels of velocity that allows working with live grooves mu...",
+    "url": "https://www.youtube.com/watch?v=tQdXeqoRdL0",
+    "type": "video",
+    "tags": [
+        "PULSAR-23",
+        "SOMA laboratory",
+        "SOMA lab",
+        "LYRA-8",
+        "ЛИРА-8",
+        "Vlad Kreimer",
+        "Vlad Kreymer",
+        "Влад Креймер"
+    ],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://i.ytimg.com/vi/tQdXeqoRdL0/hqdefault.jpg",
+            "width": 480,
+            "height": 360,
+            "size": 172800,
+            "mime": "image/jpeg"
+        },
+        {
+            "url": "https://i.ytimg.com/vi/tQdXeqoRdL0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720,
+            "size": 921600,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://i.ytimg.com/vi/tQdXeqoRdL0/hqdefault.jpg",
+    "imageWidth": 480,
+    "imageHeight": 360,
+    "code": "<iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/tQdXeqoRdL0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+    "width": 720,
+    "height": 405,
+    "aspectRatio": 56.25,
+    "authorName": "Vlad Kreimer",
+    "authorUrl": "https://www.youtube.com/channel/UCXfXBfjiRwCZxqQ1oWwZr3A",
+    "providerIcons": [
+        {
+            "url": "https://www.youtube.com/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_32-vflOogEID.png",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_48-vflVjB_Qk.png",
+            "width": 48,
+            "height": 48,
+            "size": 2304,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_96-vflW9Ec0w.png",
+            "width": 96,
+            "height": 96,
+            "size": 9216,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/yts/img/favicon_144-vfliLAfaB.png",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": "image/png"
+        }
+    ],
+    "providerIcon": "https://www.youtube.com/yts/img/favicon_144-vfliLAfaB.png",
+    "providerName": "YouTube",
+    "providerUrl": "https://www.youtube.com/",
+    "publishedTime": "2018-11-27",
+    "license": null
+}
