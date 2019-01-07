@@ -209,12 +209,12 @@ body
 {
     .headline
     {
-        width:                  100%;    
+        max-width:              100%;
     }
     
     .teaser
     {
-        width:                  100%;
+        max-width:              100%;
         margin:                 0.5rem;
         margin-left:            1rem;
         letter-spacing:         0.1rem;
@@ -222,7 +222,7 @@ body
 
     .abody
     {
-        width:                  100%;
+        max-width:              100%;
         margin:                 1rem;
         margin-left:            1rem;
     }
@@ -340,12 +340,14 @@ body
     
     .artikel_1 .teaser
     {
+        width:                  100%;
         font-size:              1.4rem;
         margin:                 0.5rem;
     }
     
     .artikel_1 .abody
     {
+        width:                  100%;
         font-size:              1rem;
         margin:                 0.5rem;
     }
@@ -605,6 +607,11 @@ body
     font-size:                  2rem;
 }
 
+.artikel_3 a
+{
+    color:                      #cc0000;
+}
+
 .artikel_3 .teaser p
 {
     margin:                     0;
@@ -645,6 +652,12 @@ body
     .artikel_3
     {
         padding:                0.5rem;
+    }
+    
+    .artikel_3 .headline
+    {
+        text-indent:            0;
+        width:                  100%;    
     }
     
     .artikel_3 .abody
@@ -694,6 +707,7 @@ body
 
 .one
 {
+    display:                    flex;
     flex:                       100%;
     margin:                     auto;
 }
@@ -706,20 +720,23 @@ body
 
 .two
 {
-    flex:                       50%;
-    margin:                     auto;
+    display:                    flex;
+}
+
+.two_img
+{
+    width:                      50%;
+    padding:                    0.5rem;
 }
 
 .two img
 {
     width:                      100%;
-    padding:                    0.5rem;
 }
 
 .three
 {
-    flex:                       30%;
-    margin:                     auto;
+    display:                    flex;
 }
 
 .three img
@@ -733,7 +750,14 @@ body
 {
     .two
     {
+        display:                flex;
+        flex-flow:              column;
         flex:                   100%;
+    }
+    
+    .two_img
+    {
+        width:                  100%;
     }
     
     .two img
@@ -744,6 +768,8 @@ body
     
     .three
     {
+        display:                flex;
+        flex-flow:              column;
         flex:                   100%;
     }
     
@@ -1385,6 +1411,7 @@ body
     .cta
     {
         width:                  100%;
+        height:                 30vh;
         margin:                 0;
         margin-top:             0.5rem;
     }
