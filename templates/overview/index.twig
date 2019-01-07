@@ -27,7 +27,7 @@
     {% for entry in pageEntries %}
         <div class="artikel_1">
             {# For-Loop mit Switch-Case für jeden Block im Matrixfeld #}
-            {% for block in entry.artikel.all() %}
+            {% for block in entry.artikel.limit(1).all() %}
                 {% switch block.type %}
                     {% case "artikelPreview" %}
                         {# For-Loop für Thumbnail-Ausgabe #}
